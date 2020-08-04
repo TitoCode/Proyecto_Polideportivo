@@ -8,3 +8,6 @@ C:\Users\stmar\source\repos\Polideportivo_Proj\Polideportivo_Proj\bin\Debug\Poli
 C:\Users\stmar\source\repos\Polideportivo_Proj\Polideportivo_Proj\obj\Debug\Polideportivo_Proj.exe
 C:\Users\stmar\source\repos\Polideportivo_Proj\Polideportivo_Proj\obj\Debug\Polideportivo_Proj.pdb
 C:\Users\stmar\source\repos\Polideportivo_Proj\Polideportivo_Proj\obj\Debug\Polideportivo_Proj.FrmMain.resources
+C:\Users\TheVolts\Proyecto_Polideportivo\Polideportivo_Proj\Polideportivo_Proj\bin\Debug\Polideportivo_Proj.exe.config
+C:\Users\TheVolts\Proyecto_Polideportivo\Polideportivo_Proj\Polideportivo_Proj\obj\Debug\Polideportivo_Proj.exe
+C:\Users\TheVolts\Proyecto_Polideportivo\Polideportivo_Proj\Polideportivo_Proj\obj\Debug\Polideportivo_Proj.pdb
