@@ -41,9 +41,16 @@
             this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnLogin.Location = new System.Drawing.Point(827, 1);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(166, 39);
+=======
+            this.BtnLogin.Location = new System.Drawing.Point(1054, 276);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(221, 44);
+>>>>>>> 62624744e90f1eec096a1dfbc901d62842f73329
             this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "Log in";
             this.BtnLogin.UseVisualStyleBackColor = true;
@@ -54,9 +61,16 @@
             this.BtnListadoE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BtnListadoE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnListadoE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnListadoE.Location = new System.Drawing.Point(610, 1);
             this.BtnListadoE.Name = "BtnListadoE";
             this.BtnListadoE.Size = new System.Drawing.Size(211, 39);
+=======
+            this.BtnListadoE.Location = new System.Drawing.Point(754, 276);
+            this.BtnListadoE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnListadoE.Name = "BtnListadoE";
+            this.BtnListadoE.Size = new System.Drawing.Size(281, 44);
+>>>>>>> 62624744e90f1eec096a1dfbc901d62842f73329
             this.BtnListadoE.TabIndex = 3;
             this.BtnListadoE.Text = "Listados De Equipos";
             this.BtnListadoE.UseVisualStyleBackColor = true;
@@ -68,9 +82,16 @@
             this.BtnCalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BtnCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnCalendario.Location = new System.Drawing.Point(393, 1);
             this.BtnCalendario.Name = "BtnCalendario";
             this.BtnCalendario.Size = new System.Drawing.Size(211, 39);
+=======
+            this.BtnCalendario.Location = new System.Drawing.Point(490, 276);
+            this.BtnCalendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCalendario.Name = "BtnCalendario";
+            this.BtnCalendario.Size = new System.Drawing.Size(281, 44);
+>>>>>>> 62624744e90f1eec096a1dfbc901d62842f73329
             this.BtnCalendario.TabIndex = 4;
             this.BtnCalendario.Text = "Calendario";
             this.BtnCalendario.UseVisualStyleBackColor = true;
@@ -83,17 +104,29 @@
             this.panel1.Controls.Add(this.BtnListadoE);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(993, 40);
+=======
+            this.panel1.Size = new System.Drawing.Size(1324, 48);
+>>>>>>> 62624744e90f1eec096a1dfbc901d62842f73329
             this.panel1.TabIndex = 5;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(993, 494);
+            this.ClientSize = new System.Drawing.Size(1324, 608);
             this.Controls.Add(this.panel1);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.BtnCalendario);
+            this.Controls.Add(this.BtnListadoE);
+            this.Controls.Add(this.BtnLogin);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 62624744e90f1eec096a1dfbc901d62842f73329
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);

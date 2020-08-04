@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\Admin. Financiera\FrmAdminFinanc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Admin. Financiera\FrmAdminFinanc.Designer.cs">
+      <DependentUpon>FrmAdminFinanc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Main\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mantenimientos\Admin. Financiera\FrmAdminFinanc.resx">
+      <DependentUpon>FrmAdminFinanc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Main\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,7 +89,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mantenimientos\Admin. Financiera\" />
     <Folder Include="Mantenimientos\Admin. Técnica\" />
     <Folder Include="Mantenimientos\Log in\" />
     <Folder Include="Mantenimientos\Usuario Entrenador\" />
