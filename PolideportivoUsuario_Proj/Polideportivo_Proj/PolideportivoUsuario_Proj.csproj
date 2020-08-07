@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A6A973B-9A60-419C-8A8B-98AA76AC95A3}</ProjectGuid>
+    <ProjectGuid>{44C1719F-2B13-4FFC-B527-DED197A1F800}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PolideportivoAdmin_Proj</RootNamespace>
-    <AssemblyName>PolideportivoAdmin_Proj</AssemblyName>
+    <RootNamespace>Polideportivo_Proj</RootNamespace>
+    <AssemblyName>Polideportivo_Proj</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,44 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConexion.cs" />
-    <Compile Include="Mantenimientos\Administración\FrmAdmin.cs">
+    <Compile Include="Mantenimientos\Main\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\Administración\FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador.Designer.cs">
-      <DependentUpon>FrmEntrenador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\Gerencia\FrmGerencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\Gerencia\FrmGerencia.Designer.cs">
-      <DependentUpon>FrmGerencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\Log in\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\Log in\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Mantenimientos\Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador.resx">
-      <DependentUpon>FrmEntrenador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmGerencia.resx">
-      <DependentUpon>FrmGerencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\Log in\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,9 +81,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Imagenes\Botones\seguridad.png" />
-    <Content Include="Imagenes\Botones\usuario.png" />
-    <Content Include="Imagenes\Icono\campeon.ico" />
+    <Content Include="Imagenes\Botones\calendario.png" />
+    <Content Include="Imagenes\Botones\lista.png" />
+    <Content Include="Imagenes\Botones\ui.png" />
+    <Content Include="Imagenes\Icono\trofeo.ico" />
+    <Content Include="Imagenes\Slider\latest %281%29.png" />
+    <Content Include="Imagenes\Slider\latest %282%29.png" />
+    <Content Include="Imagenes\Slider\latest.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

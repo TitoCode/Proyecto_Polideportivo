@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PolideportivoAdmin_Proj.Properties
+namespace Polideportivo_Proj.Properties
 {
 
 
