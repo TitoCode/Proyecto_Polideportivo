@@ -58,10 +58,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
            {
               
                string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Txt_NomUsuario.Text + "','" + Txt_Password.Text + "'," + Cmb_TipoUsuario.Text+ ")";
-               
-               string InsertarEmpleado = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO,ID_TIPO_PUESTO, DIRECCION, FECHA_NACIMIENTO,NIT,DPI,ID_USUARIO_FK) VALUES ('"+ID_Empleado.Text+"','" + Txt_Nombre1.Text + "','" + Txt_Nombre2.Text + "','" + Txt_Apellido1.Text + 
+               string InsertarEmpleado = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO,ID_TIPO_PUESTO, DIRECCION, FECHA_NACIMIENTO,NIT,DPI,ID_USUARIO_FK) VALUES ('"+Txt_IdEmpleado.Text+"','" + Txt_Nombre1.Text + "','" + Txt_Nombre2.Text + "','" + Txt_Apellido1.Text + 
                "','"+Txt_Apellido2.Text+"','"+Txt_Correo.Text+"','"+ Cmb_TipoPuesto.Text+ "','"+Txt_Direccion.Text+"','"+Txt_FechaNac.Text+"','"+Txt_Nit.Text+"','"+Txt_DPI.Text+"','"+ Txt_NomUsuario.Text+"')";
-               string InsertarTelefono = "INSERT INTO TELEFONO (ID_TELEFONO, ID_EMPLEADO_FK) VALUES ('" + Txt_Telefono.Text + "','" + ID_Empleado.Text + "')";
+               string InsertarTelefono = "INSERT INTO TELEFONO (ID_TELEFONO, ID_EMPLEADO_FK) VALUES ('" + Txt_Telefono.Text + "','" + Txt_IdEmpleado.Text + "')";
                 
                 OdbcCommand Query_Validacion1 = new OdbcCommand(InsertarUsuario, conex.conexion());
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarEmpleado, conex.conexion());
@@ -99,7 +98,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Cmb_TipoPuesto.Items.Add("2");
             Cmb_TipoPuesto.Items.Add("3");
             Cmb_TipoPuesto.Items.Add("4");
-            Cmb_TipoPuesto.Items.Add("5");
+         
 
         }
 
@@ -110,6 +109,62 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try{
+
+                
+                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text+ "'";
+                string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
+
+                OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
+                OdbcCommand Query_Validacion6 = new OdbcCommand(BuscarDatoEmpleado, conex.conexion());
+
+                OdbcDataReader Lector1 = Query_Validacion5.ExecuteReader();
+                OdbcDataReader Lector2 = Query_Validacion6.ExecuteReader();
+
+                if (Lector1.HasRows)
+                {
+                    while (Lector1.Read())
+                    {
+                        Txt_IdTel.Text = Lector1.GetString(0);
+                        
+                    }
+                }
+
+                if (Lector2.HasRows)
+                {
+                    while (Lector2.Read())
+                    {
+                        Txt_IdUser.Text = Lector2.GetString(0);
+
+                    }
+                }
+
+
+                string EliminarTelefono = "DELETE FROM TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
+                string EliminarEmpleado = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO="+ Txt_IdEmpleado.Text;
+                string EliminarUsuario = "DELETE FROM USUARIO WHERE ID_USUARIO='"+ Txt_IdUser.Text + "'";
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(EliminarTelefono, conex.conexion());
+                OdbcCommand Query_Validacion2 = new OdbcCommand(EliminarEmpleado, conex.conexion());
+                OdbcCommand Query_Validacion3 = new OdbcCommand(EliminarUsuario, conex.conexion());
+
+                OdbcDataReader Lector4 = Query_Validacion1.ExecuteReader();
+                OdbcDataReader Lector5 = Query_Validacion2.ExecuteReader();
+                OdbcDataReader Lector6 = Query_Validacion3.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            //Consulta para agregar puestos
             /*try
             {
                 string InsertarPuesto = "INSERT INTO TIPO_PUESTO (ID_TIPO_PUESTO, NOMBRE_PUESTO, SALARIO) VALUES ('" + textBox1.Text + "','" + Txt_NomPuesto.Text + "','" + Txt_Salario.Text + "')";
@@ -126,6 +181,80 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }//fin del try*/
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+
+                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text + "'";
+                string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
+
+                OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
+                OdbcCommand Query_Validacion6 = new OdbcCommand(BuscarDatoEmpleado, conex.conexion());
+
+                OdbcDataReader Lector1 = Query_Validacion5.ExecuteReader();
+                OdbcDataReader Lector2 = Query_Validacion6.ExecuteReader();
+
+                if (Lector1.HasRows)
+                {
+                    while (Lector1.Read())
+                    {
+                        Txt_IdTel.Text = Lector1.GetString(0);
+
+                    }
+                }
+
+                if (Lector2.HasRows)
+                {
+                    while (Lector2.Read())
+                    {
+                        Txt_IdUser.Text = Lector2.GetString(0);
+
+                    }
+                }
+
+
+                string EliminarTelefono = "UPDATE TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
+                string EliminarEmpleado = "UPDATE EMPLEADO WHERE ID_EMPLEADO=" + Txt_IdEmpleado.Text;
+                string EliminarUsuario = "UPDATE USUARIO WHERE ID_USUARIO='" + Txt_IdUser.Text + "'";
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(EliminarTelefono, conex.conexion());
+                OdbcCommand Query_Validacion2 = new OdbcCommand(EliminarEmpleado, conex.conexion());
+                OdbcCommand Query_Validacion3 = new OdbcCommand(EliminarUsuario, conex.conexion());
+
+                OdbcDataReader Lector4 = Query_Validacion1.ExecuteReader();
+                OdbcDataReader Lector5 = Query_Validacion2.ExecuteReader();
+                OdbcDataReader Lector6 = Query_Validacion3.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+        private void Txt_IdUser_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

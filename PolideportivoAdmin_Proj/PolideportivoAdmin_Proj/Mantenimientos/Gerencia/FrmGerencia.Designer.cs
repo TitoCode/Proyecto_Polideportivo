@@ -59,13 +59,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ID_Empleado = new System.Windows.Forms.TextBox();
+            this.Txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Cmb_TipoPuesto = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Txt_IdUser = new System.Windows.Forms.TextBox();
+            this.Txt_IdTel = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +118,7 @@
             // 
             // Btn_Insertar
             // 
-            this.Btn_Insertar.Location = new System.Drawing.Point(12, 412);
+            this.Btn_Insertar.Location = new System.Drawing.Point(38, 315);
             this.Btn_Insertar.Name = "Btn_Insertar";
             this.Btn_Insertar.Size = new System.Drawing.Size(153, 58);
             this.Btn_Insertar.TabIndex = 6;
@@ -133,7 +139,7 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.Cmb_TipoUsuario);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ID_Empleado);
+            this.panel1.Controls.Add(this.Txt_IdEmpleado);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Txt_Password);
             this.panel1.Controls.Add(this.label3);
@@ -341,27 +347,28 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Tipo Puesto";
             // 
-            // ID_Empleado
+            // Txt_IdEmpleado
             // 
-            this.ID_Empleado.Location = new System.Drawing.Point(143, 47);
-            this.ID_Empleado.Name = "ID_Empleado";
-            this.ID_Empleado.Size = new System.Drawing.Size(204, 22);
-            this.ID_Empleado.TabIndex = 13;
+            this.Txt_IdEmpleado.Location = new System.Drawing.Point(143, 47);
+            this.Txt_IdEmpleado.Name = "Txt_IdEmpleado";
+            this.Txt_IdEmpleado.Size = new System.Drawing.Size(204, 22);
+            this.Txt_IdEmpleado.TabIndex = 13;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(189, 414);
+            this.button1.Location = new System.Drawing.Point(38, 388);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 58);
+            this.button1.Size = new System.Drawing.Size(153, 58);
             this.button1.TabIndex = 14;
             this.button1.Text = "Modificar Empleado";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(103, 492);
+            this.button2.Location = new System.Drawing.Point(38, 454);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 50);
+            this.button2.Size = new System.Drawing.Size(155, 56);
             this.button2.TabIndex = 15;
             this.button2.Text = "Eliminar Empleado";
             this.button2.UseVisualStyleBackColor = true;
@@ -384,11 +391,58 @@
             this.label14.TabIndex = 16;
             this.label14.Text = "ID Empleado";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Txt_IdTel);
+            this.panel3.Controls.Add(this.Txt_IdUser);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Location = new System.Drawing.Point(239, 315);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 195);
+            this.panel3.TabIndex = 16;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(21, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 17);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Id Usuario";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(24, 113);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 17);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Id Telefono";
+            // 
+            // Txt_IdUser
+            // 
+            this.Txt_IdUser.Enabled = false;
+            this.Txt_IdUser.Location = new System.Drawing.Point(113, 43);
+            this.Txt_IdUser.Name = "Txt_IdUser";
+            this.Txt_IdUser.Size = new System.Drawing.Size(84, 22);
+            this.Txt_IdUser.TabIndex = 2;
+            this.Txt_IdUser.TextChanged += new System.EventHandler(this.Txt_IdUser_TextChanged);
+            // 
+            // Txt_IdTel
+            // 
+            this.Txt_IdTel.Enabled = false;
+            this.Txt_IdTel.Location = new System.Drawing.Point(117, 113);
+            this.Txt_IdTel.Name = "Txt_IdTel";
+            this.Txt_IdTel.Size = new System.Drawing.Size(80, 22);
+            this.Txt_IdTel.TabIndex = 3;
+            // 
             // FrmGerencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 554);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -403,6 +457,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,10 +495,15 @@
         private System.Windows.Forms.TextBox Txt_DPI;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox ID_Empleado;
+        private System.Windows.Forms.TextBox Txt_IdEmpleado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox Cmb_TipoPuesto;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox Txt_IdTel;
+        private System.Windows.Forms.TextBox Txt_IdUser;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
