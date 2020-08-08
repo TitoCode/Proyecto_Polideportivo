@@ -27,7 +27,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Cmb_Crear_Entrenador_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try 
+           /* try 
             {
                 string Consulta = "SELECT FROM  WHERE  = '" + .Text + "' AND  "' ;";
                 OdbcCommand Query_Validacion = new OdbcCommand(Consulta, x.conexion());
@@ -52,7 +52,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                 ex.GetType().ToString() + System.Environment.NewLine +
                 ex.Message, "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
 
         }
 
