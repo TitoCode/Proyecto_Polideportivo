@@ -162,6 +162,7 @@
             this.Btn_Ingresar_Equipo.TabIndex = 8;
             this.Btn_Ingresar_Equipo.Text = "Ingresar";
             this.Btn_Ingresar_Equipo.UseVisualStyleBackColor = true;
+            this.Btn_Ingresar_Equipo.Click += new System.EventHandler(this.Btn_Ingresar_Equipo_Click);
             // 
             // Cmb_Crear_Entrenador
             // 

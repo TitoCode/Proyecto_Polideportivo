@@ -55,5 +55,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             }
 
         }
+
+        private void Btn_Ingresar_Equipo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

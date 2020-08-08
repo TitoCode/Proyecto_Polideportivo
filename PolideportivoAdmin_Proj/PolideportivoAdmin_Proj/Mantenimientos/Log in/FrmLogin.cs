@@ -38,6 +38,8 @@ namespace PolideportivoAdmin_Proj
                     OdbcCommand Query_Validacion = new OdbcCommand(Consulta, x.conexion());
                     OdbcDataReader Lector = Query_Validacion.ExecuteReader();
 
+                    
+                    
                     if (Lector.HasRows == true)
                     {
                         OdbcCommand Login = new OdbcCommand(Consulta, x.conexion());
@@ -48,7 +50,10 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-                            Form Formulario = new FrmGerencia();
+
+                            Form Formulario = new FrmGerencia(); 
+
+
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -59,7 +64,7 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-                            Form Formulario = new FrmEntrenador();
+                             Form Formulario = new FrmEntrenador();
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -70,7 +75,9 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
+
                             Form Formulario = new FrmAdmin();
+
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
