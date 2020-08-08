@@ -50,7 +50,10 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
+
                             Form Formulario = new FrmGerencia(); 
+
+
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -61,7 +64,7 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-                            Form Formulario = new FrmAdmin();
+                             Form Formulario = new FrmEntrenador();
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -72,7 +75,9 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-                            Form Formulario = new FrmEntrenador(); 
+
+                            Form Formulario = new FrmAdmin();
+
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
