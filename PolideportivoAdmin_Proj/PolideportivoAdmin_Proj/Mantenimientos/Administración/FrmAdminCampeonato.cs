@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
-    public partial class FrmAdmin : Form
+    public partial class Fmr_Admin_Campeonato : Form
     {
-        public FrmAdmin()
+        public Fmr_Admin_Campeonato()
         {
             InitializeComponent();
-        }
-
-        private void FrmAdmin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
