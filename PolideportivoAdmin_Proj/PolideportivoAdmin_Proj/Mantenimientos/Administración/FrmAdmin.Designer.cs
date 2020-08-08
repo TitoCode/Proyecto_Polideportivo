@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Btn_Tabla_Posiciones = new System.Windows.Forms.Button();
             this.Btn_Campeonato = new System.Windows.Forms.Button();
             this.Btn_Equipo = new System.Windows.Forms.Button();
-            this.Btn_Partido = new System.Windows.Forms.Button();
             this.Btn_Calendario = new System.Windows.Forms.Button();
-            this.Btn_Tabla_Posiciones = new System.Windows.Forms.Button();
-            this.Pnl_algo = new System.Windows.Forms.Panel();
+            this.Btn_Partido = new System.Windows.Forms.Button();
+            this.Pnl_Interfaz = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,71 +48,79 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Partido);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(186, 450);
+            this.Pnl_Menu.Size = new System.Drawing.Size(248, 554);
             this.Pnl_Menu.TabIndex = 0;
+            // 
+            // Btn_Tabla_Posiciones
+            // 
+            this.Btn_Tabla_Posiciones.Location = new System.Drawing.Point(29, 276);
+            this.Btn_Tabla_Posiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Tabla_Posiciones.Name = "Btn_Tabla_Posiciones";
+            this.Btn_Tabla_Posiciones.Size = new System.Drawing.Size(184, 28);
+            this.Btn_Tabla_Posiciones.TabIndex = 4;
+            this.Btn_Tabla_Posiciones.Text = "Tabla de Posiciones";
+            this.Btn_Tabla_Posiciones.UseVisualStyleBackColor = true;
             // 
             // Btn_Campeonato
             // 
-            this.Btn_Campeonato.Location = new System.Drawing.Point(22, 37);
+            this.Btn_Campeonato.Location = new System.Drawing.Point(29, 46);
+            this.Btn_Campeonato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Campeonato.Name = "Btn_Campeonato";
-            this.Btn_Campeonato.Size = new System.Drawing.Size(138, 23);
+            this.Btn_Campeonato.Size = new System.Drawing.Size(184, 28);
             this.Btn_Campeonato.TabIndex = 0;
             this.Btn_Campeonato.Text = "Campeonato";
             this.Btn_Campeonato.UseVisualStyleBackColor = true;
             // 
             // Btn_Equipo
             // 
-            this.Btn_Equipo.Location = new System.Drawing.Point(22, 80);
+            this.Btn_Equipo.Location = new System.Drawing.Point(29, 98);
+            this.Btn_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Equipo.Name = "Btn_Equipo";
-            this.Btn_Equipo.Size = new System.Drawing.Size(138, 23);
+            this.Btn_Equipo.Size = new System.Drawing.Size(184, 28);
             this.Btn_Equipo.TabIndex = 1;
             this.Btn_Equipo.Text = "Equipo";
             this.Btn_Equipo.UseVisualStyleBackColor = true;
             // 
-            // Btn_Partido
-            // 
-            this.Btn_Partido.Location = new System.Drawing.Point(22, 129);
-            this.Btn_Partido.Name = "Btn_Partido";
-            this.Btn_Partido.Size = new System.Drawing.Size(138, 23);
-            this.Btn_Partido.TabIndex = 2;
-            this.Btn_Partido.Text = "Partido";
-            this.Btn_Partido.UseVisualStyleBackColor = true;
-            // 
             // Btn_Calendario
             // 
-            this.Btn_Calendario.Location = new System.Drawing.Point(22, 178);
+            this.Btn_Calendario.Location = new System.Drawing.Point(29, 219);
+            this.Btn_Calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Calendario.Name = "Btn_Calendario";
-            this.Btn_Calendario.Size = new System.Drawing.Size(138, 23);
+            this.Btn_Calendario.Size = new System.Drawing.Size(184, 28);
             this.Btn_Calendario.TabIndex = 3;
             this.Btn_Calendario.Text = "Calendario";
             this.Btn_Calendario.UseVisualStyleBackColor = true;
             // 
-            // Btn_Tabla_Posiciones
+            // Btn_Partido
             // 
-            this.Btn_Tabla_Posiciones.Location = new System.Drawing.Point(22, 224);
-            this.Btn_Tabla_Posiciones.Name = "Btn_Tabla_Posiciones";
-            this.Btn_Tabla_Posiciones.Size = new System.Drawing.Size(138, 23);
-            this.Btn_Tabla_Posiciones.TabIndex = 4;
-            this.Btn_Tabla_Posiciones.Text = "Tabla de Posiciones";
-            this.Btn_Tabla_Posiciones.UseVisualStyleBackColor = true;
+            this.Btn_Partido.Location = new System.Drawing.Point(29, 159);
+            this.Btn_Partido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Partido.Name = "Btn_Partido";
+            this.Btn_Partido.Size = new System.Drawing.Size(184, 28);
+            this.Btn_Partido.TabIndex = 2;
+            this.Btn_Partido.Text = "Partido";
+            this.Btn_Partido.UseVisualStyleBackColor = true;
             // 
-            // Pnl_algo
+            // Pnl_Interfaz
             // 
-            this.Pnl_algo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_algo.Location = new System.Drawing.Point(186, 0);
-            this.Pnl_algo.Name = "Pnl_algo";
-            this.Pnl_algo.Size = new System.Drawing.Size(614, 450);
-            this.Pnl_algo.TabIndex = 5;
+            this.Pnl_Interfaz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_Interfaz.Location = new System.Drawing.Point(248, 0);
+            this.Pnl_Interfaz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Interfaz.Name = "Pnl_Interfaz";
+            this.Pnl_Interfaz.Size = new System.Drawing.Size(819, 554);
+            this.Pnl_Interfaz.TabIndex = 5;
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Pnl_algo);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.Pnl_Interfaz);
             this.Controls.Add(this.Pnl_Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
@@ -129,6 +137,6 @@
         private System.Windows.Forms.Button Btn_Partido;
         private System.Windows.Forms.Button Btn_Calendario;
         private System.Windows.Forms.Button Btn_Tabla_Posiciones;
-        private System.Windows.Forms.Panel Pnl_algo;
+        private System.Windows.Forms.Panel Pnl_Interfaz;
     }
 }
