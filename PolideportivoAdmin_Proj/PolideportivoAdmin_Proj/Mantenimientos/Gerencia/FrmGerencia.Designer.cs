@@ -133,6 +133,7 @@
             this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
             this.Cmb_TipoUsuario.Size = new System.Drawing.Size(204, 24);
             this.Cmb_TipoUsuario.TabIndex = 7;
+            this.Cmb_TipoUsuario.SelectedIndexChanged += new System.EventHandler(this.Cmb_TipoUsuario_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -397,15 +398,15 @@
             this.panel3.Controls.Add(this.Txt_IdUser);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(239, 315);
+            this.panel3.Location = new System.Drawing.Point(224, 343);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 195);
+            this.panel3.Size = new System.Drawing.Size(200, 131);
             this.panel3.TabIndex = 16;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 43);
+            this.label16.Location = new System.Drawing.Point(8, 24);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 17);
             this.label16.TabIndex = 0;
@@ -414,7 +415,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(24, 113);
+            this.label17.Location = new System.Drawing.Point(11, 94);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 17);
             this.label17.TabIndex = 1;
@@ -423,7 +424,7 @@
             // Txt_IdUser
             // 
             this.Txt_IdUser.Enabled = false;
-            this.Txt_IdUser.Location = new System.Drawing.Point(113, 43);
+            this.Txt_IdUser.Location = new System.Drawing.Point(100, 24);
             this.Txt_IdUser.Name = "Txt_IdUser";
             this.Txt_IdUser.Size = new System.Drawing.Size(84, 22);
             this.Txt_IdUser.TabIndex = 2;
@@ -432,7 +433,7 @@
             // Txt_IdTel
             // 
             this.Txt_IdTel.Enabled = false;
-            this.Txt_IdTel.Location = new System.Drawing.Point(117, 113);
+            this.Txt_IdTel.Location = new System.Drawing.Point(104, 94);
             this.Txt_IdTel.Name = "Txt_IdTel";
             this.Txt_IdTel.Size = new System.Drawing.Size(80, 22);
             this.Txt_IdTel.TabIndex = 3;

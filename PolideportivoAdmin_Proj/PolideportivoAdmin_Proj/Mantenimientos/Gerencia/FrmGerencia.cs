@@ -111,8 +111,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             try{
 
-                
-                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text+ "'";
+                //Consulta de Busqueda
+                string BuscarDatoTelefono = "SELECT ID_TELEFONO FROM TELEFONO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text + "'";
                 string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
 
                 OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
@@ -139,7 +139,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     }
                 }
 
-
+                //Consulta de Eliminacion
                 string EliminarTelefono = "DELETE FROM TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
                 string EliminarEmpleado = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO="+ Txt_IdEmpleado.Text;
                 string EliminarUsuario = "DELETE FROM USUARIO WHERE ID_USUARIO='"+ Txt_IdUser.Text + "'";
@@ -190,8 +190,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             try
             {
 
-
-                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text + "'";
+                //Consulta de Busqueda
+                string BuscarDatoTelefono = "SELECT ID_TELEFONO FROM TELEFONO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text + "'";
                 string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
 
                 OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
@@ -217,20 +217,22 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
                     }
                 }
+                
+                //Consulta de Modificacion
+                string ModificarTelefono = "UPDATE TELEFONO SET ID_TELEFONO='"+ Txt_Telefono+"' WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
+                string ModificarEmpleado = "UPDATE EMPLEADO SET NOMBRE1='"+ Txt_Nombre1.Text+"', NOMBRE2='"+ Txt_Nombre2.Text+
+                    "', APELLIDO1='"+Txt_Apellido1.Text+"', APELLIDO2='"+ Txt_Apellido2.Text+"', CORREO='"+ Txt_Correo.Text+
+                    "', DIRECCION='"+Txt_Direccion.Text+"'WHERE ID_EMPLEADO='" + Txt_IdEmpleado.Text+"'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='"+Txt_IdUser.Text+"', PASSWORD='"+Txt_Password.Text+"' WHERE ID_USUARIO='" + Txt_IdUser.Text + "'";
 
-
-                string EliminarTelefono = "UPDATE TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
-                string EliminarEmpleado = "UPDATE EMPLEADO WHERE ID_EMPLEADO=" + Txt_IdEmpleado.Text;
-                string EliminarUsuario = "UPDATE USUARIO WHERE ID_USUARIO='" + Txt_IdUser.Text + "'";
-
-                OdbcCommand Query_Validacion1 = new OdbcCommand(EliminarTelefono, conex.conexion());
-                OdbcCommand Query_Validacion2 = new OdbcCommand(EliminarEmpleado, conex.conexion());
-                OdbcCommand Query_Validacion3 = new OdbcCommand(EliminarUsuario, conex.conexion());
+                OdbcCommand Query_Validacion1 = new OdbcCommand(ModificarTelefono, conex.conexion());
+                OdbcCommand Query_Validacion2 = new OdbcCommand(ModificarEmpleado, conex.conexion());
+                OdbcCommand Query_Validacion3 = new OdbcCommand(ModificarUsuario, conex.conexion());
 
                 OdbcDataReader Lector4 = Query_Validacion1.ExecuteReader();
                 OdbcDataReader Lector5 = Query_Validacion2.ExecuteReader();
                 OdbcDataReader Lector6 = Query_Validacion3.ExecuteReader();
-
+                
             }
             catch (Exception ex)
             {
@@ -240,13 +242,13 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+              
             }
 
 
+            
 
-
-
+            
 
 
 
@@ -255,6 +257,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Txt_IdUser_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Cmb_TipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
 
         }
     }
