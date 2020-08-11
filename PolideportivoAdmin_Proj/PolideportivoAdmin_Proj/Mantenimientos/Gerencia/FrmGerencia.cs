@@ -17,7 +17,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             InitializeComponent();
         }
-        ClsConexion conex = new ClsConexion();
+        ClsConexion conexion = new ClsConexion();
 
         public void Conversion()
         {
@@ -27,7 +27,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 
                 string ObtenerCombo = "Select ID_TIPO_PUESTO, NOMBRE_PUESTO FROM TIPO_PUESTO";
                 DataTable llenado = new DataTable();
-                OdbcCommand Query_Validacion = new OdbcCommand(ObtenerCombo, conex.conexion());
+                OdbcCommand Query_Validacion = new OdbcCommand(ObtenerCombo, conexion.conexion());
                 OdbcDataReader Lector = Query_Validacion.ExecuteReader();
                 
                 Cmb_TipoUsuario.DisplayMember = "NOMBRE_PUESTO";
@@ -50,41 +50,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-           
-          try
-           {
-              
-               string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Txt_NomUsuario.Text + "','" + Txt_Password.Text + "'," + Cmb_TipoUsuario.Text+ ")";
-               string InsertarEmpleado = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO,ID_TIPO_PUESTO, DIRECCION, FECHA_NACIMIENTO,NIT,DPI,ID_USUARIO_FK) VALUES ('"+Txt_IdEmpleado.Text+"','" + Txt_Nombre1.Text + "','" + Txt_Nombre2.Text + "','" + Txt_Apellido1.Text + 
-               "','"+Txt_Apellido2.Text+"','"+Txt_Correo.Text+"','"+ Cmb_TipoPuesto.Text+ "','"+Txt_Direccion.Text+"','"+Txt_FechaNac.Text+"','"+Txt_Nit.Text+"','"+Txt_DPI.Text+"','"+ Txt_NomUsuario.Text+"')";
-               string InsertarTelefono = "INSERT INTO TELEFONO (ID_TELEFONO, ID_EMPLEADO_FK) VALUES ('" + Txt_Telefono.Text + "','" + Txt_IdEmpleado.Text + "')";
-                
-                OdbcCommand Query_Validacion1 = new OdbcCommand(InsertarUsuario, conex.conexion());
-                OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarEmpleado, conex.conexion());
-                OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarTelefono, conex.conexion());
-               
-
-                OdbcDataReader Lector1 = Query_Validacion1.ExecuteReader();
-                OdbcDataReader Lector2 = Query_Validacion2.ExecuteReader();
-                OdbcDataReader Lector3 = Query_Validacion3.ExecuteReader();
-               
-
-            }
-           catch (Exception ex){
-
-               MessageBox.Show("Error al ejecutar SQL: " +
-                   System.Environment.NewLine + System.Environment.NewLine +
-                   ex.GetType().ToString() + System.Environment.NewLine +
-                   ex.Message, "Error",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-           }//fin del try
-
-
-        }
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
@@ -102,134 +67,105 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try{
-
-                
-                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text+ "'";
-                string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
-
-                OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
-                OdbcCommand Query_Validacion6 = new OdbcCommand(BuscarDatoEmpleado, conex.conexion());
-
-                OdbcDataReader Lector1 = Query_Validacion5.ExecuteReader();
-                OdbcDataReader Lector2 = Query_Validacion6.ExecuteReader();
-
-                if (Lector1.HasRows)
-                {
-                    while (Lector1.Read())
-                    {
-                        Txt_IdTel.Text = Lector1.GetString(0);
-                        
-                    }
-                }
-
-                if (Lector2.HasRows)
-                {
-                    while (Lector2.Read())
-                    {
-                        Txt_IdUser.Text = Lector2.GetString(0);
-
-                    }
-                }
-
-
-                string EliminarTelefono = "DELETE FROM TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
-                string EliminarEmpleado = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO="+ Txt_IdEmpleado.Text;
-                string EliminarUsuario = "DELETE FROM USUARIO WHERE ID_USUARIO='"+ Txt_IdUser.Text + "'";
-
-                OdbcCommand Query_Validacion1 = new OdbcCommand(EliminarTelefono, conex.conexion());
-                OdbcCommand Query_Validacion2 = new OdbcCommand(EliminarEmpleado, conex.conexion());
-                OdbcCommand Query_Validacion3 = new OdbcCommand(EliminarUsuario, conex.conexion());
-
-                OdbcDataReader Lector4 = Query_Validacion1.ExecuteReader();
-                OdbcDataReader Lector5 = Query_Validacion2.ExecuteReader();
-                OdbcDataReader Lector6 = Query_Validacion3.ExecuteReader();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-            //Consulta para agregar puestos
-            /*try
-            {
-                string InsertarPuesto = "INSERT INTO TIPO_PUESTO (ID_TIPO_PUESTO, NOMBRE_PUESTO, SALARIO) VALUES ('" + textBox1.Text + "','" + Txt_NomPuesto.Text + "','" + Txt_Salario.Text + "')";
-            OdbcCommand Query_Validacion4 = new OdbcCommand(InsertarPuesto, conex.conexion());
-            OdbcDataReader Lector4 = Query_Validacion4.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }//fin del try*/
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
             try
             {
 
+                string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Txt_Usuario.Text + "','" + Txt_Password.Text + "'," + Cmb_TipoUsuario.Text + ")";
+                string InsertarEmpleado = "INSERT INTO EMPLEADO (NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO) VALUES ('" + Txt_Nombre1.Text + "','" + Txt_Nombre2.Text + "','" + Txt_Apellido1.Text +
+                "','" + Txt_Apellido2.Text + "','" + Txt_Email.Text + "','" + Cmb_TipoPuesto.Text + "','" + Txt_Direccion.Text + "','" + Txt_FechaNacimiento.Text + "','" + Txt_NIT.Text + "','" + Txt_DPI.Text + "','" + Txt_Usuario.Text + "','" + Txt_FechaContrato.Text + "')";
 
-                string BuscarDatoTelefono = "SELECT ID_TELEFONO.TELEFONO, ID_USUARIO_FK.EMPLEADO FROM TELEFONO, EMPLEADO WHERE ID_EMPLEADO_FK ='" + Txt_IdEmpleado.Text + "'";
-                string BuscarDatoEmpleado = "SELECT ID_USUARIO_FK FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IdEmpleado.Text + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(InsertarUsuario, conexion.conexion());
+                OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
+                OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
+                OdbcDataReader Ejecucion2 = Query_Validacion2.ExecuteReader();
 
-                OdbcCommand Query_Validacion5 = new OdbcCommand(BuscarDatoTelefono, conex.conexion());
-                OdbcCommand Query_Validacion6 = new OdbcCommand(BuscarDatoEmpleado, conex.conexion());
+                string ID_Empleado;
+                string BusquedaID = "SELECT MAX(ID_EMPLEADO) FROM EMPLEADO ORDER BY ID_EMPLEADO DESC";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(BusquedaID, conexion.conexion());
+                ID_Empleado = Convert.ToString(Query_Validacion3.ExecuteScalar());
+                OdbcDataReader Ejecucion3 = Query_Validacion3.ExecuteReader();
 
-                OdbcDataReader Lector1 = Query_Validacion5.ExecuteReader();
-                OdbcDataReader Lector2 = Query_Validacion6.ExecuteReader();
+                string InsertarTelefono = "INSERT INTO TELEFONO (TELEFONO, ID_EMPLEADO_FK) VALUES ('" + Txt_Telefono.Text + "'," + ID_Empleado + ")";
+                OdbcCommand Query_Validacion4 = new OdbcCommand(InsertarTelefono, conexion.conexion());
+                OdbcDataReader Ejecucion4 = Query_Validacion4.ExecuteReader();
 
-                if (Lector1.HasRows)
+                MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }//fin del try
+        }
+
+        private void Btn_EliminarEmpleado_Click(object sender, EventArgs e)
+        {
+
+            if(MessageBox.Show("¿Seguro que quiere borrar este empleado?", "FORMULARIO EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
+            {
+                Btn_EliminarEmpleado.Focus();
+            }
+            else
+            {
+                try
                 {
-                    while (Lector1.Read())
-                    {
-                        Txt_IdTel.Text = Lector1.GetString(0);
 
-                    }
+                    string EliminarTelefono = "DELETE FROM TELEFONO WHERE ID_TELEFONO ='" + Lbl_IDTelefono.Text + "'";
+                    string EliminarEmpleado = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO=" + Txt_IDEmpleado.Text;
+                    string EliminarUsuario = "DELETE FROM USUARIO WHERE ID_USUARIO='" + Lbl_IDUsuario.Text + "'";
+
+                    OdbcCommand Query_DELETE1 = new OdbcCommand(EliminarTelefono, conexion.conexion());
+                    OdbcCommand Query_DELETE2 = new OdbcCommand(EliminarEmpleado, conexion.conexion());
+                    OdbcCommand Query_DELETE3 = new OdbcCommand(EliminarUsuario, conexion.conexion());
+
+                    Query_DELETE1.ExecuteNonQuery();
+                    Query_DELETE2.ExecuteNonQuery();
+                    Query_DELETE3.ExecuteNonQuery();
+
+                    MessageBox.Show("Eliminación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
-
-                if (Lector2.HasRows)
+                catch (Exception ex)
                 {
-                    while (Lector2.Read())
-                    {
-                        Txt_IdUser.Text = Lector2.GetString(0);
 
-                    }
+                    MessageBox.Show("Error al ejecutar SQL: " +
+                        System.Environment.NewLine + System.Environment.NewLine +
+                        ex.GetType().ToString() + System.Environment.NewLine +
+                        ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
+            }
 
+        }
 
-                string EliminarTelefono = "UPDATE TELEFONO WHERE ID_TELEFONO='" + Txt_IdTel.Text + "'";
-                string EliminarEmpleado = "UPDATE EMPLEADO WHERE ID_EMPLEADO=" + Txt_IdEmpleado.Text;
-                string EliminarUsuario = "UPDATE USUARIO WHERE ID_USUARIO='" + Txt_IdUser.Text + "'";
+        private void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
 
-                OdbcCommand Query_Validacion1 = new OdbcCommand(EliminarTelefono, conex.conexion());
-                OdbcCommand Query_Validacion2 = new OdbcCommand(EliminarEmpleado, conex.conexion());
-                OdbcCommand Query_Validacion3 = new OdbcCommand(EliminarUsuario, conex.conexion());
+                string ModificarTelefono = "UPDATE FROM TELEFONO WHERE ID_TELEFONO = " + Lbl_IDTelefono.Text ;
+                string ModificarEmpleado = "UPDATE FROM EMPLEADO WHERE ID_EMPLEADO=" + Txt_IDEmpleado.Text;
+                string ModificarUsuario = "UPDATE FROM USUARIO WHERE ID_USUARIO='" + Lbl_IDUsuario.Text + "'";
+                
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarTelefono, conexion.conexion());
+                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarEmpleado, conexion.conexion());
+                OdbcCommand Query_UPDATE3 = new OdbcCommand(ModificarUsuario, conexion.conexion());
 
-                OdbcDataReader Lector4 = Query_Validacion1.ExecuteReader();
-                OdbcDataReader Lector5 = Query_Validacion2.ExecuteReader();
-                OdbcDataReader Lector6 = Query_Validacion3.ExecuteReader();
+                Query_UPDATE1.ExecuteNonQuery();
+                Query_UPDATE2.ExecuteNonQuery();
+                Query_UPDATE3.ExecuteNonQuery();
+
+                MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -243,19 +179,74 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
             }
 
-
-
-
-
-
-
-
-
         }
 
-        private void Txt_IdUser_TextChanged(object sender, EventArgs e)
+        private void Btn_Buscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                              
+                string BuscarDatoTelefono = "SELECT * FROM TELEFONO WHERE ID_EMPLEADO_FK ='" + Txt_IDEmpleado.Text + "'";
+                string BuscarDatoEmpleado = "SELECT * FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IDEmpleado.Text + "'";
 
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarDatoTelefono, conexion.conexion());
+                OdbcCommand Query_Busqueda2 = new OdbcCommand(BuscarDatoEmpleado, conexion.conexion());
+
+                OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
+                OdbcDataReader Lector2 = Query_Busqueda2.ExecuteReader();
+
+                if (Lector1.HasRows == true && Lector2.HasRows == true)
+                {
+                    while (Lector1.Read())
+                    {
+                        Lbl_IDTelefono.Text = Lector1.GetString(0);
+                        Txt_Telefono.Text = Lector1.GetString(1);
+
+                    }
+
+                    while (Lector2.Read())
+                    {
+
+                        Txt_Nombre1.Text = Lector2.GetString(1);
+                        Txt_Nombre2.Text = Lector2.GetString(2);
+                        Txt_Apellido1.Text = Lector2.GetString(3);
+                        Txt_Apellido2.Text = Lector2.GetString(4);
+                        Txt_Email.Text = Lector2.GetString(5);
+                        Txt_Direccion.Text = Lector2.GetString(7);
+                        Txt_FechaNacimiento.Text = Lector2.GetString(8);
+                        Txt_NIT.Text = Lector2.GetString(9);
+                        Txt_DPI.Text = Lector2.GetString(10);
+                        Lbl_IDUsuario.Text = Lector2.GetString(11);
+                        Txt_FechaContrato.Text = Lector2.GetString(12);
+
+
+                    }
+
+                    string BuscarDatoUsuario = "SELECT * FROM USUARIO WHERE ID_USUARIO ='" + Lbl_IDUsuario.Text + "'";
+                    OdbcCommand Query_Busqueda3 = new OdbcCommand(BuscarDatoUsuario, conexion.conexion());
+                    OdbcDataReader Lector3 = Query_Busqueda3.ExecuteReader();
+
+                    while (Lector3.Read())
+                    {
+
+                        Txt_Usuario.Text = Lector3.GetString(0);
+                        Txt_Password.Text = Lector3.GetString(1);
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

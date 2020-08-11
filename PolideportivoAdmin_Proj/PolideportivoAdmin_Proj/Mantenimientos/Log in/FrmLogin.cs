@@ -45,15 +45,12 @@ namespace PolideportivoAdmin_Proj
                         OdbcCommand Login = new OdbcCommand(Consulta, x.conexion());
                         ID_TIPO_USUARIO = Convert.ToInt32(Login.ExecuteScalar());
 
-                        if (ID_TIPO_USUARIO == 1)
+                        if (ID_TIPO_USUARIO == 3)
                         {
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-
-                            Form Formulario = new FrmGerencia(); 
-
-
+                            Form Formulario = new FrmGerencia();
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -64,20 +61,18 @@ namespace PolideportivoAdmin_Proj
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-                             Form Formulario = new FrmEntrenador();
+                            Form Formulario = new FrmEntrenador();
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
 
                         }
-                        else if (ID_TIPO_USUARIO == 3)
+                        else if (ID_TIPO_USUARIO == 1)
                         {
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
                             BtnIngreso.Focus();
-
                             Form Formulario = new FrmAdmin();
-
                             this.Hide();
                             Formulario.ShowDialog();
                             this.Show();
@@ -107,6 +102,7 @@ namespace PolideportivoAdmin_Proj
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+
             }                            
         }
     }   
