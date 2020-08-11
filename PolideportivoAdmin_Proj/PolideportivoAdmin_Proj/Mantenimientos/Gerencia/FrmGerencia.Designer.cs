@@ -145,7 +145,6 @@
             this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
             this.Cmb_TipoUsuario.Size = new System.Drawing.Size(154, 21);
             this.Cmb_TipoUsuario.TabIndex = 7;
-            this.Cmb_TipoUsuario.SelectedIndexChanged += new System.EventHandler(this.Cmb_TipoUsuario_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -403,6 +402,7 @@
             this.Txt_Nombre1.TabIndex = 5;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // label8
             // 
             this.label8.AutoSize = true;
@@ -538,6 +538,8 @@
             this.Txt_IdTel.Size = new System.Drawing.Size(80, 22);
             this.Txt_IdTel.TabIndex = 3;
 =======
+=======
+>>>>>>> b338cb25e6e1c7c04905cbec94b57cc5abd6c430
             // Lbl_Apellido2
             // 
             this.Lbl_Apellido2.AutoSize = true;
@@ -690,7 +692,10 @@
             this.Lbl_IDTelefono.Size = new System.Drawing.Size(0, 13);
             this.Lbl_IDTelefono.TabIndex = 19;
             this.Lbl_IDTelefono.Visible = false;
+<<<<<<< HEAD
 >>>>>>> 39f1a489fa46c6d8402f6ca333860423e7444728
+=======
+>>>>>>> b338cb25e6e1c7c04905cbec94b57cc5abd6c430
             // 
             // FrmGerencia
             // 
