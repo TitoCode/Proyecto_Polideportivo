@@ -153,10 +153,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             try
             {
 
-                string ModificarTelefono = "UPDATE FROM TELEFONO WHERE ID_TELEFONO = " + Lbl_IDTelefono.Text ;
-                string ModificarEmpleado = "UPDATE FROM EMPLEADO WHERE ID_EMPLEADO=" + Txt_IDEmpleado.Text;
-                string ModificarUsuario = "UPDATE FROM USUARIO WHERE ID_USUARIO='" + Lbl_IDUsuario.Text + "'";
-                
+                string ModificarTelefono = "UPDATE TELEFONO SET TELEFONO='" + Txt_Telefono.Text + "' WHERE ID_TELEFONO='" + Lbl_Telefono.Text + "'";
+                string ModificarEmpleado = "UPDATE EMPLEADO SET NOMBRE1='" + Txt_Nombre1.Text + "', NOMBRE2='" + Txt_Nombre2.Text +
+                    "', APELLIDO1='" + Txt_Apellido1.Text + "', APELLIDO2='" + Txt_Apellido2.Text + "', CORREO='" + Txt_Email.Text +
+                    "', DIRECCION='" + Txt_Direccion.Text + "'WHERE ID_EMPLEADO='" + Txt_IDEmpleado.Text + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Txt_Usuario.Text + "', PASSWORD='" + Txt_Password.Text + "' WHERE ID_USUARIO='" + Txt_Usuario.Text + "'";
+
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarTelefono, conexion.conexion());
                 OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarEmpleado, conexion.conexion());
                 OdbcCommand Query_UPDATE3 = new OdbcCommand(ModificarUsuario, conexion.conexion());
