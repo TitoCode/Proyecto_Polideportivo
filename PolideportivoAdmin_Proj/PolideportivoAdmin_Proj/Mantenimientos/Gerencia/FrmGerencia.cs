@@ -16,55 +16,15 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         public FrmGerencia()
         {
             InitializeComponent();
+            
         }
+
         ClsConexion conexion = new ClsConexion();
-
-        public void Conversion()
-        {
-           
-            try
-            {
-                
-                string ObtenerCombo = "Select ID_TIPO_PUESTO, NOMBRE_PUESTO FROM TIPO_PUESTO";
-                DataTable llenado = new DataTable();
-                OdbcCommand Query_Validacion = new OdbcCommand(ObtenerCombo, conexion.conexion());
-                OdbcDataReader Lector = Query_Validacion.ExecuteReader();
-                
-                Cmb_TipoUsuario.DisplayMember = "NOMBRE_PUESTO";
-                Cmb_TipoUsuario.ValueMember = "ID_TIPO_PUESTO";
-                Cmb_TipoUsuario.SelectedValue = Lector;
-             
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }//fin del try
-
-
-        }
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
-           //Llenado Manual Combo Cmb_TipoUsuario
-           Cmb_TipoUsuario.Items.Add("3");
-           Cmb_TipoUsuario.Items.Add("2");
-           Cmb_TipoUsuario.Items.Add("1");
-            //Conversion();
-            //Llenado Manual Combo Cmb_TipoPuesto
-            Cmb_TipoPuesto.Items.Add("1");
-            Cmb_TipoPuesto.Items.Add("2");
-            Cmb_TipoPuesto.Items.Add("3");
-            Cmb_TipoPuesto.Items.Add("4");
-         
-
+            DatosCmb_TipoPuesto();
+            DatosCmb_TipoUsuario();
         }
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
@@ -250,5 +210,68 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
             }
         }
+
+        public void DatosCmb_TipoPuesto()
+        {
+            try
+            {
+
+                string CargaPuestos = "SELECT * FROM TIPO_PUESTO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, conexion.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
+
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Cmb_TipoPuesto.DataSource = Datos;
+                Cmb_TipoPuesto.DisplayMember = "NOMBRE_PUESTO";
+                Cmb_TipoPuesto.ResetText();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void DatosCmb_TipoUsuario()
+        {
+            try
+            {
+
+                string CargaTiposUsuario = "SELECT * FROM TIPO_USUARIO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaTiposUsuario, conexion.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
+
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Cmb_TipoUsuario.DataSource = Datos;
+                Cmb_TipoUsuario.DisplayMember = "NOMBRE_TIPO";
+                Cmb_TipoUsuario.ResetText();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
     }
 }
