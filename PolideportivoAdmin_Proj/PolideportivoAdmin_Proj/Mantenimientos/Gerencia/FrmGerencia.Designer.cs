@@ -564,14 +564,14 @@
             // 
             // Tbc_Gerencia
             // 
-            this.Tbc_Gerencia.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.Tbc_Gerencia.Controls.Add(this.Tbp_ListadoEmpleados);
             this.Tbc_Gerencia.Controls.Add(this.Tbp_Ingreso);
             this.Tbc_Gerencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Gerencia.Location = new System.Drawing.Point(155, 0);
+            this.Tbc_Gerencia.Multiline = true;
             this.Tbc_Gerencia.Name = "Tbc_Gerencia";
             this.Tbc_Gerencia.SelectedIndex = 0;
-            this.Tbc_Gerencia.Size = new System.Drawing.Size(857, 495);
+            this.Tbc_Gerencia.Size = new System.Drawing.Size(914, 495);
             this.Tbc_Gerencia.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.Tbc_Gerencia.TabIndex = 19;
             // 
@@ -586,7 +586,7 @@
             this.Tbp_ListadoEmpleados.Location = new System.Drawing.Point(4, 22);
             this.Tbp_ListadoEmpleados.Name = "Tbp_ListadoEmpleados";
             this.Tbp_ListadoEmpleados.Padding = new System.Windows.Forms.Padding(3);
-            this.Tbp_ListadoEmpleados.Size = new System.Drawing.Size(849, 469);
+            this.Tbp_ListadoEmpleados.Size = new System.Drawing.Size(906, 469);
             this.Tbp_ListadoEmpleados.TabIndex = 0;
             this.Tbp_ListadoEmpleados.Text = "EMPLEADOS";
             this.Tbp_ListadoEmpleados.UseVisualStyleBackColor = true;
@@ -606,7 +606,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1012, 495);
+            this.ClientSize = new System.Drawing.Size(1069, 495);
             this.Controls.Add(this.Tbc_Gerencia);
             this.Controls.Add(this.panel4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
