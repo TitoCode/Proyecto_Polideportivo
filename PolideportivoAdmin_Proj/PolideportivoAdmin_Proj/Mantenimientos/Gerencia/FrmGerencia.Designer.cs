@@ -35,8 +35,9 @@
             this.Txt_Usuario = new System.Windows.Forms.TextBox();
             this.Txt_Password = new System.Windows.Forms.TextBox();
             this.Btn_Ingreso = new System.Windows.Forms.Button();
-            this.Cmb_TipoUsuario = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Lbl_IDTelefono = new System.Windows.Forms.Label();
+            this.Lbl_IDUsuario = new System.Windows.Forms.Label();
             this.Txt_IDEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_IDEmplado = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -71,12 +72,16 @@
             this.Btn_Empleado = new System.Windows.Forms.Button();
             this.Btn_Estadistica = new System.Windows.Forms.Button();
             this.Btn_Reporte = new System.Windows.Forms.Button();
-            this.Lbl_IDUsuario = new System.Windows.Forms.Label();
             this.Btn_Buscar = new System.Windows.Forms.Button();
-            this.Lbl_IDTelefono = new System.Windows.Forms.Label();
+            this.Cmb_TipoUsuario = new System.Windows.Forms.ComboBox();
+            this.Tbc_Gerencia = new System.Windows.Forms.TabControl();
+            this.Tbp_ListadoEmpleados = new System.Windows.Forms.TabPage();
+            this.Tbp_Ingreso = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.Tbc_Gerencia.SuspendLayout();
+            this.Tbp_ListadoEmpleados.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_Usuario
@@ -127,8 +132,8 @@
             // 
             // Btn_Ingreso
             // 
-            this.Btn_Ingreso.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ingreso.Location = new System.Drawing.Point(277, 443);
+            this.Btn_Ingreso.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ingreso.Location = new System.Drawing.Point(12, 406);
             this.Btn_Ingreso.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Ingreso.Name = "Btn_Ingreso";
             this.Btn_Ingreso.Size = new System.Drawing.Size(171, 41);
@@ -137,32 +142,41 @@
             this.Btn_Ingreso.UseVisualStyleBackColor = true;
             this.Btn_Ingreso.Click += new System.EventHandler(this.Btn_Ingreso_Click);
             // 
-            // Cmb_TipoUsuario
-            // 
-            this.Cmb_TipoUsuario.FormattingEnabled = true;
-            this.Cmb_TipoUsuario.Location = new System.Drawing.Point(107, 103);
-            this.Cmb_TipoUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
-            this.Cmb_TipoUsuario.Size = new System.Drawing.Size(154, 21);
-            this.Cmb_TipoUsuario.TabIndex = 7;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Cmb_TipoUsuario);
             this.panel1.Controls.Add(this.Lbl_IDTelefono);
             this.panel1.Controls.Add(this.Lbl_IDUsuario);
             this.panel1.Controls.Add(this.Txt_IDEmpleado);
             this.panel1.Controls.Add(this.Lbl_IDEmplado);
-            this.panel1.Controls.Add(this.Cmb_TipoUsuario);
             this.panel1.Controls.Add(this.Lbl_Usuario);
             this.panel1.Controls.Add(this.Lbl_Password);
             this.panel1.Controls.Add(this.Txt_Password);
             this.panel1.Controls.Add(this.Lbl_TipoUsuario);
             this.panel1.Controls.Add(this.Txt_Usuario);
-            this.panel1.Location = new System.Drawing.Point(176, 106);
+            this.panel1.Location = new System.Drawing.Point(20, 36);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 187);
             this.panel1.TabIndex = 8;
+            // 
+            // Lbl_IDTelefono
+            // 
+            this.Lbl_IDTelefono.AutoSize = true;
+            this.Lbl_IDTelefono.Location = new System.Drawing.Point(81, 9);
+            this.Lbl_IDTelefono.Name = "Lbl_IDTelefono";
+            this.Lbl_IDTelefono.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_IDTelefono.TabIndex = 19;
+            this.Lbl_IDTelefono.Visible = false;
+            // 
+            // Lbl_IDUsuario
+            // 
+            this.Lbl_IDUsuario.AutoSize = true;
+            this.Lbl_IDUsuario.Location = new System.Drawing.Point(40, 6);
+            this.Lbl_IDUsuario.Name = "Lbl_IDUsuario";
+            this.Lbl_IDUsuario.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_IDUsuario.TabIndex = 18;
+            this.Lbl_IDUsuario.Visible = false;
             // 
             // Txt_IDEmpleado
             // 
@@ -208,7 +222,7 @@
             this.panel2.Controls.Add(this.Lbl_Apellido2);
             this.panel2.Controls.Add(this.Lbl_Apellido1);
             this.panel2.Controls.Add(this.Lbl_Nombre2);
-            this.panel2.Location = new System.Drawing.Point(461, 59);
+            this.panel2.Location = new System.Drawing.Point(301, 36);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 277);
@@ -234,6 +248,7 @@
             // 
             // Cmb_TipoPuesto
             // 
+            this.Cmb_TipoPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoPuesto.FormattingEnabled = true;
             this.Cmb_TipoPuesto.Location = new System.Drawing.Point(128, 183);
             this.Cmb_TipoPuesto.Margin = new System.Windows.Forms.Padding(2);
@@ -433,8 +448,8 @@
             // 
             // Btn_Modificar
             // 
-            this.Btn_Modificar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Modificar.Location = new System.Drawing.Point(463, 443);
+            this.Btn_Modificar.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar.Location = new System.Drawing.Point(215, 406);
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar.Name = "Btn_Modificar";
             this.Btn_Modificar.Size = new System.Drawing.Size(182, 41);
@@ -445,8 +460,8 @@
             // 
             // Btn_EliminarEmpleado
             // 
-            this.Btn_EliminarEmpleado.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_EliminarEmpleado.Location = new System.Drawing.Point(664, 443);
+            this.Btn_EliminarEmpleado.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_EliminarEmpleado.Location = new System.Drawing.Point(450, 406);
             this.Btn_EliminarEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_EliminarEmpleado.Name = "Btn_EliminarEmpleado";
             this.Btn_EliminarEmpleado.Size = new System.Drawing.Size(182, 41);
@@ -524,19 +539,12 @@
             this.Btn_Reporte.Text = "REPORTES";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
             // 
-            // Lbl_IDUsuario
-            // 
-            this.Lbl_IDUsuario.AutoSize = true;
-            this.Lbl_IDUsuario.Location = new System.Drawing.Point(40, 6);
-            this.Lbl_IDUsuario.Name = "Lbl_IDUsuario";
-            this.Lbl_IDUsuario.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_IDUsuario.TabIndex = 18;
-            this.Lbl_IDUsuario.Visible = false;
-            // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Buscar.Location = new System.Drawing.Point(461, 398);
+            this.Btn_Buscar.FlatAppearance.BorderSize = 0;
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.Location = new System.Drawing.Point(646, 406);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(182, 41);
@@ -545,28 +553,64 @@
             this.Btn_Buscar.UseVisualStyleBackColor = true;
             this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
             // 
-            // Lbl_IDTelefono
+            // Cmb_TipoUsuario
             // 
-            this.Lbl_IDTelefono.AutoSize = true;
-            this.Lbl_IDTelefono.Location = new System.Drawing.Point(81, 9);
-            this.Lbl_IDTelefono.Name = "Lbl_IDTelefono";
-            this.Lbl_IDTelefono.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_IDTelefono.TabIndex = 19;
-            this.Lbl_IDTelefono.Visible = false;
+            this.Cmb_TipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cmb_TipoUsuario.FormattingEnabled = true;
+            this.Cmb_TipoUsuario.Location = new System.Drawing.Point(107, 102);
+            this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
+            this.Cmb_TipoUsuario.Size = new System.Drawing.Size(154, 21);
+            this.Cmb_TipoUsuario.TabIndex = 20;
+            // 
+            // Tbc_Gerencia
+            // 
+            this.Tbc_Gerencia.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.Tbc_Gerencia.Controls.Add(this.Tbp_ListadoEmpleados);
+            this.Tbc_Gerencia.Controls.Add(this.Tbp_Ingreso);
+            this.Tbc_Gerencia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tbc_Gerencia.Location = new System.Drawing.Point(155, 0);
+            this.Tbc_Gerencia.Name = "Tbc_Gerencia";
+            this.Tbc_Gerencia.SelectedIndex = 0;
+            this.Tbc_Gerencia.Size = new System.Drawing.Size(857, 495);
+            this.Tbc_Gerencia.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.Tbc_Gerencia.TabIndex = 19;
+            // 
+            // Tbp_ListadoEmpleados
+            // 
+            this.Tbp_ListadoEmpleados.Controls.Add(this.panel1);
+            this.Tbp_ListadoEmpleados.Controls.Add(this.Btn_Buscar);
+            this.Tbp_ListadoEmpleados.Controls.Add(this.panel2);
+            this.Tbp_ListadoEmpleados.Controls.Add(this.Btn_EliminarEmpleado);
+            this.Tbp_ListadoEmpleados.Controls.Add(this.Btn_Ingreso);
+            this.Tbp_ListadoEmpleados.Controls.Add(this.Btn_Modificar);
+            this.Tbp_ListadoEmpleados.Location = new System.Drawing.Point(4, 22);
+            this.Tbp_ListadoEmpleados.Name = "Tbp_ListadoEmpleados";
+            this.Tbp_ListadoEmpleados.Padding = new System.Windows.Forms.Padding(3);
+            this.Tbp_ListadoEmpleados.Size = new System.Drawing.Size(849, 469);
+            this.Tbp_ListadoEmpleados.TabIndex = 0;
+            this.Tbp_ListadoEmpleados.Text = "EMPLEADOS";
+            this.Tbp_ListadoEmpleados.UseVisualStyleBackColor = true;
+            // 
+            // Tbp_Ingreso
+            // 
+            this.Tbp_Ingreso.Location = new System.Drawing.Point(4, 22);
+            this.Tbp_Ingreso.Name = "Tbp_Ingreso";
+            this.Tbp_Ingreso.Padding = new System.Windows.Forms.Padding(3);
+            this.Tbp_Ingreso.Size = new System.Drawing.Size(849, 469);
+            this.Tbp_Ingreso.TabIndex = 1;
+            this.Tbp_Ingreso.Text = "INGRESO EMPLEADOS";
+            this.Tbp_Ingreso.UseVisualStyleBackColor = true;
             // 
             // FrmGerencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1012, 495);
-            this.Controls.Add(this.Btn_Buscar);
+            this.Controls.Add(this.Tbc_Gerencia);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.Btn_EliminarEmpleado);
-            this.Controls.Add(this.Btn_Modificar);
-            this.Controls.Add(this.Btn_Ingreso);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmGerencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmGerencia_Load);
@@ -575,6 +619,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.Tbc_Gerencia.ResumeLayout(false);
+            this.Tbp_ListadoEmpleados.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -587,7 +633,6 @@
         private System.Windows.Forms.TextBox Txt_Usuario;
         private System.Windows.Forms.TextBox Txt_Password;
         private System.Windows.Forms.Button Btn_Ingreso;
-        private System.Windows.Forms.ComboBox Cmb_TipoUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Txt_Telefono;
@@ -626,5 +671,9 @@
         private System.Windows.Forms.Label Lbl_IDUsuario;
         private System.Windows.Forms.Button Btn_Buscar;
         private System.Windows.Forms.Label Lbl_IDTelefono;
+        private System.Windows.Forms.ComboBox Cmb_TipoUsuario;
+        private System.Windows.Forms.TabControl Tbc_Gerencia;
+        private System.Windows.Forms.TabPage Tbp_ListadoEmpleados;
+        private System.Windows.Forms.TabPage Tbp_Ingreso;
     }
 }
