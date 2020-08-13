@@ -70,6 +70,12 @@
     <Compile Include="Mantenimientos\Administración\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminEntrenador.designer.cs">
+      <DependentUpon>FrmAdminEntrenador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEntrenador.resx">
+      <DependentUpon>FrmAdminEntrenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEquipo.resx">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
