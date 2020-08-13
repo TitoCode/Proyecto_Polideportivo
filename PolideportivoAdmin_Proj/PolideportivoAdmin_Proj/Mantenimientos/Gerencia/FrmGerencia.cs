@@ -273,5 +273,34 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             }
         }
 
+        private void Cmb_TipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_CerrarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Reporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Estadistica_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Btn_Empleado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

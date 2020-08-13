@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsConexion.cs" />
+    <Compile Include="Jugadores\FrmIngresoJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jugadores\FrmIngresoJugadores.Designer.cs">
+      <DependentUpon>FrmIngresoJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Jugadores\FrmIngresoJugadores.resx">
+      <DependentUpon>FrmIngresoJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminCampeonato.resx">
       <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
     </EmbeddedResource>

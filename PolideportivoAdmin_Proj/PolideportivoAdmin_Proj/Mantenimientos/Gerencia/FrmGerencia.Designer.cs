@@ -36,6 +36,7 @@
             this.Txt_Password = new System.Windows.Forms.TextBox();
             this.Btn_Ingreso = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Cmb_TipoUsuario = new System.Windows.Forms.ComboBox();
             this.Lbl_IDTelefono = new System.Windows.Forms.Label();
             this.Lbl_IDUsuario = new System.Windows.Forms.Label();
             this.Txt_IDEmpleado = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.Btn_Estadistica = new System.Windows.Forms.Button();
             this.Btn_Reporte = new System.Windows.Forms.Button();
             this.Btn_Buscar = new System.Windows.Forms.Button();
-            this.Cmb_TipoUsuario = new System.Windows.Forms.ComboBox();
             this.Tbc_Gerencia = new System.Windows.Forms.TabControl();
             this.Tbp_ListadoEmpleados = new System.Windows.Forms.TabPage();
             this.Tbp_Ingreso = new System.Windows.Forms.TabPage();
@@ -132,7 +132,7 @@
             // 
             // Btn_Ingreso
             // 
-            this.Btn_Ingreso.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ingreso.Location = new System.Drawing.Point(12, 406);
             this.Btn_Ingreso.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Ingreso.Name = "Btn_Ingreso";
@@ -159,6 +159,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 187);
             this.panel1.TabIndex = 8;
+            // 
+            // Cmb_TipoUsuario
+            // 
+            this.Cmb_TipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cmb_TipoUsuario.FormattingEnabled = true;
+            this.Cmb_TipoUsuario.Location = new System.Drawing.Point(107, 102);
+            this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
+            this.Cmb_TipoUsuario.Size = new System.Drawing.Size(154, 21);
+            this.Cmb_TipoUsuario.TabIndex = 20;
+            this.Cmb_TipoUsuario.SelectedIndexChanged += new System.EventHandler(this.Cmb_TipoUsuario_SelectedIndexChanged);
             // 
             // Lbl_IDTelefono
             // 
@@ -448,7 +458,7 @@
             // 
             // Btn_Modificar
             // 
-            this.Btn_Modificar.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar.Location = new System.Drawing.Point(215, 406);
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar.Name = "Btn_Modificar";
@@ -460,7 +470,7 @@
             // 
             // Btn_EliminarEmpleado
             // 
-            this.Btn_EliminarEmpleado.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_EliminarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_EliminarEmpleado.Location = new System.Drawing.Point(450, 406);
             this.Btn_EliminarEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_EliminarEmpleado.Name = "Btn_EliminarEmpleado";
@@ -482,13 +492,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(155, 495);
             this.panel4.TabIndex = 17;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // Btn_CerrarSesion
             // 
             this.Btn_CerrarSesion.FlatAppearance.BorderSize = 0;
             this.Btn_CerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_CerrarSesion.Font = new System.Drawing.Font("Tw Cen MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_CerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_CerrarSesion.Location = new System.Drawing.Point(-6, 465);
             this.Btn_CerrarSesion.Name = "Btn_CerrarSesion";
@@ -496,13 +507,14 @@
             this.Btn_CerrarSesion.TabIndex = 3;
             this.Btn_CerrarSesion.Text = "CERRAR SESIÓN";
             this.Btn_CerrarSesion.UseVisualStyleBackColor = true;
+            this.Btn_CerrarSesion.Click += new System.EventHandler(this.Btn_CerrarSesion_Click);
             // 
             // Btn_Empleado
             // 
             this.Btn_Empleado.FlatAppearance.BorderSize = 0;
             this.Btn_Empleado.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Empleado.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Empleado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Empleado.Location = new System.Drawing.Point(-6, 158);
             this.Btn_Empleado.Name = "Btn_Empleado";
@@ -510,13 +522,14 @@
             this.Btn_Empleado.TabIndex = 2;
             this.Btn_Empleado.Text = "EMPLEADOS";
             this.Btn_Empleado.UseVisualStyleBackColor = true;
+            this.Btn_Empleado.Click += new System.EventHandler(this.Btn_Empleado_Click);
             // 
             // Btn_Estadistica
             // 
             this.Btn_Estadistica.FlatAppearance.BorderSize = 0;
             this.Btn_Estadistica.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Estadistica.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Estadistica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Estadistica.Location = new System.Drawing.Point(-6, 252);
             this.Btn_Estadistica.Name = "Btn_Estadistica";
@@ -524,13 +537,14 @@
             this.Btn_Estadistica.TabIndex = 1;
             this.Btn_Estadistica.Text = "ESTADISTICAS";
             this.Btn_Estadistica.UseVisualStyleBackColor = true;
+            this.Btn_Estadistica.Click += new System.EventHandler(this.Btn_Estadistica_Click);
             // 
             // Btn_Reporte
             // 
             this.Btn_Reporte.FlatAppearance.BorderSize = 0;
             this.Btn_Reporte.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Reporte.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Reporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Reporte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Reporte.Location = new System.Drawing.Point(-6, 205);
             this.Btn_Reporte.Name = "Btn_Reporte";
@@ -538,12 +552,13 @@
             this.Btn_Reporte.TabIndex = 0;
             this.Btn_Reporte.Text = "REPORTES";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
+            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
             // Btn_Buscar
             // 
             this.Btn_Buscar.FlatAppearance.BorderSize = 0;
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Btn_Buscar.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.Location = new System.Drawing.Point(646, 406);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
@@ -552,15 +567,6 @@
             this.Btn_Buscar.Text = "BUSCAR UN EMPLEADO";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
             this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
-            // 
-            // Cmb_TipoUsuario
-            // 
-            this.Cmb_TipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cmb_TipoUsuario.FormattingEnabled = true;
-            this.Cmb_TipoUsuario.Location = new System.Drawing.Point(107, 102);
-            this.Cmb_TipoUsuario.Name = "Cmb_TipoUsuario";
-            this.Cmb_TipoUsuario.Size = new System.Drawing.Size(154, 21);
-            this.Cmb_TipoUsuario.TabIndex = 20;
             // 
             // Tbc_Gerencia
             // 
