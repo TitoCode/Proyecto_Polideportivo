@@ -45,7 +45,7 @@ namespace PolideportivoAdmin_Proj
                         OdbcCommand Login = new OdbcCommand(Consulta, x.conexion());
                         ID_TIPO_USUARIO = Convert.ToInt32(Login.ExecuteScalar());
 
-                        if (ID_TIPO_USUARIO == 3)
+                        if (ID_TIPO_USUARIO == 1)
                         {
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
@@ -56,7 +56,7 @@ namespace PolideportivoAdmin_Proj
                             this.Show();
 
                         }
-                        else if (ID_TIPO_USUARIO == 2)
+                        else if (ID_TIPO_USUARIO == 3)
                         {
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
@@ -67,7 +67,7 @@ namespace PolideportivoAdmin_Proj
                             this.Show();
 
                         }
-                        else if (ID_TIPO_USUARIO == 1)
+                        else if (ID_TIPO_USUARIO == 2)
                         {
                             TxtUsuario.Clear();
                             TxtPassword.Clear();
