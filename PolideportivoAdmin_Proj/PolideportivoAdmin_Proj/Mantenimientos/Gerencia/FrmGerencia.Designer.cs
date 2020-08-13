@@ -119,7 +119,16 @@
             this.Btn_Buscar_Modificar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Tbp_Eliminar = new MetroFramework.Controls.MetroTabPage();
-            this.Lbl_Titulo4 = new System.Windows.Forms.Label();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Btn_Busqueda_Eliminar = new System.Windows.Forms.Button();
+            this.Gpb_Usuario_Eliminar = new System.Windows.Forms.GroupBox();
+            this.Cmb_TipoUsuario_Eliminar = new System.Windows.Forms.ComboBox();
+            this.Lbl_Usuario_Eliminar = new System.Windows.Forms.Label();
+            this.Lbl_Password_Eliminar = new System.Windows.Forms.Label();
+            this.Txt_Usuario_Eliminar = new System.Windows.Forms.TextBox();
+            this.Txt_Password_Eliminar = new System.Windows.Forms.TextBox();
+            this.Lbl_TipoUsuario_Eliminar = new System.Windows.Forms.Label();
+            this.Txt_Busqueda_Eliminar = new System.Windows.Forms.TextBox();
             this.Gpb_Datos_Eliminar = new System.Windows.Forms.GroupBox();
             this.Dtp_FechaContrato_Eliminar = new MetroFramework.Controls.MetroDateTime();
             this.Dtp_FechaNacimiento_Eliminar = new MetroFramework.Controls.MetroDateTime();
@@ -145,16 +154,7 @@
             this.Lbl_Apellido2_Eliminar = new System.Windows.Forms.Label();
             this.Txt_Apellido1_Eliminar = new System.Windows.Forms.TextBox();
             this.Txt_Nombre2_Eliminar = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_Eliminar = new System.Windows.Forms.TextBox();
-            this.Gpb_Usuario_Eliminar = new System.Windows.Forms.GroupBox();
-            this.Cmb_TipoUsuario_Eliminar = new System.Windows.Forms.ComboBox();
-            this.Lbl_Usuario_Eliminar = new System.Windows.Forms.Label();
-            this.Lbl_Password_Eliminar = new System.Windows.Forms.Label();
-            this.Txt_Usuario_Eliminar = new System.Windows.Forms.TextBox();
-            this.Txt_Password_Eliminar = new System.Windows.Forms.TextBox();
-            this.Lbl_TipoUsuario_Eliminar = new System.Windows.Forms.Label();
-            this.Btn_Busqueda_Eliminar = new System.Windows.Forms.Button();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Lbl_Titulo4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.Tbc_Empleados.SuspendLayout();
             this.Tbp_ListadoEmpleado.SuspendLayout();
@@ -166,8 +166,8 @@
             this.Gpb_Usuario_Modificar.SuspendLayout();
             this.Gpb_Datos_Modificar.SuspendLayout();
             this.Tbp_Eliminar.SuspendLayout();
-            this.Gpb_Datos_Eliminar.SuspendLayout();
             this.Gpb_Usuario_Eliminar.SuspendLayout();
+            this.Gpb_Datos_Eliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -204,7 +204,7 @@
             this.Btn_Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Empleado.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Empleado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Empleado.Location = new System.Drawing.Point(-6, 214);
+            this.Btn_Empleado.Location = new System.Drawing.Point(-6, 158);
             this.Btn_Empleado.Name = "Btn_Empleado";
             this.Btn_Empleado.Size = new System.Drawing.Size(161, 41);
             this.Btn_Empleado.TabIndex = 2;
@@ -250,7 +250,7 @@
             this.Tbc_Empleados.Location = new System.Drawing.Point(155, 0);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
-            this.Tbc_Empleados.SelectedIndex = 2;
+            this.Tbc_Empleados.SelectedIndex = 3;
             this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Empleados.TabIndex = 19;
             this.Tbc_Empleados.UseSelectable = true;
@@ -1304,16 +1304,132 @@
             this.Tbp_Eliminar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Eliminar.VerticalScrollbarSize = 10;
             // 
-            // Lbl_Titulo4
+            // Btn_Eliminar
             // 
-            this.Lbl_Titulo4.AutoSize = true;
-            this.Lbl_Titulo4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo4.Location = new System.Drawing.Point(16, 20);
-            this.Lbl_Titulo4.Name = "Lbl_Titulo4";
-            this.Lbl_Titulo4.Size = new System.Drawing.Size(186, 14);
-            this.Lbl_Titulo4.TabIndex = 27;
-            this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
+            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar.Location = new System.Drawing.Point(676, 356);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(136, 41);
+            this.Btn_Eliminar.TabIndex = 33;
+            this.Btn_Eliminar.Text = "ELIMINAR";
+            this.Btn_Eliminar.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Busqueda_Eliminar
+            // 
+            this.Btn_Busqueda_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Busqueda_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Busqueda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Busqueda_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Busqueda_Eliminar.Location = new System.Drawing.Point(687, 10);
+            this.Btn_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Busqueda_Eliminar.Name = "Btn_Busqueda_Eliminar";
+            this.Btn_Busqueda_Eliminar.Size = new System.Drawing.Size(136, 26);
+            this.Btn_Busqueda_Eliminar.TabIndex = 32;
+            this.Btn_Busqueda_Eliminar.Text = "BUSCAR";
+            this.Btn_Busqueda_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Busqueda_Eliminar.Click += new System.EventHandler(this.Btn_Busqueda_Eliminar_Click);
+            // 
+            // Gpb_Usuario_Eliminar
+            // 
+            this.Gpb_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Cmb_TipoUsuario_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Usuario_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Password_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Usuario_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Password_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_TipoUsuario_Eliminar);
+            this.Gpb_Usuario_Eliminar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_Usuario_Eliminar.Location = new System.Drawing.Point(604, 84);
+            this.Gpb_Usuario_Eliminar.Name = "Gpb_Usuario_Eliminar";
+            this.Gpb_Usuario_Eliminar.Size = new System.Drawing.Size(275, 204);
+            this.Gpb_Usuario_Eliminar.TabIndex = 31;
+            this.Gpb_Usuario_Eliminar.TabStop = false;
+            this.Gpb_Usuario_Eliminar.Text = "Datos de Usuario";
+            // 
+            // Cmb_TipoUsuario_Eliminar
+            // 
+            this.Cmb_TipoUsuario_Eliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_TipoUsuario_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cmb_TipoUsuario_Eliminar.FormattingEnabled = true;
+            this.Cmb_TipoUsuario_Eliminar.Location = new System.Drawing.Point(23, 153);
+            this.Cmb_TipoUsuario_Eliminar.Name = "Cmb_TipoUsuario_Eliminar";
+            this.Cmb_TipoUsuario_Eliminar.Size = new System.Drawing.Size(231, 22);
+            this.Cmb_TipoUsuario_Eliminar.TabIndex = 26;
+            // 
+            // Lbl_Usuario_Eliminar
+            // 
+            this.Lbl_Usuario_Eliminar.AutoSize = true;
+            this.Lbl_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Usuario_Eliminar.Enabled = false;
+            this.Lbl_Usuario_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Usuario_Eliminar.Location = new System.Drawing.Point(20, 36);
+            this.Lbl_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Usuario_Eliminar.Name = "Lbl_Usuario_Eliminar";
+            this.Lbl_Usuario_Eliminar.Size = new System.Drawing.Size(54, 14);
+            this.Lbl_Usuario_Eliminar.TabIndex = 21;
+            this.Lbl_Usuario_Eliminar.Text = "USUARIO";
+            // 
+            // Lbl_Password_Eliminar
+            // 
+            this.Lbl_Password_Eliminar.AutoSize = true;
+            this.Lbl_Password_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Password_Eliminar.Enabled = false;
+            this.Lbl_Password_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Password_Eliminar.Location = new System.Drawing.Point(20, 86);
+            this.Lbl_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Password_Eliminar.Name = "Lbl_Password_Eliminar";
+            this.Lbl_Password_Eliminar.Size = new System.Drawing.Size(76, 14);
+            this.Lbl_Password_Eliminar.TabIndex = 22;
+            this.Lbl_Password_Eliminar.Text = "CONTRASEÑA";
+            // 
+            // Txt_Usuario_Eliminar
+            // 
+            this.Txt_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Usuario_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Usuario_Eliminar.Enabled = false;
+            this.Txt_Usuario_Eliminar.Location = new System.Drawing.Point(23, 52);
+            this.Txt_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Usuario_Eliminar.Name = "Txt_Usuario_Eliminar";
+            this.Txt_Usuario_Eliminar.Size = new System.Drawing.Size(231, 15);
+            this.Txt_Usuario_Eliminar.TabIndex = 24;
+            // 
+            // Txt_Password_Eliminar
+            // 
+            this.Txt_Password_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Password_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Password_Eliminar.Enabled = false;
+            this.Txt_Password_Eliminar.Location = new System.Drawing.Point(23, 102);
+            this.Txt_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Password_Eliminar.Name = "Txt_Password_Eliminar";
+            this.Txt_Password_Eliminar.Size = new System.Drawing.Size(231, 15);
+            this.Txt_Password_Eliminar.TabIndex = 25;
+            // 
+            // Lbl_TipoUsuario_Eliminar
+            // 
+            this.Lbl_TipoUsuario_Eliminar.AutoSize = true;
+            this.Lbl_TipoUsuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_TipoUsuario_Eliminar.Enabled = false;
+            this.Lbl_TipoUsuario_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TipoUsuario_Eliminar.Location = new System.Drawing.Point(20, 136);
+            this.Lbl_TipoUsuario_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_TipoUsuario_Eliminar.Name = "Lbl_TipoUsuario_Eliminar";
+            this.Lbl_TipoUsuario_Eliminar.Size = new System.Drawing.Size(97, 14);
+            this.Lbl_TipoUsuario_Eliminar.TabIndex = 23;
+            this.Lbl_TipoUsuario_Eliminar.Text = "TIPO DE USUARIO";
+            // 
+            // Txt_Busqueda_Eliminar
+            // 
+            this.Txt_Busqueda_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Busqueda_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Busqueda_Eliminar.Location = new System.Drawing.Point(255, 20);
+            this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
+            this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(313, 13);
+            this.Txt_Busqueda_Eliminar.TabIndex = 30;
             // 
             // Gpb_Datos_Eliminar
             // 
@@ -1642,132 +1758,16 @@
             this.Txt_Nombre2_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre2_Eliminar.TabIndex = 29;
             // 
-            // Txt_Busqueda_Eliminar
+            // Lbl_Titulo4
             // 
-            this.Txt_Busqueda_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Busqueda_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Busqueda_Eliminar.Location = new System.Drawing.Point(255, 20);
-            this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
-            this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(313, 13);
-            this.Txt_Busqueda_Eliminar.TabIndex = 30;
-            // 
-            // Gpb_Usuario_Eliminar
-            // 
-            this.Gpb_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Cmb_TipoUsuario_Eliminar);
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Usuario_Eliminar);
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Password_Eliminar);
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Usuario_Eliminar);
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Password_Eliminar);
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_TipoUsuario_Eliminar);
-            this.Gpb_Usuario_Eliminar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_Usuario_Eliminar.Location = new System.Drawing.Point(604, 84);
-            this.Gpb_Usuario_Eliminar.Name = "Gpb_Usuario_Eliminar";
-            this.Gpb_Usuario_Eliminar.Size = new System.Drawing.Size(275, 204);
-            this.Gpb_Usuario_Eliminar.TabIndex = 31;
-            this.Gpb_Usuario_Eliminar.TabStop = false;
-            this.Gpb_Usuario_Eliminar.Text = "Datos de Usuario";
-            // 
-            // Cmb_TipoUsuario_Eliminar
-            // 
-            this.Cmb_TipoUsuario_Eliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmb_TipoUsuario_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cmb_TipoUsuario_Eliminar.FormattingEnabled = true;
-            this.Cmb_TipoUsuario_Eliminar.Location = new System.Drawing.Point(23, 153);
-            this.Cmb_TipoUsuario_Eliminar.Name = "Cmb_TipoUsuario_Eliminar";
-            this.Cmb_TipoUsuario_Eliminar.Size = new System.Drawing.Size(231, 22);
-            this.Cmb_TipoUsuario_Eliminar.TabIndex = 26;
-            // 
-            // Lbl_Usuario_Eliminar
-            // 
-            this.Lbl_Usuario_Eliminar.AutoSize = true;
-            this.Lbl_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Usuario_Eliminar.Enabled = false;
-            this.Lbl_Usuario_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Usuario_Eliminar.Location = new System.Drawing.Point(20, 36);
-            this.Lbl_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Usuario_Eliminar.Name = "Lbl_Usuario_Eliminar";
-            this.Lbl_Usuario_Eliminar.Size = new System.Drawing.Size(54, 14);
-            this.Lbl_Usuario_Eliminar.TabIndex = 21;
-            this.Lbl_Usuario_Eliminar.Text = "USUARIO";
-            // 
-            // Lbl_Password_Eliminar
-            // 
-            this.Lbl_Password_Eliminar.AutoSize = true;
-            this.Lbl_Password_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Password_Eliminar.Enabled = false;
-            this.Lbl_Password_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Password_Eliminar.Location = new System.Drawing.Point(20, 86);
-            this.Lbl_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Password_Eliminar.Name = "Lbl_Password_Eliminar";
-            this.Lbl_Password_Eliminar.Size = new System.Drawing.Size(76, 14);
-            this.Lbl_Password_Eliminar.TabIndex = 22;
-            this.Lbl_Password_Eliminar.Text = "CONTRASEÑA";
-            // 
-            // Txt_Usuario_Eliminar
-            // 
-            this.Txt_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Usuario_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Usuario_Eliminar.Enabled = false;
-            this.Txt_Usuario_Eliminar.Location = new System.Drawing.Point(23, 52);
-            this.Txt_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Usuario_Eliminar.Name = "Txt_Usuario_Eliminar";
-            this.Txt_Usuario_Eliminar.Size = new System.Drawing.Size(231, 15);
-            this.Txt_Usuario_Eliminar.TabIndex = 24;
-            // 
-            // Txt_Password_Eliminar
-            // 
-            this.Txt_Password_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Password_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Password_Eliminar.Enabled = false;
-            this.Txt_Password_Eliminar.Location = new System.Drawing.Point(23, 102);
-            this.Txt_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Password_Eliminar.Name = "Txt_Password_Eliminar";
-            this.Txt_Password_Eliminar.Size = new System.Drawing.Size(231, 15);
-            this.Txt_Password_Eliminar.TabIndex = 25;
-            // 
-            // Lbl_TipoUsuario_Eliminar
-            // 
-            this.Lbl_TipoUsuario_Eliminar.AutoSize = true;
-            this.Lbl_TipoUsuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_TipoUsuario_Eliminar.Enabled = false;
-            this.Lbl_TipoUsuario_Eliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TipoUsuario_Eliminar.Location = new System.Drawing.Point(20, 136);
-            this.Lbl_TipoUsuario_Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_TipoUsuario_Eliminar.Name = "Lbl_TipoUsuario_Eliminar";
-            this.Lbl_TipoUsuario_Eliminar.Size = new System.Drawing.Size(97, 14);
-            this.Lbl_TipoUsuario_Eliminar.TabIndex = 23;
-            this.Lbl_TipoUsuario_Eliminar.Text = "TIPO DE USUARIO";
-            // 
-            // Btn_Busqueda_Eliminar
-            // 
-            this.Btn_Busqueda_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Busqueda_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Busqueda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Busqueda_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Busqueda_Eliminar.Location = new System.Drawing.Point(687, 10);
-            this.Btn_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Busqueda_Eliminar.Name = "Btn_Busqueda_Eliminar";
-            this.Btn_Busqueda_Eliminar.Size = new System.Drawing.Size(136, 26);
-            this.Btn_Busqueda_Eliminar.TabIndex = 32;
-            this.Btn_Busqueda_Eliminar.Text = "BUSCAR";
-            this.Btn_Busqueda_Eliminar.UseVisualStyleBackColor = false;
-            this.Btn_Busqueda_Eliminar.Click += new System.EventHandler(this.Btn_Busqueda_Eliminar_Click);
-            // 
-            // Btn_Eliminar
-            // 
-            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Eliminar.Location = new System.Drawing.Point(676, 356);
-            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(136, 41);
-            this.Btn_Eliminar.TabIndex = 33;
-            this.Btn_Eliminar.Text = "ELIMINAR";
-            this.Btn_Eliminar.UseVisualStyleBackColor = false;
+            this.Lbl_Titulo4.AutoSize = true;
+            this.Lbl_Titulo4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo4.Location = new System.Drawing.Point(16, 20);
+            this.Lbl_Titulo4.Name = "Lbl_Titulo4";
+            this.Lbl_Titulo4.Size = new System.Drawing.Size(186, 14);
+            this.Lbl_Titulo4.TabIndex = 27;
+            this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
             // 
             // FrmGerencia
             // 
@@ -1800,10 +1800,10 @@
             this.Gpb_Datos_Modificar.PerformLayout();
             this.Tbp_Eliminar.ResumeLayout(false);
             this.Tbp_Eliminar.PerformLayout();
-            this.Gpb_Datos_Eliminar.ResumeLayout(false);
-            this.Gpb_Datos_Eliminar.PerformLayout();
             this.Gpb_Usuario_Eliminar.ResumeLayout(false);
             this.Gpb_Usuario_Eliminar.PerformLayout();
+            this.Gpb_Datos_Eliminar.ResumeLayout(false);
+            this.Gpb_Datos_Eliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
