@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConexion.cs" />
+    <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
+    <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
+    <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +69,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminEntrenador.designer.cs">
+      <DependentUpon>FrmAdminEntrenador.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.cs">
       <SubType>Form</SubType>
@@ -97,6 +114,9 @@
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEntrenador.resx">
+      <DependentUpon>FrmAdminEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEquipo.resx">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,7 +155,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Clases\ClsUsuario\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\Botones\seguridad.png" />
     <Content Include="Imagenes\Botones\usuario.png" />

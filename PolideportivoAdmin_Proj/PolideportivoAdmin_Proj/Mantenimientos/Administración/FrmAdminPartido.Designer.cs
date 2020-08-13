@@ -28,60 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Tbc_Partido = new System.Windows.Forms.TabControl();
-            this.Tbp_Partido_Menu = new System.Windows.Forms.TabPage();
-            this.Tbp_Partido_Creación = new System.Windows.Forms.TabPage();
-            this.Gpb_Crear_Partido = new System.Windows.Forms.GroupBox();
-            this.Cmb_Crear_Deporte = new System.Windows.Forms.ComboBox();
-            this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
-            this.Lbl_Crear_Cantidad_Equipos = new System.Windows.Forms.Label();
-            this.Lbl_Crear_Nombre_Equipo = new System.Windows.Forms.Label();
-            this.Btn_Ingresar_Equipo = new System.Windows.Forms.Button();
-            this.Cmb_Crear_Entrenador = new System.Windows.Forms.ComboBox();
+            this.TCtrl_Partido = new System.Windows.Forms.TabControl();
+            this.TP_Partido_Menu = new System.Windows.Forms.TabPage();
+            this.TP_Partido_Creación = new System.Windows.Forms.TabPage();
+            this.TP_Partido_Editar = new System.Windows.Forms.TabPage();
+            this.TP_Partido_Eliminar = new System.Windows.Forms.TabPage();
             this.Txt_Crear_Nombre_Equipo = new System.Windows.Forms.TextBox();
-            this.Tbp_Partido_Editar = new System.Windows.Forms.TabPage();
-            this.Tbp_Partido_Eliminar = new System.Windows.Forms.TabPage();
-            this.Tbc_Partido.SuspendLayout();
-            this.Tbp_Partido_Creación.SuspendLayout();
+            this.Cmb_Crear_Entrenador = new System.Windows.Forms.ComboBox();
+            this.Btn_Ingresar_Equipo = new System.Windows.Forms.Button();
+            this.Lbl_Crear_Nombre_Equipo = new System.Windows.Forms.Label();
+            this.Lbl_Crear_Cantidad_Equipos = new System.Windows.Forms.Label();
+            this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
+            this.Cmb_Crear_Deporte = new System.Windows.Forms.ComboBox();
+            this.Gpb_Crear_Partido = new System.Windows.Forms.GroupBox();
+            this.TCtrl_Partido.SuspendLayout();
+            this.TP_Partido_Creación.SuspendLayout();
             this.Gpb_Crear_Partido.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Tbc_Partido
+            // TCtrl_Partido
             // 
-            this.Tbc_Partido.Controls.Add(this.Tbp_Partido_Menu);
-            this.Tbc_Partido.Controls.Add(this.Tbp_Partido_Creación);
-            this.Tbc_Partido.Controls.Add(this.Tbp_Partido_Editar);
-            this.Tbc_Partido.Controls.Add(this.Tbp_Partido_Eliminar);
-            this.Tbc_Partido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tbc_Partido.Location = new System.Drawing.Point(0, 0);
-            this.Tbc_Partido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbc_Partido.Name = "Tbc_Partido";
-            this.Tbc_Partido.SelectedIndex = 0;
-            this.Tbc_Partido.Size = new System.Drawing.Size(1067, 554);
-            this.Tbc_Partido.TabIndex = 2;
+            this.TCtrl_Partido.Controls.Add(this.TP_Partido_Menu);
+            this.TCtrl_Partido.Controls.Add(this.TP_Partido_Creación);
+            this.TCtrl_Partido.Controls.Add(this.TP_Partido_Editar);
+            this.TCtrl_Partido.Controls.Add(this.TP_Partido_Eliminar);
+            this.TCtrl_Partido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TCtrl_Partido.Location = new System.Drawing.Point(0, 0);
+            this.TCtrl_Partido.Name = "TCtrl_Partido";
+            this.TCtrl_Partido.SelectedIndex = 0;
+            this.TCtrl_Partido.Size = new System.Drawing.Size(800, 450);
+            this.TCtrl_Partido.TabIndex = 2;
             // 
-            // Tbp_Partido_Menu
+            // TP_Partido_Menu
             // 
-            this.Tbp_Partido_Menu.Location = new System.Drawing.Point(4, 25);
-            this.Tbp_Partido_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Menu.Name = "Tbp_Partido_Menu";
-            this.Tbp_Partido_Menu.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Menu.Size = new System.Drawing.Size(1059, 525);
-            this.Tbp_Partido_Menu.TabIndex = 3;
-            this.Tbp_Partido_Menu.Text = "Menu";
-            this.Tbp_Partido_Menu.UseVisualStyleBackColor = true;
+            this.TP_Partido_Menu.Location = new System.Drawing.Point(4, 22);
+            this.TP_Partido_Menu.Name = "TP_Partido_Menu";
+            this.TP_Partido_Menu.Padding = new System.Windows.Forms.Padding(3);
+            this.TP_Partido_Menu.Size = new System.Drawing.Size(792, 424);
+            this.TP_Partido_Menu.TabIndex = 3;
+            this.TP_Partido_Menu.Text = "Menu";
+            this.TP_Partido_Menu.UseVisualStyleBackColor = true;
             // 
-            // Tbp_Partido_Creación
+            // TP_Partido_Creación
             // 
-            this.Tbp_Partido_Creación.Controls.Add(this.Gpb_Crear_Partido);
-            this.Tbp_Partido_Creación.Location = new System.Drawing.Point(4, 25);
-            this.Tbp_Partido_Creación.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Creación.Name = "Tbp_Partido_Creación";
-            this.Tbp_Partido_Creación.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Creación.Size = new System.Drawing.Size(1059, 525);
-            this.Tbp_Partido_Creación.TabIndex = 0;
-            this.Tbp_Partido_Creación.Text = "Crear Partido";
-            this.Tbp_Partido_Creación.UseVisualStyleBackColor = true;
+            this.TP_Partido_Creación.Controls.Add(this.Gpb_Crear_Partido);
+            this.TP_Partido_Creación.Location = new System.Drawing.Point(4, 22);
+            this.TP_Partido_Creación.Name = "TP_Partido_Creación";
+            this.TP_Partido_Creación.Padding = new System.Windows.Forms.Padding(3);
+            this.TP_Partido_Creación.Size = new System.Drawing.Size(792, 424);
+            this.TP_Partido_Creación.TabIndex = 0;
+            this.TP_Partido_Creación.Text = "Crear Partido";
+            this.TP_Partido_Creación.UseVisualStyleBackColor = true;
+            // 
+            // TP_Partido_Editar
+            // 
+            this.TP_Partido_Editar.Location = new System.Drawing.Point(4, 22);
+            this.TP_Partido_Editar.Name = "TP_Partido_Editar";
+            this.TP_Partido_Editar.Padding = new System.Windows.Forms.Padding(3);
+            this.TP_Partido_Editar.Size = new System.Drawing.Size(792, 424);
+            this.TP_Partido_Editar.TabIndex = 1;
+            this.TP_Partido_Editar.Text = "Editar Partido";
+            this.TP_Partido_Editar.UseVisualStyleBackColor = true;
+            // 
+            // TP_Partido_Eliminar
+            // 
+            this.TP_Partido_Eliminar.Location = new System.Drawing.Point(4, 22);
+            this.TP_Partido_Eliminar.Name = "TP_Partido_Eliminar";
+            this.TP_Partido_Eliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.TP_Partido_Eliminar.Size = new System.Drawing.Size(792, 424);
+            this.TP_Partido_Eliminar.TabIndex = 2;
+            this.TP_Partido_Eliminar.Text = "Eliminar Partido";
+            this.TP_Partido_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // Txt_Crear_Nombre_Equipo
+            // 
+            this.Txt_Crear_Nombre_Equipo.Location = new System.Drawing.Point(164, 48);
+            this.Txt_Crear_Nombre_Equipo.Name = "Txt_Crear_Nombre_Equipo";
+            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(121, 20);
+            this.Txt_Crear_Nombre_Equipo.TabIndex = 4;
+            // 
+            // Cmb_Crear_Entrenador
+            // 
+            this.Cmb_Crear_Entrenador.FormattingEnabled = true;
+            this.Cmb_Crear_Entrenador.Location = new System.Drawing.Point(164, 81);
+            this.Cmb_Crear_Entrenador.Name = "Cmb_Crear_Entrenador";
+            this.Cmb_Crear_Entrenador.Size = new System.Drawing.Size(121, 21);
+            this.Cmb_Crear_Entrenador.TabIndex = 7;
+            // 
+            // Btn_Ingresar_Equipo
+            // 
+            this.Btn_Ingresar_Equipo.Location = new System.Drawing.Point(185, 341);
+            this.Btn_Ingresar_Equipo.Name = "Btn_Ingresar_Equipo";
+            this.Btn_Ingresar_Equipo.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Ingresar_Equipo.TabIndex = 8;
+            this.Btn_Ingresar_Equipo.Text = "Ingresar";
+            this.Btn_Ingresar_Equipo.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Crear_Nombre_Equipo
+            // 
+            this.Lbl_Crear_Nombre_Equipo.AutoSize = true;
+            this.Lbl_Crear_Nombre_Equipo.Location = new System.Drawing.Point(16, 54);
+            this.Lbl_Crear_Nombre_Equipo.Name = "Lbl_Crear_Nombre_Equipo";
+            this.Lbl_Crear_Nombre_Equipo.Size = new System.Drawing.Size(83, 13);
+            this.Lbl_Crear_Nombre_Equipo.TabIndex = 9;
+            this.Lbl_Crear_Nombre_Equipo.Text = "Nombre Equipo:";
+            // 
+            // Lbl_Crear_Cantidad_Equipos
+            // 
+            this.Lbl_Crear_Cantidad_Equipos.AutoSize = true;
+            this.Lbl_Crear_Cantidad_Equipos.Location = new System.Drawing.Point(16, 89);
+            this.Lbl_Crear_Cantidad_Equipos.Name = "Lbl_Crear_Cantidad_Equipos";
+            this.Lbl_Crear_Cantidad_Equipos.Size = new System.Drawing.Size(62, 13);
+            this.Lbl_Crear_Cantidad_Equipos.TabIndex = 10;
+            this.Lbl_Crear_Cantidad_Equipos.Text = "Entrenador:";
+            // 
+            // Lbl_Crear_Tipo_Deporte
+            // 
+            this.Lbl_Crear_Tipo_Deporte.AutoSize = true;
+            this.Lbl_Crear_Tipo_Deporte.Location = new System.Drawing.Point(16, 125);
+            this.Lbl_Crear_Tipo_Deporte.Name = "Lbl_Crear_Tipo_Deporte";
+            this.Lbl_Crear_Tipo_Deporte.Size = new System.Drawing.Size(48, 13);
+            this.Lbl_Crear_Tipo_Deporte.TabIndex = 12;
+            this.Lbl_Crear_Tipo_Deporte.Text = "Deporte:";
+            // 
+            // Cmb_Crear_Deporte
+            // 
+            this.Cmb_Crear_Deporte.FormattingEnabled = true;
+            this.Cmb_Crear_Deporte.Location = new System.Drawing.Point(164, 117);
+            this.Cmb_Crear_Deporte.Name = "Cmb_Crear_Deporte";
+            this.Cmb_Crear_Deporte.Size = new System.Drawing.Size(121, 21);
+            this.Cmb_Crear_Deporte.TabIndex = 13;
             // 
             // Gpb_Crear_Partido
             // 
@@ -93,113 +169,22 @@
             this.Gpb_Crear_Partido.Controls.Add(this.Cmb_Crear_Entrenador);
             this.Gpb_Crear_Partido.Controls.Add(this.Txt_Crear_Nombre_Equipo);
             this.Gpb_Crear_Partido.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Gpb_Crear_Partido.Location = new System.Drawing.Point(4, 4);
-            this.Gpb_Crear_Partido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Crear_Partido.Location = new System.Drawing.Point(3, 3);
             this.Gpb_Crear_Partido.Name = "Gpb_Crear_Partido";
-            this.Gpb_Crear_Partido.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Gpb_Crear_Partido.Size = new System.Drawing.Size(508, 517);
+            this.Gpb_Crear_Partido.Size = new System.Drawing.Size(381, 418);
             this.Gpb_Crear_Partido.TabIndex = 4;
             this.Gpb_Crear_Partido.TabStop = false;
             this.Gpb_Crear_Partido.Text = "Creacion de Partido";
             // 
-            // Cmb_Crear_Deporte
-            // 
-            this.Cmb_Crear_Deporte.FormattingEnabled = true;
-            this.Cmb_Crear_Deporte.Location = new System.Drawing.Point(219, 144);
-            this.Cmb_Crear_Deporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmb_Crear_Deporte.Name = "Cmb_Crear_Deporte";
-            this.Cmb_Crear_Deporte.Size = new System.Drawing.Size(160, 24);
-            this.Cmb_Crear_Deporte.TabIndex = 13;
-            // 
-            // Lbl_Crear_Tipo_Deporte
-            // 
-            this.Lbl_Crear_Tipo_Deporte.AutoSize = true;
-            this.Lbl_Crear_Tipo_Deporte.Location = new System.Drawing.Point(21, 154);
-            this.Lbl_Crear_Tipo_Deporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Crear_Tipo_Deporte.Name = "Lbl_Crear_Tipo_Deporte";
-            this.Lbl_Crear_Tipo_Deporte.Size = new System.Drawing.Size(63, 17);
-            this.Lbl_Crear_Tipo_Deporte.TabIndex = 12;
-            this.Lbl_Crear_Tipo_Deporte.Text = "Deporte:";
-            // 
-            // Lbl_Crear_Cantidad_Equipos
-            // 
-            this.Lbl_Crear_Cantidad_Equipos.AutoSize = true;
-            this.Lbl_Crear_Cantidad_Equipos.Location = new System.Drawing.Point(21, 110);
-            this.Lbl_Crear_Cantidad_Equipos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Crear_Cantidad_Equipos.Name = "Lbl_Crear_Cantidad_Equipos";
-            this.Lbl_Crear_Cantidad_Equipos.Size = new System.Drawing.Size(83, 17);
-            this.Lbl_Crear_Cantidad_Equipos.TabIndex = 10;
-            this.Lbl_Crear_Cantidad_Equipos.Text = "Entrenador:";
-            // 
-            // Lbl_Crear_Nombre_Equipo
-            // 
-            this.Lbl_Crear_Nombre_Equipo.AutoSize = true;
-            this.Lbl_Crear_Nombre_Equipo.Location = new System.Drawing.Point(21, 66);
-            this.Lbl_Crear_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Crear_Nombre_Equipo.Name = "Lbl_Crear_Nombre_Equipo";
-            this.Lbl_Crear_Nombre_Equipo.Size = new System.Drawing.Size(110, 17);
-            this.Lbl_Crear_Nombre_Equipo.TabIndex = 9;
-            this.Lbl_Crear_Nombre_Equipo.Text = "Nombre Equipo:";
-            // 
-            // Btn_Ingresar_Equipo
-            // 
-            this.Btn_Ingresar_Equipo.Location = new System.Drawing.Point(247, 420);
-            this.Btn_Ingresar_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Ingresar_Equipo.Name = "Btn_Ingresar_Equipo";
-            this.Btn_Ingresar_Equipo.Size = new System.Drawing.Size(100, 28);
-            this.Btn_Ingresar_Equipo.TabIndex = 8;
-            this.Btn_Ingresar_Equipo.Text = "Ingresar";
-            this.Btn_Ingresar_Equipo.UseVisualStyleBackColor = true;
-            // 
-            // Cmb_Crear_Entrenador
-            // 
-            this.Cmb_Crear_Entrenador.FormattingEnabled = true;
-            this.Cmb_Crear_Entrenador.Location = new System.Drawing.Point(219, 100);
-            this.Cmb_Crear_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmb_Crear_Entrenador.Name = "Cmb_Crear_Entrenador";
-            this.Cmb_Crear_Entrenador.Size = new System.Drawing.Size(160, 24);
-            this.Cmb_Crear_Entrenador.TabIndex = 7;
-            // 
-            // Txt_Crear_Nombre_Equipo
-            // 
-            this.Txt_Crear_Nombre_Equipo.Location = new System.Drawing.Point(219, 59);
-            this.Txt_Crear_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Crear_Nombre_Equipo.Name = "Txt_Crear_Nombre_Equipo";
-            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(160, 22);
-            this.Txt_Crear_Nombre_Equipo.TabIndex = 4;
-            // 
-            // Tbp_Partido_Editar
-            // 
-            this.Tbp_Partido_Editar.Location = new System.Drawing.Point(4, 25);
-            this.Tbp_Partido_Editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Editar.Name = "Tbp_Partido_Editar";
-            this.Tbp_Partido_Editar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Editar.Size = new System.Drawing.Size(1059, 525);
-            this.Tbp_Partido_Editar.TabIndex = 1;
-            this.Tbp_Partido_Editar.Text = "Editar Partido";
-            this.Tbp_Partido_Editar.UseVisualStyleBackColor = true;
-            // 
-            // Tbp_Partido_Eliminar
-            // 
-            this.Tbp_Partido_Eliminar.Location = new System.Drawing.Point(4, 25);
-            this.Tbp_Partido_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Eliminar.Name = "Tbp_Partido_Eliminar";
-            this.Tbp_Partido_Eliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Tbp_Partido_Eliminar.Size = new System.Drawing.Size(1059, 525);
-            this.Tbp_Partido_Eliminar.TabIndex = 2;
-            this.Tbp_Partido_Eliminar.Text = "Eliminar Partido";
-            this.Tbp_Partido_Eliminar.UseVisualStyleBackColor = true;
-            // 
             // FrmAdminPartido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.Tbc_Partido);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TCtrl_Partido);
             this.Name = "FrmAdminPartido";
-            this.Tbc_Partido.ResumeLayout(false);
-            this.Tbp_Partido_Creación.ResumeLayout(false);
+            this.TCtrl_Partido.ResumeLayout(false);
+            this.TP_Partido_Creación.ResumeLayout(false);
             this.Gpb_Crear_Partido.ResumeLayout(false);
             this.Gpb_Crear_Partido.PerformLayout();
             this.ResumeLayout(false);
@@ -208,11 +193,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl Tbc_Partido;
-        private System.Windows.Forms.TabPage Tbp_Partido_Menu;
-        private System.Windows.Forms.TabPage Tbp_Partido_Creación;
-        private System.Windows.Forms.TabPage Tbp_Partido_Editar;
-        private System.Windows.Forms.TabPage Tbp_Partido_Eliminar;
+        private System.Windows.Forms.TabControl TCtrl_Partido;
+        private System.Windows.Forms.TabPage TP_Partido_Menu;
+        private System.Windows.Forms.TabPage TP_Partido_Creación;
+        private System.Windows.Forms.TabPage TP_Partido_Editar;
+        private System.Windows.Forms.TabPage TP_Partido_Eliminar;
         private System.Windows.Forms.GroupBox Gpb_Crear_Partido;
         private System.Windows.Forms.ComboBox Cmb_Crear_Deporte;
         private System.Windows.Forms.Label Lbl_Crear_Tipo_Deporte;

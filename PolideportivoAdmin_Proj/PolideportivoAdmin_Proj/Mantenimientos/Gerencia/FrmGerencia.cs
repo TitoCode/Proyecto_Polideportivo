@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -16,82 +17,38 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         public FrmGerencia()
         {
             InitializeComponent();
+            
         }
+
         ClsConexion conexion = new ClsConexion();
-
-        public void Conversion()
-        {
-           
-            try
-            {
-                
-                string ObtenerCombo = "Select ID_TIPO_PUESTO, NOMBRE_PUESTO FROM TIPO_PUESTO";
-                DataTable llenado = new DataTable();
-                OdbcCommand Query_Validacion = new OdbcCommand(ObtenerCombo, conexion.conexion());
-                OdbcDataReader Lector = Query_Validacion.ExecuteReader();
-                
-                Cmb_TipoUsuario.DisplayMember = "NOMBRE_PUESTO";
-                Cmb_TipoUsuario.ValueMember = "ID_TIPO_PUESTO";
-                Cmb_TipoUsuario.SelectedValue = Lector;
-             
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }//fin del try
-
-
-        }
+        ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
+        ClsGerencia Empleado = new ClsGerencia();
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
-           //Llenado Manual Combo Cmb_TipoUsuario
-           Cmb_TipoUsuario.Items.Add("3");
-           Cmb_TipoUsuario.Items.Add("2");
-           Cmb_TipoUsuario.Items.Add("1");
-            //Conversion();
-            //Llenado Manual Combo Cmb_TipoPuesto
-            Cmb_TipoPuesto.Items.Add("1");
-            Cmb_TipoPuesto.Items.Add("2");
-            Cmb_TipoPuesto.Items.Add("3");
-            Cmb_TipoPuesto.Items.Add("4");
-         
-
+            DatosCmb_TipoPuestoIngreso();
+            DatosCmb_TipoPuestoModificar();
+            DatosCmb_TipoUsuarioIngreso();
+            DatosCmb_TipoUsuarioModificar();
         }
 
-        private void Btn_Ingreso_Click(object sender, EventArgs e)
+        public void DatosCmb_TipoPuestoIngreso()
         {
             try
             {
 
-                string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Txt_Usuario.Text + "','" + Txt_Password.Text + "'," + Cmb_TipoUsuario.Text + ")";
-                string InsertarEmpleado = "INSERT INTO EMPLEADO (NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO) VALUES ('" + Txt_Nombre1.Text + "','" + Txt_Nombre2.Text + "','" + Txt_Apellido1.Text +
-                "','" + Txt_Apellido2.Text + "','" + Txt_Email.Text + "','" + Cmb_TipoPuesto.Text + "','" + Txt_Direccion.Text + "','" + Txt_FechaNacimiento.Text + "','" + Txt_NIT.Text + "','" + Txt_DPI.Text + "','" + Txt_Usuario.Text + "','" + Txt_FechaContrato.Text + "')";
+                string CargaPuestos = "SELECT * FROM TIPO_PUESTO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, conexion.conexion());
 
-                OdbcCommand Query_Validacion1 = new OdbcCommand(InsertarUsuario, conexion.conexion());
-                OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
-                OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
-                OdbcDataReader Ejecucion2 = Query_Validacion2.ExecuteReader();
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
 
-                string ID_Empleado;
-                string BusquedaID = "SELECT MAX(ID_EMPLEADO) FROM EMPLEADO ORDER BY ID_EMPLEADO DESC";
-                OdbcCommand Query_Validacion3 = new OdbcCommand(BusquedaID, conexion.conexion());
-                ID_Empleado = Convert.ToString(Query_Validacion3.ExecuteScalar());
-                OdbcDataReader Ejecucion3 = Query_Validacion3.ExecuteReader();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
 
-                string InsertarTelefono = "INSERT INTO TELEFONO (TELEFONO, ID_EMPLEADO_FK) VALUES ('" + Txt_Telefono.Text + "'," + ID_Empleado + ")";
-                OdbcCommand Query_Validacion4 = new OdbcCommand(InsertarTelefono, conexion.conexion());
-                OdbcDataReader Ejecucion4 = Query_Validacion4.ExecuteReader();
-
-                MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Cmb_TipoPuesto_Ingreso.DataSource = Datos;
+                Cmb_TipoPuesto_Ingreso.DisplayMember = "NOMBRE_PUESTO";
+                Cmb_TipoPuesto_Ingreso.ResetText();
 
             }
             catch (Exception ex)
@@ -103,152 +60,167 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }//fin del try
+            }
         }
 
-        private void Btn_EliminarEmpleado_Click(object sender, EventArgs e)
+        public void DatosCmb_TipoPuestoModificar()
         {
-
-            if(MessageBox.Show("¿Seguro que quiere borrar este empleado?", "FORMULARIO EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
+            try
             {
-                Btn_EliminarEmpleado.Focus();
+
+                string CargaPuestos = "SELECT * FROM TIPO_PUESTO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, conexion.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
+
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Cmb_TipoPuesto_Modificar.DataSource = Datos;
+                Cmb_TipoPuesto_Modificar.DisplayMember = "NOMBRE_PUESTO";
+                Cmb_TipoPuesto_Modificar.ResetText();
+
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
 
-                    string EliminarTelefono = "DELETE FROM TELEFONO WHERE ID_TELEFONO ='" + Lbl_IDTelefono.Text + "'";
-                    string EliminarEmpleado = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO=" + Txt_IDEmpleado.Text;
-                    string EliminarUsuario = "DELETE FROM USUARIO WHERE ID_USUARIO='" + Lbl_IDUsuario.Text + "'";
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    OdbcCommand Query_DELETE1 = new OdbcCommand(EliminarTelefono, conexion.conexion());
-                    OdbcCommand Query_DELETE2 = new OdbcCommand(EliminarEmpleado, conexion.conexion());
-                    OdbcCommand Query_DELETE3 = new OdbcCommand(EliminarUsuario, conexion.conexion());
+            }
+        }
 
-                    Query_DELETE1.ExecuteNonQuery();
-                    Query_DELETE2.ExecuteNonQuery();
-                    Query_DELETE3.ExecuteNonQuery();
+        public void DatosCmb_TipoUsuarioIngreso()
+        {
+            try
+            {
 
-                    MessageBox.Show("Eliminación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string CargaTiposUsuario = "SELECT * FROM TIPO_USUARIO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaTiposUsuario, conexion.conexion());
 
-                }
-                catch (Exception ex)
-                {
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
 
-                    MessageBox.Show("Error al ejecutar SQL: " +
-                        System.Environment.NewLine + System.Environment.NewLine +
-                        ex.GetType().ToString() + System.Environment.NewLine +
-                        ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
 
-                }
+                Cmb_TipoUsuario_Ingreso.DataSource = Datos;
+                Cmb_TipoUsuario_Ingreso.DisplayMember = "NOMBRE_TIPO";
+                Cmb_TipoUsuario_Ingreso.ResetText();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void DatosCmb_TipoUsuarioModificar()
+        {
+            try
+            {
+
+                string CargaTiposUsuario = "SELECT * FROM TIPO_USUARIO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaTiposUsuario, conexion.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                DataTable Datos = new DataTable();
+
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Cmb_TipoUsuario_Modificar.DataSource = Datos;
+                Cmb_TipoUsuario_Modificar.DisplayMember = "NOMBRE_TIPO";
+                Cmb_TipoUsuario_Modificar.ResetText();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
+        }
+
+
+        private void Btn_Ingreso_Click(object sender, EventArgs e)
+        {
+            int TipoUsuario, TipoPuesto;
+            TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
+            TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
+            
+            Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
+
+        }
+
+        private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
+        {
+            Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
+            Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
+            Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
+            Txt_Apellido1_Modificar.Text = Empleado.Apellido1;
+            Txt_Apellido2_Modificar.Text = Empleado.Apellido2;
+            Txt_Email_Modificar.Text = Empleado.Email;
+            Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
+            Txt_Direccion_Modificar.Text = Empleado.Direccion;
+            Txt_Telefono_Modificar.Text = Empleado.Telefono;
+            Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
+            Txt_NIT_Modificar.Text = Empleado.NIT;
+            Txt_DPI_Modificar.Text = Empleado.DPI;
+            Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
+            Dtp_FechaContrato_Modificar.Text = Empleado.FechaContrato;
+            Txt_Password_Modificar.Text = Empleado.Pasword;
+            Cmb_TipoUsuario_Modificar.Text = Empleado.TipoUsuario;
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-
-                string ModificarTelefono = "UPDATE TELEFONO SET TELEFONO='" + Txt_Telefono.Text + "' WHERE ID_TELEFONO='" + Lbl_Telefono.Text + "'";
-                string ModificarEmpleado = "UPDATE EMPLEADO SET NOMBRE1='" + Txt_Nombre1.Text + "', NOMBRE2='" + Txt_Nombre2.Text +
-                    "', APELLIDO1='" + Txt_Apellido1.Text + "', APELLIDO2='" + Txt_Apellido2.Text + "', CORREO='" + Txt_Email.Text +
-                    "', DIRECCION='" + Txt_Direccion.Text + "'WHERE ID_EMPLEADO='" + Txt_IDEmpleado.Text + "'";
-                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Txt_Usuario.Text + "', PASSWORD='" + Txt_Password.Text + "' WHERE ID_USUARIO='" + Txt_Usuario.Text + "'";
-
-                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarTelefono, conexion.conexion());
-                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarEmpleado, conexion.conexion());
-                OdbcCommand Query_UPDATE3 = new OdbcCommand(ModificarUsuario, conexion.conexion());
-
-                Query_UPDATE1.ExecuteNonQuery();
-                Query_UPDATE2.ExecuteNonQuery();
-                Query_UPDATE3.ExecuteNonQuery();
-
-                MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
+            int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
+            Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
 
         }
 
-        private void Btn_Buscar_Click(object sender, EventArgs e)
+        private void Btn_Empleado_Click(object sender, EventArgs e)
         {
-            try
-            {
-                              
-                string BuscarDatoTelefono = "SELECT * FROM TELEFONO WHERE ID_EMPLEADO_FK ='" + Txt_IDEmpleado.Text + "'";
-                string BuscarDatoEmpleado = "SELECT * FROM EMPLEADO WHERE ID_EMPLEADO ='" + Txt_IDEmpleado.Text + "'";
+            Tbc_Empleados.Visible = true;
+        }
 
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarDatoTelefono, conexion.conexion());
-                OdbcCommand Query_Busqueda2 = new OdbcCommand(BuscarDatoEmpleado, conexion.conexion());
+        private void Btn_Busqueda_Eliminar_Click(object sender, EventArgs e)
+        {
+            
+            Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Eliminar.Text);
+            Txt_Nombre1_Eliminar.Text = Empleado.Nombre1;
+            Txt_Nombre2_Eliminar.Text = Empleado.Nombre2;
+            Txt_Apellido1_Eliminar.Text = Empleado.Apellido1;
+            Txt_Apellido2_Eliminar.Text = Empleado.Apellido2;
+            Txt_Email_Eliminar.Text = Empleado.Email;
+            Cmb_TipoPuesto_Eliminar.Text = Empleado.TipoPuesto;
+            Txt_Direccion_Eliminar.Text = Empleado.Direccion;
+            Txt_Telefono_Eliminar.Text = Empleado.Telefono;
+            Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;
+            Txt_NIT_Eliminar.Text = Empleado.NIT;
+            Txt_DPI_Eliminar.Text = Empleado.DPI;
+            Txt_Usuario_Eliminar.Text = Empleado.ID_Usuario;
+            Dtp_FechaContrato_Eliminar.Text = Empleado.FechaContrato;
+            Txt_Password_Eliminar.Text = Empleado.Pasword;
+            Cmb_TipoUsuario_Eliminar.Text = Empleado.TipoUsuario;
 
-                OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
-                OdbcDataReader Lector2 = Query_Busqueda2.ExecuteReader();
-
-                if (Lector1.HasRows == true && Lector2.HasRows == true)
-                {
-                    while (Lector1.Read())
-                    {
-                        Lbl_IDTelefono.Text = Lector1.GetString(0);
-                        Txt_Telefono.Text = Lector1.GetString(1);
-
-                    }
-
-                    while (Lector2.Read())
-                    {
-
-                        Txt_Nombre1.Text = Lector2.GetString(1);
-                        Txt_Nombre2.Text = Lector2.GetString(2);
-                        Txt_Apellido1.Text = Lector2.GetString(3);
-                        Txt_Apellido2.Text = Lector2.GetString(4);
-                        Txt_Email.Text = Lector2.GetString(5);
-                        Txt_Direccion.Text = Lector2.GetString(7);
-                        Txt_FechaNacimiento.Text = Lector2.GetString(8);
-                        Txt_NIT.Text = Lector2.GetString(9);
-                        Txt_DPI.Text = Lector2.GetString(10);
-                        Lbl_IDUsuario.Text = Lector2.GetString(11);
-                        Txt_FechaContrato.Text = Lector2.GetString(12);
-
-
-                    }
-
-                    string BuscarDatoUsuario = "SELECT * FROM USUARIO WHERE ID_USUARIO ='" + Lbl_IDUsuario.Text + "'";
-                    OdbcCommand Query_Busqueda3 = new OdbcCommand(BuscarDatoUsuario, conexion.conexion());
-                    OdbcDataReader Lector3 = Query_Busqueda3.ExecuteReader();
-
-                    while (Lector3.Read())
-                    {
-
-                        Txt_Usuario.Text = Lector3.GetString(0);
-                        Txt_Password.Text = Lector3.GetString(1);
-
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }
