@@ -35,12 +35,13 @@
             this.Btn_Equipo = new System.Windows.Forms.Button();
             this.Btn_Calendario = new System.Windows.Forms.Button();
             this.Btn_Partido = new System.Windows.Forms.Button();
-            this.Pnl_Interfaz = new System.Windows.Forms.Panel();
+            this.Btn_Entrenador = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_Menu
             // 
+            this.Pnl_Menu.Controls.Add(this.Btn_Entrenador);
             this.Pnl_Menu.Controls.Add(this.Btn_Tabla_Posiciones);
             this.Pnl_Menu.Controls.Add(this.Btn_Campeonato);
             this.Pnl_Menu.Controls.Add(this.Btn_Equipo);
@@ -48,15 +49,15 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Partido);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(248, 554);
+            this.Pnl_Menu.Size = new System.Drawing.Size(248, 609);
             this.Pnl_Menu.TabIndex = 0;
             // 
             // Btn_Tabla_Posiciones
             // 
-            this.Btn_Tabla_Posiciones.Location = new System.Drawing.Point(29, 276);
-            this.Btn_Tabla_Posiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Tabla_Posiciones.Location = new System.Drawing.Point(29, 291);
+            this.Btn_Tabla_Posiciones.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Tabla_Posiciones.Name = "Btn_Tabla_Posiciones";
             this.Btn_Tabla_Posiciones.Size = new System.Drawing.Size(184, 28);
             this.Btn_Tabla_Posiciones.TabIndex = 4;
@@ -66,7 +67,7 @@
             // Btn_Campeonato
             // 
             this.Btn_Campeonato.Location = new System.Drawing.Point(29, 46);
-            this.Btn_Campeonato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Campeonato.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Campeonato.Name = "Btn_Campeonato";
             this.Btn_Campeonato.Size = new System.Drawing.Size(184, 28);
             this.Btn_Campeonato.TabIndex = 0;
@@ -76,7 +77,7 @@
             // Btn_Equipo
             // 
             this.Btn_Equipo.Location = new System.Drawing.Point(29, 98);
-            this.Btn_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Equipo.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Equipo.Name = "Btn_Equipo";
             this.Btn_Equipo.Size = new System.Drawing.Size(184, 28);
             this.Btn_Equipo.TabIndex = 1;
@@ -86,7 +87,7 @@
             // Btn_Calendario
             // 
             this.Btn_Calendario.Location = new System.Drawing.Point(29, 219);
-            this.Btn_Calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Calendario.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Calendario.Name = "Btn_Calendario";
             this.Btn_Calendario.Size = new System.Drawing.Size(184, 28);
             this.Btn_Calendario.TabIndex = 3;
@@ -96,31 +97,32 @@
             // Btn_Partido
             // 
             this.Btn_Partido.Location = new System.Drawing.Point(29, 159);
-            this.Btn_Partido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Partido.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Partido.Name = "Btn_Partido";
             this.Btn_Partido.Size = new System.Drawing.Size(184, 28);
             this.Btn_Partido.TabIndex = 2;
             this.Btn_Partido.Text = "Partido";
             this.Btn_Partido.UseVisualStyleBackColor = true;
             // 
-            // Pnl_Interfaz
+            // Btn_Entrenador
             // 
-            this.Pnl_Interfaz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Interfaz.Location = new System.Drawing.Point(248, 0);
-            this.Pnl_Interfaz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Pnl_Interfaz.Name = "Pnl_Interfaz";
-            this.Pnl_Interfaz.Size = new System.Drawing.Size(819, 554);
-            this.Pnl_Interfaz.TabIndex = 5;
+            this.Btn_Entrenador.Location = new System.Drawing.Point(29, 351);
+            this.Btn_Entrenador.Name = "Btn_Entrenador";
+            this.Btn_Entrenador.Size = new System.Drawing.Size(184, 27);
+            this.Btn_Entrenador.TabIndex = 1;
+            this.Btn_Entrenador.Text = "Entrenadores";
+            this.Btn_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Entrenador.Click += new System.EventHandler(this.Btn_Entrenador_Click);
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.Pnl_Interfaz);
+            this.ClientSize = new System.Drawing.Size(1349, 609);
             this.Controls.Add(this.Pnl_Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
@@ -137,6 +139,6 @@
         private System.Windows.Forms.Button Btn_Partido;
         private System.Windows.Forms.Button Btn_Calendario;
         private System.Windows.Forms.Button Btn_Tabla_Posiciones;
-        private System.Windows.Forms.Panel Pnl_Interfaz;
+        private System.Windows.Forms.Button Btn_Entrenador;
     }
 }
