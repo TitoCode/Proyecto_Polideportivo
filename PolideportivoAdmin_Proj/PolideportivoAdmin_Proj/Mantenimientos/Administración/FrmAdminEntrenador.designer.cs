@@ -29,7 +29,43 @@
         private void InitializeComponent()
         {
             this.Tbp_Eliminar_Entrenador = new System.Windows.Forms.TabPage();
+            this.Gbx_Eliminar_Entrenador2 = new System.Windows.Forms.GroupBox();
+            this.Btn_Eliminar_Entrenador = new System.Windows.Forms.Button();
+            this.Lbl_Eliminar_Fdn_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Apellido2_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Apellido1_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.Label();
+            this.Btn_Eliminar_Buscar_Entrenador = new System.Windows.Forms.Button();
+            this.Dtp_Eliminar_Fdn_Entrenador = new System.Windows.Forms.DateTimePicker();
+            this.Txt_Eliminar_Apellido2_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Apellido1_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
+            this.Gbx_Eliminar_Entrenador1 = new System.Windows.Forms.GroupBox();
+            this.Lbl_Eliminar_Password_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Usuario_Entrenador = new System.Windows.Forms.Label();
+            this.Txt_Eliminar_Password_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
             this.Tbp_Modificar_Entrenador = new System.Windows.Forms.TabPage();
+            this.Gbx_Modificar_Entrenador2 = new System.Windows.Forms.GroupBox();
+            this.Btn_Modificar_Entrenador = new System.Windows.Forms.Button();
+            this.Lbl_Modificar_Fdn_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Apellido2_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Apellido1_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Nombre2_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Nombre1_Entrenador = new System.Windows.Forms.Label();
+            this.Btn_Modificar_Buscar_Entrenador = new System.Windows.Forms.Button();
+            this.Dtp_Modificar_Fdn_Entrenador = new System.Windows.Forms.DateTimePicker();
+            this.Txt_Modificar_Apellido2_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_Apellido1_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
+            this.Gbx_Modificar_Entrenador1 = new System.Windows.Forms.GroupBox();
+            this.Lbl_Modificar_Password_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Usuario_Entrenador = new System.Windows.Forms.Label();
+            this.Txt_Modificar_Password_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
             this.Tbp_Ingreso_Entrenador = new System.Windows.Forms.TabPage();
             this.Gbx_Ingreso_Entrenador2 = new System.Windows.Forms.GroupBox();
             this.Lbl_Ingreso_Fdn_Entrenador = new System.Windows.Forms.Label();
@@ -50,52 +86,24 @@
             this.Txt_Ingreso_Id_Usuario = new System.Windows.Forms.TextBox();
             this.Tbp_Menu_Entrenador = new System.Windows.Forms.TabPage();
             this.Tbc_Entrenador = new System.Windows.Forms.TabControl();
-            this.Gbx_Modificar_Entrenador1 = new System.Windows.Forms.GroupBox();
-            this.Lbl_Modificar_Password_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Modificar_Usuario_Entrenador = new System.Windows.Forms.Label();
-            this.Txt_Modificar_Password_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Modificar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
-            this.Gbx_Modificar_Entrenador2 = new System.Windows.Forms.GroupBox();
-            this.Lbl_Modificar_Fdn_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Modificar_Apellido2_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Modificar_Apellido1_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Modificar_Nombre2_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Modificar_Nombre1_Entrenador = new System.Windows.Forms.Label();
-            this.Btn_Modificar_Buscar_Entrenador = new System.Windows.Forms.Button();
-            this.Dtp_Modificar_Fdn_Entrenador = new System.Windows.Forms.DateTimePicker();
-            this.Txt_Modificar_Apellido2_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Modificar_Apellido1_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Modificar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Modificar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
-            this.Btn_Modificar_Entrenador = new System.Windows.Forms.Button();
-            this.Gbx_Eliminar_Entrenador1 = new System.Windows.Forms.GroupBox();
-            this.Lbl_Eliminar_Password_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Eliminar_Usuario_Entrenador = new System.Windows.Forms.Label();
-            this.Txt_Eliminar_Password_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Eliminar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
-            this.Gbx_Eliminar_Entrenador2 = new System.Windows.Forms.GroupBox();
-            this.Btn_Eliminar_Entrenador = new System.Windows.Forms.Button();
-            this.Lbl_Eliminar_Fdn_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Eliminar_Apellido2_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Eliminar_Apellido1_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.Label();
-            this.Lbl_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.Label();
-            this.Btn_Eliminar_Buscar_Entrenador = new System.Windows.Forms.Button();
-            this.Dtp_Eliminar_Fdn_Entrenador = new System.Windows.Forms.DateTimePicker();
-            this.Txt_Eliminar_Apellido2_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Eliminar_Apellido1_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
-            this.Txt_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_Id_Entenador = new System.Windows.Forms.TextBox();
+            this.Lbl_Modificar_Id_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador = new System.Windows.Forms.Label();
+            this.Txt_Modificar_Tipo_Usuario_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Id_Entrenador = new System.Windows.Forms.TextBox();
+            this.Lbl_Eliminar_Id_Entrenador = new System.Windows.Forms.Label();
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador = new System.Windows.Forms.Label();
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador = new System.Windows.Forms.TextBox();
             this.Tbp_Eliminar_Entrenador.SuspendLayout();
+            this.Gbx_Eliminar_Entrenador2.SuspendLayout();
+            this.Gbx_Eliminar_Entrenador1.SuspendLayout();
             this.Tbp_Modificar_Entrenador.SuspendLayout();
+            this.Gbx_Modificar_Entrenador2.SuspendLayout();
+            this.Gbx_Modificar_Entrenador1.SuspendLayout();
             this.Tbp_Ingreso_Entrenador.SuspendLayout();
             this.Gbx_Ingreso_Entrenador2.SuspendLayout();
             this.Gbx_Ingreso_Entrenador1.SuspendLayout();
             this.Tbc_Entrenador.SuspendLayout();
-            this.Gbx_Modificar_Entrenador1.SuspendLayout();
-            this.Gbx_Modificar_Entrenador2.SuspendLayout();
-            this.Gbx_Eliminar_Entrenador1.SuspendLayout();
-            this.Gbx_Eliminar_Entrenador2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbp_Eliminar_Entrenador
@@ -110,6 +118,180 @@
             this.Tbp_Eliminar_Entrenador.Text = "Eliminar";
             this.Tbp_Eliminar_Entrenador.UseVisualStyleBackColor = true;
             // 
+            // Gbx_Eliminar_Entrenador2
+            // 
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Id_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Id_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Btn_Eliminar_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Fdn_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Apellido2_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Apellido1_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Nombre2_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Nombre1_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Btn_Eliminar_Buscar_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Dtp_Eliminar_Fdn_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Apellido2_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Apellido1_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Nombre2_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Nombre1_Entrenador);
+            this.Gbx_Eliminar_Entrenador2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Gbx_Eliminar_Entrenador2.Location = new System.Drawing.Point(603, 3);
+            this.Gbx_Eliminar_Entrenador2.Name = "Gbx_Eliminar_Entrenador2";
+            this.Gbx_Eliminar_Entrenador2.Size = new System.Drawing.Size(735, 575);
+            this.Gbx_Eliminar_Entrenador2.TabIndex = 3;
+            this.Gbx_Eliminar_Entrenador2.TabStop = false;
+            this.Gbx_Eliminar_Entrenador2.Text = "2. Modificación de Entrenador";
+            // 
+            // Btn_Eliminar_Entrenador
+            // 
+            this.Btn_Eliminar_Entrenador.Location = new System.Drawing.Point(349, 389);
+            this.Btn_Eliminar_Entrenador.Name = "Btn_Eliminar_Entrenador";
+            this.Btn_Eliminar_Entrenador.Size = new System.Drawing.Size(88, 25);
+            this.Btn_Eliminar_Entrenador.TabIndex = 11;
+            this.Btn_Eliminar_Entrenador.Text = "Eliminar";
+            this.Btn_Eliminar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar_Entrenador.Click += new System.EventHandler(this.Btn_Eliminar_Entrenador_Click);
+            // 
+            // Lbl_Eliminar_Fdn_Entrenador
+            // 
+            this.Lbl_Eliminar_Fdn_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Fdn_Entrenador.Location = new System.Drawing.Point(25, 223);
+            this.Lbl_Eliminar_Fdn_Entrenador.Name = "Lbl_Eliminar_Fdn_Entrenador";
+            this.Lbl_Eliminar_Fdn_Entrenador.Size = new System.Drawing.Size(133, 17);
+            this.Lbl_Eliminar_Fdn_Entrenador.TabIndex = 10;
+            this.Lbl_Eliminar_Fdn_Entrenador.Text = "Fecha de Nacimiento :";
+            // 
+            // Lbl_Eliminar_Apellido2_Entrenador
+            // 
+            this.Lbl_Eliminar_Apellido2_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Apellido2_Entrenador.Location = new System.Drawing.Point(22, 179);
+            this.Lbl_Eliminar_Apellido2_Entrenador.Name = "Lbl_Eliminar_Apellido2_Entrenador";
+            this.Lbl_Eliminar_Apellido2_Entrenador.Size = new System.Drawing.Size(111, 17);
+            this.Lbl_Eliminar_Apellido2_Entrenador.TabIndex = 9;
+            this.Lbl_Eliminar_Apellido2_Entrenador.Text = "Segundo Apellido :";
+            // 
+            // Lbl_Eliminar_Apellido1_Entrenador
+            // 
+            this.Lbl_Eliminar_Apellido1_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Apellido1_Entrenador.Location = new System.Drawing.Point(19, 136);
+            this.Lbl_Eliminar_Apellido1_Entrenador.Name = "Lbl_Eliminar_Apellido1_Entrenador";
+            this.Lbl_Eliminar_Apellido1_Entrenador.Size = new System.Drawing.Size(101, 17);
+            this.Lbl_Eliminar_Apellido1_Entrenador.TabIndex = 8;
+            this.Lbl_Eliminar_Apellido1_Entrenador.Text = "Primer Apellido :";
+            // 
+            // Lbl_Eliminar_Nombre2_Entrenador
+            // 
+            this.Lbl_Eliminar_Nombre2_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Nombre2_Entrenador.Location = new System.Drawing.Point(19, 91);
+            this.Lbl_Eliminar_Nombre2_Entrenador.Name = "Lbl_Eliminar_Nombre2_Entrenador";
+            this.Lbl_Eliminar_Nombre2_Entrenador.Size = new System.Drawing.Size(112, 17);
+            this.Lbl_Eliminar_Nombre2_Entrenador.TabIndex = 7;
+            this.Lbl_Eliminar_Nombre2_Entrenador.Text = "Segundo Nombre :";
+            // 
+            // Lbl_Eliminar_Nombre1_Entrenador
+            // 
+            this.Lbl_Eliminar_Nombre1_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Nombre1_Entrenador.Location = new System.Drawing.Point(19, 51);
+            this.Lbl_Eliminar_Nombre1_Entrenador.Name = "Lbl_Eliminar_Nombre1_Entrenador";
+            this.Lbl_Eliminar_Nombre1_Entrenador.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_Eliminar_Nombre1_Entrenador.TabIndex = 6;
+            this.Lbl_Eliminar_Nombre1_Entrenador.Text = "Primer Nombre :";
+            // 
+            // Btn_Eliminar_Buscar_Entrenador
+            // 
+            this.Btn_Eliminar_Buscar_Entrenador.Location = new System.Drawing.Point(229, 389);
+            this.Btn_Eliminar_Buscar_Entrenador.Name = "Btn_Eliminar_Buscar_Entrenador";
+            this.Btn_Eliminar_Buscar_Entrenador.Size = new System.Drawing.Size(99, 25);
+            this.Btn_Eliminar_Buscar_Entrenador.TabIndex = 5;
+            this.Btn_Eliminar_Buscar_Entrenador.Text = "Buscar";
+            this.Btn_Eliminar_Buscar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar_Buscar_Entrenador.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Entrenador_Click);
+            // 
+            // Dtp_Eliminar_Fdn_Entrenador
+            // 
+            this.Dtp_Eliminar_Fdn_Entrenador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Eliminar_Fdn_Entrenador.Location = new System.Drawing.Point(180, 219);
+            this.Dtp_Eliminar_Fdn_Entrenador.Name = "Dtp_Eliminar_Fdn_Entrenador";
+            this.Dtp_Eliminar_Fdn_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Dtp_Eliminar_Fdn_Entrenador.TabIndex = 4;
+            this.Dtp_Eliminar_Fdn_Entrenador.Value = new System.DateTime(2020, 8, 13, 0, 0, 0, 0);
+            // 
+            // Txt_Eliminar_Apellido2_Entrenador
+            // 
+            this.Txt_Eliminar_Apellido2_Entrenador.Location = new System.Drawing.Point(180, 179);
+            this.Txt_Eliminar_Apellido2_Entrenador.Name = "Txt_Eliminar_Apellido2_Entrenador";
+            this.Txt_Eliminar_Apellido2_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Eliminar_Apellido2_Entrenador.TabIndex = 3;
+            // 
+            // Txt_Eliminar_Apellido1_Entrenador
+            // 
+            this.Txt_Eliminar_Apellido1_Entrenador.Location = new System.Drawing.Point(180, 134);
+            this.Txt_Eliminar_Apellido1_Entrenador.Name = "Txt_Eliminar_Apellido1_Entrenador";
+            this.Txt_Eliminar_Apellido1_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Eliminar_Apellido1_Entrenador.TabIndex = 2;
+            // 
+            // Txt_Eliminar_Nombre2_Entrenador
+            // 
+            this.Txt_Eliminar_Nombre2_Entrenador.Location = new System.Drawing.Point(180, 91);
+            this.Txt_Eliminar_Nombre2_Entrenador.Name = "Txt_Eliminar_Nombre2_Entrenador";
+            this.Txt_Eliminar_Nombre2_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Eliminar_Nombre2_Entrenador.TabIndex = 1;
+            // 
+            // Txt_Eliminar_Nombre1_Entrenador
+            // 
+            this.Txt_Eliminar_Nombre1_Entrenador.Location = new System.Drawing.Point(180, 47);
+            this.Txt_Eliminar_Nombre1_Entrenador.Name = "Txt_Eliminar_Nombre1_Entrenador";
+            this.Txt_Eliminar_Nombre1_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Eliminar_Nombre1_Entrenador.TabIndex = 0;
+            // 
+            // Gbx_Eliminar_Entrenador1
+            // 
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Txt_Eliminar_Tipo_Usuario_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Lbl_Eliminar_Tipo_Usuario_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Lbl_Eliminar_Password_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Lbl_Eliminar_Usuario_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Txt_Eliminar_Password_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Txt_Eliminar_Usuario_Entrenador);
+            this.Gbx_Eliminar_Entrenador1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Gbx_Eliminar_Entrenador1.Location = new System.Drawing.Point(3, 3);
+            this.Gbx_Eliminar_Entrenador1.Name = "Gbx_Eliminar_Entrenador1";
+            this.Gbx_Eliminar_Entrenador1.Size = new System.Drawing.Size(594, 575);
+            this.Gbx_Eliminar_Entrenador1.TabIndex = 2;
+            this.Gbx_Eliminar_Entrenador1.TabStop = false;
+            this.Gbx_Eliminar_Entrenador1.Text = "1. Eliminar de Usuario";
+            // 
+            // Lbl_Eliminar_Password_Entrenador
+            // 
+            this.Lbl_Eliminar_Password_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Password_Entrenador.Location = new System.Drawing.Point(23, 95);
+            this.Lbl_Eliminar_Password_Entrenador.Name = "Lbl_Eliminar_Password_Entrenador";
+            this.Lbl_Eliminar_Password_Entrenador.Size = new System.Drawing.Size(79, 17);
+            this.Lbl_Eliminar_Password_Entrenador.TabIndex = 5;
+            this.Lbl_Eliminar_Password_Entrenador.Text = "Contraseña :";
+            // 
+            // Lbl_Eliminar_Usuario_Entrenador
+            // 
+            this.Lbl_Eliminar_Usuario_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(20, 51);
+            this.Lbl_Eliminar_Usuario_Entrenador.Name = "Lbl_Eliminar_Usuario_Entrenador";
+            this.Lbl_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(58, 17);
+            this.Lbl_Eliminar_Usuario_Entrenador.TabIndex = 4;
+            this.Lbl_Eliminar_Usuario_Entrenador.Text = "Usuario :";
+            // 
+            // Txt_Eliminar_Password_Entrenador
+            // 
+            this.Txt_Eliminar_Password_Entrenador.Location = new System.Drawing.Point(137, 91);
+            this.Txt_Eliminar_Password_Entrenador.Name = "Txt_Eliminar_Password_Entrenador";
+            this.Txt_Eliminar_Password_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Eliminar_Password_Entrenador.TabIndex = 1;
+            // 
+            // Txt_Eliminar_Usuario_Entrenador
+            // 
+            this.Txt_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(137, 47);
+            this.Txt_Eliminar_Usuario_Entrenador.Name = "Txt_Eliminar_Usuario_Entrenador";
+            this.Txt_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Eliminar_Usuario_Entrenador.TabIndex = 0;
+            // 
             // Tbp_Modificar_Entrenador
             // 
             this.Tbp_Modificar_Entrenador.Controls.Add(this.Gbx_Modificar_Entrenador2);
@@ -121,6 +303,179 @@
             this.Tbp_Modificar_Entrenador.TabIndex = 2;
             this.Tbp_Modificar_Entrenador.Text = "Modificar";
             this.Tbp_Modificar_Entrenador.UseVisualStyleBackColor = true;
+            // 
+            // Gbx_Modificar_Entrenador2
+            // 
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Id_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Id_Entenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Btn_Modificar_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Fdn_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Apellido2_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Apellido1_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Nombre2_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Nombre1_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Btn_Modificar_Buscar_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Dtp_Modificar_Fdn_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Apellido2_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Apellido1_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Nombre2_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Nombre1_Entrenador);
+            this.Gbx_Modificar_Entrenador2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Gbx_Modificar_Entrenador2.Location = new System.Drawing.Point(603, 3);
+            this.Gbx_Modificar_Entrenador2.Name = "Gbx_Modificar_Entrenador2";
+            this.Gbx_Modificar_Entrenador2.Size = new System.Drawing.Size(735, 575);
+            this.Gbx_Modificar_Entrenador2.TabIndex = 2;
+            this.Gbx_Modificar_Entrenador2.TabStop = false;
+            this.Gbx_Modificar_Entrenador2.Text = "2. Modificación de Entrenador";
+            // 
+            // Btn_Modificar_Entrenador
+            // 
+            this.Btn_Modificar_Entrenador.Location = new System.Drawing.Point(352, 418);
+            this.Btn_Modificar_Entrenador.Name = "Btn_Modificar_Entrenador";
+            this.Btn_Modificar_Entrenador.Size = new System.Drawing.Size(88, 25);
+            this.Btn_Modificar_Entrenador.TabIndex = 11;
+            this.Btn_Modificar_Entrenador.Text = "Modificar";
+            this.Btn_Modificar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Modificar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Entrenador_Click);
+            // 
+            // Lbl_Modificar_Fdn_Entrenador
+            // 
+            this.Lbl_Modificar_Fdn_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Fdn_Entrenador.Location = new System.Drawing.Point(25, 223);
+            this.Lbl_Modificar_Fdn_Entrenador.Name = "Lbl_Modificar_Fdn_Entrenador";
+            this.Lbl_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(133, 17);
+            this.Lbl_Modificar_Fdn_Entrenador.TabIndex = 10;
+            this.Lbl_Modificar_Fdn_Entrenador.Text = "Fecha de Nacimiento :";
+            // 
+            // Lbl_Modificar_Apellido2_Entrenador
+            // 
+            this.Lbl_Modificar_Apellido2_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Apellido2_Entrenador.Location = new System.Drawing.Point(22, 179);
+            this.Lbl_Modificar_Apellido2_Entrenador.Name = "Lbl_Modificar_Apellido2_Entrenador";
+            this.Lbl_Modificar_Apellido2_Entrenador.Size = new System.Drawing.Size(111, 17);
+            this.Lbl_Modificar_Apellido2_Entrenador.TabIndex = 9;
+            this.Lbl_Modificar_Apellido2_Entrenador.Text = "Segundo Apellido :";
+            // 
+            // Lbl_Modificar_Apellido1_Entrenador
+            // 
+            this.Lbl_Modificar_Apellido1_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Apellido1_Entrenador.Location = new System.Drawing.Point(19, 136);
+            this.Lbl_Modificar_Apellido1_Entrenador.Name = "Lbl_Modificar_Apellido1_Entrenador";
+            this.Lbl_Modificar_Apellido1_Entrenador.Size = new System.Drawing.Size(101, 17);
+            this.Lbl_Modificar_Apellido1_Entrenador.TabIndex = 8;
+            this.Lbl_Modificar_Apellido1_Entrenador.Text = "Primer Apellido :";
+            // 
+            // Lbl_Modificar_Nombre2_Entrenador
+            // 
+            this.Lbl_Modificar_Nombre2_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Nombre2_Entrenador.Location = new System.Drawing.Point(19, 91);
+            this.Lbl_Modificar_Nombre2_Entrenador.Name = "Lbl_Modificar_Nombre2_Entrenador";
+            this.Lbl_Modificar_Nombre2_Entrenador.Size = new System.Drawing.Size(112, 17);
+            this.Lbl_Modificar_Nombre2_Entrenador.TabIndex = 7;
+            this.Lbl_Modificar_Nombre2_Entrenador.Text = "Segundo Nombre :";
+            // 
+            // Lbl_Modificar_Nombre1_Entrenador
+            // 
+            this.Lbl_Modificar_Nombre1_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Nombre1_Entrenador.Location = new System.Drawing.Point(19, 51);
+            this.Lbl_Modificar_Nombre1_Entrenador.Name = "Lbl_Modificar_Nombre1_Entrenador";
+            this.Lbl_Modificar_Nombre1_Entrenador.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_Modificar_Nombre1_Entrenador.TabIndex = 6;
+            this.Lbl_Modificar_Nombre1_Entrenador.Text = "Primer Nombre :";
+            // 
+            // Btn_Modificar_Buscar_Entrenador
+            // 
+            this.Btn_Modificar_Buscar_Entrenador.Location = new System.Drawing.Point(247, 418);
+            this.Btn_Modificar_Buscar_Entrenador.Name = "Btn_Modificar_Buscar_Entrenador";
+            this.Btn_Modificar_Buscar_Entrenador.Size = new System.Drawing.Size(99, 25);
+            this.Btn_Modificar_Buscar_Entrenador.TabIndex = 5;
+            this.Btn_Modificar_Buscar_Entrenador.Text = "Buscar";
+            this.Btn_Modificar_Buscar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Modificar_Buscar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Buscar_Entrenador_Click);
+            // 
+            // Dtp_Modificar_Fdn_Entrenador
+            // 
+            this.Dtp_Modificar_Fdn_Entrenador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Modificar_Fdn_Entrenador.Location = new System.Drawing.Point(180, 219);
+            this.Dtp_Modificar_Fdn_Entrenador.Name = "Dtp_Modificar_Fdn_Entrenador";
+            this.Dtp_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Dtp_Modificar_Fdn_Entrenador.TabIndex = 4;
+            // 
+            // Txt_Modificar_Apellido2_Entrenador
+            // 
+            this.Txt_Modificar_Apellido2_Entrenador.Location = new System.Drawing.Point(180, 179);
+            this.Txt_Modificar_Apellido2_Entrenador.Name = "Txt_Modificar_Apellido2_Entrenador";
+            this.Txt_Modificar_Apellido2_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Modificar_Apellido2_Entrenador.TabIndex = 3;
+            // 
+            // Txt_Modificar_Apellido1_Entrenador
+            // 
+            this.Txt_Modificar_Apellido1_Entrenador.Location = new System.Drawing.Point(180, 134);
+            this.Txt_Modificar_Apellido1_Entrenador.Name = "Txt_Modificar_Apellido1_Entrenador";
+            this.Txt_Modificar_Apellido1_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Modificar_Apellido1_Entrenador.TabIndex = 2;
+            // 
+            // Txt_Modificar_Nombre2_Entrenador
+            // 
+            this.Txt_Modificar_Nombre2_Entrenador.Location = new System.Drawing.Point(180, 91);
+            this.Txt_Modificar_Nombre2_Entrenador.Name = "Txt_Modificar_Nombre2_Entrenador";
+            this.Txt_Modificar_Nombre2_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Modificar_Nombre2_Entrenador.TabIndex = 1;
+            // 
+            // Txt_Modificar_Nombre1_Entrenador
+            // 
+            this.Txt_Modificar_Nombre1_Entrenador.Location = new System.Drawing.Point(180, 47);
+            this.Txt_Modificar_Nombre1_Entrenador.Name = "Txt_Modificar_Nombre1_Entrenador";
+            this.Txt_Modificar_Nombre1_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Modificar_Nombre1_Entrenador.TabIndex = 0;
+            // 
+            // Gbx_Modificar_Entrenador1
+            // 
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Txt_Modificar_Tipo_Usuario_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Lbl_Modificar_Tipo_Usuario_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Lbl_Modificar_Password_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Lbl_Modificar_Usuario_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Txt_Modificar_Password_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Txt_Modificar_Usuario_Entrenador);
+            this.Gbx_Modificar_Entrenador1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Gbx_Modificar_Entrenador1.Location = new System.Drawing.Point(3, 3);
+            this.Gbx_Modificar_Entrenador1.Name = "Gbx_Modificar_Entrenador1";
+            this.Gbx_Modificar_Entrenador1.Size = new System.Drawing.Size(594, 575);
+            this.Gbx_Modificar_Entrenador1.TabIndex = 1;
+            this.Gbx_Modificar_Entrenador1.TabStop = false;
+            this.Gbx_Modificar_Entrenador1.Text = "1. Modificación de Usuario";
+            // 
+            // Lbl_Modificar_Password_Entrenador
+            // 
+            this.Lbl_Modificar_Password_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Password_Entrenador.Location = new System.Drawing.Point(23, 95);
+            this.Lbl_Modificar_Password_Entrenador.Name = "Lbl_Modificar_Password_Entrenador";
+            this.Lbl_Modificar_Password_Entrenador.Size = new System.Drawing.Size(79, 17);
+            this.Lbl_Modificar_Password_Entrenador.TabIndex = 5;
+            this.Lbl_Modificar_Password_Entrenador.Text = "Contraseña :";
+            // 
+            // Lbl_Modificar_Usuario_Entrenador
+            // 
+            this.Lbl_Modificar_Usuario_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Usuario_Entrenador.Location = new System.Drawing.Point(20, 51);
+            this.Lbl_Modificar_Usuario_Entrenador.Name = "Lbl_Modificar_Usuario_Entrenador";
+            this.Lbl_Modificar_Usuario_Entrenador.Size = new System.Drawing.Size(58, 17);
+            this.Lbl_Modificar_Usuario_Entrenador.TabIndex = 4;
+            this.Lbl_Modificar_Usuario_Entrenador.Text = "Usuario :";
+            // 
+            // Txt_Modificar_Password_Entrenador
+            // 
+            this.Txt_Modificar_Password_Entrenador.Location = new System.Drawing.Point(137, 91);
+            this.Txt_Modificar_Password_Entrenador.Name = "Txt_Modificar_Password_Entrenador";
+            this.Txt_Modificar_Password_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Modificar_Password_Entrenador.TabIndex = 1;
+            // 
+            // Txt_Modificar_Usuario_Entrenador
+            // 
+            this.Txt_Modificar_Usuario_Entrenador.Location = new System.Drawing.Point(137, 47);
+            this.Txt_Modificar_Usuario_Entrenador.Name = "Txt_Modificar_Usuario_Entrenador";
+            this.Txt_Modificar_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Modificar_Usuario_Entrenador.TabIndex = 0;
             // 
             // Tbp_Ingreso_Entrenador
             // 
@@ -213,6 +568,7 @@
             // 
             // Dtp_Ingreso_Fdn_Entrenador
             // 
+            this.Dtp_Ingreso_Fdn_Entrenador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Ingreso_Fdn_Entrenador.Location = new System.Drawing.Point(180, 219);
             this.Dtp_Ingreso_Fdn_Entrenador.Name = "Dtp_Ingreso_Fdn_Entrenador";
             this.Dtp_Ingreso_Fdn_Entrenador.Size = new System.Drawing.Size(257, 23);
@@ -317,339 +673,73 @@
             this.Tbc_Entrenador.Size = new System.Drawing.Size(1349, 609);
             this.Tbc_Entrenador.TabIndex = 2;
             // 
-            // Gbx_Modificar_Entrenador1
-            // 
-            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Lbl_Modificar_Password_Entrenador);
-            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Lbl_Modificar_Usuario_Entrenador);
-            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Txt_Modificar_Password_Entrenador);
-            this.Gbx_Modificar_Entrenador1.Controls.Add(this.Txt_Modificar_Usuario_Entrenador);
-            this.Gbx_Modificar_Entrenador1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Gbx_Modificar_Entrenador1.Location = new System.Drawing.Point(3, 3);
-            this.Gbx_Modificar_Entrenador1.Name = "Gbx_Modificar_Entrenador1";
-            this.Gbx_Modificar_Entrenador1.Size = new System.Drawing.Size(594, 575);
-            this.Gbx_Modificar_Entrenador1.TabIndex = 1;
-            this.Gbx_Modificar_Entrenador1.TabStop = false;
-            this.Gbx_Modificar_Entrenador1.Text = "1. Modificación de Usuario";
-            // 
-            // Lbl_Modificar_Password_Entrenador
-            // 
-            this.Lbl_Modificar_Password_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Password_Entrenador.Location = new System.Drawing.Point(23, 95);
-            this.Lbl_Modificar_Password_Entrenador.Name = "Lbl_Modificar_Password_Entrenador";
-            this.Lbl_Modificar_Password_Entrenador.Size = new System.Drawing.Size(79, 17);
-            this.Lbl_Modificar_Password_Entrenador.TabIndex = 5;
-            this.Lbl_Modificar_Password_Entrenador.Text = "Contraseña :";
-            // 
-            // Lbl_Modificar_Usuario_Entrenador
-            // 
-            this.Lbl_Modificar_Usuario_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Usuario_Entrenador.Location = new System.Drawing.Point(20, 51);
-            this.Lbl_Modificar_Usuario_Entrenador.Name = "Lbl_Modificar_Usuario_Entrenador";
-            this.Lbl_Modificar_Usuario_Entrenador.Size = new System.Drawing.Size(58, 17);
-            this.Lbl_Modificar_Usuario_Entrenador.TabIndex = 4;
-            this.Lbl_Modificar_Usuario_Entrenador.Text = "Usuario :";
-            // 
-            // Txt_Modificar_Password_Entrenador
-            // 
-            this.Txt_Modificar_Password_Entrenador.Location = new System.Drawing.Point(137, 91);
-            this.Txt_Modificar_Password_Entrenador.Name = "Txt_Modificar_Password_Entrenador";
-            this.Txt_Modificar_Password_Entrenador.Size = new System.Drawing.Size(194, 23);
-            this.Txt_Modificar_Password_Entrenador.TabIndex = 1;
-            // 
-            // Txt_Modificar_Usuario_Entrenador
-            // 
-            this.Txt_Modificar_Usuario_Entrenador.Location = new System.Drawing.Point(137, 47);
-            this.Txt_Modificar_Usuario_Entrenador.Name = "Txt_Modificar_Usuario_Entrenador";
-            this.Txt_Modificar_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
-            this.Txt_Modificar_Usuario_Entrenador.TabIndex = 0;
-            // 
-            // Gbx_Modificar_Entrenador2
-            // 
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Btn_Modificar_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Fdn_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Apellido2_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Apellido1_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Nombre2_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Lbl_Modificar_Nombre1_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Btn_Modificar_Buscar_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Dtp_Modificar_Fdn_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Apellido2_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Apellido1_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Nombre2_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Controls.Add(this.Txt_Modificar_Nombre1_Entrenador);
-            this.Gbx_Modificar_Entrenador2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Gbx_Modificar_Entrenador2.Location = new System.Drawing.Point(603, 3);
-            this.Gbx_Modificar_Entrenador2.Name = "Gbx_Modificar_Entrenador2";
-            this.Gbx_Modificar_Entrenador2.Size = new System.Drawing.Size(735, 575);
-            this.Gbx_Modificar_Entrenador2.TabIndex = 2;
-            this.Gbx_Modificar_Entrenador2.TabStop = false;
-            this.Gbx_Modificar_Entrenador2.Text = "2. Modificación de Entrenador";
-            // 
-            // Lbl_Modificar_Fdn_Entrenador
-            // 
-            this.Lbl_Modificar_Fdn_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Fdn_Entrenador.Location = new System.Drawing.Point(25, 223);
-            this.Lbl_Modificar_Fdn_Entrenador.Name = "Lbl_Modificar_Fdn_Entrenador";
-            this.Lbl_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(133, 17);
-            this.Lbl_Modificar_Fdn_Entrenador.TabIndex = 10;
-            this.Lbl_Modificar_Fdn_Entrenador.Text = "Fecha de Nacimiento :";
-            // 
-            // Lbl_Modificar_Apellido2_Entrenador
-            // 
-            this.Lbl_Modificar_Apellido2_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Apellido2_Entrenador.Location = new System.Drawing.Point(22, 179);
-            this.Lbl_Modificar_Apellido2_Entrenador.Name = "Lbl_Modificar_Apellido2_Entrenador";
-            this.Lbl_Modificar_Apellido2_Entrenador.Size = new System.Drawing.Size(111, 17);
-            this.Lbl_Modificar_Apellido2_Entrenador.TabIndex = 9;
-            this.Lbl_Modificar_Apellido2_Entrenador.Text = "Segundo Apellido :";
-            // 
-            // Lbl_Modificar_Apellido1_Entrenador
-            // 
-            this.Lbl_Modificar_Apellido1_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Apellido1_Entrenador.Location = new System.Drawing.Point(19, 136);
-            this.Lbl_Modificar_Apellido1_Entrenador.Name = "Lbl_Modificar_Apellido1_Entrenador";
-            this.Lbl_Modificar_Apellido1_Entrenador.Size = new System.Drawing.Size(101, 17);
-            this.Lbl_Modificar_Apellido1_Entrenador.TabIndex = 8;
-            this.Lbl_Modificar_Apellido1_Entrenador.Text = "Primer Apellido :";
-            // 
-            // Lbl_Modificar_Nombre2_Entrenador
-            // 
-            this.Lbl_Modificar_Nombre2_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Nombre2_Entrenador.Location = new System.Drawing.Point(19, 91);
-            this.Lbl_Modificar_Nombre2_Entrenador.Name = "Lbl_Modificar_Nombre2_Entrenador";
-            this.Lbl_Modificar_Nombre2_Entrenador.Size = new System.Drawing.Size(112, 17);
-            this.Lbl_Modificar_Nombre2_Entrenador.TabIndex = 7;
-            this.Lbl_Modificar_Nombre2_Entrenador.Text = "Segundo Nombre :";
-            // 
-            // Lbl_Modificar_Nombre1_Entrenador
-            // 
-            this.Lbl_Modificar_Nombre1_Entrenador.AutoSize = true;
-            this.Lbl_Modificar_Nombre1_Entrenador.Location = new System.Drawing.Point(19, 51);
-            this.Lbl_Modificar_Nombre1_Entrenador.Name = "Lbl_Modificar_Nombre1_Entrenador";
-            this.Lbl_Modificar_Nombre1_Entrenador.Size = new System.Drawing.Size(102, 17);
-            this.Lbl_Modificar_Nombre1_Entrenador.TabIndex = 6;
-            this.Lbl_Modificar_Nombre1_Entrenador.Text = "Primer Nombre :";
-            // 
-            // Btn_Modificar_Buscar_Entrenador
-            // 
-            this.Btn_Modificar_Buscar_Entrenador.Location = new System.Drawing.Point(245, 298);
-            this.Btn_Modificar_Buscar_Entrenador.Name = "Btn_Modificar_Buscar_Entrenador";
-            this.Btn_Modificar_Buscar_Entrenador.Size = new System.Drawing.Size(99, 25);
-            this.Btn_Modificar_Buscar_Entrenador.TabIndex = 5;
-            this.Btn_Modificar_Buscar_Entrenador.Text = "Buscar";
-            this.Btn_Modificar_Buscar_Entrenador.UseVisualStyleBackColor = true;
-            this.Btn_Modificar_Buscar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Buscar_Entrenador_Click);
-            // 
-            // Dtp_Modificar_Fdn_Entrenador
-            // 
-            this.Dtp_Modificar_Fdn_Entrenador.Location = new System.Drawing.Point(180, 219);
-            this.Dtp_Modificar_Fdn_Entrenador.Name = "Dtp_Modificar_Fdn_Entrenador";
-            this.Dtp_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Dtp_Modificar_Fdn_Entrenador.TabIndex = 4;
-            // 
-            // Txt_Modificar_Apellido2_Entrenador
-            // 
-            this.Txt_Modificar_Apellido2_Entrenador.Location = new System.Drawing.Point(180, 179);
-            this.Txt_Modificar_Apellido2_Entrenador.Name = "Txt_Modificar_Apellido2_Entrenador";
-            this.Txt_Modificar_Apellido2_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Modificar_Apellido2_Entrenador.TabIndex = 3;
-            // 
-            // Txt_Modificar_Apellido1_Entrenador
-            // 
-            this.Txt_Modificar_Apellido1_Entrenador.Location = new System.Drawing.Point(180, 134);
-            this.Txt_Modificar_Apellido1_Entrenador.Name = "Txt_Modificar_Apellido1_Entrenador";
-            this.Txt_Modificar_Apellido1_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Modificar_Apellido1_Entrenador.TabIndex = 2;
-            // 
-            // Txt_Modificar_Nombre2_Entrenador
-            // 
-            this.Txt_Modificar_Nombre2_Entrenador.Location = new System.Drawing.Point(180, 91);
-            this.Txt_Modificar_Nombre2_Entrenador.Name = "Txt_Modificar_Nombre2_Entrenador";
-            this.Txt_Modificar_Nombre2_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Modificar_Nombre2_Entrenador.TabIndex = 1;
-            // 
-            // Txt_Modificar_Nombre1_Entrenador
-            // 
-            this.Txt_Modificar_Nombre1_Entrenador.Location = new System.Drawing.Point(180, 47);
-            this.Txt_Modificar_Nombre1_Entrenador.Name = "Txt_Modificar_Nombre1_Entrenador";
-            this.Txt_Modificar_Nombre1_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Modificar_Nombre1_Entrenador.TabIndex = 0;
-            // 
-            // Btn_Modificar_Entrenador
-            // 
-            this.Btn_Modificar_Entrenador.Location = new System.Drawing.Point(349, 298);
-            this.Btn_Modificar_Entrenador.Name = "Btn_Modificar_Entrenador";
-            this.Btn_Modificar_Entrenador.Size = new System.Drawing.Size(88, 25);
-            this.Btn_Modificar_Entrenador.TabIndex = 11;
-            this.Btn_Modificar_Entrenador.Text = "Modificar";
-            this.Btn_Modificar_Entrenador.UseVisualStyleBackColor = true;
-            this.Btn_Modificar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Entrenador_Click);
-            // 
-            // Gbx_Eliminar_Entrenador1
-            // 
-            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Lbl_Eliminar_Password_Entrenador);
-            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Lbl_Eliminar_Usuario_Entrenador);
-            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Txt_Eliminar_Password_Entrenador);
-            this.Gbx_Eliminar_Entrenador1.Controls.Add(this.Txt_Eliminar_Usuario_Entrenador);
-            this.Gbx_Eliminar_Entrenador1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Gbx_Eliminar_Entrenador1.Location = new System.Drawing.Point(3, 3);
-            this.Gbx_Eliminar_Entrenador1.Name = "Gbx_Eliminar_Entrenador1";
-            this.Gbx_Eliminar_Entrenador1.Size = new System.Drawing.Size(594, 575);
-            this.Gbx_Eliminar_Entrenador1.TabIndex = 2;
-            this.Gbx_Eliminar_Entrenador1.TabStop = false;
-            this.Gbx_Eliminar_Entrenador1.Text = "1. Eliminar de Usuario";
-            // 
-            // Lbl_Eliminar_Password_Entrenador
-            // 
-            this.Lbl_Eliminar_Password_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Password_Entrenador.Location = new System.Drawing.Point(23, 95);
-            this.Lbl_Eliminar_Password_Entrenador.Name = "Lbl_Eliminar_Password_Entrenador";
-            this.Lbl_Eliminar_Password_Entrenador.Size = new System.Drawing.Size(79, 17);
-            this.Lbl_Eliminar_Password_Entrenador.TabIndex = 5;
-            this.Lbl_Eliminar_Password_Entrenador.Text = "Contraseña :";
-            // 
-            // Lbl_Eliminar_Usuario_Entrenador
-            // 
-            this.Lbl_Eliminar_Usuario_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(20, 51);
-            this.Lbl_Eliminar_Usuario_Entrenador.Name = "Lbl_Eliminar_Usuario_Entrenador";
-            this.Lbl_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(58, 17);
-            this.Lbl_Eliminar_Usuario_Entrenador.TabIndex = 4;
-            this.Lbl_Eliminar_Usuario_Entrenador.Text = "Usuario :";
-            // 
-            // Txt_Eliminar_Password_Entrenador
-            // 
-            this.Txt_Eliminar_Password_Entrenador.Location = new System.Drawing.Point(137, 91);
-            this.Txt_Eliminar_Password_Entrenador.Name = "Txt_Eliminar_Password_Entrenador";
-            this.Txt_Eliminar_Password_Entrenador.Size = new System.Drawing.Size(194, 23);
-            this.Txt_Eliminar_Password_Entrenador.TabIndex = 1;
-            // 
-            // Txt_Eliminar_Usuario_Entrenador
-            // 
-            this.Txt_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(137, 47);
-            this.Txt_Eliminar_Usuario_Entrenador.Name = "Txt_Eliminar_Usuario_Entrenador";
-            this.Txt_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
-            this.Txt_Eliminar_Usuario_Entrenador.TabIndex = 0;
-            // 
-            // Gbx_Eliminar_Entrenador2
-            // 
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Btn_Eliminar_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Fdn_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Apellido2_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Apellido1_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Nombre2_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Lbl_Eliminar_Nombre1_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Btn_Eliminar_Buscar_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Dtp_Eliminar_Fdn_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Apellido2_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Apellido1_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Nombre2_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Controls.Add(this.Txt_Eliminar_Nombre1_Entrenador);
-            this.Gbx_Eliminar_Entrenador2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Gbx_Eliminar_Entrenador2.Location = new System.Drawing.Point(603, 3);
-            this.Gbx_Eliminar_Entrenador2.Name = "Gbx_Eliminar_Entrenador2";
-            this.Gbx_Eliminar_Entrenador2.Size = new System.Drawing.Size(735, 575);
-            this.Gbx_Eliminar_Entrenador2.TabIndex = 3;
-            this.Gbx_Eliminar_Entrenador2.TabStop = false;
-            this.Gbx_Eliminar_Entrenador2.Text = "2. Modificación de Entrenador";
-            // 
-            // Btn_Eliminar_Entrenador
-            // 
-            this.Btn_Eliminar_Entrenador.Location = new System.Drawing.Point(349, 298);
-            this.Btn_Eliminar_Entrenador.Name = "Btn_Eliminar_Entrenador";
-            this.Btn_Eliminar_Entrenador.Size = new System.Drawing.Size(88, 25);
-            this.Btn_Eliminar_Entrenador.TabIndex = 11;
-            this.Btn_Eliminar_Entrenador.Text = "Eliminar";
-            this.Btn_Eliminar_Entrenador.UseVisualStyleBackColor = true;
-            // 
-            // Lbl_Eliminar_Fdn_Entrenador
-            // 
-            this.Lbl_Eliminar_Fdn_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Fdn_Entrenador.Location = new System.Drawing.Point(25, 223);
-            this.Lbl_Eliminar_Fdn_Entrenador.Name = "Lbl_Eliminar_Fdn_Entrenador";
-            this.Lbl_Eliminar_Fdn_Entrenador.Size = new System.Drawing.Size(133, 17);
-            this.Lbl_Eliminar_Fdn_Entrenador.TabIndex = 10;
-            this.Lbl_Eliminar_Fdn_Entrenador.Text = "Fecha de Nacimiento :";
-            // 
-            // Lbl_Eliminar_Apellido2_Entrenador
-            // 
-            this.Lbl_Eliminar_Apellido2_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Apellido2_Entrenador.Location = new System.Drawing.Point(22, 179);
-            this.Lbl_Eliminar_Apellido2_Entrenador.Name = "Lbl_Eliminar_Apellido2_Entrenador";
-            this.Lbl_Eliminar_Apellido2_Entrenador.Size = new System.Drawing.Size(111, 17);
-            this.Lbl_Eliminar_Apellido2_Entrenador.TabIndex = 9;
-            this.Lbl_Eliminar_Apellido2_Entrenador.Text = "Segundo Apellido :";
-            // 
-            // Lbl_Eliminar_Apellido1_Entrenador
-            // 
-            this.Lbl_Eliminar_Apellido1_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Apellido1_Entrenador.Location = new System.Drawing.Point(19, 136);
-            this.Lbl_Eliminar_Apellido1_Entrenador.Name = "Lbl_Eliminar_Apellido1_Entrenador";
-            this.Lbl_Eliminar_Apellido1_Entrenador.Size = new System.Drawing.Size(101, 17);
-            this.Lbl_Eliminar_Apellido1_Entrenador.TabIndex = 8;
-            this.Lbl_Eliminar_Apellido1_Entrenador.Text = "Primer Apellido :";
-            // 
-            // Lbl_Eliminar_Nombre2_Entrenador
-            // 
-            this.Lbl_Eliminar_Nombre2_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Nombre2_Entrenador.Location = new System.Drawing.Point(19, 91);
-            this.Lbl_Eliminar_Nombre2_Entrenador.Name = "Lbl_Eliminar_Nombre2_Entrenador";
-            this.Lbl_Eliminar_Nombre2_Entrenador.Size = new System.Drawing.Size(112, 17);
-            this.Lbl_Eliminar_Nombre2_Entrenador.TabIndex = 7;
-            this.Lbl_Eliminar_Nombre2_Entrenador.Text = "Segundo Nombre :";
-            // 
-            // Lbl_Eliminar_Nombre1_Entrenador
-            // 
-            this.Lbl_Eliminar_Nombre1_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Nombre1_Entrenador.Location = new System.Drawing.Point(19, 51);
-            this.Lbl_Eliminar_Nombre1_Entrenador.Name = "Lbl_Eliminar_Nombre1_Entrenador";
-            this.Lbl_Eliminar_Nombre1_Entrenador.Size = new System.Drawing.Size(102, 17);
-            this.Lbl_Eliminar_Nombre1_Entrenador.TabIndex = 6;
-            this.Lbl_Eliminar_Nombre1_Entrenador.Text = "Primer Nombre :";
-            // 
-            // Btn_Eliminar_Buscar_Entrenador
-            // 
-            this.Btn_Eliminar_Buscar_Entrenador.Location = new System.Drawing.Point(245, 298);
-            this.Btn_Eliminar_Buscar_Entrenador.Name = "Btn_Eliminar_Buscar_Entrenador";
-            this.Btn_Eliminar_Buscar_Entrenador.Size = new System.Drawing.Size(99, 25);
-            this.Btn_Eliminar_Buscar_Entrenador.TabIndex = 5;
-            this.Btn_Eliminar_Buscar_Entrenador.Text = "Buscar";
-            this.Btn_Eliminar_Buscar_Entrenador.UseVisualStyleBackColor = true;
-            // 
-            // Dtp_Eliminar_Fdn_Entrenador
-            // 
-            this.Dtp_Eliminar_Fdn_Entrenador.Location = new System.Drawing.Point(180, 219);
-            this.Dtp_Eliminar_Fdn_Entrenador.Name = "Dtp_Eliminar_Fdn_Entrenador";
-            this.Dtp_Eliminar_Fdn_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Dtp_Eliminar_Fdn_Entrenador.TabIndex = 4;
-            // 
-            // Txt_Eliminar_Apellido2_Entrenador
-            // 
-            this.Txt_Eliminar_Apellido2_Entrenador.Location = new System.Drawing.Point(180, 179);
-            this.Txt_Eliminar_Apellido2_Entrenador.Name = "Txt_Eliminar_Apellido2_Entrenador";
-            this.Txt_Eliminar_Apellido2_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Eliminar_Apellido2_Entrenador.TabIndex = 3;
-            // 
-            // Txt_Eliminar_Apellido1_Entrenador
-            // 
-            this.Txt_Eliminar_Apellido1_Entrenador.Location = new System.Drawing.Point(180, 134);
-            this.Txt_Eliminar_Apellido1_Entrenador.Name = "Txt_Eliminar_Apellido1_Entrenador";
-            this.Txt_Eliminar_Apellido1_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Eliminar_Apellido1_Entrenador.TabIndex = 2;
-            // 
-            // Txt_Eliminar_Nombre2_Entrenador
-            // 
-            this.Txt_Eliminar_Nombre2_Entrenador.Location = new System.Drawing.Point(180, 91);
-            this.Txt_Eliminar_Nombre2_Entrenador.Name = "Txt_Eliminar_Nombre2_Entrenador";
-            this.Txt_Eliminar_Nombre2_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Eliminar_Nombre2_Entrenador.TabIndex = 1;
-            // 
-            // Txt_Eliminar_Nombre1_Entrenador
-            // 
-            this.Txt_Eliminar_Nombre1_Entrenador.Location = new System.Drawing.Point(180, 47);
-            this.Txt_Eliminar_Nombre1_Entrenador.Name = "Txt_Eliminar_Nombre1_Entrenador";
-            this.Txt_Eliminar_Nombre1_Entrenador.Size = new System.Drawing.Size(257, 23);
-            this.Txt_Eliminar_Nombre1_Entrenador.TabIndex = 0;
+            // Txt_Modificar_Id_Entenador
+            // 
+            this.Txt_Modificar_Id_Entenador.Enabled = false;
+            this.Txt_Modificar_Id_Entenador.Location = new System.Drawing.Point(180, 369);
+            this.Txt_Modificar_Id_Entenador.Name = "Txt_Modificar_Id_Entenador";
+            this.Txt_Modificar_Id_Entenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Modificar_Id_Entenador.TabIndex = 12;
+            // 
+            // Lbl_Modificar_Id_Entrenador
+            // 
+            this.Lbl_Modificar_Id_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Id_Entrenador.Location = new System.Drawing.Point(28, 374);
+            this.Lbl_Modificar_Id_Entrenador.Name = "Lbl_Modificar_Id_Entrenador";
+            this.Lbl_Modificar_Id_Entrenador.Size = new System.Drawing.Size(95, 17);
+            this.Lbl_Modificar_Id_Entrenador.TabIndex = 13;
+            this.Lbl_Modificar_Id_Entrenador.Text = "ID Entrenador :";
+            // 
+            // Lbl_Modificar_Tipo_Usuario_Entrenador
+            // 
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.AutoSize = true;
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.Location = new System.Drawing.Point(23, 136);
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.Name = "Lbl_Modificar_Tipo_Usuario_Entrenador";
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.TabIndex = 6;
+            this.Lbl_Modificar_Tipo_Usuario_Entrenador.Text = "Tipo de Usuario :";
+            // 
+            // Txt_Modificar_Tipo_Usuario_Entrenador
+            // 
+            this.Txt_Modificar_Tipo_Usuario_Entrenador.Enabled = false;
+            this.Txt_Modificar_Tipo_Usuario_Entrenador.Location = new System.Drawing.Point(137, 136);
+            this.Txt_Modificar_Tipo_Usuario_Entrenador.Name = "Txt_Modificar_Tipo_Usuario_Entrenador";
+            this.Txt_Modificar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Modificar_Tipo_Usuario_Entrenador.TabIndex = 7;
+            // 
+            // Txt_Eliminar_Id_Entrenador
+            // 
+            this.Txt_Eliminar_Id_Entrenador.Enabled = false;
+            this.Txt_Eliminar_Id_Entrenador.Location = new System.Drawing.Point(180, 324);
+            this.Txt_Eliminar_Id_Entrenador.Name = "Txt_Eliminar_Id_Entrenador";
+            this.Txt_Eliminar_Id_Entrenador.Size = new System.Drawing.Size(257, 23);
+            this.Txt_Eliminar_Id_Entrenador.TabIndex = 12;
+            // 
+            // Lbl_Eliminar_Id_Entrenador
+            // 
+            this.Lbl_Eliminar_Id_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Id_Entrenador.Location = new System.Drawing.Point(25, 330);
+            this.Lbl_Eliminar_Id_Entrenador.Name = "Lbl_Eliminar_Id_Entrenador";
+            this.Lbl_Eliminar_Id_Entrenador.Size = new System.Drawing.Size(88, 17);
+            this.Lbl_Eliminar_Id_Entrenador.TabIndex = 13;
+            this.Lbl_Eliminar_Id_Entrenador.Text = "ID Entrenador";
+            // 
+            // Lbl_Eliminar_Tipo_Usuario_Entrenador
+            // 
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.AutoSize = true;
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.Location = new System.Drawing.Point(23, 136);
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.Name = "Lbl_Eliminar_Tipo_Usuario_Entrenador";
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.TabIndex = 6;
+            this.Lbl_Eliminar_Tipo_Usuario_Entrenador.Text = "Tipo de Usuario :";
+            // 
+            // Txt_Eliminar_Tipo_Usuario_Entrenador
+            // 
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador.Enabled = false;
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador.Location = new System.Drawing.Point(137, 130);
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador.Name = "Txt_Eliminar_Tipo_Usuario_Entrenador";
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(194, 23);
+            this.Txt_Eliminar_Tipo_Usuario_Entrenador.TabIndex = 7;
             // 
             // FrmAdminEntrenador
             // 
@@ -660,21 +750,21 @@
             this.Name = "FrmAdminEntrenador";
             this.Load += new System.EventHandler(this.FmrAdminEntrenador_Load);
             this.Tbp_Eliminar_Entrenador.ResumeLayout(false);
+            this.Gbx_Eliminar_Entrenador2.ResumeLayout(false);
+            this.Gbx_Eliminar_Entrenador2.PerformLayout();
+            this.Gbx_Eliminar_Entrenador1.ResumeLayout(false);
+            this.Gbx_Eliminar_Entrenador1.PerformLayout();
             this.Tbp_Modificar_Entrenador.ResumeLayout(false);
+            this.Gbx_Modificar_Entrenador2.ResumeLayout(false);
+            this.Gbx_Modificar_Entrenador2.PerformLayout();
+            this.Gbx_Modificar_Entrenador1.ResumeLayout(false);
+            this.Gbx_Modificar_Entrenador1.PerformLayout();
             this.Tbp_Ingreso_Entrenador.ResumeLayout(false);
             this.Gbx_Ingreso_Entrenador2.ResumeLayout(false);
             this.Gbx_Ingreso_Entrenador2.PerformLayout();
             this.Gbx_Ingreso_Entrenador1.ResumeLayout(false);
             this.Gbx_Ingreso_Entrenador1.PerformLayout();
             this.Tbc_Entrenador.ResumeLayout(false);
-            this.Gbx_Modificar_Entrenador1.ResumeLayout(false);
-            this.Gbx_Modificar_Entrenador1.PerformLayout();
-            this.Gbx_Modificar_Entrenador2.ResumeLayout(false);
-            this.Gbx_Modificar_Entrenador2.PerformLayout();
-            this.Gbx_Eliminar_Entrenador1.ResumeLayout(false);
-            this.Gbx_Eliminar_Entrenador1.PerformLayout();
-            this.Gbx_Eliminar_Entrenador2.ResumeLayout(false);
-            this.Gbx_Eliminar_Entrenador2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -739,5 +829,13 @@
         private System.Windows.Forms.Label Lbl_Eliminar_Usuario_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Password_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Usuario_Entrenador;
+        private System.Windows.Forms.Label Lbl_Modificar_Id_Entrenador;
+        private System.Windows.Forms.TextBox Txt_Modificar_Id_Entenador;
+        private System.Windows.Forms.TextBox Txt_Modificar_Tipo_Usuario_Entrenador;
+        private System.Windows.Forms.Label Lbl_Modificar_Tipo_Usuario_Entrenador;
+        private System.Windows.Forms.Label Lbl_Eliminar_Id_Entrenador;
+        private System.Windows.Forms.TextBox Txt_Eliminar_Id_Entrenador;
+        private System.Windows.Forms.TextBox Txt_Eliminar_Tipo_Usuario_Entrenador;
+        private System.Windows.Forms.Label Lbl_Eliminar_Tipo_Usuario_Entrenador;
     }
 }
