@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
 {
-    class ClsUsuario
+    public class ClsUsuario
     {
         public string ID_Usuario { get; set; }
         public string TipoUsuario { get; set; }
         public string Password { get; set; }
+        public byte[] Foto { get; set; }
     }
 }

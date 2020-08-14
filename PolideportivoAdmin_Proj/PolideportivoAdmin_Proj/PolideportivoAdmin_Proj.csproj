@@ -61,9 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
       <SubType>Form</SubType>
@@ -106,6 +108,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.Designer.cs">
       <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.cs">
       <SubType>Form</SubType>
@@ -160,6 +168,9 @@
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.resx">
       <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +217,7 @@
     <Content Include="Imagenes\Botones\seguridad.png" />
     <Content Include="Imagenes\Botones\usuario.png" />
     <Content Include="Imagenes\Icono\campeon.ico" />
+    <Content Include="Imagenes\Logo\Poli_deportivo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

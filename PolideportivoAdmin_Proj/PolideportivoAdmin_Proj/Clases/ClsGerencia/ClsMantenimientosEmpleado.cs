@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -172,26 +174,25 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        public bool ActualizarPerfil(string Usuario, string Password, byte[] Foto)
+        public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
         {
             
             try
             {
 
-                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA = @Imagen WHERE ID_USUARIO_FK='" + Usuario + "'";
+                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA ='"+ Foto +"' WHERE ID_USUARIO_FK='" + Usuario + "'";
                 string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
                                           "' WHERE ID_USUARIO='" + Usuario + "'";
 
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(CambiarFoto, conexion.conexion());
                 OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
-                Query_UPDATE1.Parameters.AddWithValue("Imagen", Foto);
 
                 Query_UPDATE1.ExecuteNonQuery();
                 Query_UPDATE2.ExecuteNonQuery();
 
                 MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-                return true;
+                
 
             }
             catch (Exception ex)
@@ -203,10 +204,13 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return false;
+                
 
             }
 
         }
+
+        
+
     }
 }

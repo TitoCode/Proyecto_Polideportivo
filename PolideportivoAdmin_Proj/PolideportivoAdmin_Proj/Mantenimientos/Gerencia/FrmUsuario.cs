@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +38,11 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            
-            Ingreso.ActualizarPerfil();
+            MemoryStream ms = new MemoryStream();
+            Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+            Ingreso.ActualizarPerfil(Txt_Usuario.Text, Txt_Password.Text, aByte);
         }
+
     }
 }

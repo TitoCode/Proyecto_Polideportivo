@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
+using PolideportivoAdmin_Proj.Clases.ClsUsuario;
+using System.IO;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -21,9 +23,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             
         }
 
+        ClsConexion Conexion = new ClsConexion();
+
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel(new FrmBase());
+            //MostrarFotografia(Lbl_Usuario.Text);
         }
 
         private void Btn_Empleado_Click(object sender, EventArgs e)
@@ -36,7 +41,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             AbrirFormEnPanel(new FrmReportes());
         }
 
-        private void AbrirFormEnPanel(object Formhijo)
+        public void AbrirFormEnPanel(object Formhijo)
         {
             if (this.Pnl_Contenedor.Controls.Count > 0)
                 this.Pnl_Contenedor.Controls.RemoveAt(0);
@@ -47,6 +52,55 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             this.Pnl_Contenedor.Tag = fh;
             fh.Show();
         }
+
+        private void Lblk_CambiarPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirFormEnPanel(new FrmUsuario());
+        }
+
+        private void Btn_Inicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FrmBase());
+        }
+
+        public void MostrarFotografia(string Usuario)
+        {
+            try
+            {
+
+                string BuscarDatoEmpleado = "SELECT FOTOGRAFIA FROM EMPLEADO WHERE ID_EMPLEADO ='" + 1 + "'";
+
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarDatoEmpleado, Conexion.conexion());
+                OdbcDataReader Lector = Query_Busqueda1.ExecuteReader();
+                MessageBox.Show("No se han completado los campos");
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        //byte[] img = Convert.FromBase64String(Lector["FOTOGRAFIA"]);
+                        //MemoryStream ms = new MemoryStream(img);
+                        
+                        //Bitmap bm = GetBitmap(img);
+                        //Ptb_FotoUsuario.Image = bm;
+                    }
+                    
+                
+                }
+
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 }
