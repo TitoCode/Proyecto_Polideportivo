@@ -79,7 +79,7 @@
     <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.Designer.cs">
+    <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.designer.cs">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminPartido.cs">

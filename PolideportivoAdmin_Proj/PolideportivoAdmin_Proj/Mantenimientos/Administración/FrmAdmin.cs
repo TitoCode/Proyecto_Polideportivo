@@ -21,5 +21,17 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
 
         }
+
+        private void Btn_Entreador_Click(object sender, EventArgs e)
+        {
+            Form Entrenador = new FrmAdminEntrenador();
+            Entrenador.ShowDialog();
+        }
+
+        private void Btn_Equipo_Click(object sender, EventArgs e)
+        {
+            Form Equipo = new FrmAdminEquipo();
+            Equipo.ShowDialog();
+        }
     }
 }
