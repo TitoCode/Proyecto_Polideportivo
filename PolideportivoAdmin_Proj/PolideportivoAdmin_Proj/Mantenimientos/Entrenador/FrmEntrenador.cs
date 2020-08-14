@@ -18,34 +18,26 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             InitializeComponent();
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-            button1.ForeColor = Color.FromArgb(10, 37, 73);
-        }
-
         private void FrmEntrenador_Load(object sender, EventArgs e)
         {
             
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void AbrirFormEnPanel(object Formhijo)
         {
-            button1.ForeColor = DefaultForeColor;
+            if (this.Pnl_Contenedor.Controls.Count > 0)
+                this.Pnl_Contenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Pnl_Contenedor.Controls.Add(fh);
+            this.Pnl_Contenedor.Tag = fh;
+            fh.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Btn_IngresoJugadores_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            AbrirFormEnPanel(new FrmEntrenador_Jugador());
         }
     }
 }
