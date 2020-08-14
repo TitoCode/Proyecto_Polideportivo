@@ -65,15 +65,16 @@
             this.Lbl_Apellido2_Eliminar = new System.Windows.Forms.Label();
             this.Txt_Apellido1_Eliminar = new System.Windows.Forms.TextBox();
             this.Txt_Nombre2_Eliminar = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_Eliminar = new System.Windows.Forms.TextBox();
-            this.Lbl_Titulo4 = new System.Windows.Forms.Label();
             this.Tbp_Modificar = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Eliminar = new MetroFramework.Controls.MetroTabPage();
+            this.Lbl_Titulo4 = new System.Windows.Forms.Label();
+            this.Txt_Busqueda_Eliminar = new System.Windows.Forms.TextBox();
             this.Tbc_Jugadores.SuspendLayout();
             this.Tbp_Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
             this.Tbp_Ingreso.SuspendLayout();
             this.Gpb_Datos_Eliminar.SuspendLayout();
+            this.Tbp_Modificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbc_Jugadores
@@ -85,8 +86,8 @@
             this.Tbc_Jugadores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Jugadores.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Jugadores.Name = "Tbc_Jugadores";
-            this.Tbc_Jugadores.SelectedIndex = 2;
-            this.Tbc_Jugadores.Size = new System.Drawing.Size(898, 484);
+            this.Tbc_Jugadores.SelectedIndex = 3;
+            this.Tbc_Jugadores.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Jugadores.TabIndex = 1;
             this.Tbc_Jugadores.UseSelectable = true;
             // 
@@ -99,7 +100,7 @@
             this.Tbp_Listado.HorizontalScrollbarSize = 10;
             this.Tbp_Listado.Location = new System.Drawing.Point(4, 38);
             this.Tbp_Listado.Name = "Tbp_Listado";
-            this.Tbp_Listado.Size = new System.Drawing.Size(890, 442);
+            this.Tbp_Listado.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Listado.TabIndex = 0;
             this.Tbp_Listado.Text = "Listado de Jugadores";
             this.Tbp_Listado.VerticalScrollbarBarColor = true;
@@ -138,7 +139,7 @@
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgw_Listado.Location = new System.Drawing.Point(0, 35);
+            this.Dgw_Listado.Location = new System.Drawing.Point(0, 74);
             this.Dgw_Listado.Name = "Dgw_Listado";
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -151,7 +152,7 @@
             this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgw_Listado.Size = new System.Drawing.Size(890, 407);
+            this.Dgw_Listado.Size = new System.Drawing.Size(906, 407);
             this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Blue;
             this.Dgw_Listado.TabIndex = 5;
             // 
@@ -204,14 +205,12 @@
             // 
             this.Tbp_Ingreso.Controls.Add(this.Btn_Ingreso);
             this.Tbp_Ingreso.Controls.Add(this.Gpb_Datos_Eliminar);
-            this.Tbp_Ingreso.Controls.Add(this.Txt_Busqueda_Eliminar);
-            this.Tbp_Ingreso.Controls.Add(this.Lbl_Titulo4);
             this.Tbp_Ingreso.HorizontalScrollbarBarColor = true;
             this.Tbp_Ingreso.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Ingreso.HorizontalScrollbarSize = 10;
             this.Tbp_Ingreso.Location = new System.Drawing.Point(4, 38);
             this.Tbp_Ingreso.Name = "Tbp_Ingreso";
-            this.Tbp_Ingreso.Size = new System.Drawing.Size(890, 442);
+            this.Tbp_Ingreso.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Ingreso.TabIndex = 1;
             this.Tbp_Ingreso.Text = "Ingreso de Jugadores";
             this.Tbp_Ingreso.VerticalScrollbarBarColor = true;
@@ -560,34 +559,16 @@
             this.Txt_Nombre2_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre2_Eliminar.TabIndex = 29;
             // 
-            // Txt_Busqueda_Eliminar
-            // 
-            this.Txt_Busqueda_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Busqueda_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Busqueda_Eliminar.Location = new System.Drawing.Point(276, 15);
-            this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
-            this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(313, 13);
-            this.Txt_Busqueda_Eliminar.TabIndex = 35;
-            // 
-            // Lbl_Titulo4
-            // 
-            this.Lbl_Titulo4.AutoSize = true;
-            this.Lbl_Titulo4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo4.Location = new System.Drawing.Point(24, 14);
-            this.Lbl_Titulo4.Name = "Lbl_Titulo4";
-            this.Lbl_Titulo4.Size = new System.Drawing.Size(186, 14);
-            this.Lbl_Titulo4.TabIndex = 34;
-            this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
-            // 
             // Tbp_Modificar
             // 
+            this.Tbp_Modificar.Controls.Add(this.Txt_Busqueda_Eliminar);
+            this.Tbp_Modificar.Controls.Add(this.Lbl_Titulo4);
             this.Tbp_Modificar.HorizontalScrollbarBarColor = true;
             this.Tbp_Modificar.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Modificar.HorizontalScrollbarSize = 10;
             this.Tbp_Modificar.Location = new System.Drawing.Point(4, 38);
             this.Tbp_Modificar.Name = "Tbp_Modificar";
-            this.Tbp_Modificar.Size = new System.Drawing.Size(890, 442);
+            this.Tbp_Modificar.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Modificar.TabIndex = 2;
             this.Tbp_Modificar.Text = "Modificar un Jugador";
             this.Tbp_Modificar.VerticalScrollbarBarColor = true;
@@ -599,20 +580,40 @@
             this.Tbp_Eliminar.HorizontalScrollbarBarColor = true;
             this.Tbp_Eliminar.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Eliminar.HorizontalScrollbarSize = 10;
-            this.Tbp_Eliminar.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Eliminar.Location = new System.Drawing.Point(4, 39);
             this.Tbp_Eliminar.Name = "Tbp_Eliminar";
-            this.Tbp_Eliminar.Size = new System.Drawing.Size(890, 442);
+            this.Tbp_Eliminar.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Eliminar.TabIndex = 3;
             this.Tbp_Eliminar.Text = "Eliminar un Jugador";
             this.Tbp_Eliminar.VerticalScrollbarBarColor = true;
             this.Tbp_Eliminar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Eliminar.VerticalScrollbarSize = 10;
             // 
+            // Lbl_Titulo4
+            // 
+            this.Lbl_Titulo4.AutoSize = true;
+            this.Lbl_Titulo4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo4.Location = new System.Drawing.Point(27, 19);
+            this.Lbl_Titulo4.Name = "Lbl_Titulo4";
+            this.Lbl_Titulo4.Size = new System.Drawing.Size(186, 14);
+            this.Lbl_Titulo4.TabIndex = 35;
+            this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
+            // 
+            // Txt_Busqueda_Eliminar
+            // 
+            this.Txt_Busqueda_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Busqueda_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Busqueda_Eliminar.Location = new System.Drawing.Point(260, 20);
+            this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
+            this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(313, 13);
+            this.Txt_Busqueda_Eliminar.TabIndex = 36;
+            // 
             // FrmEntrenador_Jugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 484);
+            this.ClientSize = new System.Drawing.Size(914, 523);
             this.Controls.Add(this.Tbc_Jugadores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEntrenador_Jugador";
@@ -621,9 +622,10 @@
             this.Tbp_Listado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).EndInit();
             this.Tbp_Ingreso.ResumeLayout(false);
-            this.Tbp_Ingreso.PerformLayout();
             this.Gpb_Datos_Eliminar.ResumeLayout(false);
             this.Gpb_Datos_Eliminar.PerformLayout();
+            this.Tbp_Modificar.ResumeLayout(false);
+            this.Tbp_Modificar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -664,9 +666,9 @@
         private System.Windows.Forms.Label Lbl_Apellido2_Eliminar;
         private System.Windows.Forms.TextBox Txt_Apellido1_Eliminar;
         private System.Windows.Forms.TextBox Txt_Nombre2_Eliminar;
-        private System.Windows.Forms.TextBox Txt_Busqueda_Eliminar;
-        private System.Windows.Forms.Label Lbl_Titulo4;
         private MetroFramework.Controls.MetroTabPage Tbp_Modificar;
         private MetroFramework.Controls.MetroTabPage Tbp_Eliminar;
+        private System.Windows.Forms.TextBox Txt_Busqueda_Eliminar;
+        private System.Windows.Forms.Label Lbl_Titulo4;
     }
 }
