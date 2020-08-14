@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -30,6 +31,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
+
+        
         }
 
         public void DatosCmb_TipoPuestoIngreso()
@@ -157,7 +160,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         }
 
-
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
             int TipoUsuario, TipoPuesto;
@@ -222,5 +224,17 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Cmb_TipoUsuario_Eliminar.Text = Empleado.TipoUsuario;
 
         }
+
+
+        private void Btn_Reporte_Click(object sender, EventArgs e)
+        {
+            Form Formulario = new FrmReportes();
+            this.Hide();
+            Formulario.ShowDialog();
+            this.Show();
+
+        }
+
+     
     }
 }
