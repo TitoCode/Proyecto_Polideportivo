@@ -94,6 +94,12 @@
     <Compile Include="Mantenimientos\Entrenador\FrmEntrenador.Designer.cs">
       <DependentUpon>FrmEntrenador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.Designer.cs">
+      <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmGerencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador.resx">
       <DependentUpon>FrmEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.resx">
+      <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmGerencia.resx">
       <DependentUpon>FrmGerencia.cs</DependentUpon>
