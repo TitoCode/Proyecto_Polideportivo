@@ -82,7 +82,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             if (Rbtn_Tipo1.Checked == false && Rbtn_Tipo2.Checked == false && Rbtn_Tipo3.Checked == false)
             {
-                MessageBox.Show("No ha Seleccionado un Tipo de Reporte");
+                MessageBox.Show("No ha Seleccionado un Tipo de Reporte.");
             }else{
                 Generar_Reportes();
             }
