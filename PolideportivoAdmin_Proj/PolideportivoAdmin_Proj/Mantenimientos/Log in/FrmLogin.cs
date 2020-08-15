@@ -34,7 +34,7 @@ namespace PolideportivoAdmin_Proj
         string UsuarioActivo;
         int TipoProceso = 1;
         string SenSql1 = null;
-
+        
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
             int TipoUsuario;
@@ -54,8 +54,6 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
-                    //Bitacora.IngresoBitacora(int Proceso, string Usuario, string Sql);
                     FrmGerencia Formulario = new FrmGerencia();
                     Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
@@ -112,6 +110,7 @@ namespace PolideportivoAdmin_Proj
                 if (TipoUsuario == 4)
                 {
 
+
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 13;
@@ -126,12 +125,13 @@ namespace PolideportivoAdmin_Proj
                 if (TipoUsuario == 5)
                 {
 
+
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 14;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-                    
+
                     MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Clear();
@@ -146,7 +146,6 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 14;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("Intentelo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Clear();

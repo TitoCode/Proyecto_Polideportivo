@@ -20,6 +20,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
+
         string UsuarioActivo = null;
         int TipoProceso = 0;
         string SenSql1 = null, SenSql2 = null;

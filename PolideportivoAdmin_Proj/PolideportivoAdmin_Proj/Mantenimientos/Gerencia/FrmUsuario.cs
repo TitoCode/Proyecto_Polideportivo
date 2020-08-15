@@ -49,6 +49,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
+
             MemoryStream ms = new MemoryStream();
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();

@@ -97,7 +97,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
             try
             {
 
-                string EliminarEmpleado = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK = '" + 2 + "' WHERE ID_EMPLEADO= " + ID_Empleado + "'";
+                string EliminarEmpleado = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK = '" + 2 + "' WHERE ID_EMPLEADO= '" + ID_Empleado + "'";
                 string EliminarUsuario = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = '" + 4 + "' WHERE ID_USUARIO='" + Usuario + "'";
 
                 OdbcCommand Query_DELETE2 = new OdbcCommand(EliminarEmpleado, conexion.conexion());

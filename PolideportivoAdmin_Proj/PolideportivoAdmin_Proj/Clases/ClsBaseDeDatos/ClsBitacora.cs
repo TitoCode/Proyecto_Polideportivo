@@ -21,7 +21,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
             IPHostEntry host;
             string localIP = "?";
 
-            
             string UsuarioActivo = ClsDatos.UserId;
 
             host = Dns.GetHostEntry(Dns.GetHostName());
@@ -33,6 +32,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 
                 }
             }
+
 
 
             switch (Proceso)
@@ -53,6 +53,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 case 14: Nombre_Proceso = "Intento_de_Ingreso"; break;
                 case 15: Nombre_Proceso = "Creacion_Reporte"; break;
             }
+
 
             try
             {
@@ -75,6 +76,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 fichero.WriteLine("LOG IP: " + localIP + " Usuario: " + UsuarioActivo + " Sentencia Sql: " + Sql + " Proceso: " + Nombre_Proceso + " PC: " + Convert.ToString(host.HostName) +
                 " Fecha: " + DateTime.Now + " - " + Environment.NewLine);
                 fichero.Close(); // Al cerrar el fichero nos aseguramos que no queda ningún dato por guardar
+
 
 
             }

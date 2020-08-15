@@ -24,7 +24,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
-
         ClsBitacora Bitacora = new ClsBitacora();
 
         string UsuarioActivo = null;

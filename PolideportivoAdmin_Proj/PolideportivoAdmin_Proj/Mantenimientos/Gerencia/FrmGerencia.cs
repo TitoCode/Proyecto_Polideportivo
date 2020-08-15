@@ -16,6 +16,7 @@ using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases;
 
 
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmGerencia : Form
