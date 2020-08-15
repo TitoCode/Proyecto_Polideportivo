@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenador));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
-            this.Btn_Inscripcion = new System.Windows.Forms.Button();
+            this.Lbl_Puesto = new System.Windows.Forms.Label();
+            this.Lbl_Nombre = new System.Windows.Forms.Label();
+            this.Ptb_FotoUsuario = new System.Windows.Forms.PictureBox();
             this.Btn_CerrarSesion = new System.Windows.Forms.Button();
             this.Btn_IngresoJugadores = new System.Windows.Forms.Button();
             this.Btn_Equipo = new System.Windows.Forms.Button();
             this.Btn_TablaDePosiciones = new System.Windows.Forms.Button();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
-            this.Ptb_FotoUsuario = new System.Windows.Forms.PictureBox();
-            this.Lbl_Puesto = new System.Windows.Forms.Label();
-            this.Lbl_Nombre = new System.Windows.Forms.Label();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +48,6 @@
             this.Pnl_Menu.Controls.Add(this.Lbl_Puesto);
             this.Pnl_Menu.Controls.Add(this.Lbl_Nombre);
             this.Pnl_Menu.Controls.Add(this.Ptb_FotoUsuario);
-            this.Pnl_Menu.Controls.Add(this.Btn_Inscripcion);
             this.Pnl_Menu.Controls.Add(this.Btn_CerrarSesion);
             this.Pnl_Menu.Controls.Add(this.Btn_IngresoJugadores);
             this.Pnl_Menu.Controls.Add(this.Btn_Equipo);
@@ -60,19 +58,37 @@
             this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
             this.Pnl_Menu.TabIndex = 0;
             // 
-            // Btn_Inscripcion
+            // Lbl_Puesto
             // 
-            this.Btn_Inscripcion.FlatAppearance.BorderSize = 0;
-            this.Btn_Inscripcion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Inscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Inscripcion.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Inscripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Inscripcion.Location = new System.Drawing.Point(-6, 370);
-            this.Btn_Inscripcion.Name = "Btn_Inscripcion";
-            this.Btn_Inscripcion.Size = new System.Drawing.Size(161, 41);
-            this.Btn_Inscripcion.TabIndex = 4;
-            this.Btn_Inscripcion.Text = "INSCRIBIRSE A CAMPEONATO";
-            this.Btn_Inscripcion.UseVisualStyleBackColor = true;
+            this.Lbl_Puesto.AutoSize = true;
+            this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 197);
+            this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Puesto.Name = "Lbl_Puesto";
+            this.Lbl_Puesto.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_Puesto.TabIndex = 8;
+            this.Lbl_Puesto.Text = "label2";
+            // 
+            // Lbl_Nombre
+            // 
+            this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Nombre.Location = new System.Drawing.Point(11, 161);
+            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Nombre.Name = "Lbl_Nombre";
+            this.Lbl_Nombre.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_Nombre.TabIndex = 7;
+            this.Lbl_Nombre.Text = "label1";
+            // 
+            // Ptb_FotoUsuario
+            // 
+            this.Ptb_FotoUsuario.Location = new System.Drawing.Point(9, 11);
+            this.Ptb_FotoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.Ptb_FotoUsuario.Name = "Ptb_FotoUsuario";
+            this.Ptb_FotoUsuario.Size = new System.Drawing.Size(141, 134);
+            this.Ptb_FotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ptb_FotoUsuario.TabIndex = 5;
+            this.Ptb_FotoUsuario.TabStop = false;
             // 
             // Btn_CerrarSesion
             // 
@@ -110,7 +126,7 @@
             this.Btn_Equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Equipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Equipo.Location = new System.Drawing.Point(-6, 428);
+            this.Btn_Equipo.Location = new System.Drawing.Point(-6, 356);
             this.Btn_Equipo.Name = "Btn_Equipo";
             this.Btn_Equipo.Size = new System.Drawing.Size(161, 41);
             this.Btn_Equipo.TabIndex = 2;
@@ -140,38 +156,6 @@
             this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
             this.Pnl_Contenedor.TabIndex = 1;
             // 
-            // Ptb_FotoUsuario
-            // 
-            this.Ptb_FotoUsuario.Location = new System.Drawing.Point(9, 11);
-            this.Ptb_FotoUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.Ptb_FotoUsuario.Name = "Ptb_FotoUsuario";
-            this.Ptb_FotoUsuario.Size = new System.Drawing.Size(141, 134);
-            this.Ptb_FotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Ptb_FotoUsuario.TabIndex = 5;
-            this.Ptb_FotoUsuario.TabStop = false;
-            // 
-            // Lbl_Puesto
-            // 
-            this.Lbl_Puesto.AutoSize = true;
-            this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 197);
-            this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Puesto.Name = "Lbl_Puesto";
-            this.Lbl_Puesto.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_Puesto.TabIndex = 8;
-            this.Lbl_Puesto.Text = "label2";
-            // 
-            // Lbl_Nombre
-            // 
-            this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(11, 161);
-            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_Nombre.TabIndex = 7;
-            this.Lbl_Nombre.Text = "label1";
-            // 
             // FrmEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +183,6 @@
         private System.Windows.Forms.Button Btn_Equipo;
         private System.Windows.Forms.Button Btn_CerrarSesion;
         private System.Windows.Forms.Button Btn_IngresoJugadores;
-        private System.Windows.Forms.Button Btn_Inscripcion;
         private System.Windows.Forms.PictureBox Ptb_FotoUsuario;
         private System.Windows.Forms.Label Lbl_Puesto;
         private System.Windows.Forms.Label Lbl_Nombre;
