@@ -1,6 +1,6 @@
 ﻿namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
-    partial class Fmr_Admin_Campeonato
+    partial class FrmAdminCampeonato
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@
             this.TCtrl_Campeonato.Name = "TCtrl_Campeonato";
             this.TCtrl_Campeonato.SelectedIndex = 0;
             this.TCtrl_Campeonato.Size = new System.Drawing.Size(800, 450);
-            this.TCtrl_Campeonato.TabIndex = 0;
+            this.TCtrl_Campeonato.TabIndex = 2;
             // 
             // TP_Campeonato_Menu
             // 
@@ -432,13 +432,14 @@
             this.Txt_Eliminar_Nombre_Campeonato.Size = new System.Drawing.Size(121, 20);
             this.Txt_Eliminar_Nombre_Campeonato.TabIndex = 4;
             // 
-            // Fmr_Admin_Campeonato
+            // FrmAdminCampeonato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TCtrl_Campeonato);
-            this.Name = "Fmr_Admin_Campeonato";
+            this.Name = "FrmAdminCampeonato";
+            this.Text = "FrmAdminCampeonato";
             this.TCtrl_Campeonato.ResumeLayout(false);
             this.TP_Campeonato_Creación.ResumeLayout(false);
             this.Gpb_Crear_Campeonato.ResumeLayout(false);
@@ -470,6 +471,7 @@
         private System.Windows.Forms.TextBox Txt_Crear_Campeonato;
         private System.Windows.Forms.TabPage TP_Campeonato_Editar;
         private System.Windows.Forms.GroupBox Gpb_Editar_Campeonato;
+        private System.Windows.Forms.Button Btn_Editar_Buscar;
         private System.Windows.Forms.Label Lbl_Editar_Deporte;
         private System.Windows.Forms.Label Lbl_Editar_Sedes;
         private System.Windows.Forms.Label Lbl_Editar_Cantidad_Equipos;
@@ -480,7 +482,6 @@
         private System.Windows.Forms.TextBox Txt_Editar_Cantidad_Equipos;
         private System.Windows.Forms.TextBox Txt_Editar_Nombre_Campeonato;
         private System.Windows.Forms.TabPage TP_Campeonato_Eliminar;
-        private System.Windows.Forms.Button Btn_Editar_Buscar;
         private System.Windows.Forms.GroupBox Gpb_Eliminar_Campeonato;
         private System.Windows.Forms.Button Btn_Eliminar_Buscar;
         private System.Windows.Forms.Label Lbl_Eliminar_Deporte;

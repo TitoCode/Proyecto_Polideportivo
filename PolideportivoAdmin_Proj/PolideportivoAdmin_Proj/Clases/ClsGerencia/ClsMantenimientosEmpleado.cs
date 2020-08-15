@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Drawing;
@@ -15,6 +16,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
     {
         ClsConexion conexion = new ClsConexion();
         ClsGerencia Empleado = new ClsGerencia();
+
         public void IngresoEmpleado(string Usuario, string Password, int TipoUsuario, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, int TipoPuesto, string Direccion, string Telefono, string FechaNacimiento, string NIT, string DPI, string FechaContrato )
         {
 
@@ -36,6 +38,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
                 Query_Validacion3.ExecuteNonQuery();
+
+                
 
                 MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

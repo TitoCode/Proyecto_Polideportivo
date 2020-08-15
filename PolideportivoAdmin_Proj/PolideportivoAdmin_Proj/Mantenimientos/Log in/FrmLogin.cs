@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
@@ -17,8 +18,10 @@ using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
 namespace PolideportivoAdmin_Proj
 {
+    
     public partial class FrmLogin : Form
     {
+        
         public FrmLogin()
         {
             InitializeComponent();
@@ -26,7 +29,6 @@ namespace PolideportivoAdmin_Proj
 
         ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();
         ClsBitacora Bitacora = new ClsBitacora();
-        
 
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
@@ -41,7 +43,7 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 1)
                 {
-                    Bitacora.IngresoBitacora(int Proceso, string Usuario, string Sql);
+                    //Bitacora.IngresoBitacora(int Proceso, string Usuario, string Sql);
                     FrmGerencia Formulario = new FrmGerencia();
                     Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
@@ -60,6 +62,7 @@ namespace PolideportivoAdmin_Proj
                     FrmAdmin Formulario = new FrmAdmin();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    ClsLog.UserID = TxtUsuario.Text;
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
