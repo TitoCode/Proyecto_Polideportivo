@@ -16,41 +16,22 @@ using PolideportivoAdmin_Proj.Mantenimientos.Administración;
 using PolideportivoAdmin_Proj.Mantenimientos.Entrenador;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
-
 namespace PolideportivoAdmin_Proj
 {
-<<<<<<< HEAD
     
     public partial class FrmLogin : Form
     {
         
-=======
-    public partial class FrmLogin : Form 
-    {
-        
-
->>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
         public FrmLogin()
         {
             InitializeComponent();
-            
         }
 
-
-        ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();        
+        ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();
         ClsBitacora Bitacora = new ClsBitacora();
-<<<<<<< HEAD
-=======
-
-        string UsuarioActivo = null;
-        int TipoProceso = 0;
-        string SenSql1 = null;
-
->>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
 
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
-            
             int TipoUsuario;
             if (TxtUsuario.Text == "" || TxtPassword.Text == "")
             {
@@ -62,21 +43,11 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 1)
                 {
-<<<<<<< HEAD
                     //Bitacora.IngresoBitacora(int Proceso, string Usuario, string Sql);
-=======
-
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
->>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
                     FrmGerencia Formulario = new FrmGerencia();
-                    ClsDatos.UserId = TxtUsuario.Text;
+                    Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
                     Formulario.Lbl_Password.Text = TxtPassword.Text;
-                    
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -88,15 +59,10 @@ namespace PolideportivoAdmin_Proj
                 if (TipoUsuario == 2)
                 {
 
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     FrmAdmin Formulario = new FrmAdmin();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
-                    ClsLog.UserID = TxtUsuario.Text;
+                    
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -107,11 +73,6 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 3)
                 {
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     FrmEntrenador Formulario = new FrmEntrenador();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
@@ -125,12 +86,6 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 4)
                 {
-
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("Usuario o Contraseña Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Focus();
@@ -138,12 +93,6 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 5)
                 {
-
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Clear();
@@ -152,12 +101,6 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 0)
                 {
-
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 13;
-                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("Intentelo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Clear();

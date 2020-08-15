@@ -76,9 +76,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Admin.EliminarEntrenador(Txt_Eliminar_Usuario_Entrenador.Text, Txt_Eliminar_Id_Entrenador.Text);
         }
 
-        private void Btn_Seleccionar_Click(object sender, EventArgs e)
+        private void Btn_Fotografia_Click(object sender, EventArgs e)
         {
-            
             OpenFileDialog Fotografia = new OpenFileDialog();
             Fotografia.Filter = "Imagenes |*.jpg; *.png";
             Fotografia.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
@@ -88,8 +87,19 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             {
                 Ptb_Foto.Image = Image.FromFile(Fotografia.FileName);
             }
-
         }
 
+        private void Btn_CambiarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Fotografia = new OpenFileDialog();
+            Fotografia.Filter = "Imagenes |*.jpg; *.png";
+            Fotografia.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            Fotografia.Title = "Seleccionar Imagen";
+
+            if (Fotografia.ShowDialog() == DialogResult.OK)
+            {
+                Ptb_Foto_Modificar.Image = Image.FromFile(Fotografia.FileName);
+            }
+        }
     }
 }

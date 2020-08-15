@@ -71,7 +71,6 @@
             this.Lbl_Password_Ingreso = new System.Windows.Forms.Label();
             this.Gpb_Datos_Ingreso = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Btn_Seleccionar = new MetroFramework.Controls.MetroButton();
             this.Ptb_Foto = new System.Windows.Forms.PictureBox();
             this.Dtp_FechaNacimiento_Ingreso = new MetroFramework.Controls.MetroDateTime();
             this.Lbl_FechaNacimiento_Ingreso = new System.Windows.Forms.Label();
@@ -87,7 +86,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.Ptb_Foto_Modificar = new System.Windows.Forms.PictureBox();
             this.Dtp_Modificar_Fdn_Entrenador = new MetroFramework.Controls.MetroDateTime();
             this.label3 = new System.Windows.Forms.Label();
@@ -111,6 +109,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.Btn_Fotografia = new System.Windows.Forms.Button();
+            this.Btn_CambiarFoto = new System.Windows.Forms.Button();
             this.Tbc_Entrenador.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -140,24 +140,34 @@
             // 
             // Btn_Eliminar_Entrenador
             // 
-            this.Btn_Eliminar_Entrenador.Location = new System.Drawing.Point(674, 353);
+            this.Btn_Eliminar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Entrenador.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar_Entrenador.Location = new System.Drawing.Point(669, 332);
             this.Btn_Eliminar_Entrenador.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar_Entrenador.Name = "Btn_Eliminar_Entrenador";
-            this.Btn_Eliminar_Entrenador.Size = new System.Drawing.Size(115, 44);
+            this.Btn_Eliminar_Entrenador.Size = new System.Drawing.Size(136, 41);
             this.Btn_Eliminar_Entrenador.TabIndex = 11;
-            this.Btn_Eliminar_Entrenador.Text = "Eliminar";
-            this.Btn_Eliminar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar_Entrenador.Text = "ELIMINAR";
+            this.Btn_Eliminar_Entrenador.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Entrenador.Click += new System.EventHandler(this.Btn_Eliminar_Entrenador_Click);
             // 
             // Btn_Eliminar_Buscar_Entrenador
             // 
-            this.Btn_Eliminar_Buscar_Entrenador.Location = new System.Drawing.Point(651, 23);
+            this.Btn_Eliminar_Buscar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Buscar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Buscar_Entrenador.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar_Buscar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar_Buscar_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar_Buscar_Entrenador.Location = new System.Drawing.Point(669, 12);
             this.Btn_Eliminar_Buscar_Entrenador.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar_Buscar_Entrenador.Name = "Btn_Eliminar_Buscar_Entrenador";
-            this.Btn_Eliminar_Buscar_Entrenador.Size = new System.Drawing.Size(74, 20);
+            this.Btn_Eliminar_Buscar_Entrenador.Size = new System.Drawing.Size(131, 28);
             this.Btn_Eliminar_Buscar_Entrenador.TabIndex = 5;
-            this.Btn_Eliminar_Buscar_Entrenador.Text = "Buscar";
-            this.Btn_Eliminar_Buscar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar_Buscar_Entrenador.Text = "BUSCAR";
+            this.Btn_Eliminar_Buscar_Entrenador.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Buscar_Entrenador.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Entrenador_Click);
             // 
             // Txt_Eliminar_Apellido2_Entrenador
@@ -259,24 +269,34 @@
             // 
             // Btn_Modificar_Entrenador
             // 
-            this.Btn_Modificar_Entrenador.Location = new System.Drawing.Point(693, 364);
+            this.Btn_Modificar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Entrenador.FlatAppearance.BorderSize = 0;
+            this.Btn_Modificar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Modificar_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar_Entrenador.Location = new System.Drawing.Point(669, 332);
             this.Btn_Modificar_Entrenador.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar_Entrenador.Name = "Btn_Modificar_Entrenador";
-            this.Btn_Modificar_Entrenador.Size = new System.Drawing.Size(97, 31);
+            this.Btn_Modificar_Entrenador.Size = new System.Drawing.Size(136, 41);
             this.Btn_Modificar_Entrenador.TabIndex = 11;
-            this.Btn_Modificar_Entrenador.Text = "Modificar";
-            this.Btn_Modificar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Modificar_Entrenador.Text = "MODIFICAR";
+            this.Btn_Modificar_Entrenador.UseVisualStyleBackColor = false;
             this.Btn_Modificar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Entrenador_Click);
             // 
             // Btn_Modificar_Buscar_Entrenador
             // 
-            this.Btn_Modificar_Buscar_Entrenador.Location = new System.Drawing.Point(664, 6);
+            this.Btn_Modificar_Buscar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Buscar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Buscar_Entrenador.FlatAppearance.BorderSize = 0;
+            this.Btn_Modificar_Buscar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Modificar_Buscar_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar_Buscar_Entrenador.Location = new System.Drawing.Point(669, 12);
             this.Btn_Modificar_Buscar_Entrenador.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar_Buscar_Entrenador.Name = "Btn_Modificar_Buscar_Entrenador";
-            this.Btn_Modificar_Buscar_Entrenador.Size = new System.Drawing.Size(95, 28);
+            this.Btn_Modificar_Buscar_Entrenador.Size = new System.Drawing.Size(131, 28);
             this.Btn_Modificar_Buscar_Entrenador.TabIndex = 5;
-            this.Btn_Modificar_Buscar_Entrenador.Text = "Buscar";
-            this.Btn_Modificar_Buscar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Modificar_Buscar_Entrenador.Text = "BUSCAR";
+            this.Btn_Modificar_Buscar_Entrenador.UseVisualStyleBackColor = false;
             this.Btn_Modificar_Buscar_Entrenador.Click += new System.EventHandler(this.Btn_Modificar_Buscar_Entrenador_Click);
             // 
             // Txt_Modificar_Apellido2_Entrenador
@@ -352,13 +372,18 @@
             // 
             // Btn_Ingresar_Entrenador
             // 
-            this.Btn_Ingresar_Entrenador.Location = new System.Drawing.Point(687, 362);
+            this.Btn_Ingresar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Ingresar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Ingresar_Entrenador.FlatAppearance.BorderSize = 0;
+            this.Btn_Ingresar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ingresar_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ingresar_Entrenador.Location = new System.Drawing.Point(669, 332);
             this.Btn_Ingresar_Entrenador.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Ingresar_Entrenador.Name = "Btn_Ingresar_Entrenador";
-            this.Btn_Ingresar_Entrenador.Size = new System.Drawing.Size(97, 35);
+            this.Btn_Ingresar_Entrenador.Size = new System.Drawing.Size(136, 41);
             this.Btn_Ingresar_Entrenador.TabIndex = 5;
-            this.Btn_Ingresar_Entrenador.Text = "Ingresar";
-            this.Btn_Ingresar_Entrenador.UseVisualStyleBackColor = true;
+            this.Btn_Ingresar_Entrenador.Text = "INGRESAR";
+            this.Btn_Ingresar_Entrenador.UseVisualStyleBackColor = false;
             this.Btn_Ingresar_Entrenador.Click += new System.EventHandler(this.Btn_Ingresar_Entrenador_Click);
             // 
             // Txt_Ingreso_Apellido2_Entrenador
@@ -581,8 +606,8 @@
             // Gpb_Datos_Ingreso
             // 
             this.Gpb_Datos_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gpb_Datos_Ingreso.Controls.Add(this.Btn_Fotografia);
             this.Gpb_Datos_Ingreso.Controls.Add(this.label1);
-            this.Gpb_Datos_Ingreso.Controls.Add(this.Btn_Seleccionar);
             this.Gpb_Datos_Ingreso.Controls.Add(this.Ptb_Foto);
             this.Gpb_Datos_Ingreso.Controls.Add(this.Dtp_FechaNacimiento_Ingreso);
             this.Gpb_Datos_Ingreso.Controls.Add(this.Lbl_FechaNacimiento_Ingreso);
@@ -613,16 +638,6 @@
             this.label1.Size = new System.Drawing.Size(88, 14);
             this.label1.TabIndex = 51;
             this.label1.Text = "FOTO DE PERFIL";
-            // 
-            // Btn_Seleccionar
-            // 
-            this.Btn_Seleccionar.Location = new System.Drawing.Point(256, 345);
-            this.Btn_Seleccionar.Name = "Btn_Seleccionar";
-            this.Btn_Seleccionar.Size = new System.Drawing.Size(120, 23);
-            this.Btn_Seleccionar.TabIndex = 50;
-            this.Btn_Seleccionar.Text = "SELECCIONAR";
-            this.Btn_Seleccionar.UseSelectable = true;
-            this.Btn_Seleccionar.Click += new System.EventHandler(this.Btn_Seleccionar_Click);
             // 
             // Ptb_Foto
             // 
@@ -792,8 +807,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.Btn_CambiarFoto);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.metroButton1);
             this.groupBox1.Controls.Add(this.Ptb_Foto_Modificar);
             this.groupBox1.Controls.Add(this.Dtp_Modificar_Fdn_Entrenador);
             this.groupBox1.Controls.Add(this.label3);
@@ -824,15 +839,6 @@
             this.label2.Size = new System.Drawing.Size(88, 14);
             this.label2.TabIndex = 51;
             this.label2.Text = "FOTO DE PERFIL";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(256, 345);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(120, 23);
-            this.metroButton1.TabIndex = 50;
-            this.metroButton1.Text = "SELECCIONAR";
-            this.metroButton1.UseSelectable = true;
             // 
             // Ptb_Foto_Modificar
             // 
@@ -969,6 +975,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(20, 137);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -981,6 +988,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Enabled = false;
             this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(20, 36);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -993,6 +1001,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Enabled = false;
             this.label12.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(20, 86);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1028,6 +1037,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Enabled = false;
             this.label13.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(217, 193);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1038,6 +1048,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(179, 220);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(185, 157);
@@ -1062,6 +1073,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Enabled = false;
             this.label14.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(7, 137);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1074,6 +1086,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Enabled = false;
             this.label15.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(7, 36);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1086,6 +1099,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Enabled = false;
             this.label16.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(297, 36);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1098,6 +1112,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label17.Enabled = false;
             this.label17.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(7, 86);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1110,6 +1125,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Enabled = false;
             this.label18.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(297, 86);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1128,6 +1144,36 @@
             this.label19.Size = new System.Drawing.Size(195, 14);
             this.label19.TabIndex = 31;
             this.label19.Text = "Ingrese el ID del Entrenador";
+            // 
+            // Btn_Fotografia
+            // 
+            this.Btn_Fotografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Fotografia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Fotografia.FlatAppearance.BorderSize = 0;
+            this.Btn_Fotografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Fotografia.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Fotografia.Location = new System.Drawing.Point(258, 351);
+            this.Btn_Fotografia.Name = "Btn_Fotografia";
+            this.Btn_Fotografia.Size = new System.Drawing.Size(149, 31);
+            this.Btn_Fotografia.TabIndex = 52;
+            this.Btn_Fotografia.Text = "SELECCIONAR";
+            this.Btn_Fotografia.UseVisualStyleBackColor = false;
+            this.Btn_Fotografia.Click += new System.EventHandler(this.Btn_Fotografia_Click);
+            // 
+            // Btn_CambiarFoto
+            // 
+            this.Btn_CambiarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_CambiarFoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_CambiarFoto.FlatAppearance.BorderSize = 0;
+            this.Btn_CambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_CambiarFoto.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CambiarFoto.Location = new System.Drawing.Point(258, 351);
+            this.Btn_CambiarFoto.Name = "Btn_CambiarFoto";
+            this.Btn_CambiarFoto.Size = new System.Drawing.Size(149, 31);
+            this.Btn_CambiarFoto.TabIndex = 52;
+            this.Btn_CambiarFoto.Text = "SELECCIONAR";
+            this.Btn_CambiarFoto.UseVisualStyleBackColor = false;
+            this.Btn_CambiarFoto.Click += new System.EventHandler(this.Btn_CambiarFoto_Click);
             // 
             // FrmAdminEntrenador
             // 
@@ -1218,10 +1264,8 @@
         private System.Windows.Forms.Label Lbl_Password_Ingreso;
         private System.Windows.Forms.PictureBox Ptb_Foto;
         private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroButton Btn_Seleccionar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.PictureBox Ptb_Foto_Modificar;
         private MetroFramework.Controls.MetroDateTime Dtp_Modificar_Fdn_Entrenador;
         private System.Windows.Forms.Label label3;
@@ -1248,5 +1292,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button Btn_Fotografia;
+        private System.Windows.Forms.Button Btn_CambiarFoto;
     }
 }
