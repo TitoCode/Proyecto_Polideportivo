@@ -13,6 +13,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
     {
         ClsConexion conexion = new ClsConexion();
         ClsEntrenador Entrenador = new ClsEntrenador();
+        ClsEquipo Equipo = new ClsEquipo();
         public void IngresoEntrenador(string Usuario, string Password, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNacimiento, byte[] Foto)
         {
             try
@@ -143,120 +144,113 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             }
         }
 
-        //public void IngresoEquipo(string ID_Entrenador, string ID_TipoDeporte, string Nombre)
-        //{
-        //    try
-        //    {
-        //        int Id_Entrenador, Id_Tipo_Deporte;
-        //        Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
-        //        Id_Tipo_Deporte = Cbx_Crear_Deporte.SelectedIndex + 1;
+        public void IngresoEquipo(int ID_Entrenador, int ID_TipoDeporte, string Nombre)
+        {
+            try
+            {
+                int ID_Equipo;
+                string Correlativo = "SELECT IFNULL(MAX(ID_EQUIPO),0) +1 FROM EQUIPO";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, conexion.conexion());
+                ID_Equipo = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
-        //        int ID_Equipo;
-        //        string Correlativo = "SELECT IFNULL(MAX(ID_EQUIPO),0) +1 FROM EQUIPO";
-        //        OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, conexion.conexion());
-        //        ID_Equipo = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
-        //        OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
+                string InsertarEquipo = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO, ID_ENTRENADOR_FK, ID_TIPO_DEPORTE__FK, ID_ESTADO_EQUIPO_FK)" +
+                    "VALUES('" + ID_Equipo + "','" + Nombre + "','" + ID_Entrenador + "','" + ID_TipoDeporte + "','" + 1 + "')";
 
-        //        string InsertarEquipo = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO, ID_ENTRENADOR_FK, ID_TIPO_DEPORTE_FK, ID_ESTADO_EQUIPO_FK)" +
-        //            "VALUES('" + ID_Equipo + "','" + Nombre + "','" + ID_Entrenador + "','" + ID_TipoDeporte + "','" + 1 + "')";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarEquipo, conexion.conexion());
+                Query_Validacion2.ExecuteNonQuery();
 
-        //        OdbcCommand Query_Validacion1 = new OdbcCommand(InsertarEquipo, conexion.conexion());
-        //        Query_Validacion1.ExecuteNonQuery();
+                MessageBox.Show("Ingreso Exitoso", "FORMULARIO EQUIPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-        //        MessageBox.Show("Ingreso Exitoso", "FORMULARIO EQUIPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al ejecutar SQL: " +
-        //        System.Environment.NewLine + System.Environment.NewLine +
-        //        ex.GetType().ToString() + System.Environment.NewLine +
-        //        ex.Message, "Error",
-        //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+        }
 
-        //public void ModificarEquipo()
-        //{
-        //    try
-        //    {
-        //        string ModificarEquipo = "UPDATE EQUIPO SET NOMBRE_EQUIPO='" + Txt_Editar_Nombre_Equipo + "'ID_ENTRENADOR_FK='"
-        //            + Cbx_Editar_Entrenador + "' ID_TIPO_DEPORTE_FK='" + Cbx_Editar_Deporte + "WHERE ID_EQUIPO=" + Txt_Modificar_Id_Equipo + "'";
+        public void ModificarEquipo(string Nombre, string Id_Equipo)
+        {
+            try
+            {
+                string ModificarEquipo = "UPDATE EQUIPO SET NOMBRE_EQUIPO='" + Nombre + "' WHERE ID_EQUIPO='" + Id_Equipo + "'";
 
-        //        OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarEquipo, conexion.conexion());
-        //        Query_UPDATE1.ExecuteNonQuery();
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarEquipo, conexion.conexion());
+                Query_UPDATE1.ExecuteNonQuery();
 
-        //        MessageBox.Show("Equipo modificado con éxito.", "FORMULARIO ADMINNISTRACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al ejecutar SQL: " +
-        //        System.Environment.NewLine + System.Environment.NewLine +
-        //        ex.GetType().ToString() + System.Environment.NewLine +
-        //        ex.Message, "Error",
-        //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+                MessageBox.Show("Equipo modificado con éxito.", "FORMULARIO ADMINNISTRACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-        //public void EliminarEquipo()
-        //{
-        //    try
-        //    {
-        //        string BuscarEquipos = "SELECT * FROM EQUIPOS" + " WHERE NOMBRE_EQUIPO =" + Txt_Eliminar_Nombre_Equipo.Text;
+        }
 
-        //        OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEquipos, conexion.conexion());
-        //        OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
+        public void EliminarEquipo(string Id_Equipo)
+        {
+            try
+            {
+                string EliminarEquipos = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK='" + 3 + "' WHERE ID_EQUIPO='" + Id_Equipo + "'";
 
-        //        if (Lector1.HasRows == true)
-        //        {
-        //            while (Lector1.Read())
-        //            {
-        //                Txt_Eliminar_Id_Equipo.Text = Lector1.GetString(0);
-        //                Txt_Eliminar_Nombre_Equipo.Text = Lector1.GetString(1);
-        //                Cbx_Eliminar_Entrenador.Text = Lector1.GetString(2);
-        //                Cbx_Eliminar_Deporte.Text = Lector1.GetString(3);
-        //            }//fin while
-        //        }//fin if
-        //    }//fin try
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(EliminarEquipos, conexion.conexion());
+                Query_UPDATE1.ExecuteNonQuery();
 
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al ejecutar SQL: " +
-        //        System.Environment.NewLine + System.Environment.NewLine +
-        //        ex.GetType().ToString() + System.Environment.NewLine +
-        //        ex.Message, "Error",
-        //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }//fin catch
-        //}
+                MessageBox.Show("Equipo eliminado con éxito.", "FORMULARIO ADMINNISTRACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-        //public void BusquedaIDEquipo(string ID_Equipo)
-        //{
-        //    try
-        //    {
-        //        string BuscarEquipos = "SELECT * FROM EQUIPO WHERE ID_EQUIPO =" + ID_Equipo;
+        public ClsEquipo BusquedaIDEquipo(string ID_Equipo)
+        {
+            string NombreCompletoEntrenador;
+            try
+            {
+                string BuscarEquipos = "SELECT E.NOMBRE_EQUIPO, EN.NOMBRE1, EN.NOMBRE2, EN.APELLIDO1, EN.APELLIDO2, TP.NOMBRE_DEPORTE FROM EQUIPO AS E, ENTRENADOR AS EN, TIPO_DEPORTE AS TP WHERE ID_EQUIPO =" + ID_Equipo;
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEquipos, conexion.conexion());
+                OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
 
-        //        OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEquipos, conexion.conexion());
-        //        OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
+                if (Lector1.HasRows == true)
+                {
+                    while (Lector1.Read())
+                    {
+                        NombreCompletoEntrenador = "";
+                        NombreCompletoEntrenador += Lector1.GetString(1) + " ";
+                        NombreCompletoEntrenador += Lector1.GetString(2) + " ";
+                        NombreCompletoEntrenador += Lector1.GetString(3) + " ";
+                        NombreCompletoEntrenador += Lector1.GetString(4);
+                        Equipo.ID_Entrenador = NombreCompletoEntrenador;
+                        Equipo.Nombre = Lector1.GetString(0);
+                        Equipo.ID_TipoDeporte = Lector1.GetString(5);
+                    }
+                }
+                return Equipo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Equipo;
+            }
 
-        //        if (Lector1.HasRows == true)
-        //        {
-        //            while (Lector1.Read())
-        //            {
-        //                Txt_Modificar_Id_Equipo.Text = Lector1.GetString(0);
-        //                Txt_Editar_Nombre_Equipo.Text = Lector1.GetString(1);
-        //                Cbx_Editar_Entrenador.Text = Lector1.GetString(2);
-        //                Cbx_Editar_Deporte.Text = Lector1.GetString(3);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al ejecutar SQL: " +
-        //        System.Environment.NewLine + System.Environment.NewLine +
-        //        ex.GetType().ToString() + System.Environment.NewLine +
-        //        ex.Message, "Error",
-        //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-
-        //}
+        }
     }
 }

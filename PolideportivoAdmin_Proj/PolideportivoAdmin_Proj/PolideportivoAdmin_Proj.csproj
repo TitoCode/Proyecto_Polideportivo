@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsAdmin\ClsEntrenador.cs" />
+    <Compile Include="Clases\ClsAdmin\ClsEquipo.cs" />
     <Compile Include="Clases\ClsAdmin\ClsMantenimientosAdmin.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
+    <Compile Include="Clases\ClsCampeonato\ClsCampeonato.cs" />
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />

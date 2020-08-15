@@ -62,7 +62,7 @@ namespace PolideportivoAdmin_Proj
                     FrmAdmin Formulario = new FrmAdmin();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
-                    //ClsLog.UserID = TxtUsuario.Text;
+                    
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();

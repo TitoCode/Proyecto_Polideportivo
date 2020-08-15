@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using PolideportivoAdmin_Proj.Clases.ClsAdmin;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
@@ -19,6 +20,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         }
 
         ClsConexion conexion = new ClsConexion();
+        ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
+        ClsEquipo Equipo = new ClsEquipo();
+
 
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
         {
@@ -26,14 +30,14 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             DatosCbx_Tipo_Deporte();
         }
 
-        private void Cmb_Crear_Entrenador_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        }
-
         private void Btn_Ingresar_Equipo_Click(object sender, EventArgs e)
         {
-            
+            int Id_Entrenador, Id_Tipo_Deporte;
+            Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
+            Id_Tipo_Deporte = Cbx_Crear_Deporte.SelectedIndex + 1;
+
+            Admin.IngresoEquipo(Id_Entrenador, Id_Tipo_Deporte, Txt_Crear_Nombre_Equipo.Text);
+
         }
 
         private void DatosCbx_Equipos_Entrenador() 
@@ -57,8 +61,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                         NombreCompletoEntrenador += Lector1.GetString(3);
 
                         Cbx_Crear_Entrenador.Items.Add(NombreCompletoEntrenador);
-                        Cbx_Editar_Entrenador.Items.Add(NombreCompletoEntrenador);
-                        Cbx_Eliminar_Entrenador.Items.Add(NombreCompletoEntrenador);
+
                     }//fin while
                 }//fin if
             }//fin try
@@ -91,14 +94,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                 Cbx_Crear_Deporte.DisplayMember = "NOMBRE_DEPORTE";
                 Cbx_Crear_Deporte.ResetText();
 
-                Cbx_Editar_Deporte.DataSource = Datos;
-                Cbx_Editar_Deporte.DisplayMember = "NOMBRE_DEPORTE";
-                Cbx_Editar_Deporte.ResetText();
-
-                Cbx_Eliminar_Deporte.DataSource = Datos;
-                Cbx_Eliminar_Deporte.DisplayMember = "NOMBRE_DEPORTE";
-                Cbx_Eliminar_Deporte.ResetText();
-
             }
             catch (Exception ex)
             {
@@ -114,22 +109,30 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Editar_Buscar_Click(object sender, EventArgs e)
         {
-            
+            Equipo = Admin.BusquedaIDEquipo(Txt_Modificar_Id_Equipo.Text);
+            Txt_Editar_Nombre_Equipo.Text = Equipo.Nombre;
+            Txt_Editar_Deporte.Text = Equipo.ID_TipoDeporte;
+            Txt_Editar_Entrenador.Text = Equipo.ID_Entrenador;
+
         }
 
         private void Btn_Modificar_Equipo_Click(object sender, EventArgs e)
         {
-            
+            int Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
+            Admin.ModificarEquipo(Txt_Editar_Nombre_Equipo.Text, Txt_Modificar_Id_Equipo.Text);
         }
 
         private void Btn_Eliminar_Equipo_Click(object sender, EventArgs e)
         {
-            
+            Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
         }
 
         private void Btn_Eliminar_Buscar_Click(object sender, EventArgs e)
         {
-            
+            Equipo = Admin.BusquedaIDEquipo(Txt_Modificar_Id_Equipo.Text);
+            Txt_Eliminar_Nombre_Equipo.Text = Equipo.Nombre;
+            Txt_Eliminar_Deporte.Text = Equipo.ID_TipoDeporte;
+            Txt_Eliminar_Entrenador.Text = Equipo.ID_Entrenador;
         }
     }
 }

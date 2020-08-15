@@ -138,7 +138,7 @@
             this.Lblk_CambiarPerfil.ActiveLinkColor = System.Drawing.Color.White;
             this.Lblk_CambiarPerfil.AutoSize = true;
             this.Lblk_CambiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblk_CambiarPerfil.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.Lblk_CambiarPerfil.LinkColor = System.Drawing.Color.DodgerBlue;
             this.Lblk_CambiarPerfil.Location = new System.Drawing.Point(12, 166);
             this.Lblk_CambiarPerfil.Name = "Lblk_CambiarPerfil";
             this.Lblk_CambiarPerfil.Size = new System.Drawing.Size(71, 13);

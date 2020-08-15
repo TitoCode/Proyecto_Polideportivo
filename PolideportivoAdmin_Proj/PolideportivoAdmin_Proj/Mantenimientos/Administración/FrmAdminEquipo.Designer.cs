@@ -37,39 +37,39 @@
             this.Txt_Crear_Nombre_Equipo = new System.Windows.Forms.TextBox();
             this.Txt_Modificar_Id_Equipo = new System.Windows.Forms.TextBox();
             this.Btn_Editar_Buscar = new System.Windows.Forms.Button();
-            this.Cbx_Editar_Deporte = new System.Windows.Forms.ComboBox();
             this.Lbl_Editar_Deporte = new System.Windows.Forms.Label();
             this.Lbl_Editar_Entrenador = new System.Windows.Forms.Label();
             this.Lbl_Editar_Nombre_Equipo = new System.Windows.Forms.Label();
             this.Btn_Modificar_Equipo = new System.Windows.Forms.Button();
-            this.Cbx_Editar_Entrenador = new System.Windows.Forms.ComboBox();
             this.Txt_Editar_Nombre_Equipo = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Id_Equipo = new System.Windows.Forms.TextBox();
             this.Btn_Eliminar_Buscar = new System.Windows.Forms.Button();
-            this.Cbx_Eliminar_Deporte = new System.Windows.Forms.ComboBox();
             this.Btn_Eliminar_Equipo = new System.Windows.Forms.Button();
-            this.Cbx_Eliminar_Entrenador = new System.Windows.Forms.ComboBox();
             this.Txt_Eliminar_Nombre_Equipo = new System.Windows.Forms.TextBox();
             this.Tbc_Equipo = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_Listado = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
-            this.Tbp_Modifcar = new MetroFramework.Controls.MetroTabPage();
-            this.Tpb_Eliminar = new MetroFramework.Controls.MetroTabPage();
-            this.Gpb_Datos = new System.Windows.Forms.GroupBox();
             this.Lbl_Titulo2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Gpb_Datos = new System.Windows.Forms.GroupBox();
+            this.Tbp_Modifcar = new MetroFramework.Controls.MetroTabPage();
             this.Lbl_Titulo3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Txt_Editar_Entrenador = new System.Windows.Forms.TextBox();
+            this.Txt_Editar_Deporte = new System.Windows.Forms.TextBox();
+            this.Tpb_Eliminar = new MetroFramework.Controls.MetroTabPage();
             this.Lbl_Titulo4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Txt_Eliminar_Deporte = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_Entrenador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Tbc_Equipo.SuspendLayout();
             this.Tbp_Ingreso.SuspendLayout();
-            this.Tbp_Modifcar.SuspendLayout();
-            this.Tpb_Eliminar.SuspendLayout();
             this.Gpb_Datos.SuspendLayout();
+            this.Tbp_Modifcar.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.Tpb_Eliminar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             this.Cbx_Crear_Deporte.FormattingEnabled = true;
             this.Cbx_Crear_Deporte.Location = new System.Drawing.Point(198, 129);
             this.Cbx_Crear_Deporte.Name = "Cbx_Crear_Deporte";
-            this.Cbx_Crear_Deporte.Size = new System.Drawing.Size(221, 22);
+            this.Cbx_Crear_Deporte.Size = new System.Drawing.Size(420, 22);
             this.Cbx_Crear_Deporte.TabIndex = 13;
             // 
             // Lbl_Crear_Tipo_Deporte
@@ -136,9 +136,8 @@
             this.Cbx_Crear_Entrenador.FormattingEnabled = true;
             this.Cbx_Crear_Entrenador.Location = new System.Drawing.Point(198, 86);
             this.Cbx_Crear_Entrenador.Name = "Cbx_Crear_Entrenador";
-            this.Cbx_Crear_Entrenador.Size = new System.Drawing.Size(221, 22);
+            this.Cbx_Crear_Entrenador.Size = new System.Drawing.Size(420, 22);
             this.Cbx_Crear_Entrenador.TabIndex = 7;
-            this.Cbx_Crear_Entrenador.SelectedIndexChanged += new System.EventHandler(this.Cmb_Crear_Entrenador_SelectedIndexChanged);
             // 
             // Txt_Crear_Nombre_Equipo
             // 
@@ -146,7 +145,7 @@
             this.Txt_Crear_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Crear_Nombre_Equipo.Location = new System.Drawing.Point(198, 46);
             this.Txt_Crear_Nombre_Equipo.Name = "Txt_Crear_Nombre_Equipo";
-            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(221, 15);
+            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(420, 15);
             this.Txt_Crear_Nombre_Equipo.TabIndex = 4;
             // 
             // Txt_Modificar_Id_Equipo
@@ -154,7 +153,7 @@
             this.Txt_Modificar_Id_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Modificar_Id_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Modificar_Id_Equipo.Location = new System.Drawing.Point(299, 70);
-            this.Txt_Modificar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Modificar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Modificar_Id_Equipo.Name = "Txt_Modificar_Id_Equipo";
             this.Txt_Modificar_Id_Equipo.Size = new System.Drawing.Size(341, 13);
             this.Txt_Modificar_Id_Equipo.TabIndex = 15;
@@ -174,16 +173,6 @@
             this.Btn_Editar_Buscar.Text = "BUSCAR";
             this.Btn_Editar_Buscar.UseVisualStyleBackColor = false;
             this.Btn_Editar_Buscar.Click += new System.EventHandler(this.Btn_Editar_Buscar_Click);
-            // 
-            // Cbx_Editar_Deporte
-            // 
-            this.Cbx_Editar_Deporte.Enabled = false;
-            this.Cbx_Editar_Deporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Editar_Deporte.FormattingEnabled = true;
-            this.Cbx_Editar_Deporte.Location = new System.Drawing.Point(208, 120);
-            this.Cbx_Editar_Deporte.Name = "Cbx_Editar_Deporte";
-            this.Cbx_Editar_Deporte.Size = new System.Drawing.Size(211, 22);
-            this.Cbx_Editar_Deporte.TabIndex = 13;
             // 
             // Lbl_Editar_Deporte
             // 
@@ -233,31 +222,21 @@
             this.Btn_Modificar_Equipo.UseVisualStyleBackColor = false;
             this.Btn_Modificar_Equipo.Click += new System.EventHandler(this.Btn_Modificar_Equipo_Click);
             // 
-            // Cbx_Editar_Entrenador
-            // 
-            this.Cbx_Editar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Editar_Entrenador.FormattingEnabled = true;
-            this.Cbx_Editar_Entrenador.Location = new System.Drawing.Point(208, 84);
-            this.Cbx_Editar_Entrenador.Name = "Cbx_Editar_Entrenador";
-            this.Cbx_Editar_Entrenador.Size = new System.Drawing.Size(211, 22);
-            this.Cbx_Editar_Entrenador.TabIndex = 7;
-            // 
             // Txt_Editar_Nombre_Equipo
             // 
             this.Txt_Editar_Nombre_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Editar_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Editar_Nombre_Equipo.Location = new System.Drawing.Point(208, 48);
             this.Txt_Editar_Nombre_Equipo.Name = "Txt_Editar_Nombre_Equipo";
-            this.Txt_Editar_Nombre_Equipo.Size = new System.Drawing.Size(211, 15);
+            this.Txt_Editar_Nombre_Equipo.Size = new System.Drawing.Size(414, 15);
             this.Txt_Editar_Nombre_Equipo.TabIndex = 4;
             // 
             // Txt_Eliminar_Id_Equipo
             // 
             this.Txt_Eliminar_Id_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Id_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Eliminar_Id_Equipo.Enabled = false;
             this.Txt_Eliminar_Id_Equipo.Location = new System.Drawing.Point(299, 70);
-            this.Txt_Eliminar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Eliminar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Eliminar_Id_Equipo.Name = "Txt_Eliminar_Id_Equipo";
             this.Txt_Eliminar_Id_Equipo.Size = new System.Drawing.Size(341, 13);
             this.Txt_Eliminar_Id_Equipo.TabIndex = 16;
@@ -278,15 +257,6 @@
             this.Btn_Eliminar_Buscar.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Buscar.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Click);
             // 
-            // Cbx_Eliminar_Deporte
-            // 
-            this.Cbx_Eliminar_Deporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Eliminar_Deporte.FormattingEnabled = true;
-            this.Cbx_Eliminar_Deporte.Location = new System.Drawing.Point(210, 121);
-            this.Cbx_Eliminar_Deporte.Name = "Cbx_Eliminar_Deporte";
-            this.Cbx_Eliminar_Deporte.Size = new System.Drawing.Size(209, 22);
-            this.Cbx_Eliminar_Deporte.TabIndex = 13;
-            // 
             // Btn_Eliminar_Equipo
             // 
             this.Btn_Eliminar_Equipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
@@ -302,22 +272,14 @@
             this.Btn_Eliminar_Equipo.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Equipo.Click += new System.EventHandler(this.Btn_Eliminar_Equipo_Click);
             // 
-            // Cbx_Eliminar_Entrenador
-            // 
-            this.Cbx_Eliminar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Eliminar_Entrenador.FormattingEnabled = true;
-            this.Cbx_Eliminar_Entrenador.Location = new System.Drawing.Point(210, 85);
-            this.Cbx_Eliminar_Entrenador.Name = "Cbx_Eliminar_Entrenador";
-            this.Cbx_Eliminar_Entrenador.Size = new System.Drawing.Size(209, 22);
-            this.Cbx_Eliminar_Entrenador.TabIndex = 7;
-            // 
             // Txt_Eliminar_Nombre_Equipo
             // 
             this.Txt_Eliminar_Nombre_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Nombre_Equipo.Enabled = false;
             this.Txt_Eliminar_Nombre_Equipo.Location = new System.Drawing.Point(210, 46);
             this.Txt_Eliminar_Nombre_Equipo.Name = "Txt_Eliminar_Nombre_Equipo";
-            this.Txt_Eliminar_Nombre_Equipo.Size = new System.Drawing.Size(209, 15);
+            this.Txt_Eliminar_Nombre_Equipo.Size = new System.Drawing.Size(414, 15);
             this.Txt_Eliminar_Nombre_Equipo.TabIndex = 4;
             // 
             // Tbc_Equipo
@@ -329,7 +291,7 @@
             this.Tbc_Equipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Equipo.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Equipo.Name = "Tbc_Equipo";
-            this.Tbc_Equipo.SelectedIndex = 2;
+            this.Tbc_Equipo.SelectedIndex = 0;
             this.Tbc_Equipo.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Equipo.TabIndex = 2;
             this.Tbc_Equipo.UseSelectable = true;
@@ -365,6 +327,34 @@
             this.Tbp_Ingreso.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Ingreso.VerticalScrollbarSize = 10;
             // 
+            // Lbl_Titulo2
+            // 
+            this.Lbl_Titulo2.AutoSize = true;
+            this.Lbl_Titulo2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo2.Location = new System.Drawing.Point(308, 75);
+            this.Lbl_Titulo2.Name = "Lbl_Titulo2";
+            this.Lbl_Titulo2.Size = new System.Drawing.Size(244, 18);
+            this.Lbl_Titulo2.TabIndex = 24;
+            this.Lbl_Titulo2.Text = "Ingrese los siguiente datos";
+            // 
+            // Gpb_Datos
+            // 
+            this.Gpb_Datos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Nombre_Equipo);
+            this.Gpb_Datos.Controls.Add(this.Cbx_Crear_Deporte);
+            this.Gpb_Datos.Controls.Add(this.Cbx_Crear_Entrenador);
+            this.Gpb_Datos.Controls.Add(this.Txt_Crear_Nombre_Equipo);
+            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Tipo_Deporte);
+            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Cantidad_Equipos);
+            this.Gpb_Datos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_Datos.Location = new System.Drawing.Point(95, 138);
+            this.Gpb_Datos.Name = "Gpb_Datos";
+            this.Gpb_Datos.Size = new System.Drawing.Size(700, 183);
+            this.Gpb_Datos.TabIndex = 14;
+            this.Gpb_Datos.TabStop = false;
+            this.Gpb_Datos.Text = "Datos del Equipo";
+            // 
             // Tbp_Modifcar
             // 
             this.Tbp_Modifcar.Controls.Add(this.Lbl_Titulo3);
@@ -383,6 +373,54 @@
             this.Tbp_Modifcar.VerticalScrollbarBarColor = true;
             this.Tbp_Modifcar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Modifcar.VerticalScrollbarSize = 10;
+            // 
+            // Lbl_Titulo3
+            // 
+            this.Lbl_Titulo3.AutoSize = true;
+            this.Lbl_Titulo3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo3.Location = new System.Drawing.Point(82, 69);
+            this.Lbl_Titulo3.Name = "Lbl_Titulo3";
+            this.Lbl_Titulo3.Size = new System.Drawing.Size(170, 14);
+            this.Lbl_Titulo3.TabIndex = 27;
+            this.Lbl_Titulo3.Text = "Ingrese el  ID del Equipo";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.Txt_Editar_Entrenador);
+            this.groupBox1.Controls.Add(this.Txt_Editar_Deporte);
+            this.groupBox1.Controls.Add(this.Lbl_Editar_Entrenador);
+            this.groupBox1.Controls.Add(this.Lbl_Editar_Deporte);
+            this.groupBox1.Controls.Add(this.Txt_Editar_Nombre_Equipo);
+            this.groupBox1.Controls.Add(this.Lbl_Editar_Nombre_Equipo);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(100, 137);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(703, 183);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos del Equipo";
+            // 
+            // Txt_Editar_Entrenador
+            // 
+            this.Txt_Editar_Entrenador.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Editar_Entrenador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Editar_Entrenador.Enabled = false;
+            this.Txt_Editar_Entrenador.Location = new System.Drawing.Point(208, 87);
+            this.Txt_Editar_Entrenador.Name = "Txt_Editar_Entrenador";
+            this.Txt_Editar_Entrenador.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Editar_Entrenador.TabIndex = 15;
+            // 
+            // Txt_Editar_Deporte
+            // 
+            this.Txt_Editar_Deporte.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Editar_Deporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Editar_Deporte.Enabled = false;
+            this.Txt_Editar_Deporte.Location = new System.Drawing.Point(208, 123);
+            this.Txt_Editar_Deporte.Name = "Txt_Editar_Deporte";
+            this.Txt_Editar_Deporte.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Editar_Deporte.TabIndex = 14;
             // 
             // Tpb_Eliminar
             // 
@@ -403,62 +441,6 @@
             this.Tpb_Eliminar.VerticalScrollbarHighlightOnWheel = false;
             this.Tpb_Eliminar.VerticalScrollbarSize = 10;
             // 
-            // Gpb_Datos
-            // 
-            this.Gpb_Datos.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Nombre_Equipo);
-            this.Gpb_Datos.Controls.Add(this.Cbx_Crear_Deporte);
-            this.Gpb_Datos.Controls.Add(this.Cbx_Crear_Entrenador);
-            this.Gpb_Datos.Controls.Add(this.Txt_Crear_Nombre_Equipo);
-            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Tipo_Deporte);
-            this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Cantidad_Equipos);
-            this.Gpb_Datos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_Datos.Location = new System.Drawing.Point(205, 138);
-            this.Gpb_Datos.Name = "Gpb_Datos";
-            this.Gpb_Datos.Size = new System.Drawing.Size(450, 183);
-            this.Gpb_Datos.TabIndex = 14;
-            this.Gpb_Datos.TabStop = false;
-            this.Gpb_Datos.Text = "Datos del Equipo";
-            // 
-            // Lbl_Titulo2
-            // 
-            this.Lbl_Titulo2.AutoSize = true;
-            this.Lbl_Titulo2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo2.Location = new System.Drawing.Point(308, 75);
-            this.Lbl_Titulo2.Name = "Lbl_Titulo2";
-            this.Lbl_Titulo2.Size = new System.Drawing.Size(244, 18);
-            this.Lbl_Titulo2.TabIndex = 24;
-            this.Lbl_Titulo2.Text = "Ingrese los siguiente datos";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Controls.Add(this.Cbx_Editar_Entrenador);
-            this.groupBox1.Controls.Add(this.Lbl_Editar_Entrenador);
-            this.groupBox1.Controls.Add(this.Lbl_Editar_Deporte);
-            this.groupBox1.Controls.Add(this.Txt_Editar_Nombre_Equipo);
-            this.groupBox1.Controls.Add(this.Cbx_Editar_Deporte);
-            this.groupBox1.Controls.Add(this.Lbl_Editar_Nombre_Equipo);
-            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(190, 137);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 183);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Equipo";
-            // 
-            // Lbl_Titulo3
-            // 
-            this.Lbl_Titulo3.AutoSize = true;
-            this.Lbl_Titulo3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo3.Location = new System.Drawing.Point(82, 69);
-            this.Lbl_Titulo3.Name = "Lbl_Titulo3";
-            this.Lbl_Titulo3.Size = new System.Drawing.Size(146, 14);
-            this.Lbl_Titulo3.TabIndex = 27;
-            this.Lbl_Titulo3.Text = "Ingrese el del Equipo";
-            // 
             // Lbl_Titulo4
             // 
             this.Lbl_Titulo4.AutoSize = true;
@@ -473,19 +455,39 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Controls.Add(this.Txt_Eliminar_Deporte);
+            this.groupBox2.Controls.Add(this.Txt_Eliminar_Entrenador);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.Txt_Eliminar_Nombre_Equipo);
-            this.groupBox2.Controls.Add(this.Cbx_Eliminar_Entrenador);
-            this.groupBox2.Controls.Add(this.Cbx_Eliminar_Deporte);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(190, 137);
+            this.groupBox2.Location = new System.Drawing.Point(100, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 183);
+            this.groupBox2.Size = new System.Drawing.Size(703, 183);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
+            // 
+            // Txt_Eliminar_Deporte
+            // 
+            this.Txt_Eliminar_Deporte.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Deporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Deporte.Enabled = false;
+            this.Txt_Eliminar_Deporte.Location = new System.Drawing.Point(210, 123);
+            this.Txt_Eliminar_Deporte.Name = "Txt_Eliminar_Deporte";
+            this.Txt_Eliminar_Deporte.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Eliminar_Deporte.TabIndex = 15;
+            // 
+            // Txt_Eliminar_Entrenador
+            // 
+            this.Txt_Eliminar_Entrenador.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Entrenador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Entrenador.Enabled = false;
+            this.Txt_Eliminar_Entrenador.Location = new System.Drawing.Point(210, 87);
+            this.Txt_Eliminar_Entrenador.Name = "Txt_Eliminar_Entrenador";
+            this.Txt_Eliminar_Entrenador.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Eliminar_Entrenador.TabIndex = 14;
             // 
             // label2
             // 
@@ -533,14 +535,14 @@
             this.Tbc_Equipo.ResumeLayout(false);
             this.Tbp_Ingreso.ResumeLayout(false);
             this.Tbp_Ingreso.PerformLayout();
-            this.Tbp_Modifcar.ResumeLayout(false);
-            this.Tbp_Modifcar.PerformLayout();
-            this.Tpb_Eliminar.ResumeLayout(false);
-            this.Tpb_Eliminar.PerformLayout();
             this.Gpb_Datos.ResumeLayout(false);
             this.Gpb_Datos.PerformLayout();
+            this.Tbp_Modifcar.ResumeLayout(false);
+            this.Tbp_Modifcar.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.Tpb_Eliminar.ResumeLayout(false);
+            this.Tpb_Eliminar.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -556,16 +558,12 @@
         private System.Windows.Forms.TextBox Txt_Crear_Nombre_Equipo;
         private System.Windows.Forms.ComboBox Cbx_Crear_Deporte;
         private System.Windows.Forms.Button Btn_Editar_Buscar;
-        private System.Windows.Forms.ComboBox Cbx_Editar_Deporte;
         private System.Windows.Forms.Label Lbl_Editar_Deporte;
         private System.Windows.Forms.Label Lbl_Editar_Entrenador;
         private System.Windows.Forms.Label Lbl_Editar_Nombre_Equipo;
         private System.Windows.Forms.Button Btn_Modificar_Equipo;
-        private System.Windows.Forms.ComboBox Cbx_Editar_Entrenador;
         private System.Windows.Forms.TextBox Txt_Editar_Nombre_Equipo;
-        private System.Windows.Forms.ComboBox Cbx_Eliminar_Deporte;
         private System.Windows.Forms.Button Btn_Eliminar_Equipo;
-        private System.Windows.Forms.ComboBox Cbx_Eliminar_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Nombre_Equipo;
         private System.Windows.Forms.Button Btn_Eliminar_Buscar;
         private System.Windows.Forms.TextBox Txt_Modificar_Id_Equipo;
@@ -584,5 +582,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Txt_Editar_Deporte;
+        private System.Windows.Forms.TextBox Txt_Editar_Entrenador;
+        private System.Windows.Forms.TextBox Txt_Eliminar_Deporte;
+        private System.Windows.Forms.TextBox Txt_Eliminar_Entrenador;
     }
 }
