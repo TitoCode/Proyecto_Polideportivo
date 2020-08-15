@@ -19,10 +19,17 @@ using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
 namespace PolideportivoAdmin_Proj
 {
+<<<<<<< HEAD
+    
+    public partial class FrmLogin : Form
+    {
+        
+=======
     public partial class FrmLogin : Form 
     {
         
 
+>>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
         public FrmLogin()
         {
             InitializeComponent();
@@ -32,11 +39,14 @@ namespace PolideportivoAdmin_Proj
 
         ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();        
         ClsBitacora Bitacora = new ClsBitacora();
+<<<<<<< HEAD
+=======
 
         string UsuarioActivo = null;
         int TipoProceso = 0;
         string SenSql1 = null;
 
+>>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
 
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
@@ -52,12 +62,16 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 1)
                 {
+<<<<<<< HEAD
+                    //Bitacora.IngresoBitacora(int Proceso, string Usuario, string Sql);
+=======
 
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
+>>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
                     FrmGerencia Formulario = new FrmGerencia();
                     ClsDatos.UserId = TxtUsuario.Text;
                     Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
@@ -82,6 +96,7 @@ namespace PolideportivoAdmin_Proj
                     FrmAdmin Formulario = new FrmAdmin();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    ClsLog.UserID = TxtUsuario.Text;
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();

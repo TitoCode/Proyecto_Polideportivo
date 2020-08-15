@@ -32,9 +32,13 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             FrmGerencia Formulario = new FrmGerencia();
             AbrirFormEnPanel(new FrmBase());
+<<<<<<< HEAD
+            MostrarFotografia(Lbl_Usuario.Text);
+=======
             Lbl_Usuario.Text = ClsDatos.UserId;
             //MostrarFotografia(Lbl_Usuario.Text);
 
+>>>>>>> 680c468521f480f4a83d0c6e14f8ee546e402323
         }
 
         private void Btn_Empleado_Click(object sender, EventArgs e)
@@ -83,11 +87,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 {
                     while (Lector.Read())
                     {
-                        //byte[] img = Convert.FromBase64String(Lector["FOTOGRAFIA"]);
-                        //MemoryStream ms = new MemoryStream(img);
-                        
-                        //Bitmap bm = GetBitmap(img);
-                        //Ptb_FotoUsuario.Image = bm;
+                        MemoryStream ms = new MemoryStream((byte[])Lector["FOTOGRAFIA"]);
+                        ms.Position = 0;
+                        Ptb_FotoUsuario.BackgroundImage = Bitmap.FromStream(ms);
                     }
                     
                 
