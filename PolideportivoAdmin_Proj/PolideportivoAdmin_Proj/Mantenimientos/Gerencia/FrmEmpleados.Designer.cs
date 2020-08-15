@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_Empleados = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_ListadoEmpleado = new MetroFramework.Controls.MetroTabPage();
             this.Ttx_Busqueda_Listado = new MetroFramework.Controls.MetroTextBox();
@@ -235,27 +235,27 @@
             this.Dgw_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgw_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgw_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgw_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgw_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_EMPLEADO,
             this.Nombre,
             this.Nombre2});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle5;
             this.Dgw_Listado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -264,14 +264,14 @@
             this.Dgw_Listado.Margin = new System.Windows.Forms.Padding(4);
             this.Dgw_Listado.Name = "Dgw_Listado";
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgw_Listado.RowHeadersWidth = 51;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -907,9 +907,9 @@
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(400, 385);
             this.Dtp_FechaContrato_Modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 27);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
-            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(307, 27);
+            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(307, 26);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
             this.Dtp_FechaContrato_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -921,9 +921,9 @@
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(12, 321);
             this.Dtp_FechaNacimiento_Modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 27);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
-            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(307, 27);
+            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(307, 26);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
             this.Dtp_FechaNacimiento_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -1404,7 +1404,7 @@
             this.Dtp_FechaContrato_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(400, 385);
             this.Dtp_FechaContrato_Eliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(4, 27);
+            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
             this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaContrato_Eliminar.TabIndex = 49;
@@ -1418,7 +1418,7 @@
             this.Dtp_FechaNacimiento_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(12, 321);
             this.Dtp_FechaNacimiento_Eliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(4, 27);
+            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
             this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaNacimiento_Eliminar.TabIndex = 48;

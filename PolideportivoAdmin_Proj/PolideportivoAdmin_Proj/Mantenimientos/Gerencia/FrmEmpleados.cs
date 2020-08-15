@@ -13,19 +13,19 @@ using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases;
 
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmEmpleados : Form
     {
-        
         public FrmEmpleados()
         {
             InitializeComponent();
         }
 
         string UsuarioActivo = null;
-        int TipoProceso = 0 ;
-        string SenSql1 = null ,SenSql2 = null;
+        int TipoProceso = 0;
+        string SenSql1 = null, SenSql2 = null;
 
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
@@ -38,6 +38,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
+            
         }
 
         private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
             Txt_Direccion_Modificar.Text = Empleado.Direccion;
             Txt_Telefono_Modificar.Text = Empleado.Telefono;
-            Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
+            Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;////
             Txt_NIT_Modificar.Text = Empleado.NIT;
             Txt_DPI_Modificar.Text = Empleado.DPI;
             Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
@@ -200,14 +201,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             int TipoUsuario, TipoPuesto;
             TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
             TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
-            
+
             Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
-       
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 1;
             SenSql1 = "UPDATE EMPLEADO SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 + , " +
@@ -217,7 +216,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             SenSql2 = "UPDATE USUARIO SET ID_USUARIO = + Usuario + , PASSWORD= + Password + WHERE ID_USUARIO= + Usuario + ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
 
             int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
             int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
@@ -235,7 +233,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Cmb_TipoPuesto_Eliminar.Text = Empleado.TipoPuesto;
             Txt_Direccion_Eliminar.Text = Empleado.Direccion;
             Txt_Telefono_Eliminar.Text = Empleado.Telefono;
-            Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;
+            Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;//
             Txt_NIT_Eliminar.Text = Empleado.NIT;
             Txt_DPI_Eliminar.Text = Empleado.DPI;
             Txt_Usuario_Eliminar.Text = Empleado.ID_Usuario;
@@ -244,8 +242,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Cmb_TipoUsuario_Eliminar.Text = Empleado.TipoUsuario;
         }
 
-        private void Btn_Eliminar_Click(object sender, EventArgs e){
-
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 2;
             SenSql1 = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK =  + 2 +  WHERE ID_EMPLEADO= + ID_Empleado + ";
@@ -254,9 +252,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
             Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
-
-           
-
         }
 
         

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
-    public partial class Fmr_Admin_Campeonato : Form
+    public partial class FrmAdminCampeonato : Form
     {
-        public Fmr_Admin_Campeonato()
+        public FrmAdminCampeonato()
         {
             InitializeComponent();
         }
