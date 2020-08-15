@@ -42,6 +42,12 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,19 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="ClsConexion.cs" />
-    <Compile Include="Jugadores\FrmIngresoJugadores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jugadores\FrmIngresoJugadores.Designer.cs">
-      <DependentUpon>FrmIngresoJugadores.cs</DependentUpon>
-    </Compile>
-=======
+    <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
+    <Compile Include="Clases\ClsDatos.cs" />
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
->>>>>>> 3d246c80c2ddc32a18eff84da6b22c804d7cbffd
+    <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
+    <Compile Include="IfzInformacion.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +90,7 @@
     <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.Designer.cs">
+    <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.designer.cs">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminPartido.cs">
@@ -104,11 +105,41 @@
     <Compile Include="Mantenimientos\Entrenador\FrmEntrenador.Designer.cs">
       <DependentUpon>FrmEntrenador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.Designer.cs">
+      <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmGerencia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmGerencia.Designer.cs">
       <DependentUpon>FrmGerencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Log in\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -118,9 +149,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Jugadores\FrmIngresoJugadores.resx">
-      <DependentUpon>FrmIngresoJugadores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminCampeonato.resx">
       <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +167,23 @@
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador.resx">
       <DependentUpon>FrmEntrenador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.resx">
+      <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmGerencia.resx">
       <DependentUpon>FrmGerencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Log in\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -169,12 +212,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clases\ClsUsuario\" />
+    <Folder Include="Clases\ClsAdmin\" />
+    <Folder Include="Clases\ClsEntrenador\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\Botones\seguridad.png" />
     <Content Include="Imagenes\Botones\usuario.png" />
     <Content Include="Imagenes\Icono\campeon.ico" />
+    <Content Include="Imagenes\Logo\Poli_deportivo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

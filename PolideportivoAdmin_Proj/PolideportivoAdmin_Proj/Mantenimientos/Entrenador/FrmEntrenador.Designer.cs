@@ -29,27 +29,50 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenador));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Btn_Inscripcion = new System.Windows.Forms.Button();
             this.Btn_CerrarSesion = new System.Windows.Forms.Button();
             this.Btn_IngresoJugadores = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.Btn_Equipo = new System.Windows.Forms.Button();
+            this.Btn_TablaDePosiciones = new System.Windows.Forms.Button();
+            this.Pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.Ptb_FotoUsuario = new System.Windows.Forms.PictureBox();
+            this.Lbl_Puesto = new System.Windows.Forms.Label();
+            this.Lbl_Nombre = new System.Windows.Forms.Label();
+            this.Pnl_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // Pnl_Menu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.Btn_CerrarSesion);
-            this.panel1.Controls.Add(this.Btn_IngresoJugadores);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 450);
-            this.panel1.TabIndex = 0;
+            this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
+            this.Pnl_Menu.Controls.Add(this.Lbl_Puesto);
+            this.Pnl_Menu.Controls.Add(this.Lbl_Nombre);
+            this.Pnl_Menu.Controls.Add(this.Ptb_FotoUsuario);
+            this.Pnl_Menu.Controls.Add(this.Btn_Inscripcion);
+            this.Pnl_Menu.Controls.Add(this.Btn_CerrarSesion);
+            this.Pnl_Menu.Controls.Add(this.Btn_IngresoJugadores);
+            this.Pnl_Menu.Controls.Add(this.Btn_Equipo);
+            this.Pnl_Menu.Controls.Add(this.Btn_TablaDePosiciones);
+            this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Menu.Name = "Pnl_Menu";
+            this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
+            this.Pnl_Menu.TabIndex = 0;
+            // 
+            // Btn_Inscripcion
+            // 
+            this.Btn_Inscripcion.FlatAppearance.BorderSize = 0;
+            this.Btn_Inscripcion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Inscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Inscripcion.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Inscripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Inscripcion.Location = new System.Drawing.Point(-6, 370);
+            this.Btn_Inscripcion.Name = "Btn_Inscripcion";
+            this.Btn_Inscripcion.Size = new System.Drawing.Size(161, 41);
+            this.Btn_Inscripcion.TabIndex = 4;
+            this.Btn_Inscripcion.Text = "INSCRIBIRSE A CAMPEONATO";
+            this.Btn_Inscripcion.UseVisualStyleBackColor = true;
             // 
             // Btn_CerrarSesion
             // 
@@ -58,7 +81,7 @@
             this.Btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_CerrarSesion.Font = new System.Drawing.Font("Tw Cen MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_CerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_CerrarSesion.Location = new System.Drawing.Point(-6, 420);
+            this.Btn_CerrarSesion.Location = new System.Drawing.Point(-6, 493);
             this.Btn_CerrarSesion.Name = "Btn_CerrarSesion";
             this.Btn_CerrarSesion.Size = new System.Drawing.Size(161, 30);
             this.Btn_CerrarSesion.TabIndex = 3;
@@ -72,78 +95,113 @@
             this.Btn_IngresoJugadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_IngresoJugadores.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_IngresoJugadores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_IngresoJugadores.Location = new System.Drawing.Point(-6, 137);
+            this.Btn_IngresoJugadores.Location = new System.Drawing.Point(-6, 262);
             this.Btn_IngresoJugadores.Name = "Btn_IngresoJugadores";
             this.Btn_IngresoJugadores.Size = new System.Drawing.Size(161, 41);
             this.Btn_IngresoJugadores.TabIndex = 2;
             this.Btn_IngresoJugadores.Text = "INGRESO JUGADORES";
             this.Btn_IngresoJugadores.UseVisualStyleBackColor = true;
+            this.Btn_IngresoJugadores.Click += new System.EventHandler(this.Btn_IngresoJugadores_Click);
             // 
-            // button3
+            // Btn_Equipo
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(-6, 231);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 41);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "EQUIPO";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Btn_Equipo.FlatAppearance.BorderSize = 0;
+            this.Btn_Equipo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Equipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Equipo.Location = new System.Drawing.Point(-6, 428);
+            this.Btn_Equipo.Name = "Btn_Equipo";
+            this.Btn_Equipo.Size = new System.Drawing.Size(161, 41);
+            this.Btn_Equipo.TabIndex = 2;
+            this.Btn_Equipo.Text = "EQUIPO";
+            this.Btn_Equipo.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Btn_TablaDePosiciones
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(-6, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "TABLA DE POSICIONES";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.Btn_TablaDePosiciones.FlatAppearance.BorderSize = 0;
+            this.Btn_TablaDePosiciones.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_TablaDePosiciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_TablaDePosiciones.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_TablaDePosiciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_TablaDePosiciones.Location = new System.Drawing.Point(-6, 309);
+            this.Btn_TablaDePosiciones.Name = "Btn_TablaDePosiciones";
+            this.Btn_TablaDePosiciones.Size = new System.Drawing.Size(161, 41);
+            this.Btn_TablaDePosiciones.TabIndex = 0;
+            this.Btn_TablaDePosiciones.Text = "TABLA DE POSICIONES";
+            this.Btn_TablaDePosiciones.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // Pnl_Contenedor
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(155, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 450);
-            this.panel2.TabIndex = 1;
+            this.Pnl_Contenedor.BackColor = System.Drawing.Color.White;
+            this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_Contenedor.Location = new System.Drawing.Point(155, 0);
+            this.Pnl_Contenedor.Name = "Pnl_Contenedor";
+            this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
+            this.Pnl_Contenedor.TabIndex = 1;
+            // 
+            // Ptb_FotoUsuario
+            // 
+            this.Ptb_FotoUsuario.Location = new System.Drawing.Point(9, 11);
+            this.Ptb_FotoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.Ptb_FotoUsuario.Name = "Ptb_FotoUsuario";
+            this.Ptb_FotoUsuario.Size = new System.Drawing.Size(141, 134);
+            this.Ptb_FotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ptb_FotoUsuario.TabIndex = 5;
+            this.Ptb_FotoUsuario.TabStop = false;
+            // 
+            // Lbl_Puesto
+            // 
+            this.Lbl_Puesto.AutoSize = true;
+            this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 197);
+            this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Puesto.Name = "Lbl_Puesto";
+            this.Lbl_Puesto.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_Puesto.TabIndex = 8;
+            this.Lbl_Puesto.Text = "label2";
+            // 
+            // Lbl_Nombre
+            // 
+            this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Nombre.Location = new System.Drawing.Point(11, 161);
+            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Nombre.Name = "Lbl_Nombre";
+            this.Lbl_Nombre.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_Nombre.TabIndex = 7;
+            this.Lbl_Nombre.Text = "label1";
             // 
             // FrmEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1069, 523);
+            this.Controls.Add(this.Pnl_Contenedor);
+            this.Controls.Add(this.Pnl_Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEntrenador";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmEntrenador_Load);
-            this.panel1.ResumeLayout(false);
+            this.Pnl_Menu.ResumeLayout(false);
+            this.Pnl_Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel Pnl_Menu;
+        private System.Windows.Forms.Panel Pnl_Contenedor;
+        private System.Windows.Forms.Button Btn_TablaDePosiciones;
+        private System.Windows.Forms.Button Btn_Equipo;
         private System.Windows.Forms.Button Btn_CerrarSesion;
         private System.Windows.Forms.Button Btn_IngresoJugadores;
+        private System.Windows.Forms.Button Btn_Inscripcion;
+        private System.Windows.Forms.PictureBox Ptb_FotoUsuario;
+        private System.Windows.Forms.Label Lbl_Puesto;
+        private System.Windows.Forms.Label Lbl_Nombre;
     }
 }

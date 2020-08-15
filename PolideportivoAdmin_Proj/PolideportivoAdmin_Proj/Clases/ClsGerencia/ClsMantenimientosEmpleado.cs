@@ -1,21 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+
 
 namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 {
+
+    
     class ClsMantenimientosEmpleado
     {
+    
         ClsConexion conexion = new ClsConexion();
         ClsGerencia Empleado = new ClsGerencia();
+       
+       
+
         public void IngresoEmpleado(string Usuario, string Password, int TipoUsuario, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, int TipoPuesto, string Direccion, string Telefono, string FechaNacimiento, string NIT, string DPI, string FechaContrato )
         {
 
+         
             try
             {
 
@@ -37,6 +48,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
                 MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+         
+              
             }
             catch (Exception ex)
             {
@@ -53,6 +67,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         public void ModificarEmpleado(string Usuario, string Password, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, string Direccion, int Telefono, int ID_Empleado)
         {
+            
             try
             {
 
@@ -71,6 +86,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
                 MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+  
             }
             catch (Exception ex)
             {
@@ -87,6 +103,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         public void EliminarEmpleado(string Usuario, string ID_Empleado)
         {
+         
 
             try
             {
@@ -101,6 +118,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                 Query_DELETE3.ExecuteNonQuery();
 
                 MessageBox.Show("Eliminación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+         
 
             }
             catch (Exception ex)
@@ -117,8 +136,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
         }
 
         public ClsGerencia BusquedaIDEmpleado(string ID_Empleado)
-        {  
-
+        {
+            
             try
             {
                 
@@ -171,6 +190,40 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
             }
 
         }
+
+        public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
+        {
+
+            try
+            {
+
+                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA ='"+ Foto +"' WHERE ID_USUARIO_FK='" + Usuario + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
+                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(CambiarFoto, conexion.conexion());
+                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+
+                Query_UPDATE1.ExecuteNonQuery();
+                Query_UPDATE2.ExecuteNonQuery();
+
+                MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+  
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        
 
     }
 }

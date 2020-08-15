@@ -8,99 +8,145 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Mantenimientos.Administración;
 using PolideportivoAdmin_Proj.Mantenimientos.Entrenador;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
+
 namespace PolideportivoAdmin_Proj
 {
-    public partial class FrmLogin : Form
+    public partial class FrmLogin : Form 
     {
+        
+
         public FrmLogin()
         {
             InitializeComponent();
+            
         }
 
-        ClsConexion x = new ClsConexion();
-        int ID_TIPO_USUARIO;
+
+        ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();        
+        ClsBitacora Bitacora = new ClsBitacora();
+
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null;
+
 
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
+            
+            int TipoUsuario;
             if (TxtUsuario.Text == "" || TxtPassword.Text == "")
             {
                 MessageBox.Show("No se han completado los campos", "PRECAUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                try
+                TipoUsuario = Logeo.IngresoLogin(TxtUsuario.Text, TxtPassword.Text);
+
+                if (TipoUsuario == 1)
                 {
-                    string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + TxtUsuario.Text + "' AND PASSWORD = '" + TxtPassword.Text + "' ;";
-                    OdbcCommand Query_Validacion = new OdbcCommand(Consulta, x.conexion());
-                    OdbcDataReader Lector = Query_Validacion.ExecuteReader();
 
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                    FrmGerencia Formulario = new FrmGerencia();
+                    ClsDatos.UserId = TxtUsuario.Text;
+                    Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    Formulario.Lbl_Password.Text = TxtPassword.Text;
                     
-                    
-                    if (Lector.HasRows == true)
-                    {
-                        OdbcCommand Login = new OdbcCommand(Consulta, x.conexion());
-                        ID_TIPO_USUARIO = Convert.ToInt32(Login.ExecuteScalar());
-
-                        if (ID_TIPO_USUARIO == 1)
-                        {
-                            TxtUsuario.Clear();
-                            TxtPassword.Clear();
-                            BtnIngreso.Focus();
-                            Form Formulario = new FrmGerencia();
-                            this.Hide();
-                            Formulario.ShowDialog();
-                            this.Show();
-
-                        }
-                        else if (ID_TIPO_USUARIO == 3)
-                        {
-                            TxtUsuario.Clear();
-                            TxtPassword.Clear();
-                            BtnIngreso.Focus();
-                            Form Formulario = new FrmEntrenador();
-                            this.Hide();
-                            Formulario.ShowDialog();
-                            this.Show();
-
-                        }
-                        else if (ID_TIPO_USUARIO == 2)
-                        {
-                            TxtUsuario.Clear();
-                            TxtPassword.Clear();
-                            BtnIngreso.Focus();
-                            Form Formulario = new FrmAdmin();
-                            this.Hide();
-                            Formulario.ShowDialog();
-                            this.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario o Contraseña Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            TxtPassword.Clear();
-                            TxtUsuario.Focus();
-                        }
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        TxtPassword.Clear();
-                        TxtUsuario.Focus();
-                    }
+                    TxtUsuario.Clear();
+                    TxtPassword.Clear();
+                    BtnIngreso.Focus();
+                    this.Hide();
+                    Formulario.ShowDialog();
+                    this.Show();
                 }
-                catch (Exception ex)
+
+                if (TipoUsuario == 2)
                 {
 
-                    MessageBox.Show("Error al ejecutar SQL: " +
-                        System.Environment.NewLine + System.Environment.NewLine +
-                        ex.GetType().ToString() + System.Environment.NewLine +
-                        ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
+                    FrmAdmin Formulario = new FrmAdmin();
+                    //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
+                    //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    TxtUsuario.Clear();
+                    TxtPassword.Clear();
+                    BtnIngreso.Focus();
+                    this.Hide();
+                    Formulario.ShowDialog();
+                    this.Show();
+                }
+
+                if (TipoUsuario == 3)
+                {
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                    FrmEntrenador Formulario = new FrmEntrenador();
+                    //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
+                    //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    TxtUsuario.Clear();
+                    TxtPassword.Clear();
+                    BtnIngreso.Focus();
+                    this.Hide();
+                    Formulario.ShowDialog();
+                    this.Show();
+                }
+
+                if (TipoUsuario == 4)
+                {
+
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                    MessageBox.Show("Usuario o Contraseña Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtPassword.Clear();
+                    TxtUsuario.Focus();
+                }
+
+                if (TipoUsuario == 5)
+                {
+
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                    MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtPassword.Clear();
+                    TxtUsuario.Clear();
+                    TxtUsuario.Focus();
+                }
+
+                if (TipoUsuario == 0)
+                {
+
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 13;
+                    SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                    MessageBox.Show("Intentelo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtPassword.Clear();
+                    TxtUsuario.Clear();
+                    TxtUsuario.Focus();
                 }
 
             }                            
