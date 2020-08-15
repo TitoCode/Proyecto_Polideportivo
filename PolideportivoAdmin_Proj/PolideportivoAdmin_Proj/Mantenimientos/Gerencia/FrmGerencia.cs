@@ -12,6 +12,9 @@ using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using System.IO;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases;
+
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
