@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 using System.Net;
-using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,8 +20,10 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
             
             IPHostEntry host;
             string localIP = "?";
+
             
             string UsuarioActivo = ClsDatos.UserId;
+
             host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (IPAddress ip in host.AddressList)
             {
@@ -32,6 +33,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 
                 }
             }
+
 
             switch (Proceso)
             {
@@ -61,15 +63,14 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 ID_Bitacora = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
+
                 string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + Convert.ToString(host.HostName) + "','" + Convert.ToString(DateTime.Now) + "','" + UsuarioActivo + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
-                
+
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarBitacora, Conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
 
                 StreamWriter fichero = File.AppendText("Bitacora.txt");
                 //El archivo se guarda en la carpeta bin/debug del proyecto
-                
-               
 
                 fichero.WriteLine("LOG IP: " + localIP + " Usuario: " + UsuarioActivo + " Sentencia Sql: " + Sql + " Proceso: " + Nombre_Proceso + " PC: " + Convert.ToString(host.HostName) +
                 " Fecha: " + DateTime.Now + " - " + Environment.NewLine);

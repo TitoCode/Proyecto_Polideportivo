@@ -15,6 +15,7 @@ using System.IO;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases;
 
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmGerencia : Form
@@ -26,7 +27,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsConexion Conexion = new ClsConexion();
-        ClsBitacora Bitacora = new ClsBitacora();
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {

@@ -9,9 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
-using PolideportivoAdmin_Proj.Clases.ClsUsuario;
-using PolideportivoAdmin_Proj.Clases;
 
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
@@ -30,7 +27,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
         ClsConexion conexion = new ClsConexion();
-        ClsBitacora Bitacora = new ClsBitacora();
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
@@ -188,16 +184,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 3;
-            SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
-
-            SenSql2 = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, TELEFONO, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO, ID_ESTADO_EMPLEADO_FK) VALUES ( + ID_Empleado + , + Nombre1 + , + Nombre2 + , + Apellido1 " +
-                ", + Apellido2 + , + Email + , + TipoPuesto + , + Direccion + ,  + Telefono + ,  + FechaNacimiento + , + NIT + , + DPI + , + Usuario + , + FechaContrato + , + 1 + )";
-
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
             int TipoUsuario, TipoPuesto;
             TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
             TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
@@ -207,6 +193,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
+
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 1;
             SenSql1 = "UPDATE EMPLEADO SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 + , " +
@@ -244,6 +231,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
+
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 2;
             SenSql1 = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK =  + 2 +  WHERE ID_EMPLEADO= + ID_Empleado + ";

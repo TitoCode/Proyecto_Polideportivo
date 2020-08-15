@@ -14,6 +14,7 @@ using PolideportivoAdmin_Proj.Clases;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmReportes : Form
@@ -23,12 +24,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
+
         ClsBitacora Bitacora = new ClsBitacora();
 
         string UsuarioActivo = null;
         int TipoProceso;
         string SenSql1 = null;
-
 
         public void Generar_Reportes()
         {
