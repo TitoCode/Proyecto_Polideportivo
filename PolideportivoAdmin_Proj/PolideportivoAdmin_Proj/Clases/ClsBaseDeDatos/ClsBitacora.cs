@@ -32,14 +32,14 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
             {
 
                 int ID_Bitacora;
-                string Correlativo = "SELECT IFNULL(MAX(ID_EMPLEADO),0) +1 FROM EMPLEADO";
+                string Correlativo = "SELECT IFNULL(MAX(ID_BITACORA),0) +1 FROM BITACORA";
                 OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, Conexion.conexion());
                 ID_Bitacora = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
 
 
-                string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + strHostName + "'," + DateTime.Now + ",'" + Usuario + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
+                string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + strHostName + "','" + DateTime.Now + "','" + Usuario + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
                 
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarBitacora, Conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
