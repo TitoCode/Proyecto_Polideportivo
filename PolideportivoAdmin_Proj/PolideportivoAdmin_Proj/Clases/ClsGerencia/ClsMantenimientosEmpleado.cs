@@ -1,6 +1,9 @@
-﻿using System;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -13,6 +16,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
     {
         ClsConexion conexion = new ClsConexion();
         ClsGerencia Empleado = new ClsGerencia();
+
         public void IngresoEmpleado(string Usuario, string Password, int TipoUsuario, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, int TipoPuesto, string Direccion, string Telefono, string FechaNacimiento, string NIT, string DPI, string FechaContrato )
         {
 
@@ -34,6 +38,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
                 Query_Validacion3.ExecuteNonQuery();
+
+                
 
                 MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -171,6 +177,44 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
             }
 
         }
+
+        public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
+        {
+            
+            try
+            {
+
+                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA ='"+ Foto +"' WHERE ID_USUARIO_FK='" + Usuario + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
+                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(CambiarFoto, conexion.conexion());
+                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+
+                Query_UPDATE1.ExecuteNonQuery();
+                Query_UPDATE2.ExecuteNonQuery();
+
+                MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                
+
+            }
+
+        }
+
+        
 
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
+namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 {
-    public partial class FrmAdminCampeonato : Form
+    public partial class FrmEntrenador_Jugador : Form
     {
-        public FrmAdminCampeonato()
+        public FrmEntrenador_Jugador()
         {
             InitializeComponent();
         }
