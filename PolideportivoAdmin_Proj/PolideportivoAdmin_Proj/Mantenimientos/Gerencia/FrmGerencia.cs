@@ -11,9 +11,7 @@ using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using System.IO;
-using PolideportivoAdmin_Proj.Clases;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -22,19 +20,15 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         public FrmGerencia()
         {
             InitializeComponent();
-
+            
         }
 
         ClsConexion Conexion = new ClsConexion();
-        ClsBitacora Bitacora = new ClsBitacora();
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
-            FrmGerencia Formulario = new FrmGerencia();
             AbrirFormEnPanel(new FrmBase());
-            Lbl_Usuario.Text = ClsDatos.UserId;
             //MostrarFotografia(Lbl_Usuario.Text);
-
         }
 
         private void Btn_Empleado_Click(object sender, EventArgs e)

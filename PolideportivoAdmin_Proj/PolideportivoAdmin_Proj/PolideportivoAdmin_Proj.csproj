@@ -62,13 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
-    <Compile Include="Clases\ClsDatos.cs" />
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
-    <Compile Include="IfzInformacion.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
