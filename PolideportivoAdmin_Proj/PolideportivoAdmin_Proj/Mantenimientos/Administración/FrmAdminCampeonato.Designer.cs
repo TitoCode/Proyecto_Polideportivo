@@ -541,7 +541,6 @@
             this.Gpb_Campeonato_Tipo_Tct.TabIndex = 32;
             this.Gpb_Campeonato_Tipo_Tct.TabStop = false;
             this.Gpb_Campeonato_Tipo_Tct.Visible = false;
-
             // 
             // Lbl_Campeonato_Ida_Vuelta
             // 
@@ -583,7 +582,6 @@
             this.Rdb_Ida.Visible = false;
             // 
             // Lbl_Campeonato_Ida
-
             // 
             this.Lbl_Campeonato_Ida.AutoSize = true;
             this.Lbl_Campeonato_Ida.BackColor = System.Drawing.SystemColors.ControlLightLight;

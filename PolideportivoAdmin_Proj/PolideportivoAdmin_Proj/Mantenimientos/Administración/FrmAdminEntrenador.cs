@@ -54,18 +54,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Entrenador_Click(object sender, EventArgs e)
         {
-
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 4;
-            SenSql1 = "UPDATE ENTRENADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
-                                          ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
-                                          " WHERE ID_ENTRENADOR= + ID_Entrenador ";
-
-            SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
-                                          " WHERE ID_USUARIO= + Usuario  ";
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-            
             Admin.ModificarEntrenador(Txt_Modificar_Id_Entenador.Text, Txt_Modificar_Usuario_Entrenador.Text, Txt_Modificar_Password_Entrenador.Text, Txt_Modificar_Nombre1_Entrenador.Text, Txt_Modificar_Nombre2_Entrenador.Text, Txt_Modificar_Apellido1_Entrenador.Text, Txt_Modificar_Apellido2_Entrenador.Text);
         }
 
