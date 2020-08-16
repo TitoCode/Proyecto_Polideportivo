@@ -26,15 +26,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         ClsMantenimientosJugador Entrenador = new ClsMantenimientosJugador();
         ClsConexion conexion = new ClsConexion();
 
-        private void Btn_Fotografia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Ingresar_Entrenador_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Btn_Fotografia_Click_1(object sender, EventArgs e)
         {
