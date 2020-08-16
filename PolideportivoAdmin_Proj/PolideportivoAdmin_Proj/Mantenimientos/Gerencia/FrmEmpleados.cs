@@ -1,4 +1,5 @@
-﻿using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases;
 
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
@@ -28,6 +30,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
         ClsConexion conexion = new ClsConexion();
+        ClsBitacora Bitacora = new ClsBitacora();
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {

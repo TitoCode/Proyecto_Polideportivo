@@ -95,7 +95,7 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
+                    Logeo.IDEquipoEntrenador(TxtUsuario.Text);
                     FrmEntrenador Formulario = new FrmEntrenador();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
