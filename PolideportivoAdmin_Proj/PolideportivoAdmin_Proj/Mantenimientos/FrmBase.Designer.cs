@@ -48,11 +48,11 @@
             this.Lbl_Hora.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Hora.Font = new System.Drawing.Font("Century Gothic", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-<<<<<<< HEAD
+
             this.Lbl_Hora.Location = new System.Drawing.Point(285, 389);
-=======
+
             this.Lbl_Hora.Location = new System.Drawing.Point(327, 387);
->>>>>>> 68c3c5fd2da1ff22a08ea971da7d0bffa8798892
+
             this.Lbl_Hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Hora.Name = "Lbl_Hora";
             this.Lbl_Hora.Size = new System.Drawing.Size(0, 161);
@@ -64,11 +64,11 @@
             this.Lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Fecha.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-<<<<<<< HEAD
+
             this.Lbl_Fecha.Location = new System.Drawing.Point(265, 548);
-=======
+
             this.Lbl_Fecha.Location = new System.Drawing.Point(313, 536);
->>>>>>> 68c3c5fd2da1ff22a08ea971da7d0bffa8798892
+
             this.Lbl_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Fecha.Name = "Lbl_Fecha";
             this.Lbl_Fecha.Size = new System.Drawing.Size(0, 51);

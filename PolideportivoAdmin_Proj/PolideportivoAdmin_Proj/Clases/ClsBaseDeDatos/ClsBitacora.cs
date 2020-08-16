@@ -67,12 +67,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 ID_Bitacora = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
-<<<<<<< HEAD
-                string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + strHostName + "','" + DateTime.Now + "','" + Usuario + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
-=======
-
                 string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + Convert.ToString(host.HostName) + "','" + Convert.ToString(DateTime.Now) + "','" + UsuarioActivo + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
->>>>>>> 68c3c5fd2da1ff22a08ea971da7d0bffa8798892
+
 
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarBitacora, Conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
