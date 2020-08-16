@@ -5,30 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
-
-
 namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
 {
-   
-
     class ClsMantenimientosLogin
     {
-    
-      
-
         ClsConexion Conexion = new ClsConexion();
         
         public int IngresoLogin(string Usuario, string Password)
         {
             int ID_TIPO_USUARIO;
-            string SentenciaSql;
             try
             {               
                 string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + Usuario + "' AND PASSWORD = '" + Password + "' ;";
                 OdbcCommand Query_Validacion = new OdbcCommand(Consulta, Conexion.conexion());
                 OdbcDataReader Lector = Query_Validacion.ExecuteReader();
-                SentenciaSql = Consulta;
                 if (Lector.HasRows == true)
                 {
                     OdbcCommand Login = new OdbcCommand(Consulta, Conexion.conexion());
@@ -43,10 +35,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
                     }else{
                         return 4;
                     }
-
-
-                }
-                else{
+                }else{
                     return 5;
                 }
             }catch (Exception ex){
@@ -58,8 +47,5 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
                 return 0;
             }
         }
-
     }
-
-  
 }

@@ -17,23 +17,22 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmEmpleados : Form
     {
-        
         public FrmEmpleados()
         {
             InitializeComponent();
         }
 
+        ClsBitacora Bitacora = new ClsBitacora();
         string UsuarioActivo = null;
-        int TipoProceso = 0 ;
-        string SenSql1 = null ,SenSql2 = null;
+        int TipoProceso = 0;
+        string SenSql1 = null, SenSql2 = null;
 
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
         ClsConexion conexion = new ClsConexion();
-        ClsBitacora Bitacora = new ClsBitacora();
         ClsNuevoUsuario nuevoUsuario = new ClsNuevoUsuario();
 
-        private void FrmEmpleados_Load(object sender, EventArgs e)
+private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             DatosCmb_TipoPuestoIngreso();
             DatosCmb_TipoPuestoModificar();
@@ -44,8 +43,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
         {
             if (Txt_Busqueda_Modificar.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            else
-            {
+            else{
                 Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
                 Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
                 Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
@@ -222,7 +220,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
 
-
             if (Txt_Nombre1_Modificar.Text == "" || Txt_Apellido1_Modificar.Text == "" || Txt_Telefono_Modificar.Text == "" || Txt_Email_Modificar.Text == "" || Txt_Nombre2_Modificar.Text == "" || Txt_Apellido2_Modificar.Text == "" || Txt_Direccion_Modificar.Text == "" || Txt_DPI_Modificar.Text == "" || Txt_NIT_Modificar.Text == "" || Txt_Usuario_Modificar.Text == "" || Txt_Password_Modificar.Text == "" || Cmb_TipoUsuario_Modificar.SelectedItem == null || Cmb_TipoPuesto_Modificar == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
@@ -357,13 +354,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             SenSql2 = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = + 4 +  WHERE ID_USUARIO= + Usuario + ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
             Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
-
-           
-
         }
-
         
     }
 }

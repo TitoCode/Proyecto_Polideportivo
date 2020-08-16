@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Drawing;
@@ -20,9 +21,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
     
         ClsConexion conexion = new ClsConexion();
         ClsGerencia Empleado = new ClsGerencia();
-       
-       
-
         public void IngresoEmpleado(string Usuario, string Password, int TipoUsuario, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, int TipoPuesto, string Direccion, string Telefono, string FechaNacimiento, string NIT, string DPI, string FechaContrato )
         {
 
@@ -45,6 +43,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
                 Query_Validacion3.ExecuteNonQuery();
+
+                
 
                 MessageBox.Show("Ingreso Exitoso", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -108,7 +108,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
             try
             {
 
-                string EliminarEmpleado = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK = '" + 2 + "' WHERE ID_EMPLEADO= " + ID_Empleado + "'";
+                string EliminarEmpleado = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK = '" + 2 + "' WHERE ID_EMPLEADO= '" + ID_Empleado + "'";
                 string EliminarUsuario = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = '" + 4 + "' WHERE ID_USUARIO='" + Usuario + "'";
 
                 OdbcCommand Query_DELETE2 = new OdbcCommand(EliminarEmpleado, conexion.conexion());
@@ -193,7 +193,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
         {
-
             try
             {
 
@@ -208,7 +207,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                 Query_UPDATE2.ExecuteNonQuery();
 
                 MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-  
             }
             catch (Exception ex)
             {
@@ -218,12 +216,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
         }
-
-        
-
     }
 }

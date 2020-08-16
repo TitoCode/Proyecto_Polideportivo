@@ -61,7 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClsAdmin\ClsEntrenador.cs" />
+    <Compile Include="Clases\ClsAdmin\ClsEquipo.cs" />
+    <Compile Include="Clases\ClsAdmin\ClsMantenimientosAdmin.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
+    <Compile Include="Clases\ClsCampeonato\ClsCampeonato.cs" />
     <Compile Include="Clases\ClsDatos.cs" />
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
@@ -82,6 +86,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.Designer.cs">
+      <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdminEntrenador.cs">
       <SubType>Form</SubType>
@@ -151,11 +161,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminCampeonato.resx">
-      <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminCampeonato.resx">
+      <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEntrenador.resx">
       <DependentUpon>FrmAdminEntrenador.cs</DependentUpon>
@@ -214,7 +224,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clases\ClsAdmin\" />
     <Folder Include="Clases\ClsEntrenador\" />
   </ItemGroup>
   <ItemGroup>

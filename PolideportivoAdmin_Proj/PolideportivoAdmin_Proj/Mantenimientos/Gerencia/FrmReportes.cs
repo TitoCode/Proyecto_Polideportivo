@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
-using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases;
+using PolideportivoAdmin_Proj.Clases.ClsUsuario;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -24,11 +24,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsBitacora Bitacora = new ClsBitacora();
-        FrmGerencia Formulario = new FrmGerencia();
-
         string UsuarioActivo = null;
-        int TipoProceso = 0;
-        string SenSql1 = null, SenSql2 = null;
+        int TipoProceso;
+        string SenSql1 = null;
 
         public void Generar_Reportes()
         {
@@ -36,21 +34,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Excel.Application AplicacionExcel;
             Excel.Workbook LibroExcel;
             Excel.Worksheet HojaExcel;
-            int Proceso = 0;
-            string Usuario = null, Sql = null;
-
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 5;
-            SenSql1 = "CONSULTA PENDIENTE";
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
-
             try
             {
-                Proceso = 10;
-                Usuario = Formulario.Lbl_Usuario.Text;
-                Sql = "prueba";
-                Bitacora.IngresoBitacora(Proceso, Usuario, Sql);
+
                 //Inicia el excel y se obtiene el objeto Application
                 AplicacionExcel = new Excel.Application();
                 //InputBox para Colocarle un nombre al Nuevo Documento de Excel
@@ -101,11 +87,14 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
         private void Btn_Generar_Reporte_Click(object sender, EventArgs e)
         {
-          
             if (Rbtn_Tipo1.Checked == false && Rbtn_Tipo2.Checked == false && Rbtn_Tipo3.Checked == false)
             {
                 MessageBox.Show("No ha Seleccionado un Tipo de Reporte.");
             }else{
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 15;
+                SenSql1 = "CONSULTA PENDIENTE";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
                 Generar_Reportes();
             }
         }
