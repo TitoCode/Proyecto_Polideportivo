@@ -90,7 +90,6 @@
             this.Lbl_Crear_Tipo_Deporte.Location = new System.Drawing.Point(24, 133);
             this.Lbl_Crear_Tipo_Deporte.Name = "Lbl_Crear_Tipo_Deporte";
             this.Lbl_Crear_Tipo_Deporte.Size = new System.Drawing.Size(54, 14);
-
             this.Lbl_Crear_Tipo_Deporte.TabIndex = 12;
             this.Lbl_Crear_Tipo_Deporte.Text = "DEPORTE";
             // 
@@ -107,13 +106,12 @@
             // 
             // Lbl_Crear_Nombre_Equipo
             // 
-            this.Lbl_Crear_Nombre_Equipo.AutoSize = true; 
+            this.Lbl_Crear_Nombre_Equipo.AutoSize = true;
             this.Lbl_Crear_Nombre_Equipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Crear_Nombre_Equipo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Crear_Nombre_Equipo.Location = new System.Drawing.Point(24, 47);
             this.Lbl_Crear_Nombre_Equipo.Name = "Lbl_Crear_Nombre_Equipo";
             this.Lbl_Crear_Nombre_Equipo.Size = new System.Drawing.Size(117, 14);
-
             this.Lbl_Crear_Nombre_Equipo.TabIndex = 9;
             this.Lbl_Crear_Nombre_Equipo.Text = "NOMBRE DEL EQUIPO";
             // 
@@ -526,7 +524,7 @@
             // 
             // FrmAdminEquipo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(914, 523);

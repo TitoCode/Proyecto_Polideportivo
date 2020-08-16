@@ -266,85 +266,15 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
             }
         }
 
-        private void Txt_Nombre1_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
+        private void numero(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarCampos.Numeros(e);
+        }
+        private void letra(object sender, KeyPressEventArgs e)
         {
             ClsValidarCampos.Letras(e);
         }
 
-        private void Txt_Apellido1_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_Telefono_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_Nombre2_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_Apellido2_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_DPI_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_NIT_Ingreso_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_Busqueda_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_Nombre1_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_Apellido1_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_Telefono_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_Nombre2_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_Apellido2_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-        private void Txt_DPI_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_NIT_Modificar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
-
-        private void Txt_Busqueda_Eliminar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Numeros(e);
-        }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e){
 

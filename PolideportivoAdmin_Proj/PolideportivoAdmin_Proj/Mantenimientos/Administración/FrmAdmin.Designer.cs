@@ -73,7 +73,6 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Entrenador);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
             this.Pnl_Menu.TabIndex = 18;
@@ -193,16 +192,6 @@
             this.Btn_CerrarSesion.Text = "CERRAR SESIÓN";
             this.Btn_CerrarSesion.UseVisualStyleBackColor = true;
             // 
-            // Btn_Tabla_Posiciones
-            // 
-            this.Btn_Tabla_Posiciones.Location = new System.Drawing.Point(29, 276);
-            this.Btn_Tabla_Posiciones.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Tabla_Posiciones.Name = "Btn_Tabla_Posiciones";
-            this.Btn_Tabla_Posiciones.Size = new System.Drawing.Size(184, 28);
-            this.Btn_Tabla_Posiciones.TabIndex = 4;
-            this.Btn_Tabla_Posiciones.Text = "Tabla de Posiciones";
-            this.Btn_Tabla_Posiciones.UseVisualStyleBackColor = true;
-            // 
             // Btn_Campeonato
             // 
             this.Btn_Campeonato.FlatAppearance.BorderSize = 0;
@@ -250,13 +239,12 @@
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 523);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_Contenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
@@ -278,7 +266,6 @@
         public System.Windows.Forms.PictureBox Ptb_FotoUsuario;
         private System.Windows.Forms.Button Btn_CerrarSesion;
         private System.Windows.Forms.Button Btn_Campeonato;
-        private System.Windows.Forms.Button Btn_Entreador;
         private System.Windows.Forms.Button Btn_Equipo;
         private System.Windows.Forms.Button Btn_Entrenador;
         private System.Windows.Forms.Button Btn_TablaPosiciones;
