@@ -977,6 +977,249 @@
             this.Btn_Eliminar_Buscar_Jugador.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Buscar_Jugador.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Jugador_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Enabled = false;
+            this.label13.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(929, 123);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 18);
+            this.label13.TabIndex = 51;
+            this.label13.Text = "FOTO DE PERFIL";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Controls.Add(this.Txt_Posicion_Eliminar);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.Dtp_Eliminar_Fdn);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.Txt_Eliminar_Nombre1);
+            this.groupBox4.Controls.Add(this.Txt_Eliminar_Nombre2);
+            this.groupBox4.Controls.Add(this.Txt_Eliminar_Apellido1);
+            this.groupBox4.Controls.Add(this.Txt_Eliminar_Apellido2);
+            this.groupBox4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(39, 129);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(736, 251);
+            this.groupBox4.TabIndex = 39;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Datos Personales";
+            // 
+            // Txt_Posicion_Eliminar
+            // 
+            this.Txt_Posicion_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Posicion_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Posicion_Eliminar.Enabled = false;
+            this.Txt_Posicion_Eliminar.Location = new System.Drawing.Point(400, 198);
+            this.Txt_Posicion_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Posicion_Eliminar.Name = "Txt_Posicion_Eliminar";
+            this.Txt_Posicion_Eliminar.Size = new System.Drawing.Size(308, 19);
+            this.Txt_Posicion_Eliminar.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Enabled = false;
+            this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(396, 169);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 18);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "POSICION DEL JUGADOR";
+            // 
+            // Dtp_Eliminar_Fdn
+            // 
+            this.Dtp_Eliminar_Fdn.Enabled = false;
+            this.Dtp_Eliminar_Fdn.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.Dtp_Eliminar_Fdn.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
+            this.Dtp_Eliminar_Fdn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Eliminar_Fdn.Location = new System.Drawing.Point(13, 190);
+            this.Dtp_Eliminar_Fdn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_Eliminar_Fdn.MinimumSize = new System.Drawing.Size(0, 27);
+            this.Dtp_Eliminar_Fdn.Name = "Dtp_Eliminar_Fdn";
+            this.Dtp_Eliminar_Fdn.Size = new System.Drawing.Size(305, 27);
+            this.Dtp_Eliminar_Fdn.TabIndex = 48;
+            this.Dtp_Eliminar_Fdn.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Enabled = false;
+            this.label14.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(9, 169);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 18);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "FECHA NACIMIENTO";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Enabled = false;
+            this.label15.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(9, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(115, 18);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "PRIMER NOMBRE";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Enabled = false;
+            this.label16.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(396, 44);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(130, 18);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "SEGUNDO NOMBRE";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label17.Enabled = false;
+            this.label17.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(9, 106);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 18);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "PRIMER APELLIDO";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Enabled = false;
+            this.label18.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(396, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(133, 18);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "SEGUNDO APELLIDO";
+            // 
+            // Txt_Eliminar_Nombre1
+            // 
+            this.Txt_Eliminar_Nombre1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Nombre1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Nombre1.Enabled = false;
+            this.Txt_Eliminar_Nombre1.Location = new System.Drawing.Point(13, 64);
+            this.Txt_Eliminar_Nombre1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Eliminar_Nombre1.Name = "Txt_Eliminar_Nombre1";
+            this.Txt_Eliminar_Nombre1.Size = new System.Drawing.Size(307, 19);
+            this.Txt_Eliminar_Nombre1.TabIndex = 0;
+            // 
+            // Txt_Eliminar_Nombre2
+            // 
+            this.Txt_Eliminar_Nombre2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Nombre2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Nombre2.Enabled = false;
+            this.Txt_Eliminar_Nombre2.Location = new System.Drawing.Point(400, 64);
+            this.Txt_Eliminar_Nombre2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Eliminar_Nombre2.Name = "Txt_Eliminar_Nombre2";
+            this.Txt_Eliminar_Nombre2.Size = new System.Drawing.Size(308, 19);
+            this.Txt_Eliminar_Nombre2.TabIndex = 1;
+            // 
+            // Txt_Eliminar_Apellido1
+            // 
+            this.Txt_Eliminar_Apellido1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Apellido1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Apellido1.Enabled = false;
+            this.Txt_Eliminar_Apellido1.Location = new System.Drawing.Point(13, 126);
+            this.Txt_Eliminar_Apellido1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Eliminar_Apellido1.Name = "Txt_Eliminar_Apellido1";
+            this.Txt_Eliminar_Apellido1.Size = new System.Drawing.Size(307, 19);
+            this.Txt_Eliminar_Apellido1.TabIndex = 2;
+            // 
+            // Txt_Eliminar_Apellido2
+            // 
+            this.Txt_Eliminar_Apellido2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Apellido2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Apellido2.Enabled = false;
+            this.Txt_Eliminar_Apellido2.Location = new System.Drawing.Point(400, 126);
+            this.Txt_Eliminar_Apellido2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Eliminar_Apellido2.Name = "Txt_Eliminar_Apellido2";
+            this.Txt_Eliminar_Apellido2.Size = new System.Drawing.Size(308, 19);
+            this.Txt_Eliminar_Apellido2.TabIndex = 3;
+            // 
+            // Ptb_FotoEliminar
+            // 
+            this.Ptb_FotoEliminar.Enabled = false;
+            this.Ptb_FotoEliminar.Location = new System.Drawing.Point(868, 156);
+            this.Ptb_FotoEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ptb_FotoEliminar.Name = "Ptb_FotoEliminar";
+            this.Ptb_FotoEliminar.Size = new System.Drawing.Size(247, 193);
+            this.Ptb_FotoEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ptb_FotoEliminar.TabIndex = 49;
+            this.Ptb_FotoEliminar.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(48, 54);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(215, 18);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "Ingrese el ID del Jugador";
+            // 
+            // Txt_Eliminar_Id
+            // 
+            this.Txt_Eliminar_Id.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_Id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_Id.Location = new System.Drawing.Point(355, 54);
+            this.Txt_Eliminar_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Eliminar_Id.Name = "Txt_Eliminar_Id";
+            this.Txt_Eliminar_Id.Size = new System.Drawing.Size(417, 15);
+            this.Txt_Eliminar_Id.TabIndex = 37;
+            // 
+            // Btn_Eliminar_Jugador
+            // 
+            this.Btn_Eliminar_Jugador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Jugador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Jugador.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar_Jugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar_Jugador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar_Jugador.Location = new System.Drawing.Point(316, 471);
+            this.Btn_Eliminar_Jugador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Eliminar_Jugador.Name = "Btn_Eliminar_Jugador";
+            this.Btn_Eliminar_Jugador.Size = new System.Drawing.Size(181, 50);
+            this.Btn_Eliminar_Jugador.TabIndex = 36;
+            this.Btn_Eliminar_Jugador.Text = "ELIMINAR";
+            this.Btn_Eliminar_Jugador.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar_Jugador.Click += new System.EventHandler(this.Btn_Eliminar_Jugador_Click);
+            // 
+            // Btn_Eliminar_Buscar_Jugador
+            // 
+            this.Btn_Eliminar_Buscar_Jugador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Buscar_Jugador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Buscar_Jugador.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar_Buscar_Jugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar_Buscar_Jugador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar_Buscar_Jugador.Location = new System.Drawing.Point(903, 46);
+            this.Btn_Eliminar_Buscar_Jugador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Eliminar_Buscar_Jugador.Name = "Btn_Eliminar_Buscar_Jugador";
+            this.Btn_Eliminar_Buscar_Jugador.Size = new System.Drawing.Size(175, 34);
+            this.Btn_Eliminar_Buscar_Jugador.TabIndex = 35;
+            this.Btn_Eliminar_Buscar_Jugador.Text = "BUSCAR";
+            this.Btn_Eliminar_Buscar_Jugador.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar_Buscar_Jugador.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Jugador_Click);
+            // 
             // FrmEntrenador_Jugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

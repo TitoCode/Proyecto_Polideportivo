@@ -25,6 +25,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsBitacora Bitacora = new ClsBitacora();
 
+
         private void Btn_Seleccionar_Click(object sender, EventArgs e)
         {
             OpenFileDialog Fotografia = new OpenFileDialog();
