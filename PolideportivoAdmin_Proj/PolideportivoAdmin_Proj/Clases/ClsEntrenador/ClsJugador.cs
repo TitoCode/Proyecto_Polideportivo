@@ -8,6 +8,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
 {
     public class ClsJugador
     {
+        //Clase del modelo del Jugador
         public string ID_Jugador { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }

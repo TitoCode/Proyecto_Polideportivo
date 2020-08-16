@@ -11,9 +11,15 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
     
     class ClsMantenimientosAdmin
     {
+
+        //Clase de Mantenimientos Administrativos//
+
+        //LLamadas a referencias a otras clases
         ClsConexion conexion = new ClsConexion();
         ClsEntrenador Entrenador = new ClsEntrenador();
         ClsEquipo Equipo = new ClsEquipo();
+
+        //Función para ingresar un Entrenador
         public void IngresoEntrenador(string Usuario, string Password, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNacimiento, byte[] Foto)
         {
             try
@@ -44,6 +50,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             }//Fin Catch
         }
 
+        //Función para modificar un Entrenador
         public void ModificarEntrenador(string ID_Entrenador, string Usuario, string Password, string Nombre1, string Nombre2, string Apellido1, string Apellido2)
         {
             try
@@ -75,6 +82,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
+        //Función que busca los datos del entrenador con el ID_entrenador
         public ClsEntrenador BusquedaIDEntrenador(string ID_Entrenador)
         {
             try
@@ -115,6 +123,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
+        //Función para eliminar un Entrenador
         public void EliminarEntrenador(string Usuario, string Id_Entrenador)
         {
             try
@@ -144,6 +153,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             }
         }
 
+        //Función para ingresar un equipo
         public void IngresoEquipo(int ID_Entrenador, int ID_TipoDeporte, string Nombre)
         {
             try
@@ -173,6 +183,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
+        //Función para modificar un equipo
         public void ModificarEquipo(string Nombre, string Id_Equipo)
         {
             try
@@ -195,6 +206,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
+        //Función para eliminar un equipo
         public void EliminarEquipo(string Id_Equipo)
         {
             try
@@ -216,6 +228,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             }
         }
 
+        //Función que busca los datos del entrenador con el ID_equipo
         public ClsEquipo BusquedaIDEquipo(string ID_Equipo)
         {
             string NombreCompletoEntrenador;

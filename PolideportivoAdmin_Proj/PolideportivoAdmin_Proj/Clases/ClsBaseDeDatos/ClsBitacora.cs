@@ -13,9 +13,11 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 {
     class ClsBitacora
     {
+        //Clases para hacer referencias
         ClsConexion Conexion = new ClsConexion();
         string Nombre_Proceso;
 
+        //Función para ingresos a la bitacora
         public void IngresoBitacora(int Proceso, string Usuario, string Sql)
         {
             

@@ -8,6 +8,8 @@ using System.Data.Odbc;
 namespace PolideportivoAdmin_Proj
 {
     class ClsConexion{
+        
+        //Clase para la conexion hacia la BD
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
