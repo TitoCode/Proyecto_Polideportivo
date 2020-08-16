@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PolideportivoAdmin_Proj.Clases;
+using System.IO;
 
 namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 {
@@ -52,6 +53,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 case 13: Nombre_Proceso = "Ingreso_Login"; break;
                 case 14: Nombre_Proceso = "Intento_de_Ingreso"; break;
                 case 15: Nombre_Proceso = "Creacion_Reporte"; break;
+                case 16: Nombre_Proceso = "Insertar_Equipo"; break;
+                case 17: Nombre_Proceso = "Modificar_Equipo"; break;
+                case 18: Nombre_Proceso = "Eliminar_Equipo"; break;
             }
 
 
