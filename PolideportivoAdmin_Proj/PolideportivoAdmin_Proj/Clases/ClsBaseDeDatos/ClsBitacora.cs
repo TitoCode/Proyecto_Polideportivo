@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PolideportivoAdmin_Proj.Clases;
-using System.IO;
 
 namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 {

@@ -48,5 +48,29 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
                 return 0;
             }
         }
+
+        public void IDEquipoEntrenador(string Usuario)
+        {
+            try
+            {
+                string Consulta1 = "SELECT E.ID_ENTRENADOR FROM ENTRENADOR AS E, USUARIO AS U WHERE E.ID_USUARIO_FK = U.ID_USUARIO AND U.ID_USUARIO = '" + Usuario + "' ;";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(Consulta1, Conexion.conexion()); 
+                int ID_ENTRENADOR = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+                string Consulta2 = "SELECT ID_EQUIPO FROM EQUIPO WHERE ID_ENTRENADOR_FK = '" + ID_ENTRENADOR + "' ;";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(Consulta2, Conexion.conexion());
+                int ID_EQUIPO = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+                ClsDatos.EquipoId = ID_EQUIPO;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

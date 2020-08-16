@@ -1,4 +1,5 @@
-﻿using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,8 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases;
+
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -21,7 +22,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
-        ClsBitacora Bitacora = new ClsBitacora();
+
         string UsuarioActivo = null;
         int TipoProceso = 0;
         string SenSql1 = null, SenSql2 = null;
@@ -29,6 +30,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
         ClsConexion conexion = new ClsConexion();
+        ClsBitacora Bitacora = new ClsBitacora();
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
@@ -186,6 +188,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
+
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 3;
             SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
