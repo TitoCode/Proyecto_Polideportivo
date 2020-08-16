@@ -52,7 +52,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
             Admin.IngresoEntrenador(Txt_Ingreso_Id_Usuario.Text, Txt_Ingreso_Password.Text, Txt_Ingreso_Nombre1_Entrenador.Text, Txt_Ingreso_Nombre2_Entrenador.Text, Txt_Ingreso_Apellido1_Entrenador.Text, Txt_Ingreso_Apellido2_Entrenador.Text, Dtp_FechaNacimiento_Ingreso.Value.Date.ToString(), aByte);
-         }
+        
+        }
 
         private void Btn_Modificar_Buscar_Entrenador_Click(object sender, EventArgs e)
         {
@@ -70,14 +71,13 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Entrenador_Click(object sender, EventArgs e)
         {
-
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 4;
-            SenSql1 = "UPDATE ENTRENADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 "+
-                                          ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 "+
+            SenSql1 = "UPDATE ENTRENADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
+                                          ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
                                           " WHERE ID_ENTRENADOR= + ID_Entrenador ";
 
-            SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password "+
+            SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
                                           " WHERE ID_USUARIO= + Usuario  ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);

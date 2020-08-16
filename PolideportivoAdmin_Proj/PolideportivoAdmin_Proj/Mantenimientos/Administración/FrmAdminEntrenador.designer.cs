@@ -39,7 +39,6 @@
             this.Txt_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Tipo_Usuario_Entrenador = new System.Windows.Forms.TextBox();
-            this.Lbl_Eliminar_Usuario_Entrenador = new System.Windows.Forms.Label();
             this.Txt_Eliminar_Password_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Modificar_Id_Entenador = new System.Windows.Forms.TextBox();
@@ -224,15 +223,6 @@
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.Name = "Txt_Eliminar_Tipo_Usuario_Entrenador";
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(308, 19);
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.TabIndex = 7;
-            // 
-            // Lbl_Eliminar_Usuario_Entrenador
-            // 
-            this.Lbl_Eliminar_Usuario_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(700, 418);
-            this.Lbl_Eliminar_Usuario_Entrenador.Name = "Lbl_Eliminar_Usuario_Entrenador";
-            this.Lbl_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(65, 17);
-            this.Lbl_Eliminar_Usuario_Entrenador.TabIndex = 4;
-            this.Lbl_Eliminar_Usuario_Entrenador.Text = "Usuario :";
             // 
             // Txt_Eliminar_Password_Entrenador
             // 
@@ -455,7 +445,7 @@
             this.Tbc_Entrenador.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Entrenador.Name = "Tbc_Entrenador";
-            this.Tbc_Entrenador.SelectedIndex = 1;
+            this.Tbc_Entrenador.SelectedIndex = 3;
             this.Tbc_Entrenador.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Entrenador.TabIndex = 3;
             this.Tbc_Entrenador.UseSelectable = true;
@@ -676,9 +666,9 @@
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(13, 190);
             this.Dtp_FechaNacimiento_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 27);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
-            this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(305, 27);
+            this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(305, 26);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
             this.Dtp_FechaNacimiento_Ingreso.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -893,9 +883,9 @@
             this.Dtp_Modificar_Fdn_Entrenador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fdn_Entrenador.Location = new System.Drawing.Point(13, 190);
             this.Dtp_Modificar_Fdn_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Dtp_Modificar_Fdn_Entrenador.MinimumSize = new System.Drawing.Size(0, 27);
+            this.Dtp_Modificar_Fdn_Entrenador.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_Modificar_Fdn_Entrenador.Name = "Dtp_Modificar_Fdn_Entrenador";
-            this.Dtp_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(305, 27);
+            this.Dtp_Modificar_Fdn_Entrenador.Size = new System.Drawing.Size(305, 26);
             this.Dtp_Modificar_Fdn_Entrenador.TabIndex = 48;
             this.Dtp_Modificar_Fdn_Entrenador.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -971,7 +961,6 @@
             this.Tbp_Eliminar.Controls.Add(this.groupBox3);
             this.Tbp_Eliminar.Controls.Add(this.groupBox4);
             this.Tbp_Eliminar.Controls.Add(this.label19);
-            this.Tbp_Eliminar.Controls.Add(this.Lbl_Eliminar_Usuario_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Txt_Eliminar_Id_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Btn_Eliminar_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Btn_Eliminar_Buscar_Entrenador);
@@ -1237,7 +1226,6 @@
         private System.Windows.Forms.TextBox Txt_Eliminar_Apellido1_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Nombre2_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Nombre1_Entrenador;
-        private System.Windows.Forms.Label Lbl_Eliminar_Usuario_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Password_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Usuario_Entrenador;
         private System.Windows.Forms.TextBox Txt_Modificar_Id_Entenador;

@@ -14,6 +14,7 @@ using PolideportivoAdmin_Proj.Clases;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmReportes : Form
@@ -24,6 +25,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsBitacora Bitacora = new ClsBitacora();
+
         string UsuarioActivo = null;
         int TipoProceso;
         string SenSql1 = null;
@@ -34,6 +36,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Excel.Application AplicacionExcel;
             Excel.Workbook LibroExcel;
             Excel.Worksheet HojaExcel;
+
             try
             {
 
@@ -91,6 +94,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             {
                 MessageBox.Show("No ha Seleccionado un Tipo de Reporte.");
             }else{
+
                 UsuarioActivo = ClsDatos.UserId;
                 TipoProceso = 15;
                 SenSql1 = "CONSULTA PENDIENTE";

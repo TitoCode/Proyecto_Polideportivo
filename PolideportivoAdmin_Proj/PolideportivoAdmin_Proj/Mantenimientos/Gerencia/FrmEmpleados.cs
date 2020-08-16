@@ -1,4 +1,5 @@
-﻿using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases.ClsGerencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,9 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
-using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases;
+
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -22,7 +22,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
-        ClsBitacora Bitacora = new ClsBitacora();
+
         string UsuarioActivo = null;
         int TipoProceso = 0;
         string SenSql1 = null, SenSql2 = null;
@@ -30,20 +30,22 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsGerencia Empleado = new ClsGerencia();
         ClsConexion conexion = new ClsConexion();
-        ClsNuevoUsuario nuevoUsuario = new ClsNuevoUsuario();
+        ClsBitacora Bitacora = new ClsBitacora();
 
-private void FrmEmpleados_Load(object sender, EventArgs e)
+        private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             DatosCmb_TipoPuestoIngreso();
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
+            
         }
 
         private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
         {
             if (Txt_Busqueda_Modificar.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            else{
+            else
+            {
                 Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
                 Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
                 Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
@@ -53,7 +55,7 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
                 Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
                 Txt_Direccion_Modificar.Text = Empleado.Direccion;
                 Txt_Telefono_Modificar.Text = Empleado.Telefono;
-                Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
+                Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;////
                 Txt_NIT_Modificar.Text = Empleado.NIT;
                 Txt_DPI_Modificar.Text = Empleado.DPI;
                 Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
@@ -191,9 +193,10 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
-            
-            if (Txt_Nombre1_Ingreso.Text == "" || Txt_Apellido1_Ingreso.Text == "" || Txt_Telefono_Ingreso.Text == "" || Txt_Email_Ingreso.Text == "" || Txt_Nombre2_Ingreso.Text == "" || Txt_Apellido2_Ingreso.Text == "" || Txt_Direccion_Ingreso.Text == "" || Txt_DPI_Ingreso.Text == "" || Txt_NIT_Ingreso.Text == "" || Txt_Usuario_Ingreso.Text == "" || Txt_Password_Ingreso.Text == "" || Cmb_TipoUsuario_Ingreso.SelectedItem == null || Cmb_TipoPuesto_Ingreso == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);} 
-            else {
+
+            if (Txt_Nombre1_Ingreso.Text == "" || Txt_Apellido1_Ingreso.Text == "" || Txt_Telefono_Ingreso.Text == "" || Txt_Email_Ingreso.Text == "" || Txt_Nombre2_Ingreso.Text == "" || Txt_Apellido2_Ingreso.Text == "" || Txt_Direccion_Ingreso.Text == "" || Txt_DPI_Ingreso.Text == "" || Txt_NIT_Ingreso.Text == "" || Txt_Usuario_Ingreso.Text == "" || Txt_Password_Ingreso.Text == "" || Cmb_TipoUsuario_Ingreso.SelectedItem == null || Cmb_TipoPuesto_Ingreso == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
                 UsuarioActivo = ClsDatos.UserId;
                 TipoProceso = 3;
                 SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
@@ -209,17 +212,11 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
                 TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
 
                 Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
-
             }
-            //int nwUs = nuevoUsuario.comprobarUsuario(Txt_Usuario_Ingreso.Text);
-            //if (nwUs == 1) { MessageBox.Show("ADVERTENCIA: EXISTE.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            //if (nwUs == 0) { MessageBox.Show("ADVERTENCIA: no EXISTE.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-
             if (Txt_Nombre1_Modificar.Text == "" || Txt_Apellido1_Modificar.Text == "" || Txt_Telefono_Modificar.Text == "" || Txt_Email_Modificar.Text == "" || Txt_Nombre2_Modificar.Text == "" || Txt_Apellido2_Modificar.Text == "" || Txt_Direccion_Modificar.Text == "" || Txt_DPI_Modificar.Text == "" || Txt_NIT_Modificar.Text == "" || Txt_Usuario_Modificar.Text == "" || Txt_Password_Modificar.Text == "" || Cmb_TipoUsuario_Modificar.SelectedItem == null || Cmb_TipoPuesto_Modificar == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
@@ -233,11 +230,9 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
                 Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
                 Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
-
                 int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
                 int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
                 Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
-
             }
         }
 
@@ -255,7 +250,7 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
                 Cmb_TipoPuesto_Eliminar.Text = Empleado.TipoPuesto;
                 Txt_Direccion_Eliminar.Text = Empleado.Direccion;
                 Txt_Telefono_Eliminar.Text = Empleado.Telefono;
-                Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;
+                Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;//
                 Txt_NIT_Eliminar.Text = Empleado.NIT;
                 Txt_DPI_Eliminar.Text = Empleado.DPI;
                 Txt_Usuario_Eliminar.Text = Empleado.ID_Usuario;
@@ -266,17 +261,8 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
             }
         }
 
-        private void numero(object sender, KeyPressEventArgs e)
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
-            ClsValidarCampos.Numeros(e);
-        }
-        private void letra(object sender, KeyPressEventArgs e)
-        {
-            ClsValidarCampos.Letras(e);
-        }
-
-
-        private void Btn_Eliminar_Click(object sender, EventArgs e){
 
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 2;
@@ -284,8 +270,18 @@ private void FrmEmpleados_Load(object sender, EventArgs e)
             SenSql2 = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = + 4 +  WHERE ID_USUARIO= + Usuario + ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
+
             Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
         }
-        
+        private void numero(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Numeros(e);
+        }
+        private void letra(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Letras(e);
+        }
+
+
     }
 }

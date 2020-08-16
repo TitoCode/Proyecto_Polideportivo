@@ -16,20 +16,21 @@ using PolideportivoAdmin_Proj.Mantenimientos.Administración;
 using PolideportivoAdmin_Proj.Mantenimientos.Entrenador;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 
-
 namespace PolideportivoAdmin_Proj
 {
-  
+    
     public partial class FrmLogin : Form
     {
-       
+        
         public FrmLogin()
         {
             InitializeComponent();
-            
         }
+
         ClsMantenimientosLogin Logeo = new ClsMantenimientosLogin();
         ClsBitacora Bitacora = new ClsBitacora();
+
+
         string UsuarioActivo;
         int TipoProceso = 1;
         string SenSql1 = null;
@@ -41,14 +42,13 @@ namespace PolideportivoAdmin_Proj
             {
                 MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-
             else
             {
                 TipoUsuario = Logeo.IngresoLogin(TxtUsuario.Text, TxtPassword.Text);
 
                 if (TipoUsuario == 1)
                 {
+
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 13;
@@ -78,6 +78,7 @@ namespace PolideportivoAdmin_Proj
                     FrmAdmin Formulario = new FrmAdmin();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -94,6 +95,7 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                    Logeo.IDEquipoEntrenador(TxtUsuario.Text);
                     FrmEntrenador Formulario = new FrmEntrenador();
                     //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
                     //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
@@ -108,11 +110,13 @@ namespace PolideportivoAdmin_Proj
                 if (TipoUsuario == 4)
                 {
 
+
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
                     MessageBox.Show("ERROR: Usuario Inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Focus();
@@ -121,12 +125,14 @@ namespace PolideportivoAdmin_Proj
                 if (TipoUsuario == 5)
                 {
 
+
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 14;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-                    MessageBox.Show("ADVERTENCIA: Usuario o contraseña incorrectos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);               
+
+                    MessageBox.Show("ADVERTENCIA: Usuario o contraseña incorrectos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TxtPassword.Clear();
                     TxtPassword.Focus();
                 }
