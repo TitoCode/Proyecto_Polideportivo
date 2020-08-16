@@ -200,9 +200,9 @@
             // 
             // 
             this.Ttx_Busqueda_Listado.CustomButton.Image = null;
-            this.Ttx_Busqueda_Listado.CustomButton.Location = new System.Drawing.Point(552, 1);
+            this.Ttx_Busqueda_Listado.CustomButton.Location = new System.Drawing.Point(414, 1);
             this.Ttx_Busqueda_Listado.CustomButton.Name = "";
-            this.Ttx_Busqueda_Listado.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Ttx_Busqueda_Listado.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.Ttx_Busqueda_Listado.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Ttx_Busqueda_Listado.CustomButton.TabIndex = 1;
             this.Ttx_Busqueda_Listado.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -371,7 +371,7 @@
             this.Txt_Usuario_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Usuario_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Usuario_Ingreso.Location = new System.Drawing.Point(23, 52);
-            this.Txt_Usuario_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Usuario_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Usuario_Ingreso.Name = "Txt_Usuario_Ingreso";
             this.Txt_Usuario_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Usuario_Ingreso.TabIndex = 24;
@@ -381,7 +381,7 @@
             this.Txt_Password_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Password_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Password_Ingreso.Location = new System.Drawing.Point(23, 102);
-            this.Txt_Password_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Password_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Password_Ingreso.Name = "Txt_Password_Ingreso";
             this.Txt_Password_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Password_Ingreso.TabIndex = 25;
@@ -439,9 +439,9 @@
             this.Dtp_FechaContrato_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaContrato_Ingreso.Name = "Dtp_FechaContrato_Ingreso";
-            this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaContrato_Ingreso.TabIndex = 49;
             this.Dtp_FechaContrato_Ingreso.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -451,9 +451,9 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
-            this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
             this.Dtp_FechaNacimiento_Ingreso.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -475,7 +475,7 @@
             this.Cmb_TipoPuesto_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoPuesto_Ingreso.FormattingEnabled = true;
             this.Cmb_TipoPuesto_Ingreso.Location = new System.Drawing.Point(9, 312);
-            this.Cmb_TipoPuesto_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Cmb_TipoPuesto_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cmb_TipoPuesto_Ingreso.Name = "Cmb_TipoPuesto_Ingreso";
             this.Cmb_TipoPuesto_Ingreso.Size = new System.Drawing.Size(231, 22);
             this.Cmb_TipoPuesto_Ingreso.TabIndex = 39;
@@ -485,10 +485,11 @@
             this.Txt_DPI_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_DPI_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_DPI_Ingreso.Location = new System.Drawing.Point(300, 206);
-            this.Txt_DPI_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_DPI_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_DPI_Ingreso.Name = "Txt_DPI_Ingreso";
             this.Txt_DPI_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_DPI_Ingreso.TabIndex = 44;
+            this.Txt_DPI_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Ingreso
             // 
@@ -519,10 +520,11 @@
             this.Txt_NIT_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_NIT_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_NIT_Ingreso.Location = new System.Drawing.Point(300, 260);
-            this.Txt_NIT_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_NIT_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_NIT_Ingreso.Name = "Txt_NIT_Ingreso";
             this.Txt_NIT_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_NIT_Ingreso.TabIndex = 42;
+            this.Txt_NIT_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Ingreso
             // 
@@ -565,7 +567,7 @@
             this.Txt_Email_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Email_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Email_Ingreso.Location = new System.Drawing.Point(9, 206);
-            this.Txt_Email_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Email_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Email_Ingreso.Name = "Txt_Email_Ingreso";
             this.Txt_Email_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Email_Ingreso.TabIndex = 38;
@@ -587,7 +589,7 @@
             this.Txt_Direccion_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Direccion_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Direccion_Ingreso.Location = new System.Drawing.Point(300, 152);
-            this.Txt_Direccion_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Direccion_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Direccion_Ingreso.Name = "Txt_Direccion_Ingreso";
             this.Txt_Direccion_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Direccion_Ingreso.TabIndex = 37;
@@ -609,10 +611,11 @@
             this.Txt_Nombre1_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Nombre1_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre1_Ingreso.Location = new System.Drawing.Point(9, 52);
-            this.Txt_Nombre1_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre1_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre1_Ingreso.Name = "Txt_Nombre1_Ingreso";
             this.Txt_Nombre1_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre1_Ingreso.TabIndex = 28;
+            this.Txt_Nombre1_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Ingreso
             // 
@@ -643,10 +646,11 @@
             this.Txt_Telefono_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Telefono_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Telefono_Ingreso.Location = new System.Drawing.Point(9, 152);
-            this.Txt_Telefono_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Telefono_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Telefono_Ingreso.Name = "Txt_Telefono_Ingreso";
             this.Txt_Telefono_Ingreso.Size = new System.Drawing.Size(123, 15);
             this.Txt_Telefono_Ingreso.TabIndex = 32;
+            this.Txt_Telefono_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Ingreso
             // 
@@ -665,10 +669,11 @@
             this.Txt_Apellido2_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Apellido2_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido2_Ingreso.Location = new System.Drawing.Point(300, 102);
-            this.Txt_Apellido2_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido2_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido2_Ingreso.Name = "Txt_Apellido2_Ingreso";
             this.Txt_Apellido2_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido2_Ingreso.TabIndex = 31;
+            this.Txt_Apellido2_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Ingreso
             // 
@@ -687,20 +692,22 @@
             this.Txt_Apellido1_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Apellido1_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido1_Ingreso.Location = new System.Drawing.Point(9, 102);
-            this.Txt_Apellido1_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido1_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido1_Ingreso.Name = "Txt_Apellido1_Ingreso";
             this.Txt_Apellido1_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido1_Ingreso.TabIndex = 30;
+            this.Txt_Apellido1_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Ingreso
             // 
             this.Txt_Nombre2_Ingreso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Nombre2_Ingreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre2_Ingreso.Location = new System.Drawing.Point(300, 52);
-            this.Txt_Nombre2_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre2_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre2_Ingreso.Name = "Txt_Nombre2_Ingreso";
             this.Txt_Nombre2_Ingreso.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre2_Ingreso.TabIndex = 29;
+            this.Txt_Nombre2_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo2
             // 
@@ -719,9 +726,9 @@
             this.Btn_Ingreso.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Ingreso.FlatAppearance.BorderSize = 0;
             this.Btn_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ingreso.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ingreso.Location = new System.Drawing.Point(676, 356);
-            this.Btn_Ingreso.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Ingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Ingreso.Name = "Btn_Ingreso";
             this.Btn_Ingreso.Size = new System.Drawing.Size(136, 41);
             this.Btn_Ingreso.TabIndex = 19;
@@ -775,6 +782,7 @@
             this.Txt_Busqueda_Modificar.Name = "Txt_Busqueda_Modificar";
             this.Txt_Busqueda_Modificar.Size = new System.Drawing.Size(313, 13);
             this.Txt_Busqueda_Modificar.TabIndex = 29;
+            this.Txt_Busqueda_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Gpb_Usuario_Modificar
             // 
@@ -832,7 +840,7 @@
             this.Txt_Usuario_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Usuario_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Usuario_Modificar.Location = new System.Drawing.Point(23, 52);
-            this.Txt_Usuario_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Usuario_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Usuario_Modificar.Name = "Txt_Usuario_Modificar";
             this.Txt_Usuario_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Usuario_Modificar.TabIndex = 24;
@@ -842,7 +850,7 @@
             this.Txt_Password_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Password_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Password_Modificar.Location = new System.Drawing.Point(23, 102);
-            this.Txt_Password_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Password_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Password_Modificar.Name = "Txt_Password_Modificar";
             this.Txt_Password_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Password_Modificar.TabIndex = 25;
@@ -901,9 +909,9 @@
             this.Dtp_FechaContrato_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
-            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
             this.Dtp_FechaContrato_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -914,9 +922,9 @@
             this.Dtp_FechaNacimiento_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
-            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
             this.Dtp_FechaNacimiento_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -939,7 +947,7 @@
             this.Cmb_TipoPuesto_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoPuesto_Modificar.FormattingEnabled = true;
             this.Cmb_TipoPuesto_Modificar.Location = new System.Drawing.Point(9, 312);
-            this.Cmb_TipoPuesto_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cmb_TipoPuesto_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cmb_TipoPuesto_Modificar.Name = "Cmb_TipoPuesto_Modificar";
             this.Cmb_TipoPuesto_Modificar.Size = new System.Drawing.Size(231, 22);
             this.Cmb_TipoPuesto_Modificar.TabIndex = 39;
@@ -950,10 +958,11 @@
             this.Txt_DPI_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_DPI_Modificar.Enabled = false;
             this.Txt_DPI_Modificar.Location = new System.Drawing.Point(300, 206);
-            this.Txt_DPI_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_DPI_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_DPI_Modificar.Name = "Txt_DPI_Modificar";
             this.Txt_DPI_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_DPI_Modificar.TabIndex = 44;
+            this.Txt_DPI_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Modificar
             // 
@@ -986,10 +995,11 @@
             this.Txt_NIT_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_NIT_Modificar.Enabled = false;
             this.Txt_NIT_Modificar.Location = new System.Drawing.Point(300, 260);
-            this.Txt_NIT_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_NIT_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_NIT_Modificar.Name = "Txt_NIT_Modificar";
             this.Txt_NIT_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_NIT_Modificar.TabIndex = 42;
+            this.Txt_NIT_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Modificar
             // 
@@ -1034,7 +1044,7 @@
             this.Txt_Email_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Email_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Email_Modificar.Location = new System.Drawing.Point(9, 206);
-            this.Txt_Email_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Email_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Email_Modificar.Name = "Txt_Email_Modificar";
             this.Txt_Email_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Email_Modificar.TabIndex = 38;
@@ -1056,7 +1066,7 @@
             this.Txt_Direccion_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Direccion_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Direccion_Modificar.Location = new System.Drawing.Point(300, 152);
-            this.Txt_Direccion_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Direccion_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Direccion_Modificar.Name = "Txt_Direccion_Modificar";
             this.Txt_Direccion_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Direccion_Modificar.TabIndex = 37;
@@ -1078,10 +1088,11 @@
             this.Txt_Nombre1_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Nombre1_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre1_Modificar.Location = new System.Drawing.Point(9, 52);
-            this.Txt_Nombre1_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre1_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre1_Modificar.Name = "Txt_Nombre1_Modificar";
             this.Txt_Nombre1_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre1_Modificar.TabIndex = 28;
+            this.Txt_Nombre1_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Modificar
             // 
@@ -1112,10 +1123,11 @@
             this.Txt_Telefono_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Telefono_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Telefono_Modificar.Location = new System.Drawing.Point(9, 152);
-            this.Txt_Telefono_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Telefono_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Telefono_Modificar.Name = "Txt_Telefono_Modificar";
             this.Txt_Telefono_Modificar.Size = new System.Drawing.Size(123, 15);
             this.Txt_Telefono_Modificar.TabIndex = 32;
+            this.Txt_Telefono_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Modificar
             // 
@@ -1134,10 +1146,11 @@
             this.Txt_Apellido2_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Apellido2_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido2_Modificar.Location = new System.Drawing.Point(300, 102);
-            this.Txt_Apellido2_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido2_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido2_Modificar.Name = "Txt_Apellido2_Modificar";
             this.Txt_Apellido2_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido2_Modificar.TabIndex = 31;
+            this.Txt_Apellido2_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Modificar
             // 
@@ -1156,20 +1169,22 @@
             this.Txt_Apellido1_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Apellido1_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido1_Modificar.Location = new System.Drawing.Point(9, 102);
-            this.Txt_Apellido1_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido1_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido1_Modificar.Name = "Txt_Apellido1_Modificar";
             this.Txt_Apellido1_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido1_Modificar.TabIndex = 30;
+            this.Txt_Apellido1_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Modificar
             // 
             this.Txt_Nombre2_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Nombre2_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre2_Modificar.Location = new System.Drawing.Point(300, 52);
-            this.Txt_Nombre2_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre2_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre2_Modificar.Name = "Txt_Nombre2_Modificar";
             this.Txt_Nombre2_Modificar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre2_Modificar.TabIndex = 29;
+            this.Txt_Nombre2_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo3
             // 
@@ -1187,9 +1202,9 @@
             this.Btn_Buscar_Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Buscar_Modificar.FlatAppearance.BorderSize = 0;
             this.Btn_Buscar_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Buscar_Modificar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar_Modificar.Location = new System.Drawing.Point(687, 10);
-            this.Btn_Buscar_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Buscar_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Buscar_Modificar.Name = "Btn_Buscar_Modificar";
             this.Btn_Buscar_Modificar.Size = new System.Drawing.Size(136, 26);
             this.Btn_Buscar_Modificar.TabIndex = 23;
@@ -1200,12 +1215,13 @@
             // Btn_Modificar
             // 
             this.Btn_Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar.Enabled = false;
             this.Btn_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Modificar.FlatAppearance.BorderSize = 0;
             this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Modificar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar.Location = new System.Drawing.Point(676, 356);
-            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Modificar.Name = "Btn_Modificar";
             this.Btn_Modificar.Size = new System.Drawing.Size(136, 41);
             this.Btn_Modificar.TabIndex = 21;
@@ -1236,12 +1252,13 @@
             // Btn_Eliminar
             // 
             this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar.Enabled = false;
             this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.Location = new System.Drawing.Point(676, 356);
-            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(136, 41);
             this.Btn_Eliminar.TabIndex = 33;
@@ -1254,9 +1271,9 @@
             this.Btn_Busqueda_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Busqueda_Eliminar.FlatAppearance.BorderSize = 0;
             this.Btn_Busqueda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Busqueda_Eliminar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Busqueda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Busqueda_Eliminar.Location = new System.Drawing.Point(687, 10);
-            this.Btn_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Busqueda_Eliminar.Name = "Btn_Busqueda_Eliminar";
             this.Btn_Busqueda_Eliminar.Size = new System.Drawing.Size(136, 26);
             this.Btn_Busqueda_Eliminar.TabIndex = 32;
@@ -1323,7 +1340,7 @@
             this.Txt_Usuario_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Usuario_Eliminar.Enabled = false;
             this.Txt_Usuario_Eliminar.Location = new System.Drawing.Point(23, 52);
-            this.Txt_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Usuario_Eliminar.Name = "Txt_Usuario_Eliminar";
             this.Txt_Usuario_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Usuario_Eliminar.TabIndex = 24;
@@ -1334,7 +1351,7 @@
             this.Txt_Password_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Password_Eliminar.Enabled = false;
             this.Txt_Password_Eliminar.Location = new System.Drawing.Point(23, 102);
-            this.Txt_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Password_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Password_Eliminar.Name = "Txt_Password_Eliminar";
             this.Txt_Password_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Password_Eliminar.TabIndex = 25;
@@ -1360,6 +1377,7 @@
             this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
             this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(313, 13);
             this.Txt_Busqueda_Eliminar.TabIndex = 30;
+            this.Txt_Busqueda_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Gpb_Datos_Eliminar
             // 
@@ -1405,7 +1423,7 @@
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(300, 313);
             this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
-            this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaContrato_Eliminar.TabIndex = 49;
             this.Dtp_FechaContrato_Eliminar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -1418,7 +1436,7 @@
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(9, 261);
             this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
-            this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(231, 25);
+            this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(231, 27);
             this.Dtp_FechaNacimiento_Eliminar.TabIndex = 48;
             this.Dtp_FechaNacimiento_Eliminar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -1441,7 +1459,7 @@
             this.Cmb_TipoPuesto_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoPuesto_Eliminar.FormattingEnabled = true;
             this.Cmb_TipoPuesto_Eliminar.Location = new System.Drawing.Point(9, 312);
-            this.Cmb_TipoPuesto_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cmb_TipoPuesto_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cmb_TipoPuesto_Eliminar.Name = "Cmb_TipoPuesto_Eliminar";
             this.Cmb_TipoPuesto_Eliminar.Size = new System.Drawing.Size(231, 22);
             this.Cmb_TipoPuesto_Eliminar.TabIndex = 39;
@@ -1452,10 +1470,11 @@
             this.Txt_DPI_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_DPI_Eliminar.Enabled = false;
             this.Txt_DPI_Eliminar.Location = new System.Drawing.Point(300, 206);
-            this.Txt_DPI_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_DPI_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_DPI_Eliminar.Name = "Txt_DPI_Eliminar";
             this.Txt_DPI_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_DPI_Eliminar.TabIndex = 44;
+            this.Txt_DPI_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Eliminar
             // 
@@ -1489,10 +1508,11 @@
             this.Txt_NIT_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_NIT_Eliminar.Enabled = false;
             this.Txt_NIT_Eliminar.Location = new System.Drawing.Point(300, 260);
-            this.Txt_NIT_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_NIT_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_NIT_Eliminar.Name = "Txt_NIT_Eliminar";
             this.Txt_NIT_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_NIT_Eliminar.TabIndex = 42;
+            this.Txt_NIT_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Eliminar
             // 
@@ -1539,7 +1559,7 @@
             this.Txt_Email_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Email_Eliminar.Enabled = false;
             this.Txt_Email_Eliminar.Location = new System.Drawing.Point(9, 206);
-            this.Txt_Email_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Email_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Email_Eliminar.Name = "Txt_Email_Eliminar";
             this.Txt_Email_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Email_Eliminar.TabIndex = 38;
@@ -1563,7 +1583,7 @@
             this.Txt_Direccion_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Direccion_Eliminar.Enabled = false;
             this.Txt_Direccion_Eliminar.Location = new System.Drawing.Point(300, 152);
-            this.Txt_Direccion_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Direccion_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Direccion_Eliminar.Name = "Txt_Direccion_Eliminar";
             this.Txt_Direccion_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Direccion_Eliminar.TabIndex = 37;
@@ -1587,10 +1607,11 @@
             this.Txt_Nombre1_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre1_Eliminar.Enabled = false;
             this.Txt_Nombre1_Eliminar.Location = new System.Drawing.Point(9, 52);
-            this.Txt_Nombre1_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre1_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre1_Eliminar.Name = "Txt_Nombre1_Eliminar";
             this.Txt_Nombre1_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre1_Eliminar.TabIndex = 28;
+            this.Txt_Nombre1_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Eliminar
             // 
@@ -1624,10 +1645,11 @@
             this.Txt_Telefono_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Telefono_Eliminar.Enabled = false;
             this.Txt_Telefono_Eliminar.Location = new System.Drawing.Point(9, 152);
-            this.Txt_Telefono_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Telefono_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Telefono_Eliminar.Name = "Txt_Telefono_Eliminar";
             this.Txt_Telefono_Eliminar.Size = new System.Drawing.Size(123, 15);
             this.Txt_Telefono_Eliminar.TabIndex = 32;
+            this.Txt_Telefono_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Eliminar
             // 
@@ -1648,10 +1670,11 @@
             this.Txt_Apellido2_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido2_Eliminar.Enabled = false;
             this.Txt_Apellido2_Eliminar.Location = new System.Drawing.Point(300, 102);
-            this.Txt_Apellido2_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido2_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido2_Eliminar.Name = "Txt_Apellido2_Eliminar";
             this.Txt_Apellido2_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido2_Eliminar.TabIndex = 31;
+            this.Txt_Apellido2_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Eliminar
             // 
@@ -1672,10 +1695,11 @@
             this.Txt_Apellido1_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Apellido1_Eliminar.Enabled = false;
             this.Txt_Apellido1_Eliminar.Location = new System.Drawing.Point(9, 102);
-            this.Txt_Apellido1_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellido1_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Apellido1_Eliminar.Name = "Txt_Apellido1_Eliminar";
             this.Txt_Apellido1_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Apellido1_Eliminar.TabIndex = 30;
+            this.Txt_Apellido1_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Eliminar
             // 
@@ -1683,10 +1707,11 @@
             this.Txt_Nombre2_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Nombre2_Eliminar.Enabled = false;
             this.Txt_Nombre2_Eliminar.Location = new System.Drawing.Point(300, 52);
-            this.Txt_Nombre2_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre2_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre2_Eliminar.Name = "Txt_Nombre2_Eliminar";
             this.Txt_Nombre2_Eliminar.Size = new System.Drawing.Size(231, 15);
             this.Txt_Nombre2_Eliminar.TabIndex = 29;
+            this.Txt_Nombre2_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo4
             // 

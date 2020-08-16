@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsAdmin;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
@@ -23,6 +25,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEquipo Equipo = new ClsEquipo();
 
+        ClsBitacora Bitacora = new ClsBitacora();
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null;
 
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
         {
@@ -32,12 +38,19 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Ingresar_Equipo_Click(object sender, EventArgs e)
         {
+            
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 16;
+            SenSql1 = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO, ID_ENTRENADOR_FK, ID_TIPO_DEPORTE__FK, ID_ESTADO_EQUIPO_FK)" +
+                    "VALUES( + ID_Equipo + , + Nombre + , + ID_Entrenador + , + ID_TipoDeporte + , + 1 + )";
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+      
+
             int Id_Entrenador, Id_Tipo_Deporte;
             Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
             Id_Tipo_Deporte = Cbx_Crear_Deporte.SelectedIndex + 1;
 
             Admin.IngresoEquipo(Id_Entrenador, Id_Tipo_Deporte, Txt_Crear_Nombre_Equipo.Text);
-
         }
 
         private void DatosCbx_Equipos_Entrenador() 
@@ -80,7 +93,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             try
             {
-
                 string CargarTipoDeporte = "SELECT * FROM TIPO_DEPORTE";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(CargarTipoDeporte, conexion.conexion());
 
@@ -118,12 +130,24 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Equipo_Click(object sender, EventArgs e)
         {
+
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 17;
+            SenSql1 = "UPDATE EQUIPO SET NOMBRE_EQUIPO= + Nombre +  WHERE ID_EQUIPO= + Id_Equipo + ";
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
             int Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
             Admin.ModificarEquipo(Txt_Editar_Nombre_Equipo.Text, Txt_Modificar_Id_Equipo.Text);
         }
 
         private void Btn_Eliminar_Equipo_Click(object sender, EventArgs e)
         {
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 18;
+            SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";
+
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
             Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
         }
 

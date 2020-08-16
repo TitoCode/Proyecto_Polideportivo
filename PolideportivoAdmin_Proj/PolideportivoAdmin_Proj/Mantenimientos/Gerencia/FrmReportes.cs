@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
 using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
+using PolideportivoAdmin_Proj.Clases;
+using PolideportivoAdmin_Proj.Clases.ClsUsuario;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -20,13 +23,17 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             InitializeComponent();
         }
 
+        ClsBitacora Bitacora = new ClsBitacora();
+        string UsuarioActivo = null;
+        int TipoProceso;
+        string SenSql1 = null;
+
         public void Generar_Reportes()
         {
 
             Excel.Application AplicacionExcel;
             Excel.Workbook LibroExcel;
             Excel.Worksheet HojaExcel;
-
             try
             {
 
@@ -84,6 +91,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             {
                 MessageBox.Show("No ha Seleccionado un Tipo de Reporte.");
             }else{
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 15;
+                SenSql1 = "CONSULTA PENDIENTE";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
                 Generar_Reportes();
             }
         }
