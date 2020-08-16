@@ -9,6 +9,6 @@ namespace PolideportivoAdmin_Proj.Clases
     public static class ClsDatos
     {
         public static string UserId;
-
+        public static int EquipoId;
     }
 }

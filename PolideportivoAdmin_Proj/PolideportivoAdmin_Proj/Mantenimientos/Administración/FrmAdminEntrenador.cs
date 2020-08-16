@@ -21,7 +21,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             InitializeComponent();
         }
 
-        ClsConexion conexion = new ClsConexion();
+        
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEntrenador Entrenador = new ClsEntrenador();
 
