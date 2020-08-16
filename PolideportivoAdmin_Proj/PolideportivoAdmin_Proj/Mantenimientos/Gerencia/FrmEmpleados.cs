@@ -198,7 +198,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
             int TipoUsuario, TipoPuesto;
             TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
             TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;

@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsAdmin;
-using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
-using PolideportivoAdmin_Proj.Clases;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
@@ -24,11 +22,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         ClsConexion conexion = new ClsConexion();
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEquipo Equipo = new ClsEquipo();
-
-        ClsBitacora Bitacora = new ClsBitacora();
-        string UsuarioActivo = null;
-        int TipoProceso = 0;
-        string SenSql1 = null;
 
 
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
