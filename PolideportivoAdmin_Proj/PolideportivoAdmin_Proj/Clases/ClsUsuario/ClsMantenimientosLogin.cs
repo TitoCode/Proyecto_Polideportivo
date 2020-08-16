@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
 {
     class ClsMantenimientosLogin
@@ -20,7 +21,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
                 string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + Usuario + "' AND PASSWORD = '" + Password + "' ;";
                 OdbcCommand Query_Validacion = new OdbcCommand(Consulta, Conexion.conexion());
                 OdbcDataReader Lector = Query_Validacion.ExecuteReader();
-
                 if (Lector.HasRows == true)
                 {
                     OdbcCommand Login = new OdbcCommand(Consulta, Conexion.conexion());
@@ -35,7 +35,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
                     }else{
                         return 4;
                     }
-
                 }else{
                     return 5;
                 }

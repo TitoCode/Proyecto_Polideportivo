@@ -10,8 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PolideportivoAdmin_Proj.Clases;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases;
+
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -21,9 +22,14 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             InitializeComponent();
         }
-
+        
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsBitacora Bitacora = new ClsBitacora();
+
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null, SenSql2 = null;
+
 
         private void Btn_Seleccionar_Click(object sender, EventArgs e)
         {
@@ -42,17 +48,21 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
 
+
             string UsuarioActivo = ClsDatos.UserId;
             int TipoProceso = 1;
             string SenSql1 = "UPDATE EMPLEADO SET FOTOGRAFIA = + Foto +  WHERE ID_USUARIO_FK= + Usuario + ";
 
             string SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
-                                           "WHERE ID_USUARIO= + Usuario + ";
 
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 1;
+            SenSql1 = "UPDATE EMPLEADO SET FOTOGRAFIA = + Foto +  WHERE ID_USUARIO_FK= + Usuario + ";
+            SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
+
+                                           "WHERE ID_USUARIO= + Usuario + ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
-
             MemoryStream ms = new MemoryStream();
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();

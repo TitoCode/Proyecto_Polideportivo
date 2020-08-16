@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 {
@@ -136,6 +138,26 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         private void FrmEntrenador_Jugador_Load(object sender, EventArgs e)
         {
             DatosCbx_Posicion();
+        }
+
+        ClsBitacora Bitacora = new ClsBitacora();
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null;
+
+
+        private void Btn_Ingreso_Click(object sender, EventArgs e)
+        {
+
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 10;
+            SenSql1 = "INSERT INTO JUGADOR (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
+
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+           
+
+
+
         }
     }
 }

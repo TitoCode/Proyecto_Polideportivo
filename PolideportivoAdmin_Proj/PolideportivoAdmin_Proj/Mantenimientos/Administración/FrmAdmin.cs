@@ -60,5 +60,11 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             AbrirFormEnPanel(new FrmAdminEquipo());
         }
+
+        private void Btn_Entreador_Click(object sender, EventArgs e)
+        {
+            Form Entrenador = new FrmAdminEntrenador();
+            Entrenador.ShowDialog();
+        }
     }
 }
