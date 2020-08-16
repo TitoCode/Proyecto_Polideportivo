@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PolideportivoAdmin_Proj.Clases;
-using System.IO;
-
 
 namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
 {
@@ -35,6 +34,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 }
             }
 
+
+
             switch (Proceso)
             {
                 case 1: Nombre_Proceso = "Modificar_Empleado"; break;
@@ -52,10 +53,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 case 13: Nombre_Proceso = "Ingreso_Login"; break;
                 case 14: Nombre_Proceso = "Intento_de_Ingreso"; break;
                 case 15: Nombre_Proceso = "Creacion_Reporte"; break;
-                case 16: Nombre_Proceso = "Insertar_Equipo"; break;
-                case 17: Nombre_Proceso = "Modificar_Equipo"; break;
-                case 18: Nombre_Proceso = "Eliminar_Equipo"; break;
             }
+
+
             try
             {
 
@@ -64,16 +64,23 @@ namespace PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos
                 OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, Conexion.conexion());
                 ID_Bitacora = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
+
+
                 string InsertarBitacora = "INSERT INTO BITACORA (ID_BITACORA, HOSTNAME, FECHA, ID_USUARIO_FK, IP_ADDRESS, CONSULTA, ID_PROCESO_FK) VALUES ('" + ID_Bitacora + "','" + Convert.ToString(host.HostName) + "','" + Convert.ToString(DateTime.Now) + "','" + UsuarioActivo + "','" + localIP + "','" + Sql + "','" + Proceso + "')";
+
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarBitacora, Conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
 
                 StreamWriter fichero = File.AppendText("Bitacora.txt");
                 //El archivo se guarda en la carpeta bin/debug del proyecto
+
                 fichero.WriteLine("LOG IP: " + localIP + " Usuario: " + UsuarioActivo + " Sentencia Sql: " + Sql + " Proceso: " + Nombre_Proceso + " PC: " + Convert.ToString(host.HostName) +
                 " Fecha: " + DateTime.Now + " - " + Environment.NewLine);
                 fichero.Close(); // Al cerrar el fichero nos aseguramos que no queda ningún dato por guardar
-          }
+
+
+
+            }
             catch (Exception ex)
             {
 

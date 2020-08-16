@@ -59,10 +59,10 @@
             // LblLogin
             // 
             this.LblLogin.AutoSize = true;
-            this.LblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLogin.Location = new System.Drawing.Point(120, 33);
             this.LblLogin.Name = "LblLogin";
-            this.LblLogin.Size = new System.Drawing.Size(76, 25);
+            this.LblLogin.Size = new System.Drawing.Size(80, 24);
             this.LblLogin.TabIndex = 2;
             this.LblLogin.Text = "LOGIN";
             // 
@@ -70,7 +70,6 @@
             // 
             this.TxtPassword.Location = new System.Drawing.Point(84, 215);
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.PasswordChar = '■';
             this.TxtPassword.Size = new System.Drawing.Size(193, 20);
             this.TxtPassword.TabIndex = 3;
             // 

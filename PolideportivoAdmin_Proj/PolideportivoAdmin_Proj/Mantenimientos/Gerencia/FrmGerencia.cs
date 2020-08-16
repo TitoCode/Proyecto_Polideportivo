@@ -15,6 +15,8 @@ using System.IO;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using PolideportivoAdmin_Proj.Clases;
 
+
+
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
     public partial class FrmGerencia : Form
@@ -22,7 +24,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         public FrmGerencia()
         {
             InitializeComponent();
-
+            
         }
 
         ClsConexion Conexion = new ClsConexion();
@@ -82,19 +84,25 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                         MemoryStream ms = new MemoryStream((byte[])Lector["FOTOGRAFIA"]);
                         ms.Position = 0;
                         Ptb_FotoUsuario.BackgroundImage = Bitmap.FromStream(ms);
-                    }              
+                    }
+                    
                 
                 }
+
+                
+
             }
             catch (Exception ex)
             {
-                    MessageBox.Show("Error al ejecutar SQL: " +
+
+                MessageBox.Show("Error al ejecutar SQL: " +
                     System.Environment.NewLine + System.Environment.NewLine +
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
     }
 }
