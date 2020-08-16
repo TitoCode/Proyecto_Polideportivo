@@ -11,6 +11,8 @@ using System.Data.Odbc;
 using PolideportivoAdmin_Proj.Clases.ClsAdmin;
 using System.IO;
 using System.Drawing.Imaging;
+using PolideportivoAdmin_Proj.Clases;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
@@ -24,6 +26,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEntrenador Entrenador = new ClsEntrenador();
+        ClsBitacora Bitacora = new ClsBitacora();
+
 
         private void FmrAdminEntrenador_Load(object sender, EventArgs e)
         {
@@ -55,13 +59,13 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         private void Btn_Modificar_Entrenador_Click(object sender, EventArgs e)
         {
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 4;
-            SenSql1 = "UPDATE ENTRENADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
+            string UsuarioActivo = ClsDatos.UserId;
+            int TipoProceso = 4;
+            string SenSql1 = "UPDATE ENTRENADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
                                           ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
                                           " WHERE ID_ENTRENADOR= + ID_Entrenador ";
 
-            SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
+            string SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
                                           " WHERE ID_USUARIO= + Usuario  ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);

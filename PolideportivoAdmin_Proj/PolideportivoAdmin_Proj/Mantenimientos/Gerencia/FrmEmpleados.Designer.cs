@@ -343,7 +343,7 @@
             this.Gpb_Usuario_Ingreso.Controls.Add(this.Lbl_TipoUsuario_Ingreso);
             this.Gpb_Usuario_Ingreso.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Usuario_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Gpb_Usuario_Ingreso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4)
+            this.Gpb_Usuario_Ingreso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Gpb_Usuario_Ingreso.Location = new System.Drawing.Point(604, 84);
             this.Gpb_Usuario_Ingreso.Name = "Gpb_Usuario_Ingreso";
             this.Gpb_Usuario_Ingreso.Size = new System.Drawing.Size(275, 204);
