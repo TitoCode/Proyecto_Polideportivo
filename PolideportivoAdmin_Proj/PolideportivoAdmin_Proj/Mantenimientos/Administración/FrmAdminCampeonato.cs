@@ -21,6 +21,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             if (Rdb_Todos.Checked == true) { Gpb_Campeonato_Tipo_Tct.Visible = true; Rdb_Ida.Visible = true; Rdb_IdaVuelta.Visible = true; Lbl_Campeonato_Ida.Visible = true; Lbl_Campeonato_Ida_Vuelta.Visible = true; Lbl_Crear_Cantidad_Equipos.Visible = true; Nud_Cantidad_Todos.Visible = true; }
             else { Gpb_Campeonato_Tipo_Tct.Visible = false; Rdb_Ida.Visible = false; Rdb_IdaVuelta.Visible = false; Lbl_Campeonato_Ida.Visible = false; Lbl_Campeonato_Ida_Vuelta.Visible = false; Lbl_Crear_Cantidad_Equipos.Visible = false; Nud_Cantidad_Todos.Visible = false; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68c3c5fd2da1ff22a08ea971da7d0bffa8798892
         }
     }
 }

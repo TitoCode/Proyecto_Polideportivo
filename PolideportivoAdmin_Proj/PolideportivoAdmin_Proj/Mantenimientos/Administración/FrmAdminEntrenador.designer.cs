@@ -39,7 +39,6 @@
             this.Txt_Eliminar_Nombre2_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Nombre1_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Tipo_Usuario_Entrenador = new System.Windows.Forms.TextBox();
-            this.Lbl_Eliminar_Usuario_Entrenador = new System.Windows.Forms.Label();
             this.Txt_Eliminar_Password_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Eliminar_Usuario_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Modificar_Id_Entenador = new System.Windows.Forms.TextBox();
@@ -70,6 +69,7 @@
             this.Lbl_Usuario_Ingreso = new System.Windows.Forms.Label();
             this.Lbl_Password_Ingreso = new System.Windows.Forms.Label();
             this.Gpb_Datos_Ingreso = new System.Windows.Forms.GroupBox();
+            this.Btn_Fotografia = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Foto = new System.Windows.Forms.PictureBox();
             this.Dtp_FechaNacimiento_Ingreso = new MetroFramework.Controls.MetroDateTime();
@@ -85,6 +85,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_CambiarFoto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Ptb_Foto_Modificar = new System.Windows.Forms.PictureBox();
             this.Dtp_Modificar_Fdn_Entrenador = new MetroFramework.Controls.MetroDateTime();
@@ -109,8 +110,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.Btn_Fotografia = new System.Windows.Forms.Button();
-            this.Btn_CambiarFoto = new System.Windows.Forms.Button();
             this.Tbc_Entrenador.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -224,16 +223,6 @@
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.Name = "Txt_Eliminar_Tipo_Usuario_Entrenador";
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.Size = new System.Drawing.Size(231, 15);
             this.Txt_Eliminar_Tipo_Usuario_Entrenador.TabIndex = 7;
-            // 
-            // Lbl_Eliminar_Usuario_Entrenador
-            // 
-            this.Lbl_Eliminar_Usuario_Entrenador.AutoSize = true;
-            this.Lbl_Eliminar_Usuario_Entrenador.Location = new System.Drawing.Point(525, 340);
-            this.Lbl_Eliminar_Usuario_Entrenador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Eliminar_Usuario_Entrenador.Name = "Lbl_Eliminar_Usuario_Entrenador";
-            this.Lbl_Eliminar_Usuario_Entrenador.Size = new System.Drawing.Size(49, 13);
-            this.Lbl_Eliminar_Usuario_Entrenador.TabIndex = 4;
-            this.Lbl_Eliminar_Usuario_Entrenador.Text = "Usuario :";
             // 
             // Txt_Eliminar_Password_Entrenador
             // 
@@ -455,7 +444,7 @@
             this.Tbc_Entrenador.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Entrenador.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Entrenador.Name = "Tbc_Entrenador";
-            this.Tbc_Entrenador.SelectedIndex = 0;
+            this.Tbc_Entrenador.SelectedIndex = 3;
             this.Tbc_Entrenador.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Entrenador.TabIndex = 3;
             this.Tbc_Entrenador.UseSelectable = true;
@@ -626,6 +615,21 @@
             this.Gpb_Datos_Ingreso.TabIndex = 25;
             this.Gpb_Datos_Ingreso.TabStop = false;
             this.Gpb_Datos_Ingreso.Text = "Datos Personales";
+            // 
+            // Btn_Fotografia
+            // 
+            this.Btn_Fotografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Fotografia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Fotografia.FlatAppearance.BorderSize = 0;
+            this.Btn_Fotografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Fotografia.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Fotografia.Location = new System.Drawing.Point(258, 351);
+            this.Btn_Fotografia.Name = "Btn_Fotografia";
+            this.Btn_Fotografia.Size = new System.Drawing.Size(149, 31);
+            this.Btn_Fotografia.TabIndex = 52;
+            this.Btn_Fotografia.Text = "SELECCIONAR";
+            this.Btn_Fotografia.UseVisualStyleBackColor = false;
+            this.Btn_Fotografia.Click += new System.EventHandler(this.Btn_Fotografia_Click);
             // 
             // label1
             // 
@@ -828,6 +832,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
+            // Btn_CambiarFoto
+            // 
+            this.Btn_CambiarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_CambiarFoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_CambiarFoto.FlatAppearance.BorderSize = 0;
+            this.Btn_CambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_CambiarFoto.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CambiarFoto.Location = new System.Drawing.Point(258, 351);
+            this.Btn_CambiarFoto.Name = "Btn_CambiarFoto";
+            this.Btn_CambiarFoto.Size = new System.Drawing.Size(149, 31);
+            this.Btn_CambiarFoto.TabIndex = 52;
+            this.Btn_CambiarFoto.Text = "SELECCIONAR";
+            this.Btn_CambiarFoto.UseVisualStyleBackColor = false;
+            this.Btn_CambiarFoto.Click += new System.EventHandler(this.Btn_CambiarFoto_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -938,7 +957,6 @@
             this.Tbp_Eliminar.Controls.Add(this.groupBox3);
             this.Tbp_Eliminar.Controls.Add(this.groupBox4);
             this.Tbp_Eliminar.Controls.Add(this.label19);
-            this.Tbp_Eliminar.Controls.Add(this.Lbl_Eliminar_Usuario_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Txt_Eliminar_Id_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Btn_Eliminar_Entrenador);
             this.Tbp_Eliminar.Controls.Add(this.Btn_Eliminar_Buscar_Entrenador);
@@ -1145,36 +1163,6 @@
             this.label19.TabIndex = 31;
             this.label19.Text = "Ingrese el ID del Entrenador";
             // 
-            // Btn_Fotografia
-            // 
-            this.Btn_Fotografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Fotografia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Fotografia.FlatAppearance.BorderSize = 0;
-            this.Btn_Fotografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Fotografia.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Fotografia.Location = new System.Drawing.Point(258, 351);
-            this.Btn_Fotografia.Name = "Btn_Fotografia";
-            this.Btn_Fotografia.Size = new System.Drawing.Size(149, 31);
-            this.Btn_Fotografia.TabIndex = 52;
-            this.Btn_Fotografia.Text = "SELECCIONAR";
-            this.Btn_Fotografia.UseVisualStyleBackColor = false;
-            this.Btn_Fotografia.Click += new System.EventHandler(this.Btn_Fotografia_Click);
-            // 
-            // Btn_CambiarFoto
-            // 
-            this.Btn_CambiarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_CambiarFoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_CambiarFoto.FlatAppearance.BorderSize = 0;
-            this.Btn_CambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_CambiarFoto.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_CambiarFoto.Location = new System.Drawing.Point(258, 351);
-            this.Btn_CambiarFoto.Name = "Btn_CambiarFoto";
-            this.Btn_CambiarFoto.Size = new System.Drawing.Size(149, 31);
-            this.Btn_CambiarFoto.TabIndex = 52;
-            this.Btn_CambiarFoto.Text = "SELECCIONAR";
-            this.Btn_CambiarFoto.UseVisualStyleBackColor = false;
-            this.Btn_CambiarFoto.Click += new System.EventHandler(this.Btn_CambiarFoto_Click);
-            // 
             // FrmAdminEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1235,7 +1223,6 @@
         private System.Windows.Forms.TextBox Txt_Eliminar_Apellido1_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Nombre2_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Nombre1_Entrenador;
-        private System.Windows.Forms.Label Lbl_Eliminar_Usuario_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Password_Entrenador;
         private System.Windows.Forms.TextBox Txt_Eliminar_Usuario_Entrenador;
         private System.Windows.Forms.TextBox Txt_Modificar_Id_Entenador;
