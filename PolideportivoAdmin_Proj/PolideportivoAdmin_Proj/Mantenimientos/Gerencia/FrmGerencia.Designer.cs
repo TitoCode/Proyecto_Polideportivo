@@ -117,10 +117,9 @@
             this.Btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_CerrarSesion.Font = new System.Drawing.Font("Tw Cen MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_CerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_CerrarSesion.Location = new System.Drawing.Point(-11, 607);
-            this.Btn_CerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_CerrarSesion.Location = new System.Drawing.Point(-8, 493);
             this.Btn_CerrarSesion.Name = "Btn_CerrarSesion";
-            this.Btn_CerrarSesion.Size = new System.Drawing.Size(215, 37);
+            this.Btn_CerrarSesion.Size = new System.Drawing.Size(161, 30);
             this.Btn_CerrarSesion.TabIndex = 3;
             this.Btn_CerrarSesion.Text = "CERRAR SESIÓN";
             this.Btn_CerrarSesion.UseVisualStyleBackColor = true;
@@ -134,7 +133,7 @@
             this.Btn_Empleado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Empleado.Location = new System.Drawing.Point(-6, 256);
             this.Btn_Empleado.Name = "Btn_Empleado";
-            this.Btn_Empleado.Size = new System.Drawing.Size(215, 50);
+            this.Btn_Empleado.Size = new System.Drawing.Size(161, 41);
             this.Btn_Empleado.TabIndex = 2;
             this.Btn_Empleado.Text = "EMPLEADOS";
             this.Btn_Empleado.UseVisualStyleBackColor = true;
@@ -149,7 +148,7 @@
             this.Btn_Estadistica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Estadistica.Location = new System.Drawing.Point(-6, 350);
             this.Btn_Estadistica.Name = "Btn_Estadistica";
-            this.Btn_Estadistica.Size = new System.Drawing.Size(215, 50);
+            this.Btn_Estadistica.Size = new System.Drawing.Size(161, 41);
             this.Btn_Estadistica.TabIndex = 1;
             this.Btn_Estadistica.Text = "ESTADISTICAS";
             this.Btn_Estadistica.UseVisualStyleBackColor = true;
@@ -163,7 +162,7 @@
             this.Btn_Reporte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Reporte.Location = new System.Drawing.Point(-6, 303);
             this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Size = new System.Drawing.Size(215, 50);
+            this.Btn_Reporte.Size = new System.Drawing.Size(161, 41);
             this.Btn_Reporte.TabIndex = 0;
             this.Btn_Reporte.Text = "REPORTES";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
@@ -206,14 +205,13 @@
             // 
             // FrmGerencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1069, 523);
             this.Controls.Add(this.Pnl_Contenedor);
             this.Controls.Add(this.Pnl_Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FrmGerencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
