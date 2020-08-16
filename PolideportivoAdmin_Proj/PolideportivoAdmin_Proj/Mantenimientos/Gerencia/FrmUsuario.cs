@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+using PolideportivoAdmin_Proj.Clases;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -21,6 +23,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
+        ClsBitacora Bitacora = new ClsBitacora();
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null, SenSql2 = null;
 
         private void Btn_Seleccionar_Click(object sender, EventArgs e)
         {
