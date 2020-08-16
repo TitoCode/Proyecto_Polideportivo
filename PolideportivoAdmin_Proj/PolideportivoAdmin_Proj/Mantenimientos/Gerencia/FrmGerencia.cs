@@ -32,7 +32,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmBase());
-            MostrarFotografia(Lbl_Usuario.Text);
+            //MostrarFotografia(Lbl_Usuario.Text);
         }
 
         private void Btn_Empleado_Click(object sender, EventArgs e)
