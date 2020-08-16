@@ -74,6 +74,7 @@
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
+    <Compile Include="Clases\ClsValidarKeyPress.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

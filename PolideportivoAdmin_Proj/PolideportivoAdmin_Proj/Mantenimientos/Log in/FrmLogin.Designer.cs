@@ -42,7 +42,7 @@
             // PtbUsuario
             // 
             this.PtbUsuario.Image = ((System.Drawing.Image)(resources.GetObject("PtbUsuario.Image")));
-            this.PtbUsuario.Location = new System.Drawing.Point(31, 157);
+            this.PtbUsuario.Location = new System.Drawing.Point(78, 73);
             this.PtbUsuario.Name = "PtbUsuario";
             this.PtbUsuario.Size = new System.Drawing.Size(38, 34);
             this.PtbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -51,7 +51,7 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Location = new System.Drawing.Point(84, 171);
+            this.TxtUsuario.Location = new System.Drawing.Point(131, 87);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(193, 20);
             this.TxtUsuario.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.LblLogin.AutoSize = true;
             this.LblLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLogin.Location = new System.Drawing.Point(120, 33);
+            this.LblLogin.Location = new System.Drawing.Point(181, 32);
             this.LblLogin.Name = "LblLogin";
             this.LblLogin.Size = new System.Drawing.Size(80, 24);
             this.LblLogin.TabIndex = 2;
@@ -68,15 +68,16 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(84, 215);
+            this.TxtPassword.Location = new System.Drawing.Point(131, 131);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(193, 20);
             this.TxtPassword.TabIndex = 3;
+            this.TxtPassword.UseSystemPasswordChar = true;
             // 
             // PtbPassword
             // 
             this.PtbPassword.Image = ((System.Drawing.Image)(resources.GetObject("PtbPassword.Image")));
-            this.PtbPassword.Location = new System.Drawing.Point(31, 201);
+            this.PtbPassword.Location = new System.Drawing.Point(78, 117);
             this.PtbPassword.Name = "PtbPassword";
             this.PtbPassword.Size = new System.Drawing.Size(38, 34);
             this.PtbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,9 +86,9 @@
             // 
             // BtnIngreso
             // 
-            this.BtnIngreso.Location = new System.Drawing.Point(125, 297);
+            this.BtnIngreso.Location = new System.Drawing.Point(166, 181);
             this.BtnIngreso.Name = "BtnIngreso";
-            this.BtnIngreso.Size = new System.Drawing.Size(75, 23);
+            this.BtnIngreso.Size = new System.Drawing.Size(116, 31);
             this.BtnIngreso.TabIndex = 5;
             this.BtnIngreso.Text = "Ingreso";
             this.BtnIngreso.UseVisualStyleBackColor = true;
@@ -99,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(321, 415);
+            this.ClientSize = new System.Drawing.Size(446, 262);
             this.Controls.Add(this.BtnIngreso);
             this.Controls.Add(this.PtbPassword);
             this.Controls.Add(this.TxtPassword);
