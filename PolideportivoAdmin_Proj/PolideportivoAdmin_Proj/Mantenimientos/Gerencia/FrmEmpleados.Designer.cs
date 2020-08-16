@@ -1098,6 +1098,7 @@
             this.Lbl_Nombre2_Modificar.AutoSize = true;
             this.Lbl_Nombre2_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Nombre2_Modificar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.Lbl_Nombre2_Modificar.Location = new System.Drawing.Point(396, 44);
             this.Lbl_Nombre2_Modificar.Name = "Lbl_Nombre2_Modificar";
             this.Lbl_Nombre2_Modificar.Size = new System.Drawing.Size(130, 18);

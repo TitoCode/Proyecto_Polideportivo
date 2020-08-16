@@ -30,7 +30,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         int TipoProceso = 0;
         string SenSql1 = null;
 
-
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
         {
             DatosCbx_Equipos_Entrenador();
@@ -52,7 +51,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Id_Tipo_Deporte = Cbx_Crear_Deporte.SelectedIndex + 1;
 
             Admin.IngresoEquipo(Id_Entrenador, Id_Tipo_Deporte, Txt_Crear_Nombre_Equipo.Text);
-
         }
 
         private void DatosCbx_Equipos_Entrenador() 
@@ -95,7 +93,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             try
             {
-
                 string CargarTipoDeporte = "SELECT * FROM TIPO_DEPORTE";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(CargarTipoDeporte, conexion.conexion());
 
@@ -145,14 +142,19 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Eliminar_Equipo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string BuscarEquipos = "SELECT * FROM EQUIPOS" + " WHERE NOMBRE_EQUIPO =" + Txt_Eliminar_Nombre_Equipo.Text;
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 18;
-            SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEquipos, conexion.conexion());
+                OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 18;
+                SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";
          
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-            Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
+                Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
         }
 
         private void Btn_Eliminar_Buscar_Click(object sender, EventArgs e)

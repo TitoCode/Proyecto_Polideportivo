@@ -21,7 +21,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             InitializeComponent();
         }
-
+        
         ClsMantenimientosEmpleado Ingreso = new ClsMantenimientosEmpleado();
         ClsBitacora Bitacora = new ClsBitacora();
         string UsuarioActivo = null;
@@ -48,14 +48,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 1;
             SenSql1 = "UPDATE EMPLEADO SET FOTOGRAFIA = + Foto +  WHERE ID_USUARIO_FK= + Usuario + ";
-
             SenSql2 = "UPDATE USUARIO SET ID_USUARIO= + Usuario + , PASSWORD= + Password " +
                                            "WHERE ID_USUARIO= + Usuario + ";
-
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
-
             MemoryStream ms = new MemoryStream();
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();

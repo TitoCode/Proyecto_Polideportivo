@@ -71,7 +71,16 @@
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsNuevoUsuario.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsValidarCampos.cs" />
+    <Compile Include="IfzInformacion.cs" />
+    <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminCampeonato.Designer.cs">
+      <DependentUpon>FrmAdminCampeonato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Administración\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -52,8 +52,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
             Admin.IngresoEntrenador(Txt_Ingreso_Id_Usuario.Text, Txt_Ingreso_Password.Text, Txt_Ingreso_Nombre1_Entrenador.Text, Txt_Ingreso_Nombre2_Entrenador.Text, Txt_Ingreso_Apellido1_Entrenador.Text, Txt_Ingreso_Apellido2_Entrenador.Text, Dtp_FechaNacimiento_Ingreso.Value.Date.ToString(), aByte);
-        
-        }
+         }
 
         private void Btn_Modificar_Buscar_Entrenador_Click(object sender, EventArgs e)
         {
