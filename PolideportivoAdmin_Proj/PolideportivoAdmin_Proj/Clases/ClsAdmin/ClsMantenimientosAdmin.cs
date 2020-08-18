@@ -25,8 +25,8 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
                 string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Usuario + "','" + Password + "'," + 2 + ")";
-                string InsertarEntrenador = "INSERT INTO ENTRENADOR (ID_ENTRENADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_USUARIO_FK, FOTO_ENTRENADOR) VALUES ('"
-                    + ID_Entrenador + "','"+ Nombre1 + "','" + Nombre2 + "','" + Apellido1 + "','" + Apellido2 + "','" + FechaNacimiento + "','" + Usuario + "','" + Foto + "')";
+                string InsertarEntrenador = "INSERT INTO ENTRENADOR (ID_ENTRENADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_USUARIO_FK, FOTO_ENTRENADOR, ID_ESTADO_ENTRENADOR_FK) VALUES ('"
+                    + ID_Entrenador + "','"+ Nombre1 + "','" + Nombre2 + "','" + Apellido1 + "','" + Apellido2 + "','" + FechaNacimiento + "','" + Usuario + "','" + Foto + "', '"+ 1 +"')";
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarUsuario, conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarEntrenador, conexion.conexion());
@@ -152,7 +152,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                 string Correlativo = "SELECT IFNULL(MAX(ID_EQUIPO),0) +1 FROM EQUIPO";
                 OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, conexion.conexion());
                 ID_Equipo = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
-                OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
                 string InsertarEquipo = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO, ID_ENTRENADOR_FK, ID_TIPO_DEPORTE__FK, ID_ESTADO_EQUIPO_FK)" +
                     "VALUES('" + ID_Equipo + "','" + Nombre + "','" + ID_Entrenador + "','" + ID_TipoDeporte + "','" + 1 + "')";
@@ -250,6 +249,11 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Equipo;
             }
+
+        }
+
+        public void Listado()
+        {
 
         }
     }

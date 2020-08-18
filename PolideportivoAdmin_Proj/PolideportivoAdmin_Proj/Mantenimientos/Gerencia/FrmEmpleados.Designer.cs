@@ -33,11 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_Empleados = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_ListadoEmpleado = new MetroFramework.Controls.MetroTabPage();
-            this.Ttx_Busqueda_Listado = new MetroFramework.Controls.MetroTextBox();
             this.Dgw_Listado = new MetroFramework.Controls.MetroGrid();
-            this.ID_EMPLEADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
             this.Gpb_Usuario_Ingreso = new System.Windows.Forms.GroupBox();
             this.Cmb_TipoUsuario_Ingreso = new System.Windows.Forms.ComboBox();
@@ -173,14 +169,14 @@
             this.Tbc_Empleados.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
-            this.Tbc_Empleados.SelectedIndex = 1;
+            this.Tbc_Empleados.SelectedIndex = 0;
             this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
-            this.Tbc_Empleados.TabIndex = 22;
+            this.Tbc_Empleados.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Tbc_Empleados.TabIndex = 1;
             this.Tbc_Empleados.UseSelectable = true;
             // 
             // Tbp_ListadoEmpleado
             // 
-            this.Tbp_ListadoEmpleado.Controls.Add(this.Ttx_Busqueda_Listado);
             this.Tbp_ListadoEmpleado.Controls.Add(this.Dgw_Listado);
             this.Tbp_ListadoEmpleado.HorizontalScrollbarBarColor = true;
             this.Tbp_ListadoEmpleado.HorizontalScrollbarHighlightOnWheel = false;
@@ -194,61 +190,29 @@
             this.Tbp_ListadoEmpleado.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_ListadoEmpleado.VerticalScrollbarSize = 10;
             // 
-            // Ttx_Busqueda_Listado
-            // 
-            // 
-            // 
-            // 
-            this.Ttx_Busqueda_Listado.CustomButton.Image = null;
-            this.Ttx_Busqueda_Listado.CustomButton.Location = new System.Drawing.Point(552, 1);
-            this.Ttx_Busqueda_Listado.CustomButton.Name = "";
-            this.Ttx_Busqueda_Listado.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Ttx_Busqueda_Listado.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Ttx_Busqueda_Listado.CustomButton.TabIndex = 1;
-            this.Ttx_Busqueda_Listado.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Ttx_Busqueda_Listado.CustomButton.UseSelectable = true;
-            this.Ttx_Busqueda_Listado.CustomButton.Visible = false;
-            this.Ttx_Busqueda_Listado.Lines = new string[0];
-            this.Ttx_Busqueda_Listado.Location = new System.Drawing.Point(25, 25);
-            this.Ttx_Busqueda_Listado.MaxLength = 32767;
-            this.Ttx_Busqueda_Listado.Name = "Ttx_Busqueda_Listado";
-            this.Ttx_Busqueda_Listado.PasswordChar = '\0';
-            this.Ttx_Busqueda_Listado.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Ttx_Busqueda_Listado.SelectedText = "";
-            this.Ttx_Busqueda_Listado.SelectionLength = 0;
-            this.Ttx_Busqueda_Listado.SelectionStart = 0;
-            this.Ttx_Busqueda_Listado.ShortcutsEnabled = true;
-            this.Ttx_Busqueda_Listado.Size = new System.Drawing.Size(574, 23);
-            this.Ttx_Busqueda_Listado.TabIndex = 3;
-            this.Ttx_Busqueda_Listado.UseSelectable = true;
-            this.Ttx_Busqueda_Listado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Ttx_Busqueda_Listado.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // Dgw_Listado
             // 
+            this.Dgw_Listado.AllowUserToAddRows = false;
+            this.Dgw_Listado.AllowUserToDeleteRows = false;
             this.Dgw_Listado.AllowUserToResizeRows = false;
             this.Dgw_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Dgw_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgw_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgw_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgw_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgw_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_EMPLEADO,
-            this.Nombre,
-            this.Nombre2});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle2;
@@ -256,44 +220,25 @@
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgw_Listado.Location = new System.Drawing.Point(0, 74);
+            this.Dgw_Listado.Location = new System.Drawing.Point(0, 3);
             this.Dgw_Listado.Name = "Dgw_Listado";
+            this.Dgw_Listado.ReadOnly = true;
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgw_Listado.RowHeadersVisible = false;
             this.Dgw_Listado.RowHeadersWidth = 51;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgw_Listado.Size = new System.Drawing.Size(906, 407);
-            this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Dgw_Listado.Size = new System.Drawing.Size(906, 478);
+            this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Silver;
             this.Dgw_Listado.TabIndex = 2;
-            // 
-            // ID_EMPLEADO
-            // 
-            this.ID_EMPLEADO.HeaderText = "Column1";
-            this.ID_EMPLEADO.MinimumWidth = 6;
-            this.ID_EMPLEADO.Name = "ID_EMPLEADO";
-            this.ID_EMPLEADO.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Column1";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Nombre2
-            // 
-            this.Nombre2.HeaderText = "Column1";
-            this.Nombre2.MinimumWidth = 6;
-            this.Nombre2.Name = "Nombre2";
-            this.Nombre2.Width = 125;
             // 
             // Tbp_Ingreso
             // 
@@ -909,7 +854,7 @@
             this.Dtp_FechaContrato_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
             this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
@@ -922,7 +867,7 @@
             this.Dtp_FechaNacimiento_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
             this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
@@ -1421,7 +1366,7 @@
             this.Dtp_FechaContrato_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
             this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Eliminar.TabIndex = 49;
@@ -1434,7 +1379,7 @@
             this.Dtp_FechaNacimiento_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
             this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Eliminar.TabIndex = 48;
@@ -1764,11 +1709,7 @@
 
         private MetroFramework.Controls.MetroTabControl Tbc_Empleados;
         private MetroFramework.Controls.MetroTabPage Tbp_ListadoEmpleado;
-        private MetroFramework.Controls.MetroTextBox Ttx_Busqueda_Listado;
         private MetroFramework.Controls.MetroGrid Dgw_Listado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_EMPLEADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre2;
         private MetroFramework.Controls.MetroTabPage Tbp_Ingreso;
         private System.Windows.Forms.GroupBox Gpb_Usuario_Ingreso;
         private System.Windows.Forms.ComboBox Cmb_TipoUsuario_Ingreso;

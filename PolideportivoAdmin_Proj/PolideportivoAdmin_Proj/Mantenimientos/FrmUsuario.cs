@@ -56,7 +56,21 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             MemoryStream ms = new MemoryStream();
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
+            //byte[] avatar = convertirAvatarAByte(Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg));
             Ingreso.ActualizarPerfil(Txt_Usuario.Text, Txt_Password.Text, aByte);
+        }
+
+        public static byte[] convertirAvatarAByte(string filePath)
+        {
+            FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            BinaryReader reader = new BinaryReader(stream);
+
+            byte[] avatar = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+
+            return avatar;
         }
 
     }

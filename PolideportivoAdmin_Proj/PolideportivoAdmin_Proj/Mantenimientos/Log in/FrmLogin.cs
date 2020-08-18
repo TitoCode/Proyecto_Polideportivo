@@ -97,8 +97,8 @@ namespace PolideportivoAdmin_Proj
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
                     Logeo.IDEquipoEntrenador(TxtUsuario.Text);
                     FrmEntrenador Formulario = new FrmEntrenador();
-                    //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
-                    //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
+                    Formulario.Lbl_Puesto.Text = "Entrenador";
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -152,6 +152,11 @@ namespace PolideportivoAdmin_Proj
                 }
 
             }                            
+        }
+
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }   
 }
