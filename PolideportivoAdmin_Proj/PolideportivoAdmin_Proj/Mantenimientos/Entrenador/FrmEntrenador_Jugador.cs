@@ -31,7 +31,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         string UsuarioActivo = null;
         int TipoProceso = 0;
-        string SenSql1 = null, SenSql2 = null;
+        string SenSql1 = null;
 
         private void Btn_Fotografia_Click_1(object sender, EventArgs e)
         {

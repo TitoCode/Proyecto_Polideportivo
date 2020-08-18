@@ -38,6 +38,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
+            Ingreso.ListadoEmpleados(Dgw_Listado);
             
         }
 

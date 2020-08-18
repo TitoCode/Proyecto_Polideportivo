@@ -1,6 +1,7 @@
 ﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.IO;
@@ -214,7 +215,34 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        
+        public void ListadoEmpleados(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarEmpleados = "SELECT ID_EMPLEADO, NOMBRE1 'PRIMER NOMBRE', NOMBRE2 'SEGUNDO NOMBRE', APELLIDO1 'PRIMER APELLIDO', APELLIDO2 'SEGUNDO APELLIDO', CORREO 'CORREO ELECTRONICO', TELEFONO FROM EMPLEADO";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
 
     }
 }

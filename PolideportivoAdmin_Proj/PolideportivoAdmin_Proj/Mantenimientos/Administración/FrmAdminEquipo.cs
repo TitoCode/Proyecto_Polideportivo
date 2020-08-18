@@ -28,7 +28,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         string UsuarioActivo = null;
         int TipoProceso = 0;
-        string SenSql1 = null, SenSql2 = null;
+        string SenSql1 = null;
 
 
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
