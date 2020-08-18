@@ -26,7 +26,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void FrmEntrenador_Load(object sender, EventArgs e)
         {
-            MostrarFotografia();
+            //MostrarFotografia();
             AbrirFormEnPanel(new FrmBase());
         }
 
