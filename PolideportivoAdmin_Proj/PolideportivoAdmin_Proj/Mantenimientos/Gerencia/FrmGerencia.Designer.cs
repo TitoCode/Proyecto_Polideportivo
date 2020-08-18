@@ -32,7 +32,6 @@
             this.Pnl_Menu = new System.Windows.Forms.Panel();
             this.Lbl_Password = new System.Windows.Forms.Label();
             this.Btn_Inicio = new System.Windows.Forms.Button();
-            this.Lblk_CambiarPerfil = new System.Windows.Forms.LinkLabel();
             this.Lbl_Puesto = new System.Windows.Forms.Label();
             this.Lbl_Usuario = new System.Windows.Forms.Label();
             this.Ptb_FotoUsuario = new System.Windows.Forms.PictureBox();
@@ -40,6 +39,7 @@
             this.Btn_Estadistica = new System.Windows.Forms.Button();
             this.Btn_Reporte = new System.Windows.Forms.Button();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.Btn_Bitacora = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +47,9 @@
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_Bitacora);
             this.Pnl_Menu.Controls.Add(this.Lbl_Password);
             this.Pnl_Menu.Controls.Add(this.Btn_Inicio);
-            this.Pnl_Menu.Controls.Add(this.Lblk_CambiarPerfil);
             this.Pnl_Menu.Controls.Add(this.Lbl_Puesto);
             this.Pnl_Menu.Controls.Add(this.Lbl_Usuario);
             this.Pnl_Menu.Controls.Add(this.Ptb_FotoUsuario);
@@ -82,7 +82,7 @@
             this.Btn_Inicio.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Inicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Inicio.Image")));
-            this.Btn_Inicio.Location = new System.Drawing.Point(0, 237);
+            this.Btn_Inicio.Location = new System.Drawing.Point(0, 207);
             this.Btn_Inicio.Name = "Btn_Inicio";
             this.Btn_Inicio.Size = new System.Drawing.Size(155, 35);
             this.Btn_Inicio.TabIndex = 8;
@@ -91,26 +91,12 @@
             this.Btn_Inicio.UseVisualStyleBackColor = true;
             this.Btn_Inicio.Click += new System.EventHandler(this.Btn_Inicio_Click);
             // 
-            // Lblk_CambiarPerfil
-            // 
-            this.Lblk_CambiarPerfil.ActiveLinkColor = System.Drawing.Color.White;
-            this.Lblk_CambiarPerfil.AutoSize = true;
-            this.Lblk_CambiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblk_CambiarPerfil.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.Lblk_CambiarPerfil.Location = new System.Drawing.Point(12, 175);
-            this.Lblk_CambiarPerfil.Name = "Lblk_CambiarPerfil";
-            this.Lblk_CambiarPerfil.Size = new System.Drawing.Size(71, 13);
-            this.Lblk_CambiarPerfil.TabIndex = 7;
-            this.Lblk_CambiarPerfil.TabStop = true;
-            this.Lblk_CambiarPerfil.Text = "Cambiar Perfil";
-            this.Lblk_CambiarPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lblk_CambiarPerfil_LinkClicked);
-            // 
             // Lbl_Puesto
             // 
             this.Lbl_Puesto.AutoSize = true;
             this.Lbl_Puesto.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Puesto.Location = new System.Drawing.Point(12, 142);
+            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 161);
             this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Puesto.Name = "Lbl_Puesto";
             this.Lbl_Puesto.Size = new System.Drawing.Size(0, 14);
@@ -121,7 +107,7 @@
             this.Lbl_Usuario.AutoSize = true;
             this.Lbl_Usuario.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Usuario.Location = new System.Drawing.Point(12, 112);
+            this.Lbl_Usuario.Location = new System.Drawing.Point(11, 131);
             this.Lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Usuario.Name = "Lbl_Usuario";
             this.Lbl_Usuario.Size = new System.Drawing.Size(0, 14);
@@ -146,7 +132,7 @@
             this.Btn_Empleado.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Empleado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Empleado.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Empleado.Image")));
-            this.Btn_Empleado.Location = new System.Drawing.Point(0, 292);
+            this.Btn_Empleado.Location = new System.Drawing.Point(0, 265);
             this.Btn_Empleado.Name = "Btn_Empleado";
             this.Btn_Empleado.Size = new System.Drawing.Size(155, 35);
             this.Btn_Empleado.TabIndex = 2;
@@ -165,7 +151,7 @@
             this.Btn_Estadistica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Estadistica.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Estadistica.Image")));
             this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Estadistica.Location = new System.Drawing.Point(0, 402);
+            this.Btn_Estadistica.Location = new System.Drawing.Point(0, 382);
             this.Btn_Estadistica.Name = "Btn_Estadistica";
             this.Btn_Estadistica.Size = new System.Drawing.Size(155, 35);
             this.Btn_Estadistica.TabIndex = 1;
@@ -182,7 +168,7 @@
             this.Btn_Reporte.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Reporte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Reporte.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Reporte.Image")));
-            this.Btn_Reporte.Location = new System.Drawing.Point(0, 348);
+            this.Btn_Reporte.Location = new System.Drawing.Point(0, 324);
             this.Btn_Reporte.Name = "Btn_Reporte";
             this.Btn_Reporte.Size = new System.Drawing.Size(155, 35);
             this.Btn_Reporte.TabIndex = 0;
@@ -198,6 +184,24 @@
             this.Pnl_Contenedor.Name = "Pnl_Contenedor";
             this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
             this.Pnl_Contenedor.TabIndex = 18;
+            // 
+            // Btn_Bitacora
+            // 
+            this.Btn_Bitacora.FlatAppearance.BorderSize = 0;
+            this.Btn_Bitacora.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.Btn_Bitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Bitacora.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Bitacora.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Bitacora.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Bitacora.Image")));
+            this.Btn_Bitacora.Location = new System.Drawing.Point(0, 433);
+            this.Btn_Bitacora.Name = "Btn_Bitacora";
+            this.Btn_Bitacora.Size = new System.Drawing.Size(155, 35);
+            this.Btn_Bitacora.TabIndex = 10;
+            this.Btn_Bitacora.Text = "      BITÁCORA";
+            this.Btn_Bitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Bitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Bitacora.UseVisualStyleBackColor = true;
+            this.Btn_Bitacora.Click += new System.EventHandler(this.Btn_Bitacora_Click);
             // 
             // FrmGerencia
             // 
@@ -225,12 +229,12 @@
         private System.Windows.Forms.Button Btn_Empleado;
         private System.Windows.Forms.Button Btn_Estadistica;
         private System.Windows.Forms.Button Btn_Reporte;
-        private System.Windows.Forms.LinkLabel Lblk_CambiarPerfil;
         public System.Windows.Forms.Label Lbl_Puesto;
         public System.Windows.Forms.Label Lbl_Usuario;
         public System.Windows.Forms.Panel Pnl_Contenedor;
         private System.Windows.Forms.Button Btn_Inicio;
         public System.Windows.Forms.PictureBox Ptb_FotoUsuario;
         public System.Windows.Forms.Label Lbl_Password;
+        private System.Windows.Forms.Button Btn_Bitacora;
     }
 }

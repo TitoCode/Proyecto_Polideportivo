@@ -32,7 +32,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmBase());
-            MostrarFotografia();
+            //MostrarFotografia();
         }
 
         private void Btn_Empleado_Click(object sender, EventArgs e)
@@ -45,6 +45,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Btn_Reporte.ForeColor = Color.White;
             Btn_Estadistica.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Estadistica.ForeColor = Color.White;
+            Btn_Bitacora.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Bitacora.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmEmpleados());
         }
 
@@ -58,6 +60,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Btn_Empleado.ForeColor = Color.White;
             Btn_Estadistica.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Estadistica.ForeColor = Color.White;
+            Btn_Bitacora.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Bitacora.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmReportes());
         }
 
@@ -73,10 +77,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             fh.Show();
         }
 
-        private void Lblk_CambiarPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AbrirFormEnPanel(new FrmUsuario());
-        }
 
         private void Btn_Inicio_Click(object sender, EventArgs e)
         {
@@ -88,6 +88,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Btn_Empleado.ForeColor = Color.White;
             Btn_Estadistica.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Estadistica.ForeColor = Color.White;
+            Btn_Bitacora.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Bitacora.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmBase());
         }
 
@@ -95,15 +97,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             byte[] Imagen = SqlaByte();
             MemoryStream ms = new MemoryStream(Imagen);
-            ms.Position = 0;
-            Image devolverImagen = Image.FromStream(ms);
-            Ptb_FotoUsuario.Image = devolverImagen;
+            Ptb_FotoUsuario.Image = Image.FromStream(ms);
         }
-
         
         private byte[] SqlaByte()
         {
-            string BuscarDatoEmpleado = "SELECT FOTOGRAFIA FROM EMPLEADO WHERE ID_EMPLEADO ='" + 1 + "'";
+            string BuscarDatoEmpleado = "SELECT FOTOGRAFIA FROM EMPLEADO WHERE ID_USUARIO_FK ='" + ClsDatos.UserId + "'";
 
             OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarDatoEmpleado, Conexion.conexion());
             OdbcDataReader Lector = Query_Busqueda1.ExecuteReader();
@@ -125,7 +124,24 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Btn_Empleado.ForeColor = Color.White;
             Btn_Inicio.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Inicio.ForeColor = Color.White;
+            Btn_Bitacora.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Bitacora.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmEstadisticas());
+        }
+
+        private void Btn_Bitacora_Click(object sender, EventArgs e)
+        {
+            Btn_Bitacora.BackColor = Color.White;
+            Btn_Bitacora.ForeColor = Color.FromArgb(10, 37, 73);
+            Btn_Reporte.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Reporte.ForeColor = Color.White;
+            Btn_Empleado.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Empleado.ForeColor = Color.White;
+            Btn_Inicio.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Inicio.ForeColor = Color.White;
+            Btn_Estadistica.BackColor = Color.FromArgb(10, 37, 73);
+            Btn_Estadistica.ForeColor = Color.White;
+            AbrirFormEnPanel(new FrmBitacora());
         }
     }
 }

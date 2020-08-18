@@ -72,6 +72,7 @@
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsMantenimientoBitacora.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
     <Compile Include="Clases\ClsValidarKeyPress.cs" />
@@ -135,6 +136,12 @@
     <Compile Include="Mantenimientos\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmBitacora.Designer.cs">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,12 +165,6 @@
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmReportes.Designer.cs">
       <DependentUpon>FrmReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Log in\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -203,6 +204,9 @@
     <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmBitacora.resx">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Log in\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

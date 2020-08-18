@@ -179,25 +179,26 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
+        public void ActualizarPerfil(string Usuario, string Password, byte [] Foto)
         {
             
             try
             {
+                
+                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA = @Imagen WHERE ID_USUARIO_FK ='" + ClsDatos.UserId + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO = '" + Usuario + "', PASSWORD='" + Password +
+                                          "' WHERE ID_USUARIO='" + ClsDatos.UserId + "'";
 
-                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA ='"+ Foto +"' WHERE ID_USUARIO_FK='" + Usuario + "'";
-                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
-                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+                OdbcCommand Query_UPDATE2 = new OdbcCommand(CambiarFoto, conexion.conexion());
 
-                OdbcCommand Query_UPDATE1 = new OdbcCommand(CambiarFoto, conexion.conexion());
-                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+                Query_UPDATE2.Parameters.Add(new OdbcParameter("@Imagen", Foto));
 
                 Query_UPDATE1.ExecuteNonQuery();
                 Query_UPDATE2.ExecuteNonQuery();
 
                 MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                
+  
 
             }
             catch (Exception ex)
@@ -243,6 +244,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
             }
 
         }
+
 
     }
 }

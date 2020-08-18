@@ -35,7 +35,6 @@
             this.Btn_Calendario = new System.Windows.Forms.Button();
             this.Lbl_Password = new System.Windows.Forms.Label();
             this.Btn_Inicio = new System.Windows.Forms.Button();
-            this.Lblk_CambiarPerfil = new System.Windows.Forms.LinkLabel();
             this.Lbl_Puesto = new System.Windows.Forms.Label();
             this.Lbl_Usuario = new System.Windows.Forms.Label();
             this.Ptb_FotoUsuario = new System.Windows.Forms.PictureBox();
@@ -63,7 +62,6 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Calendario);
             this.Pnl_Menu.Controls.Add(this.Lbl_Password);
             this.Pnl_Menu.Controls.Add(this.Btn_Inicio);
-            this.Pnl_Menu.Controls.Add(this.Lblk_CambiarPerfil);
             this.Pnl_Menu.Controls.Add(this.Lbl_Puesto);
             this.Pnl_Menu.Controls.Add(this.Lbl_Usuario);
             this.Pnl_Menu.Controls.Add(this.Ptb_FotoUsuario);
@@ -132,19 +130,6 @@
             this.Btn_Inicio.Text = "INICIO";
             this.Btn_Inicio.UseVisualStyleBackColor = true;
             this.Btn_Inicio.Click += new System.EventHandler(this.Btn_Inicio_Click);
-            // 
-            // Lblk_CambiarPerfil
-            // 
-            this.Lblk_CambiarPerfil.ActiveLinkColor = System.Drawing.Color.White;
-            this.Lblk_CambiarPerfil.AutoSize = true;
-            this.Lblk_CambiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblk_CambiarPerfil.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.Lblk_CambiarPerfil.Location = new System.Drawing.Point(12, 166);
-            this.Lblk_CambiarPerfil.Name = "Lblk_CambiarPerfil";
-            this.Lblk_CambiarPerfil.Size = new System.Drawing.Size(71, 13);
-            this.Lblk_CambiarPerfil.TabIndex = 7;
-            this.Lblk_CambiarPerfil.TabStop = true;
-            this.Lblk_CambiarPerfil.Text = "Cambiar Perfil";
             // 
             // Lbl_Puesto
             // 
@@ -260,7 +245,6 @@
         private System.Windows.Forms.Panel Pnl_Menu;
         public System.Windows.Forms.Label Lbl_Password;
         private System.Windows.Forms.Button Btn_Inicio;
-        private System.Windows.Forms.LinkLabel Lblk_CambiarPerfil;
         public System.Windows.Forms.Label Lbl_Puesto;
         public System.Windows.Forms.Label Lbl_Usuario;
         public System.Windows.Forms.PictureBox Ptb_FotoUsuario;
