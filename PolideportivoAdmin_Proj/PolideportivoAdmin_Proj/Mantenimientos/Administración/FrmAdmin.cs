@@ -38,7 +38,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Campeonato_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FrmAdminCampeonato());
+            AbrirFormEnPanel(new FrmAdminCampeonato());  
         }
 
         private void Btn_Entrenador_Click(object sender, EventArgs e)
@@ -51,14 +51,14 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             
         }
 
-        private void Btn_Inicio_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new FrmBase());
-        }
-
         private void Btn_Equipo_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmAdminEquipo());
+        }
+
+        private void Btn_Inicio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
