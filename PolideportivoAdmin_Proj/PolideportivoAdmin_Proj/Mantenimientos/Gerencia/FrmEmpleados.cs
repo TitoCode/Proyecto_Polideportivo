@@ -214,6 +214,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
             }
         }
+        private void Tmr_Listado_Tick(object sender, EventArgs e)
+        {
+            Ingreso.ListadoEmpleados(Dgw_Listado);
+        }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
