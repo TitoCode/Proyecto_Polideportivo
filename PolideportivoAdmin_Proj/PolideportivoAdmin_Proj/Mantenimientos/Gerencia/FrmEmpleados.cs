@@ -196,33 +196,55 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
+
+            int notExecute=1;
             if (Txt_Nombre1_Ingreso.Text == "" || Txt_Apellido1_Ingreso.Text == "" || Txt_Telefono_Ingreso.Text == "" || Txt_Email_Ingreso.Text == "" || Txt_Nombre2_Ingreso.Text == "" || Txt_Apellido2_Ingreso.Text == "" || Txt_Direccion_Ingreso.Text == "" || Txt_DPI_Ingreso.Text == "" || Txt_NIT_Ingreso.Text == "" || Txt_Usuario_Ingreso.Text == "" || Txt_Password_Ingreso.Text == "" || Cmb_TipoUsuario_Ingreso.SelectedItem == null || Cmb_TipoPuesto_Ingreso == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-
-                string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + Txt_Usuario_Ingreso.Text +  "' ;";
-                OdbcCommand Query_Validacion = new OdbcCommand(Consulta, conexion.conexion());
-                OdbcDataReader Lector = Query_Validacion.ExecuteReader();
-                if (Lector.HasRows==true) { MessageBox.Show("ERROR: Usuario registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                else
+                DateTime fecharNac = Dtp_FechaNacimiento_Ingreso.Value.Date;
+                var diasNac = (DateTime.Now - fecharNac).TotalDays;
+                if (Dtp_FechaContrato_Ingreso.Value.Date < Dtp_FechaNacimiento_Ingreso.Value.Date)
                 {
-                    UsuarioActivo = ClsDatos.UserId;
-                    TipoProceso = 3;
-                    SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
-
-                    SenSql2 = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, TELEFONO, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO, ID_ESTADO_EMPLEADO_FK) VALUES ( + ID_Empleado + , + Nombre1 + , + Nombre2 + , + Apellido1 " +
-                        ", + Apellido2 + , + Email + , + TipoPuesto + , + Direccion + ,  + Telefono + ,  + FechaNacimiento + , + NIT + , + DPI + , + Usuario + , + FechaContrato +)";
-
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
-                    int TipoUsuario, TipoPuesto;
-                    TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
-                    TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
-
-                    Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
-                    Txt_Nombre1_Ingreso.Text = ""; Txt_Apellido1_Ingreso.Text = ""; Txt_Telefono_Ingreso.Text = ""; Txt_Email_Ingreso.Text = ""; Txt_Nombre2_Ingreso.Text = ""; Txt_Apellido2_Ingreso.Text = ""; Txt_Direccion_Ingreso.Text = ""; Txt_DPI_Ingreso.Text = ""; Txt_NIT_Ingreso.Text = ""; Txt_Usuario_Ingreso.Text = ""; Txt_Password_Ingreso.Text = "";
+                    MessageBox.Show("ADVERTENCIA: La fecha de contratación no puede menor a la fecha de nacimiento.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    notExecute = 0;
                 }
+                if (diasNac > 36500) {
+                    MessageBox.Show("ADVERTENCIA: Edad erronea, no puede ingresar una edad mayor a 100 años.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    notExecute = 0;
+                }
+                switch (notExecute) {
+
+                    case 1:
+                        string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + Txt_Usuario_Ingreso.Text + "' ;";
+                        OdbcCommand Query_Validacion = new OdbcCommand(Consulta, conexion.conexion());
+                        OdbcDataReader Lector = Query_Validacion.ExecuteReader();
+                        if (Lector.HasRows == true) { MessageBox.Show("ERROR: Usuario registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                        else
+                        {
+                            UsuarioActivo = ClsDatos.UserId;
+                            TipoProceso = 3;
+                            SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
+
+                            SenSql2 = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, TELEFONO, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO, ID_ESTADO_EMPLEADO_FK) VALUES ( + ID_Empleado + , + Nombre1 + , + Nombre2 + , + Apellido1 " +
+                                ", + Apellido2 + , + Email + , + TipoPuesto + , + Direccion + ,  + Telefono + ,  + FechaNacimiento + , + NIT + , + DPI + , + Usuario + , + FechaContrato +)";
+
+                            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
+
+                            int TipoUsuario, TipoPuesto;
+                            TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
+                            TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
+
+                            Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.Date.ToShortDateString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.Date.ToShortDateString());
+                            Txt_Nombre1_Ingreso.Text = ""; Txt_Apellido1_Ingreso.Text = ""; Txt_Telefono_Ingreso.Text = ""; Txt_Email_Ingreso.Text = ""; Txt_Nombre2_Ingreso.Text = ""; Txt_Apellido2_Ingreso.Text = ""; Txt_Direccion_Ingreso.Text = ""; Txt_DPI_Ingreso.Text = ""; Txt_NIT_Ingreso.Text = ""; Txt_Usuario_Ingreso.Text = ""; Txt_Password_Ingreso.Text = "";
+                        }
+                        break;
+
+                    default:
+                        break;
+                
+                
+                }  
             }
         }
 
