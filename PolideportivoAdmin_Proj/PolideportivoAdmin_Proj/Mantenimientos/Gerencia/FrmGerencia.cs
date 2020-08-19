@@ -28,7 +28,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsConexion Conexion = new ClsConexion();
-        
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
@@ -50,18 +49,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Btn_Bitacora.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmEmpleados());
         }
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            switch (MessageBox.Show(this, "¿Está seguro que desea salir? Esta acción cerrará su sesión.", "Closing", MessageBoxButtons.YesNo))
-            {
-                case DialogResult.No:
-                    e.Cancel = true;
-                    break;
-                default:
-                    break;
-            }
-        }
-
 
         private void Btn_Reporte_Click(object sender, EventArgs e)
         {
