@@ -28,6 +28,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsConexion Conexion = new ClsConexion();
+        
 
         private void FrmGerencia_Load(object sender, EventArgs e)
         {
@@ -60,6 +61,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     break;
             }
         }
+
 
         private void Btn_Reporte_Click(object sender, EventArgs e)
         {

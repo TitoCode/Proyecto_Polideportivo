@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGerencia));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Btn_Bitacora = new System.Windows.Forms.Button();
             this.Lbl_Password = new System.Windows.Forms.Label();
             this.Btn_Inicio = new System.Windows.Forms.Button();
             this.Lbl_Puesto = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.Btn_Estadistica = new System.Windows.Forms.Button();
             this.Btn_Reporte = new System.Windows.Forms.Button();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
-            this.Btn_Bitacora = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,24 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
             this.Pnl_Menu.TabIndex = 17;
+            // 
+            // Btn_Bitacora
+            // 
+            this.Btn_Bitacora.FlatAppearance.BorderSize = 0;
+            this.Btn_Bitacora.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.Btn_Bitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Bitacora.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Bitacora.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Bitacora.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Bitacora.Image")));
+            this.Btn_Bitacora.Location = new System.Drawing.Point(0, 433);
+            this.Btn_Bitacora.Name = "Btn_Bitacora";
+            this.Btn_Bitacora.Size = new System.Drawing.Size(155, 35);
+            this.Btn_Bitacora.TabIndex = 10;
+            this.Btn_Bitacora.Text = "      BITÁCORA";
+            this.Btn_Bitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Bitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Bitacora.UseVisualStyleBackColor = true;
+            this.Btn_Bitacora.Click += new System.EventHandler(this.Btn_Bitacora_Click);
             // 
             // Lbl_Password
             // 
@@ -185,24 +203,6 @@
             this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
             this.Pnl_Contenedor.TabIndex = 18;
             // 
-            // Btn_Bitacora
-            // 
-            this.Btn_Bitacora.FlatAppearance.BorderSize = 0;
-            this.Btn_Bitacora.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.Btn_Bitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Bitacora.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Bitacora.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Bitacora.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Bitacora.Image")));
-            this.Btn_Bitacora.Location = new System.Drawing.Point(0, 433);
-            this.Btn_Bitacora.Name = "Btn_Bitacora";
-            this.Btn_Bitacora.Size = new System.Drawing.Size(155, 35);
-            this.Btn_Bitacora.TabIndex = 10;
-            this.Btn_Bitacora.Text = "      BITÁCORA";
-            this.Btn_Bitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Bitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Bitacora.UseVisualStyleBackColor = true;
-            this.Btn_Bitacora.Click += new System.EventHandler(this.Btn_Bitacora_Click);
-            // 
             // FrmGerencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +216,7 @@
             this.Name = "FrmGerencia";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.FrmGerencia_Load);
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Menu.PerformLayout();
