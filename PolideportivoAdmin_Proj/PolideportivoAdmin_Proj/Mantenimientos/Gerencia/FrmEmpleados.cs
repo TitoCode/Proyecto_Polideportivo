@@ -44,6 +44,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Txt_Telefono_Ingreso.MaxLength = 8;
             Txt_Telefono_Modificar.MaxLength = 8;
 
+
         }
         
 
@@ -326,7 +327,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             ClsValidarKeyPress.Numeros(e);
         }
- 
+
 
         private void letra(object sender, KeyPressEventArgs e)
         {

@@ -26,7 +26,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void FrmEntrenador_Load(object sender, EventArgs e)
         {
-            MostrarFotografia();
+            //MostrarFotografia();
             AbrirFormEnPanel(new FrmBase());
         }
 
@@ -102,7 +102,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             Image devolverImagen = Image.FromStream(ms);
             Ptb_FotoUsuario.Image = devolverImagen;
         }
-
 
         private byte[] SqlaByte()
         {

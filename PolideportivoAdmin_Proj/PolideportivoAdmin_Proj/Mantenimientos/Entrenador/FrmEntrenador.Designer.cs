@@ -66,7 +66,7 @@
             this.Btn_Inicio.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Inicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Inicio.Image")));
-            this.Btn_Inicio.Location = new System.Drawing.Point(0, 237);
+            this.Btn_Inicio.Location = new System.Drawing.Point(0, 207);
             this.Btn_Inicio.Name = "Btn_Inicio";
             this.Btn_Inicio.Size = new System.Drawing.Size(155, 35);
             this.Btn_Inicio.TabIndex = 13;
@@ -80,7 +80,7 @@
             this.Lbl_Puesto.AutoSize = true;
             this.Lbl_Puesto.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Puesto.Location = new System.Drawing.Point(12, 142);
+            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 161);
             this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Puesto.Name = "Lbl_Puesto";
             this.Lbl_Puesto.Size = new System.Drawing.Size(0, 14);
@@ -91,7 +91,7 @@
             this.Lbl_Usuario.AutoSize = true;
             this.Lbl_Usuario.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Usuario.Location = new System.Drawing.Point(12, 112);
+            this.Lbl_Usuario.Location = new System.Drawing.Point(11, 131);
             this.Lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Usuario.Name = "Lbl_Usuario";
             this.Lbl_Usuario.Size = new System.Drawing.Size(0, 14);
@@ -116,7 +116,7 @@
             this.Btn_IngresoJugadores.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_IngresoJugadores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_IngresoJugadores.Image = ((System.Drawing.Image)(resources.GetObject("Btn_IngresoJugadores.Image")));
-            this.Btn_IngresoJugadores.Location = new System.Drawing.Point(0, 414);
+            this.Btn_IngresoJugadores.Location = new System.Drawing.Point(0, 407);
             this.Btn_IngresoJugadores.Name = "Btn_IngresoJugadores";
             this.Btn_IngresoJugadores.Size = new System.Drawing.Size(155, 50);
             this.Btn_IngresoJugadores.TabIndex = 2;
@@ -134,7 +134,7 @@
             this.Btn_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Equipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Equipo.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Equipo.Image")));
-            this.Btn_Equipo.Location = new System.Drawing.Point(0, 290);
+            this.Btn_Equipo.Location = new System.Drawing.Point(0, 263);
             this.Btn_Equipo.Name = "Btn_Equipo";
             this.Btn_Equipo.Size = new System.Drawing.Size(155, 35);
             this.Btn_Equipo.TabIndex = 2;
@@ -151,7 +151,7 @@
             this.Btn_TablaDePosiciones.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_TablaDePosiciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_TablaDePosiciones.Image = ((System.Drawing.Image)(resources.GetObject("Btn_TablaDePosiciones.Image")));
-            this.Btn_TablaDePosiciones.Location = new System.Drawing.Point(0, 341);
+            this.Btn_TablaDePosiciones.Location = new System.Drawing.Point(0, 328);
             this.Btn_TablaDePosiciones.Name = "Btn_TablaDePosiciones";
             this.Btn_TablaDePosiciones.Size = new System.Drawing.Size(155, 55);
             this.Btn_TablaDePosiciones.TabIndex = 0;

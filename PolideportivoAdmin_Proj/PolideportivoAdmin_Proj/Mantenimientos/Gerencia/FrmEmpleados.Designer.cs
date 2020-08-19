@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -145,6 +146,7 @@
             this.Txt_Apellido1_Eliminar = new System.Windows.Forms.TextBox();
             this.Txt_Nombre2_Eliminar = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo4 = new System.Windows.Forms.Label();
+            this.Tmr_Listado = new System.Windows.Forms.Timer(this.components);
             this.Tbc_Empleados.SuspendLayout();
             this.Tbp_ListadoEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -195,6 +197,7 @@
             this.Dgw_Listado.AllowUserToAddRows = false;
             this.Dgw_Listado.AllowUserToDeleteRows = false;
             this.Dgw_Listado.AllowUserToResizeRows = false;
+            this.Dgw_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgw_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Dgw_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgw_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -220,7 +223,7 @@
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgw_Listado.Location = new System.Drawing.Point(0, 3);
+            this.Dgw_Listado.Location = new System.Drawing.Point(0, 17);
             this.Dgw_Listado.Name = "Dgw_Listado";
             this.Dgw_Listado.ReadOnly = true;
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -236,7 +239,7 @@
             this.Dgw_Listado.RowHeadersWidth = 51;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgw_Listado.Size = new System.Drawing.Size(906, 478);
+            this.Dgw_Listado.Size = new System.Drawing.Size(906, 464);
             this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Silver;
             this.Dgw_Listado.TabIndex = 2;
             // 
@@ -1669,6 +1672,12 @@
             this.Lbl_Titulo4.TabIndex = 27;
             this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
             // 
+            // Tmr_Listado
+            // 
+            this.Tmr_Listado.Enabled = true;
+            this.Tmr_Listado.Interval = 2000;
+            this.Tmr_Listado.Tick += new System.EventHandler(this.Tmr_Listado_Tick);
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1821,5 +1830,6 @@
         private System.Windows.Forms.Label Lbl_Titulo4;
         private System.Windows.Forms.TextBox Txt_Eliminar_TipoUsuario;
         private System.Windows.Forms.TextBox Txt_Eliminar_TipoPuesto;
+
     }
 }
