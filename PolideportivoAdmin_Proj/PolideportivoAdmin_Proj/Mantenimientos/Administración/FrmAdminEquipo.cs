@@ -30,11 +30,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         int TipoProceso = 0;
         string SenSql1 = null;
 
-        ClsBitacora Bitacora = new ClsBitacora();
-        string UsuarioActivo = null;
-        int TipoProceso = 0;
-        string SenSql1 = null;
-
 
         private void FrmAdminEquipo_Load(object sender, EventArgs e)
         {
@@ -44,10 +39,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Ingresar_Equipo_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
 
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 16;
             SenSql1 = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO, ID_ENTRENADOR_FK, ID_TIPO_DEPORTE__FK, ID_ESTADO_EQUIPO_FK)" +
@@ -140,10 +132,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Equipo_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
 
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 17;
             SenSql1 = "UPDATE EQUIPO SET NOMBRE_EQUIPO= + Nombre +  WHERE ID_EQUIPO= + Id_Equipo + ";
@@ -155,10 +144,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Eliminar_Equipo_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
 
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 18;
             SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";

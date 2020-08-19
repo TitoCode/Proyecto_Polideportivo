@@ -20,13 +20,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        private void Rdb_Todos_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Rdb_Todos.Checked == true) { Gpb_Campeonato_Tipo_Tct.Visible = true; Rdb_Ida.Visible = true; Rdb_IdaVuelta.Visible = true; Lbl_Campeonato_Ida.Visible = true; Lbl_Campeonato_Ida_Vuelta.Visible = true; Lbl_Crear_Cantidad_Equipos.Visible = true; Nud_Cantidad_Todos.Visible = true; }
-            else { Gpb_Campeonato_Tipo_Tct.Visible = false; Rdb_Ida.Visible = false; Rdb_IdaVuelta.Visible = false; Lbl_Campeonato_Ida.Visible = false; Lbl_Campeonato_Ida_Vuelta.Visible = false; Lbl_Crear_Cantidad_Equipos.Visible = false; Nud_Cantidad_Todos.Visible = false; }
-
-=======
         ClsConexion conexion = new ClsConexion();
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEquipo Equipo = new ClsEquipo();
@@ -162,7 +155,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Sede = Cmb_Crear_Sede.SelectedIndex + 1;
             Deporte = Cmb_Crear_Deporte.SelectedIndex + 1;
             Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text,No_Equipos,Sede,Deporte,DateTime.Now.ToString());
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
         }
     }
 }

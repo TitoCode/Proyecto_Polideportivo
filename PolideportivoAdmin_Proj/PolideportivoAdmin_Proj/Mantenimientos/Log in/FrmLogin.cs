@@ -117,11 +117,7 @@ namespace PolideportivoAdmin_Proj
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-<<<<<<< HEAD
-                    MessageBox.Show("Usuario o Contraseña Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-=======
                     MessageBox.Show("ERROR: Usuario Inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
                     TxtPassword.Clear();
                     TxtUsuario.Focus();
                 }
@@ -136,11 +132,7 @@ namespace PolideportivoAdmin_Proj
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-<<<<<<< HEAD
-                    MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-=======
                     MessageBox.Show("ADVERTENCIA: Usuario o contraseña incorrectos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
->>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
                     TxtPassword.Clear();
                     TxtPassword.Focus();
                 }
