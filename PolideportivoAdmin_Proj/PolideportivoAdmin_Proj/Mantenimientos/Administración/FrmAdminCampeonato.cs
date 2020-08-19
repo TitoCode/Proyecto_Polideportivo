@@ -152,23 +152,32 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Ingresar_Campeonato_Click(object sender, EventArgs e)
         {
-            int No_Equipos = (int)Nud_Cantidad_Todos.Value;
             int Sede, Deporte;
-            Sede = Cmb_Crear_Sede.SelectedIndex + 1;
             Deporte = Cmb_Crear_Deporte.SelectedIndex + 1;
+            Sede = Cmb_Crear_Sede.SelectedIndex + 1;
 
             if (Rdb_Eliminatoria.Checked == true)
             {
+                
+
                 if (Convert.ToInt32(Grid_Equipos.RowCount - 1) != Convert.ToInt32(Cmb_Equipos.SelectedItem))
                 {
                     MessageBox.Show("Ingrese la cantidad correcta de equipos para el campeonato." + MessageBoxButtons.OK + MessageBoxIcon.Error);
                 }
                 else
                 {
+                    int ID_Campeonato, No_Equipos;
+                    No_Equipos = Convert.ToInt32(Cmb_Equipos.SelectedItem);
                     try
                     {
+                        string Correlativo = "SELECT IFNULL(MAX(ID_CAMPEONATO),0) +1 FROM CAMPEONATO";
+                        OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, conexion.conexion());
+                        ID_Campeonato = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+                        OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
+
+
                         string InsertarCampeonato = "INSERT INTO CAMPEONATO (ID_CAMPEONATO, NOMBRE_CAMPEONATO, CANTIDAD_EQUIPOS, ID_SEDE_POLI_FK, ID_TIPO_DEPORTE_FK, FECHA_CREACION)"
-                            + "VALUES('" ;
+                            + "VALUES('" + ID_Campeonato + "','" + Txt_Crear_Campeonato.Text + "','" + No_Equipos + "','" + Sede + "','" + Deporte + "','" + DateTime.Today.ToString() + "')";
                         OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarCampeonato, conexion.conexion());
                         Query_Validacion3.ExecuteNonQuery();
                        
@@ -187,8 +196,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
             else if (Rdb_Todos.Checked == true)
             {
-               
-               
+                int No_Equipos = (int)Nud_Cantidad_Todos.Value;
                 Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text, No_Equipos, Sede, Deporte, DateTime.Now.ToString());
             }
 
@@ -219,19 +227,20 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
             try 
             {
-                string Correlativo1 = "SELECT IFNULL(MAX(ID_PARTIDO),0) +1 FROM PARTIDO";
-                OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo1, conexion.conexion());
-                ID_Partido = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
-
                 int ID_Campeonato;
-                string Correlativo2 = "SELECT ID_CAMPEONATO, NOMBRE_CAMPEONATO FROM CAMPEONATO WHERE NOMBRE_CAMPEONATO=" + Txt_Crear_Campeonato.Text;
+                //string Correlativo2 = "SELECT ID_CAMPEONATO, NOMBRE_CAMPEONATO FROM CAMPEONATO WHERE NOMBRE_CAMPEONATO=" + Txt_Crear_Campeonato.Text;
+                string Correlativo2 = "SELECT MAX(ID_CAMPEONATO) FROM CAMPEONATO";
                 OdbcCommand Query_Validacion2 = new OdbcCommand(Correlativo2, conexion.conexion());
                 ID_Campeonato = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
 
-                for (int i = 0; i <= Convert.ToInt32(Cmb_Equipos.SelectedItem); i += 2)
+                for (int i = 0; i < Convert.ToInt32(Cmb_Equipos.SelectedItem); i += 2)
                 {
+                    string Correlativo1 = "SELECT IFNULL(MAX(ID_PARTIDO),0) +1 FROM PARTIDO";
+                    OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo1, conexion.conexion());
+                    ID_Partido = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+
                     string InsertarPartido = "INSERT INTO PARTIDO (ID_PARTIDO, ID_CAMPEONATO_FK, FECHA_PARTIDO, ID_LOCAL, ID_VISITANTE, MARCADOR, ID_ESTADO_PARTIDO_FK)" +
-                   "VALUES('" + ID_Partido + "','" + ID_Campeonato + "','" + Fecha + "','" + Grid_Equipos.Rows[i].Cells[0].Value + "','" + Grid_Equipos.Rows[i+1].Cells[0].Value + "','" + Marcador + "','" + 1 + "')";
+                   "VALUES('" + ID_Partido + "','" + ID_Campeonato + "','" + Fecha + "','" + IDs_Equipos[i] + "','" + IDs_Equipos[i+1] + "','" + Marcador + "','" + 1 + "')";
                     OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarPartido, conexion.conexion());
                     Query_Validacion3.ExecuteNonQuery();
                     Fecha = DateTime.Parse(Fecha).AddDays(5).ToString();
