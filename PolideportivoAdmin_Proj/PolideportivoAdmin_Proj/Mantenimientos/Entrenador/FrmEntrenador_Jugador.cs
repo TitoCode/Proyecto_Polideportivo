@@ -78,7 +78,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Modificar_Buscar_Jugador_Click(object sender, EventArgs e)
         {
-            Jugador = Entrenador.BusquedaIDEntrenador(Txt_Modificar_Id.Text);
+            Jugador = Entrenador.BusquedaIDJugador(Txt_Modificar_Id.Text);
             Txt_Modificar_Nombre1.Text = Jugador.Nombre1;
             Txt_Modificar_Nombre2.Text = Jugador.Nombre2;
             Txt_Modificar_Apellido1.Text = Jugador.Apellido1;
@@ -102,7 +102,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Eliminar_Buscar_Jugador_Click(object sender, EventArgs e)
         {
-            Jugador = Entrenador.BusquedaIDEntrenador(Txt_Eliminar_Id.Text);
+            Jugador = Entrenador.BusquedaIDJugador(Txt_Eliminar_Id.Text);
             Txt_Eliminar_Nombre1.Text = Jugador.Nombre1;
             Txt_Eliminar_Nombre2.Text = Jugador.Nombre2;
             Txt_Eliminar_Apellido1.Text = Jugador.Apellido1;
@@ -122,6 +122,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
             Entrenador.EliminarJugador(Txt_Eliminar_Id.Text);
         }
+        
         private void DatosCbx_Posicion()
         {
             try
@@ -156,6 +157,11 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         private void FrmEntrenador_Jugador_Load(object sender, EventArgs e)
         {
             DatosCbx_Posicion();
+        }
+
+        private void Tmr_Jugadores_Tick(object sender, EventArgs e)
+        {
+            Entrenador.ListaEquipo(Dgw_Listado);
         }
     }
 }

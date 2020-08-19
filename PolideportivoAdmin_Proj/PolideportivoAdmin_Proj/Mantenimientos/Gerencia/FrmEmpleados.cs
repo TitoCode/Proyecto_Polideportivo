@@ -38,7 +38,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
-            Ingreso.ListadoEmpleados(Dgw_Listado);
+            
             
         }
 
@@ -278,6 +278,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             ClsValidarKeyPress.Numeros(e);
         }
+
+        private void Tmr_Listado_Tick(object sender, EventArgs e)
+        {
+            Ingreso.ListadoEmpleados(Dgw_Listado);
+        }
+
         private void letra(object sender, KeyPressEventArgs e)
         {
             ClsValidarKeyPress.Letras(e);
