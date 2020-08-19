@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminEquipo));
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminEquipo));
             this.Cbx_Crear_Deporte = new System.Windows.Forms.ComboBox();
             this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
             this.Lbl_Crear_Cantidad_Equipos = new System.Windows.Forms.Label();
@@ -52,15 +53,21 @@
             this.Txt_Eliminar_Nombre_Equipo = new System.Windows.Forms.TextBox();
             this.Tbc_Equipo = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_Listado = new MetroFramework.Controls.MetroTabPage();
+            this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Dgv_ListadoEquipos = new MetroFramework.Controls.MetroGrid();
+            this.Btn_Ayuda_ListadoEquipos = new System.Windows.Forms.Button();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Ingreso = new System.Windows.Forms.Button();
             this.Lbl_Titulo2 = new System.Windows.Forms.Label();
             this.Gpb_Datos = new System.Windows.Forms.GroupBox();
             this.Tbp_Modifcar = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Modificar = new System.Windows.Forms.Button();
             this.Lbl_Titulo3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Txt_Editar_Entrenador = new System.Windows.Forms.TextBox();
             this.Txt_Editar_Deporte = new System.Windows.Forms.TextBox();
             this.Tpb_Eliminar = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Eliminar = new System.Windows.Forms.Button();
             this.Lbl_Titulo4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Txt_Eliminar_Deporte = new System.Windows.Forms.TextBox();
@@ -68,21 +75,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Btn_Ayuda_ListadoEquipos = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_Ingreso = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_Modificar = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_Eliminar = new System.Windows.Forms.Button();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Tmr_ListadoEquipos = new System.Windows.Forms.Timer(this.components);
             this.Tbc_Equipo.SuspendLayout();
             this.Tbp_Listado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoEquipos)).BeginInit();
             this.Tbp_Ingreso.SuspendLayout();
             this.Gpb_Datos.SuspendLayout();
             this.Tbp_Modifcar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Tpb_Eliminar.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // Cbx_Crear_Deporte
@@ -311,7 +313,7 @@
             // Tbp_Listado
             // 
             this.Tbp_Listado.Controls.Add(this.Lbl_Titulo);
-            this.Tbp_Listado.Controls.Add(this.metroGrid1);
+            this.Tbp_Listado.Controls.Add(this.Dgv_ListadoEquipos);
             this.Tbp_Listado.Controls.Add(this.Btn_Ayuda_ListadoEquipos);
             this.Tbp_Listado.HorizontalScrollbarBarColor = true;
             this.Tbp_Listado.HorizontalScrollbarHighlightOnWheel = false;
@@ -324,6 +326,79 @@
             this.Tbp_Listado.VerticalScrollbarBarColor = true;
             this.Tbp_Listado.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Listado.VerticalScrollbarSize = 10;
+            // 
+            // Lbl_Titulo
+            // 
+            this.Lbl_Titulo.AutoSize = true;
+            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo.Location = new System.Drawing.Point(356, 17);
+            this.Lbl_Titulo.Name = "Lbl_Titulo";
+            this.Lbl_Titulo.Size = new System.Drawing.Size(171, 18);
+            this.Lbl_Titulo.TabIndex = 30;
+            this.Lbl_Titulo.Text = "Listado de Equipos";
+            // 
+            // Dgv_ListadoEquipos
+            // 
+            this.Dgv_ListadoEquipos.AllowUserToResizeRows = false;
+            this.Dgv_ListadoEquipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_ListadoEquipos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_ListadoEquipos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_ListadoEquipos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Dgv_ListadoEquipos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_ListadoEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_ListadoEquipos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv_ListadoEquipos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Dgv_ListadoEquipos.EnableHeadersVisualStyles = false;
+            this.Dgv_ListadoEquipos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Dgv_ListadoEquipos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_ListadoEquipos.Location = new System.Drawing.Point(0, 58);
+            this.Dgv_ListadoEquipos.Name = "Dgv_ListadoEquipos";
+            this.Dgv_ListadoEquipos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoEquipos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_ListadoEquipos.RowHeadersVisible = false;
+            this.Dgv_ListadoEquipos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Dgv_ListadoEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_ListadoEquipos.Size = new System.Drawing.Size(906, 423);
+            this.Dgv_ListadoEquipos.TabIndex = 29;
+            // 
+            // Btn_Ayuda_ListadoEquipos
+            // 
+            this.Btn_Ayuda_ListadoEquipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ListadoEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ListadoEquipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ListadoEquipos.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ListadoEquipos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEquipos.Image")));
+            this.Btn_Ayuda_ListadoEquipos.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ListadoEquipos.Name = "Btn_Ayuda_ListadoEquipos";
+            this.Btn_Ayuda_ListadoEquipos.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ListadoEquipos.TabIndex = 28;
+            this.Btn_Ayuda_ListadoEquipos.UseVisualStyleBackColor = false;
             // 
             // Tbp_Ingreso
             // 
@@ -342,6 +417,22 @@
             this.Tbp_Ingreso.VerticalScrollbarBarColor = true;
             this.Tbp_Ingreso.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Ingreso.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_Ingreso
+            // 
+            this.Btn_Ayuda_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
+            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
+            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Ingreso.TabIndex = 27;
+            this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
             // 
             // Lbl_Titulo2
             // 
@@ -390,6 +481,22 @@
             this.Tbp_Modifcar.VerticalScrollbarBarColor = true;
             this.Tbp_Modifcar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Modifcar.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_Modificar
+            // 
+            this.Btn_Ayuda_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Modificar.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
+            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
+            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Modificar.TabIndex = 31;
+            this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
             // 
             // Lbl_Titulo3
             // 
@@ -458,6 +565,22 @@
             this.Tpb_Eliminar.VerticalScrollbarBarColor = true;
             this.Tpb_Eliminar.VerticalScrollbarHighlightOnWheel = false;
             this.Tpb_Eliminar.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_Eliminar
+            // 
+            this.Btn_Ayuda_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
+            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
+            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Eliminar.TabIndex = 35;
+            this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
             // 
             // Lbl_Titulo4
             // 
@@ -540,124 +663,11 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "NOMBRE DEL EQUIPO";
             // 
-            // Btn_Ayuda_ListadoEquipos
+            // Tmr_ListadoEquipos
             // 
-            this.Btn_Ayuda_ListadoEquipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_ListadoEquipos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_ListadoEquipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_ListadoEquipos.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_ListadoEquipos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEquipos.Image")));
-            this.Btn_Ayuda_ListadoEquipos.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_ListadoEquipos.Name = "Btn_Ayuda_ListadoEquipos";
-            this.Btn_Ayuda_ListadoEquipos.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_ListadoEquipos.TabIndex = 28;
-            this.Btn_Ayuda_ListadoEquipos.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Ingreso
-            // 
-            this.Btn_Ayuda_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
-            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
-            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Ingreso.TabIndex = 27;
-            this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Modificar
-            // 
-            this.Btn_Ayuda_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
-            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
-            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Modificar.TabIndex = 31;
-            this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Eliminar
-            // 
-            this.Btn_Ayuda_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
-            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
-            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Eliminar.TabIndex = 35;
-            this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
-            // 
-            // metroGrid1
-            // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(0, 58);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(906, 423);
-            this.metroGrid1.TabIndex = 29;
-            // 
-            // Lbl_Titulo
-            // 
-            this.Lbl_Titulo.AutoSize = true;
-            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(356, 17);
-            this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(171, 18);
-            this.Lbl_Titulo.TabIndex = 30;
-            this.Lbl_Titulo.Text = "Listado de Equipos";
+            this.Tmr_ListadoEquipos.Enabled = true;
+            this.Tmr_ListadoEquipos.Interval = 2000;
+            this.Tmr_ListadoEquipos.Tick += new System.EventHandler(this.Tmr_ListadoEquipos_Tick);
             // 
             // FrmAdminEquipo
             // 
@@ -672,6 +682,7 @@
             this.Tbc_Equipo.ResumeLayout(false);
             this.Tbp_Listado.ResumeLayout(false);
             this.Tbp_Listado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoEquipos)).EndInit();
             this.Tbp_Ingreso.ResumeLayout(false);
             this.Tbp_Ingreso.PerformLayout();
             this.Gpb_Datos.ResumeLayout(false);
@@ -684,7 +695,6 @@
             this.Tpb_Eliminar.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -730,7 +740,8 @@
         private System.Windows.Forms.Button Btn_Ayuda_Ingreso;
         private System.Windows.Forms.Button Btn_Ayuda_Modificar;
         private System.Windows.Forms.Button Btn_Ayuda_Eliminar;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroGrid Dgv_ListadoEquipos;
         private System.Windows.Forms.Label Lbl_Titulo;
+        private System.Windows.Forms.Timer Tmr_ListadoEquipos;
     }
 }

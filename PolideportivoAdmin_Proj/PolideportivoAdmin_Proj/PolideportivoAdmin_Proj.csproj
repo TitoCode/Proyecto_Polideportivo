@@ -73,6 +73,7 @@
     <Compile Include="Clases\ClsAdmin\ClsMantenimientosAdmin.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsBitacora.cs" />
     <Compile Include="Clases\ClsCampeonato\ClsCampeonato.cs" />
+    <Compile Include="Clases\ClsCampeonato\ClsMantenimientosCampeonatos.cs" />
     <Compile Include="Clases\ClsDatos.cs" />
     <Compile Include="Clases\ClsEntrenador\ClsEntrenador.cs" />
     <Compile Include="Clases\ClsEntrenador\ClsJugador.cs" />

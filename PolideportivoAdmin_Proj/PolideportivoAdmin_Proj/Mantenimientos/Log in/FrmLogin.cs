@@ -74,11 +74,9 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     FrmAdmin Formulario = new FrmAdmin();
-                    //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
-                    //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
-                    
+                    Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
+                    Formulario.Lbl_Puesto.Text = "Administrador";
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -116,7 +114,6 @@ namespace PolideportivoAdmin_Proj
                     TipoProceso = 13;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("ERROR: Usuario Inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtPassword.Clear();
                     TxtUsuario.Focus();
@@ -124,14 +121,11 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 5)
                 {
-
-
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 14;
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
                     MessageBox.Show("ADVERTENCIA: Usuario o contraseña incorrectos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TxtPassword.Clear();
                     TxtPassword.Focus();
@@ -139,7 +133,6 @@ namespace PolideportivoAdmin_Proj
 
                 if (TipoUsuario == 0)
                 {
-
                     ClsDatos.UserId = TxtUsuario.Text;
                     UsuarioActivo = ClsDatos.UserId;
                     TipoProceso = 14;

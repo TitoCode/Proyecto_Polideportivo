@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Text;
@@ -257,9 +258,67 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
-        public void Listado()
+        public void ListadoEntrenadores(DataGridView Listado)
         {
 
+            try
+            {
+
+                string MostrarEntrenadores = "SELECT E.ID_ENTRENADOR, E.NOMBRE1 'PRIMER NOMBRE', E.NOMBRE2 'SEGUNDO NOMBRE', E.APELLIDO1 'PRIMER APELLIDO', E.APELLIDO2 'SEGUNDO APELLIDO', E.ID_USUARIO_FK 'Usuario Del Empleado', ES.NOMBRE_ESTADO " +
+                    "FROM ENTRENADOR AS E, ESTADO_EMPLEADO AS ES"+
+                    " WHERE E.ID_ESTADO_ENTRENADOR_FK = ES.ID_ESTADO_EMPLEADO;";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEntrenadores, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
+
+        public void ListadoEquipos(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarEquipos = "SELECT EQ.ID_EQUIPO, EQ.NOMBRE_EQUIPO AS 'NOMBRE DEL EQUIPO', concat(E.NOMBRE1, ' ' , E.NOMBRE2, ' ' , E.APELLIDO1, ' ' , E.APELLIDO2) AS 'NOMBRE DEL ENTRENADOR', T.NOMBRE_DEPORTE 'DEPORTE', ES.NOMBRE_ESTADO " +
+                    "FROM EQUIPO AS EQ, ENTRENADOR AS E, TIPO_DEPORTE AS T, ESTADO_EQUIPO AS ES" +
+                    " WHERE EQ.ID_ENTRENADOR_FK = E.ID_ENTRENADOR AND EQ.ID_TIPO_DEPORTE__FK = T.ID_TIPO_DEPORTE AND EQ.ID_ESTADO_EQUIPO_FK = ES.ID_ESTADO_EQUIPO;";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEquipos, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
     }
 }

@@ -226,6 +226,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             ClsValidarKeyPress.Numeros(e);
         }
 
+        private void Tmr_ListadoEntrenadores_Tick(object sender, EventArgs e)
+        {
+            Admin.ListadoEntrenadores(Dgw_Listado_Entrenadores);
+        }
 
         private void letra(object sender, KeyPressEventArgs e)
         {

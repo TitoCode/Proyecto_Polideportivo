@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminCampeonato));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
             this.Lbl_Crear_Sede = new System.Windows.Forms.Label();
             this.Lbl_Crear_Cantidad_Equipos = new System.Windows.Forms.Label();
@@ -41,7 +45,12 @@
             this.Cbx_Crear_Sede = new System.Windows.Forms.ComboBox();
             this.Txt_Crear_Campeonato = new System.Windows.Forms.TextBox();
             this.Tbc_Campeonato = new MetroFramework.Controls.MetroTabControl();
+            this.Tbp_Listado = new MetroFramework.Controls.MetroTabPage();
+            this.Dgv_ListadoCampeonatos = new MetroFramework.Controls.MetroGrid();
+            this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
             this.Tbp_Crear = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_IngresoCampeonato = new System.Windows.Forms.Button();
             this.Gbx_Equipos = new System.Windows.Forms.GroupBox();
             this.Btn_IngresoEquipo = new System.Windows.Forms.Button();
             this.Txt_IdEquipo = new System.Windows.Forms.TextBox();
@@ -64,6 +73,7 @@
             this.Gbx_Datos_Crear = new System.Windows.Forms.GroupBox();
             this.Lbl_Crear_Campeonato = new System.Windows.Forms.Label();
             this.Tbp_Modificar = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_ModificarCampeonato = new System.Windows.Forms.Button();
             this.Btn_Modificar_Campeonato = new System.Windows.Forms.Button();
             this.Lbl_Modificar_Id_Campeonato = new System.Windows.Forms.Label();
             this.Gbx_Modificar_Campeonato = new System.Windows.Forms.GroupBox();
@@ -79,8 +89,8 @@
             this.Lbl_Modificar_Nombre_Campeonato = new System.Windows.Forms.Label();
             this.Btn_Modificar_Buscar_Campeonato = new System.Windows.Forms.Button();
             this.Txt_Modificar_Id_Campeonato = new System.Windows.Forms.TextBox();
-            this.Tbp_Listado = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Modificar_Partido = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_ModificarPartido = new System.Windows.Forms.Button();
             this.Gbx_Anotacion = new System.Windows.Forms.GroupBox();
             this.Btn_Agregar_Anotacion = new System.Windows.Forms.Button();
             this.Dtp_Hora_Anotacion = new System.Windows.Forms.DateTimePicker();
@@ -114,12 +124,10 @@
             this.Lbl_Modificar_Id_Partido = new System.Windows.Forms.Label();
             this.Btn_Buscar_Partido = new System.Windows.Forms.Button();
             this.Txt_Modificar_Id_Partido = new System.Windows.Forms.TextBox();
-            this.Btn_Ayuda_IngresoCampeonato = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_ModificarCampeonato = new System.Windows.Forms.Button();
-            this.Btn_Ayuda = new System.Windows.Forms.Button();
-            this.Lbl_Titulo = new System.Windows.Forms.Label();
-            this.Btn_Ayuda_ModificarPartido = new System.Windows.Forms.Button();
+            this.Tmr_ListadoCampeonatos = new System.Windows.Forms.Timer(this.components);
             this.Tbc_Campeonato.SuspendLayout();
+            this.Tbp_Listado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoCampeonatos)).BeginInit();
             this.Tbp_Crear.SuspendLayout();
             this.Gbx_Equipos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Equipos_Campeonato)).BeginInit();
@@ -129,7 +137,6 @@
             this.Gbx_Datos_Crear.SuspendLayout();
             this.Tbp_Modificar.SuspendLayout();
             this.Gbx_Modificar_Campeonato.SuspendLayout();
-            this.Tbp_Listado.SuspendLayout();
             this.Tbp_Modificar_Partido.SuspendLayout();
             this.Gbx_Anotacion.SuspendLayout();
             this.Gbx_Modificar_Partido_Faltas.SuspendLayout();
@@ -233,10 +240,103 @@
             this.Tbc_Campeonato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Campeonato.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Campeonato.Name = "Tbc_Campeonato";
-            this.Tbc_Campeonato.SelectedIndex = 3;
+            this.Tbc_Campeonato.SelectedIndex = 0;
             this.Tbc_Campeonato.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Campeonato.TabIndex = 3;
             this.Tbc_Campeonato.UseSelectable = true;
+            // 
+            // Tbp_Listado
+            // 
+            this.Tbp_Listado.Controls.Add(this.Dgv_ListadoCampeonatos);
+            this.Tbp_Listado.Controls.Add(this.Lbl_Titulo);
+            this.Tbp_Listado.Controls.Add(this.Btn_Ayuda);
+            this.Tbp_Listado.HorizontalScrollbarBarColor = true;
+            this.Tbp_Listado.HorizontalScrollbarHighlightOnWheel = false;
+            this.Tbp_Listado.HorizontalScrollbarSize = 10;
+            this.Tbp_Listado.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Listado.Name = "Tbp_Listado";
+            this.Tbp_Listado.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Listado.TabIndex = 0;
+            this.Tbp_Listado.Text = "Listado de Campeonatos";
+            this.Tbp_Listado.VerticalScrollbarBarColor = true;
+            this.Tbp_Listado.VerticalScrollbarHighlightOnWheel = false;
+            this.Tbp_Listado.VerticalScrollbarSize = 10;
+            // 
+            // Dgv_ListadoCampeonatos
+            // 
+            this.Dgv_ListadoCampeonatos.AllowUserToAddRows = false;
+            this.Dgv_ListadoCampeonatos.AllowUserToDeleteRows = false;
+            this.Dgv_ListadoCampeonatos.AllowUserToResizeRows = false;
+            this.Dgv_ListadoCampeonatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_ListadoCampeonatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_ListadoCampeonatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_ListadoCampeonatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Dgv_ListadoCampeonatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoCampeonatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_ListadoCampeonatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_ListadoCampeonatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv_ListadoCampeonatos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Dgv_ListadoCampeonatos.EnableHeadersVisualStyles = false;
+            this.Dgv_ListadoCampeonatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Dgv_ListadoCampeonatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_ListadoCampeonatos.Location = new System.Drawing.Point(0, 55);
+            this.Dgv_ListadoCampeonatos.Name = "Dgv_ListadoCampeonatos";
+            this.Dgv_ListadoCampeonatos.ReadOnly = true;
+            this.Dgv_ListadoCampeonatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoCampeonatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_ListadoCampeonatos.RowHeadersVisible = false;
+            this.Dgv_ListadoCampeonatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Dgv_ListadoCampeonatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_ListadoCampeonatos.Size = new System.Drawing.Size(906, 426);
+            this.Dgv_ListadoCampeonatos.TabIndex = 36;
+            // 
+            // Lbl_Titulo
+            // 
+            this.Lbl_Titulo.AutoSize = true;
+            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo.Location = new System.Drawing.Point(335, 17);
+            this.Lbl_Titulo.Name = "Lbl_Titulo";
+            this.Lbl_Titulo.Size = new System.Drawing.Size(224, 18);
+            this.Lbl_Titulo.TabIndex = 35;
+            this.Lbl_Titulo.Text = "Listado de Campeonatos";
+            // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.TabIndex = 34;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
             // 
             // Tbp_Crear
             // 
@@ -260,6 +360,22 @@
             this.Tbp_Crear.VerticalScrollbarBarColor = true;
             this.Tbp_Crear.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Crear.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_IngresoCampeonato
+            // 
+            this.Btn_Ayuda_IngresoCampeonato.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_IngresoCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_IngresoCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_IngresoCampeonato.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_IngresoCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_IngresoCampeonato.Image")));
+            this.Btn_Ayuda_IngresoCampeonato.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_IngresoCampeonato.Name = "Btn_Ayuda_IngresoCampeonato";
+            this.Btn_Ayuda_IngresoCampeonato.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_IngresoCampeonato.TabIndex = 33;
+            this.Btn_Ayuda_IngresoCampeonato.UseVisualStyleBackColor = false;
             // 
             // Gbx_Equipos
             // 
@@ -319,26 +435,26 @@
             this.Dgv_Equipos_Campeonato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Equipos_Campeonato.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgv_Equipos_Campeonato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Equipos_Campeonato.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Equipos_Campeonato.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_Equipos_Campeonato.ColumnHeadersHeight = 29;
             this.Dgv_Equipos_Campeonato.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Clm_NoEquipo,
             this.Clm_NombreEquipo});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_Equipos_Campeonato.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_Equipos_Campeonato.DefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_Equipos_Campeonato.EnableHeadersVisualStyles = false;
             this.Dgv_Equipos_Campeonato.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Equipos_Campeonato.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -346,14 +462,14 @@
             this.Dgv_Equipos_Campeonato.Name = "Dgv_Equipos_Campeonato";
             this.Dgv_Equipos_Campeonato.ReadOnly = true;
             this.Dgv_Equipos_Campeonato.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Equipos_Campeonato.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Equipos_Campeonato.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_Equipos_Campeonato.RowHeadersVisible = false;
             this.Dgv_Equipos_Campeonato.RowHeadersWidth = 51;
             this.Dgv_Equipos_Campeonato.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -405,9 +521,9 @@
             this.Gbx_Campeonato_Tipo_Tct.Controls.Add(this.Rbtn_Ida);
             this.Gbx_Campeonato_Tipo_Tct.Controls.Add(this.Lbl_Campeonato_Ida);
             this.Gbx_Campeonato_Tipo_Tct.Location = new System.Drawing.Point(40, 129);
-            this.Gbx_Campeonato_Tipo_Tct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Campeonato_Tipo_Tct.Margin = new System.Windows.Forms.Padding(2);
             this.Gbx_Campeonato_Tipo_Tct.Name = "Gbx_Campeonato_Tipo_Tct";
-            this.Gbx_Campeonato_Tipo_Tct.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Campeonato_Tipo_Tct.Padding = new System.Windows.Forms.Padding(2);
             this.Gbx_Campeonato_Tipo_Tct.Size = new System.Drawing.Size(243, 88);
             this.Gbx_Campeonato_Tipo_Tct.TabIndex = 32;
             this.Gbx_Campeonato_Tipo_Tct.TabStop = false;
@@ -587,6 +703,22 @@
             this.Tbp_Modificar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Modificar.VerticalScrollbarSize = 10;
             // 
+            // Btn_Ayuda_ModificarCampeonato
+            // 
+            this.Btn_Ayuda_ModificarCampeonato.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ModificarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ModificarCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ModificarCampeonato.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ModificarCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ModificarCampeonato.Image")));
+            this.Btn_Ayuda_ModificarCampeonato.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ModificarCampeonato.Name = "Btn_Ayuda_ModificarCampeonato";
+            this.Btn_Ayuda_ModificarCampeonato.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ModificarCampeonato.TabIndex = 34;
+            this.Btn_Ayuda_ModificarCampeonato.UseVisualStyleBackColor = false;
+            // 
             // Btn_Modificar_Campeonato
             // 
             this.Btn_Modificar_Campeonato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
@@ -649,7 +781,7 @@
             // 
             this.Dtp_Modificar_Fecha_Campeonato.Enabled = false;
             this.Dtp_Modificar_Fecha_Campeonato.Location = new System.Drawing.Point(208, 201);
-            this.Dtp_Modificar_Fecha_Campeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Modificar_Fecha_Campeonato.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Modificar_Fecha_Campeonato.Name = "Dtp_Modificar_Fecha_Campeonato";
             this.Dtp_Modificar_Fecha_Campeonato.Size = new System.Drawing.Size(415, 22);
             this.Dtp_Modificar_Fecha_Campeonato.TabIndex = 20;
@@ -747,7 +879,7 @@
             this.Btn_Modificar_Buscar_Campeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Modificar_Buscar_Campeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar_Buscar_Campeonato.Location = new System.Drawing.Point(653, 53);
-            this.Btn_Modificar_Buscar_Campeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Modificar_Buscar_Campeonato.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar_Buscar_Campeonato.Name = "Btn_Modificar_Buscar_Campeonato";
             this.Btn_Modificar_Buscar_Campeonato.Size = new System.Drawing.Size(136, 26);
             this.Btn_Modificar_Buscar_Campeonato.TabIndex = 28;
@@ -760,26 +892,10 @@
             this.Txt_Modificar_Id_Campeonato.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Modificar_Id_Campeonato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Modificar_Id_Campeonato.Location = new System.Drawing.Point(302, 67);
-            this.Txt_Modificar_Id_Campeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Modificar_Id_Campeonato.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Modificar_Id_Campeonato.Name = "Txt_Modificar_Id_Campeonato";
             this.Txt_Modificar_Id_Campeonato.Size = new System.Drawing.Size(341, 13);
             this.Txt_Modificar_Id_Campeonato.TabIndex = 29;
-            // 
-            // Tbp_Listado
-            // 
-            this.Tbp_Listado.Controls.Add(this.Lbl_Titulo);
-            this.Tbp_Listado.Controls.Add(this.Btn_Ayuda);
-            this.Tbp_Listado.HorizontalScrollbarBarColor = true;
-            this.Tbp_Listado.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Listado.HorizontalScrollbarSize = 10;
-            this.Tbp_Listado.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Listado.Name = "Tbp_Listado";
-            this.Tbp_Listado.Size = new System.Drawing.Size(906, 481);
-            this.Tbp_Listado.TabIndex = 0;
-            this.Tbp_Listado.Text = "Listado de Campeonatos";
-            this.Tbp_Listado.VerticalScrollbarBarColor = true;
-            this.Tbp_Listado.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Listado.VerticalScrollbarSize = 10;
             // 
             // Tbp_Modificar_Partido
             // 
@@ -802,6 +918,22 @@
             this.Tbp_Modificar_Partido.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Modificar_Partido.VerticalScrollbarSize = 10;
             // 
+            // Btn_Ayuda_ModificarPartido
+            // 
+            this.Btn_Ayuda_ModificarPartido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ModificarPartido.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ModificarPartido.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ModificarPartido.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ModificarPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ModificarPartido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ModificarPartido.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ModificarPartido.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ModificarPartido.Image")));
+            this.Btn_Ayuda_ModificarPartido.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ModificarPartido.Name = "Btn_Ayuda_ModificarPartido";
+            this.Btn_Ayuda_ModificarPartido.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ModificarPartido.TabIndex = 38;
+            this.Btn_Ayuda_ModificarPartido.UseVisualStyleBackColor = false;
+            // 
             // Gbx_Anotacion
             // 
             this.Gbx_Anotacion.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -814,9 +946,9 @@
             this.Gbx_Anotacion.Controls.Add(this.Lbl_Anotacion_Jugador);
             this.Gbx_Anotacion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gbx_Anotacion.Location = new System.Drawing.Point(16, 265);
-            this.Gbx_Anotacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Gbx_Anotacion.Name = "Gbx_Anotacion";
-            this.Gbx_Anotacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Anotacion.Padding = new System.Windows.Forms.Padding(2);
             this.Gbx_Anotacion.Size = new System.Drawing.Size(461, 191);
             this.Gbx_Anotacion.TabIndex = 37;
             this.Gbx_Anotacion.TabStop = false;
@@ -830,7 +962,7 @@
             this.Btn_Agregar_Anotacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar_Anotacion.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Agregar_Anotacion.Location = new System.Drawing.Point(174, 150);
-            this.Btn_Agregar_Anotacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Agregar_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Agregar_Anotacion.Name = "Btn_Agregar_Anotacion";
             this.Btn_Agregar_Anotacion.Size = new System.Drawing.Size(80, 26);
             this.Btn_Agregar_Anotacion.TabIndex = 39;
@@ -842,7 +974,7 @@
             // 
             this.Dtp_Hora_Anotacion.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.Dtp_Hora_Anotacion.Location = new System.Drawing.Point(301, 102);
-            this.Dtp_Hora_Anotacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Hora_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Hora_Anotacion.Name = "Dtp_Hora_Anotacion";
             this.Dtp_Hora_Anotacion.Size = new System.Drawing.Size(133, 22);
             this.Dtp_Hora_Anotacion.TabIndex = 38;
@@ -913,9 +1045,9 @@
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Lbl_Tipo_Falta);
             this.Gbx_Modificar_Partido_Faltas.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gbx_Modificar_Partido_Faltas.Location = new System.Drawing.Point(16, 66);
-            this.Gbx_Modificar_Partido_Faltas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Modificar_Partido_Faltas.Margin = new System.Windows.Forms.Padding(2);
             this.Gbx_Modificar_Partido_Faltas.Name = "Gbx_Modificar_Partido_Faltas";
-            this.Gbx_Modificar_Partido_Faltas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gbx_Modificar_Partido_Faltas.Padding = new System.Windows.Forms.Padding(2);
             this.Gbx_Modificar_Partido_Faltas.Size = new System.Drawing.Size(461, 192);
             this.Gbx_Modificar_Partido_Faltas.TabIndex = 36;
             this.Gbx_Modificar_Partido_Faltas.TabStop = false;
@@ -929,7 +1061,7 @@
             this.Btn_Agregar_Falta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar_Falta.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Agregar_Falta.Location = new System.Drawing.Point(174, 151);
-            this.Btn_Agregar_Falta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Agregar_Falta.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Agregar_Falta.Name = "Btn_Agregar_Falta";
             this.Btn_Agregar_Falta.Size = new System.Drawing.Size(80, 26);
             this.Btn_Agregar_Falta.TabIndex = 38;
@@ -984,7 +1116,7 @@
             // Rtxt_Descripcion_Falta
             // 
             this.Rtxt_Descripcion_Falta.Location = new System.Drawing.Point(214, 39);
-            this.Rtxt_Descripcion_Falta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rtxt_Descripcion_Falta.Margin = new System.Windows.Forms.Padding(2);
             this.Rtxt_Descripcion_Falta.Name = "Rtxt_Descripcion_Falta";
             this.Rtxt_Descripcion_Falta.Size = new System.Drawing.Size(220, 90);
             this.Rtxt_Descripcion_Falta.TabIndex = 2;
@@ -1076,7 +1208,7 @@
             this.Dtp_Modificar_Fecha_Partido.Enabled = false;
             this.Dtp_Modificar_Fecha_Partido.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fecha_Partido.Location = new System.Drawing.Point(100, 104);
-            this.Dtp_Modificar_Fecha_Partido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Modificar_Fecha_Partido.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Modificar_Fecha_Partido.Name = "Dtp_Modificar_Fecha_Partido";
             this.Dtp_Modificar_Fecha_Partido.Size = new System.Drawing.Size(134, 22);
             this.Dtp_Modificar_Fecha_Partido.TabIndex = 20;
@@ -1185,7 +1317,7 @@
             this.Btn_Buscar_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar_Partido.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar_Partido.Location = new System.Drawing.Point(361, 30);
-            this.Btn_Buscar_Partido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Buscar_Partido.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar_Partido.Name = "Btn_Buscar_Partido";
             this.Btn_Buscar_Partido.Size = new System.Drawing.Size(70, 26);
             this.Btn_Buscar_Partido.TabIndex = 32;
@@ -1198,85 +1330,16 @@
             this.Txt_Modificar_Id_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Modificar_Id_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Modificar_Id_Partido.Location = new System.Drawing.Point(15, 37);
-            this.Txt_Modificar_Id_Partido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Modificar_Id_Partido.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Modificar_Id_Partido.Name = "Txt_Modificar_Id_Partido";
             this.Txt_Modificar_Id_Partido.Size = new System.Drawing.Size(341, 13);
             this.Txt_Modificar_Id_Partido.TabIndex = 33;
             // 
-            // Btn_Ayuda_IngresoCampeonato
+            // Tmr_ListadoCampeonatos
             // 
-            this.Btn_Ayuda_IngresoCampeonato.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_IngresoCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_IngresoCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_IngresoCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_IngresoCampeonato.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_IngresoCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_IngresoCampeonato.Image")));
-            this.Btn_Ayuda_IngresoCampeonato.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_IngresoCampeonato.Name = "Btn_Ayuda_IngresoCampeonato";
-            this.Btn_Ayuda_IngresoCampeonato.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_IngresoCampeonato.TabIndex = 33;
-            this.Btn_Ayuda_IngresoCampeonato.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_ModificarCampeonato
-            // 
-            this.Btn_Ayuda_ModificarCampeonato.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_ModificarCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ModificarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_ModificarCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_ModificarCampeonato.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_ModificarCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ModificarCampeonato.Image")));
-            this.Btn_Ayuda_ModificarCampeonato.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_ModificarCampeonato.Name = "Btn_Ayuda_ModificarCampeonato";
-            this.Btn_Ayuda_ModificarCampeonato.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_ModificarCampeonato.TabIndex = 34;
-            this.Btn_Ayuda_ModificarCampeonato.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda
-            // 
-            this.Btn_Ayuda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda.TabIndex = 34;
-            this.Btn_Ayuda.UseVisualStyleBackColor = false;
-            // 
-            // Lbl_Titulo
-            // 
-            this.Lbl_Titulo.AutoSize = true;
-            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(335, 17);
-            this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(224, 18);
-            this.Lbl_Titulo.TabIndex = 35;
-            this.Lbl_Titulo.Text = "Listado de Campeonatos";
-            // 
-            // Btn_Ayuda_ModificarPartido
-            // 
-            this.Btn_Ayuda_ModificarPartido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_ModificarPartido.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ModificarPartido.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_ModificarPartido.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ModificarPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_ModificarPartido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_ModificarPartido.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_ModificarPartido.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ModificarPartido.Image")));
-            this.Btn_Ayuda_ModificarPartido.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_ModificarPartido.Name = "Btn_Ayuda_ModificarPartido";
-            this.Btn_Ayuda_ModificarPartido.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_ModificarPartido.TabIndex = 38;
-            this.Btn_Ayuda_ModificarPartido.UseVisualStyleBackColor = false;
+            this.Tmr_ListadoCampeonatos.Enabled = true;
+            this.Tmr_ListadoCampeonatos.Interval = 2000;
+            this.Tmr_ListadoCampeonatos.Tick += new System.EventHandler(this.Tmr_ListadoCampeonatos_Tick);
             // 
             // FrmAdminCampeonato
             // 
@@ -1289,6 +1352,9 @@
             this.Text = "FrmAdminCampeonato";
             this.Load += new System.EventHandler(this.FrmAdminCampeonato_Load);
             this.Tbc_Campeonato.ResumeLayout(false);
+            this.Tbp_Listado.ResumeLayout(false);
+            this.Tbp_Listado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoCampeonatos)).EndInit();
             this.Tbp_Crear.ResumeLayout(false);
             this.Tbp_Crear.PerformLayout();
             this.Gbx_Equipos.ResumeLayout(false);
@@ -1305,8 +1371,6 @@
             this.Tbp_Modificar.PerformLayout();
             this.Gbx_Modificar_Campeonato.ResumeLayout(false);
             this.Gbx_Modificar_Campeonato.PerformLayout();
-            this.Tbp_Listado.ResumeLayout(false);
-            this.Tbp_Listado.PerformLayout();
             this.Tbp_Modificar_Partido.ResumeLayout(false);
             this.Tbp_Modificar_Partido.PerformLayout();
             this.Gbx_Anotacion.ResumeLayout(false);
@@ -1407,5 +1471,7 @@
         private System.Windows.Forms.Button Btn_Ayuda_ModificarCampeonato;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Button Btn_Ayuda_ModificarPartido;
+        private System.Windows.Forms.Timer Tmr_ListadoCampeonatos;
+        private MetroFramework.Controls.MetroGrid Dgv_ListadoCampeonatos;
     }
 }
