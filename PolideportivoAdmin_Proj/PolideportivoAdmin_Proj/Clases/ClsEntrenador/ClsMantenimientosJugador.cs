@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
             }//Fin Catch
         }
 
-        public ClsJugador BusquedaIDEntrenador(string ID_Jugador)
+        public ClsJugador BusquedaIDJugador(string ID_Jugador)
         {
             try
             {
@@ -127,6 +128,62 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        public void BusquedaEquipos(DataGridView Equipos)
+        {
+            try
+            {
+                string BuscarJugador = "SELECT NOMBRE_EQUIPO AS 'Nombre Del Equipo', T.NOMBRE_DEPORTE AS 'Tipo De Deporte', concat(E.NOMBRE1, ' ' , E.NOMBRE2, ' ' , E.APELLIDO1, ' ' , E.APELLIDO2) AS 'Nombre Completo Del Entrenador', EQ.NOMBRE_ESTADO AS 'Estado Del Equipo'"+
+                                " FROM ENTRENADOR AS E, EQUIPO AS Q, TIPO_DEPORTE AS T, ESTADO_EQUIPO AS EQ" +
+                                " WHERE ID_ENTRENADOR_FK = ID_ENTRENADOR AND ID_TIPO_DEPORTE__FK = ID_TIPO_DEPORTE AND ID_ESTADO_EQUIPO_FK = ID_ESTADO_EQUIPO AND E.ID_USUARIO_FK ='" + ClsDatos.UserId + "'";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(BuscarJugador, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Equipos.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void ListaEquipo(DataGridView Equipos)
+        {
+            try
+            {
+
+                string MostrarEmpleados = "SELECT J.ID_JUGADOR, concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , E.APELLIDO1, ' ' , E.APELLIDO2) AS 'Nombre Completo Del Jugador', T.NOMBRE_POSICION 'Tipo De Jugador', E.NOMBRE_ESTADO AS 'Estado Del Jugador'"+
+                                "FROM JUGADOR AS J, ESTADO_JUGADOR AS E, TIPO_JUGADOR AS T"+
+                                "WHERE J.ID_POSICION_FK = T.ID_TIPO_JUGADOR AND J.ID_ESTADO_JUGADOR_FK = E.ID_ESTADO_JUGADOR AND WHERE J.ID_EQUIPO_FK ='"+ ClsDatos.EquipoId +"'";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Equipos.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
     }

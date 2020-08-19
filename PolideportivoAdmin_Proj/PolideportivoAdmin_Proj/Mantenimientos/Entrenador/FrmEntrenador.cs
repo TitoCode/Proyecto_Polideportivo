@@ -26,7 +26,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void FrmEntrenador_Load(object sender, EventArgs e)
         {
-            MostrarFotografia();
+            //MostrarFotografia();
+            AbrirFormEnPanel(new FrmBase());
         }
 
         private void AbrirFormEnPanel(object Formhijo)
@@ -77,7 +78,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             Btn_Inicio.ForeColor = Color.White;
             Btn_TablaDePosiciones.BackColor = Color.FromArgb(10, 37, 73);
             Btn_TablaDePosiciones.ForeColor = Color.White;
-            AbrirFormEnPanel(new FrmBase());
+            AbrirFormEnPanel(new FrmEquipoEntrenador());
         }
 
         private void Btn_TablaDePosiciones_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             Btn_Equipo.ForeColor = Color.White;
             Btn_Inicio.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Inicio.ForeColor = Color.White;
-            AbrirFormEnPanel(new FrmBase());
+            AbrirFormEnPanel(new FrmTablaDePosiciones());
         }
 
         public void MostrarFotografia()
@@ -101,7 +102,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             Image devolverImagen = Image.FromStream(ms);
             Ptb_FotoUsuario.Image = devolverImagen;
         }
-
 
         private byte[] SqlaByte()
         {
@@ -117,9 +117,5 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             return null;
         }
 
-        private void Lblk_CambiarPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AbrirFormEnPanel(new FrmUsuario());
-        }
     }
 }

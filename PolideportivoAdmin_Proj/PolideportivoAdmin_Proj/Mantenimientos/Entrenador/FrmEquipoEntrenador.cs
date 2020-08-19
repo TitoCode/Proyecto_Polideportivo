@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PolideportivoAdmin_Proj.Clases.ClsEntrenador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         public FrmEquipoEntrenador()
         {
             InitializeComponent();
+        }
+
+        ClsMantenimientosJugador Entrenador = new ClsMantenimientosJugador();
+
+        private void FrmEquipoEntrenador_Load(object sender, EventArgs e)
+        {
+            Entrenador.BusquedaEquipos(Dgv_Equipos);
         }
     }
 }
