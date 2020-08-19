@@ -65,6 +65,10 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
                         Jugador.Id_Posicion = Lector.GetString(5);
                     }
                 }
+                else {
+
+                    MessageBox.Show("ERRROR: El código de jugador es erroneo o no existe.", "ERRROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return Jugador;
             }
             catch (Exception ex)
@@ -79,12 +83,12 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
 
         }
 
-        public void ModificarJugador(string ID_Jugador,string Nombre1, string Nombre2, string Apellido1, string Apellido2)
+        public void ModificarJugador(string ID_Jugador,string Nombre1, string Nombre2, string Apellido1, string Apellido2, int Posicion)
         {
             try
             {
                 string ModificarJugador = "UPDATE JUGADOR SET NOMBRE1='" + Nombre1 + "', NOMBRE2='" + Nombre2 +
-                                          "', APELLIDO1='" + Apellido1 + "', APELLIDO2='" + Apellido2 +
+                                          "', APELLIDO1='" + Apellido1 + "', APELLIDO2='" + Apellido2 + "', ID_POSICION_FK ='"+ Posicion +
                                           "' WHERE ID_JUGADOR='" + ID_Jugador + "'";
 
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarJugador, conexion.conexion());

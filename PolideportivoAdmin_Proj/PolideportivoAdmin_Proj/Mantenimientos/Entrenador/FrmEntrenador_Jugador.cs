@@ -61,66 +61,129 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Ingresar_Jugador_Click(object sender, EventArgs e)
         {
+            
+             
+            int notExecute=1;
+            if (Txt_Ingreso_Nombre1.Text == "" || Txt_Ingreso_Nombre2.Text == "" || Txt_Ingreso_Apellido1.Text == "" || Txt_Ingreso_Apellido2.Text == "" ) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                
+                    DateTime fecharNac = Dtp_FechaNacimiento_Ingreso.Value.Date;
+                    var diasNac = (DateTime.Now - fecharNac).TotalDays;
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 10;
-            SenSql1 = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_EQUIPO_FK, FOTO_JUGADOR, ID_POSICION_FK, ID_ESTADO_JUGADOR_FK) VALUES (" +
-                     " ID_Jugador + , + Nombre1 + , + Nombre2 + , + Apellido1 + , + Apellido2 + , + FechaNacimiento + , + ClsDatos.EquipoId + , + Foto + , + Posicion + , + 1 + )";
+                    if (MessageBox.Show("¿Desea agregar un nuevo jugador?", "JUGADOR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                    else
+                    {
+                        if (diasNac > 36500)
+                        {
+                            MessageBox.Show("ADVERTENCIA: Edad erronea, no puede ingresar una edad mayor a 100 años.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            notExecute = 0;
+                        }
 
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                        switch (notExecute)
+                        {
+                            case 1:
+                                UsuarioActivo = ClsDatos.UserId;
+                                TipoProceso = 10;
+                                SenSql1 = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_EQUIPO_FK, FOTO_JUGADOR, ID_POSICION_FK, ID_ESTADO_JUGADOR_FK) VALUES (" +
+                                    " ID_Jugador + , + Nombre1 + , + Nombre2 + , + Apellido1 + , + Apellido2 + , + FechaNacimiento + , + ClsDatos.EquipoId + , + Foto + , + Posicion + , + 1 + )";
 
-            MemoryStream ms = new MemoryStream();
-            Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
-            byte[] aByte = ms.ToArray();
-            int Posicion = Cmb_Posiciones_Ingreso.SelectedIndex + 1;
-            Entrenador.IngresoJugador(Txt_Ingreso_Nombre1.Text, Txt_Ingreso_Nombre2.Text, Txt_Ingreso_Apellido1.Text, Txt_Ingreso_Apellido2.Text, Dtp_FechaNacimiento_Ingreso.Value.Date.ToString(), aByte, Posicion);
+                                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+                                MemoryStream ms = new MemoryStream();
+                                Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
+                                byte[] aByte = ms.ToArray();
+                                int Posicion = Cmb_Posiciones_Ingreso.SelectedIndex + 1;
+                                Entrenador.IngresoJugador(Txt_Ingreso_Nombre1.Text, Txt_Ingreso_Nombre2.Text, Txt_Ingreso_Apellido1.Text, Txt_Ingreso_Apellido2.Text, Dtp_FechaNacimiento_Ingreso.Value.Date.ToString(), aByte, Posicion);
+                                Txt_Ingreso_Nombre1.Text = "";
+                                Txt_Ingreso_Nombre2.Text = "";
+                                Txt_Ingreso_Apellido1.Text = "";
+                                Txt_Ingreso_Apellido2.Text = "";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                
+            }
+             
+
         }
 
         private void Btn_Modificar_Buscar_Jugador_Click(object sender, EventArgs e)
         {
-            Jugador = Entrenador.BusquedaIDJugador(Txt_Modificar_Id.Text);
-            Txt_Modificar_Nombre1.Text = Jugador.Nombre1;
-            Txt_Modificar_Nombre2.Text = Jugador.Nombre2;
-            Txt_Modificar_Apellido1.Text = Jugador.Apellido1;
-            Txt_Modificar_Apellido2.Text = Jugador.Apellido2;
-            Dtp_Modificar_Fdn.Text = Jugador.FechaNacimiento;
-            Cmb_Posicion_Modificar.Text = Jugador.Id_Posicion;
+            if (Txt_Modificar_Id.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Jugador = Entrenador.BusquedaIDJugador(Txt_Modificar_Id.Text);
+                Txt_Modificar_Nombre1.Text = Jugador.Nombre1;
+                Txt_Modificar_Nombre2.Text = Jugador.Nombre2;
+                Txt_Modificar_Apellido1.Text = Jugador.Apellido1;
+                Txt_Modificar_Apellido2.Text = Jugador.Apellido2;
+                Dtp_Modificar_Fdn.Text = Jugador.FechaNacimiento;
+                Cmb_Posicion_Modificar.Text = Jugador.Id_Posicion;
+                Btn_Modificar_Jugador.Enabled = true;
+            }
         }
 
         private void Btn_Modificar_Jugador_Click(object sender, EventArgs e)
         {
-
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 11;
-            SenSql1 = "UPDATE JUGADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
-                                          ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
-                                           "WHERE ID_JUGADOR= + ID_Jugador + ";
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
-            Entrenador.ModificarJugador(Txt_Modificar_Id.Text, Txt_Modificar_Nombre1.Text, Txt_Modificar_Nombre2.Text, Txt_Modificar_Apellido1.Text, Txt_Modificar_Apellido2.Text);
+            if (Txt_Modificar_Nombre1.Text == "" || Txt_Modificar_Nombre2.Text == "" || Txt_Modificar_Apellido1.Text == "" || Txt_Modificar_Apellido2.Text == "") { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                if (MessageBox.Show("¿Desea modificar el jugador?", "JUGADOR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                else
+                {
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 11;
+                    SenSql1 = "UPDATE JUGADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
+                                                  ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
+                                                   "WHERE ID_JUGADOR= + ID_Jugador + ";
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                    int Posicion = Cmb_Posicion_Modificar.SelectedIndex + 1;
+                    Entrenador.ModificarJugador(Txt_Modificar_Id.Text, Txt_Modificar_Nombre1.Text, Txt_Modificar_Nombre2.Text, Txt_Modificar_Apellido1.Text, Txt_Modificar_Apellido2.Text, Posicion);
+                    Txt_Modificar_Nombre1.Text = "";
+                    Txt_Modificar_Nombre2.Text = "";
+                    Txt_Modificar_Apellido1.Text = "";
+                    Txt_Modificar_Apellido2.Text = "";
+                    Btn_Modificar_Jugador.Enabled = false;
+                }
+            }
         }
 
         private void Btn_Eliminar_Buscar_Jugador_Click(object sender, EventArgs e)
         {
-            Jugador = Entrenador.BusquedaIDJugador(Txt_Eliminar_Id.Text);
-            Txt_Eliminar_Nombre1.Text = Jugador.Nombre1;
-            Txt_Eliminar_Nombre2.Text = Jugador.Nombre2;
-            Txt_Eliminar_Apellido1.Text = Jugador.Apellido1;
-            Txt_Eliminar_Apellido2.Text = Jugador.Apellido2;
-            Dtp_Eliminar_Fdn.Text = Jugador.FechaNacimiento;
-            Txt_Posicion_Eliminar.Text = Jugador.Id_Posicion;
+            if (Txt_Eliminar_Id.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Jugador = Entrenador.BusquedaIDJugador(Txt_Eliminar_Id.Text);
+                Txt_Eliminar_Nombre1.Text = Jugador.Nombre1;
+                Txt_Eliminar_Nombre2.Text = Jugador.Nombre2;
+                Txt_Eliminar_Apellido1.Text = Jugador.Apellido1;
+                Txt_Eliminar_Apellido2.Text = Jugador.Apellido2;
+                Dtp_Eliminar_Fdn.Text = Jugador.FechaNacimiento;
+                Txt_Posicion_Eliminar.Text = Jugador.Id_Posicion;
+                Btn_Eliminar_Jugador.Enabled = true;
+            }
         }
 
         private void Btn_Eliminar_Jugador_Click(object sender, EventArgs e)
         {
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 12;
-            SenSql1 = "UPDATE JUGADOR SET ID_ESTADO_JUGADOR_FK =  + 3 +  WHERE ID_JUGADOR=  + Id_Jugador + ";
+            
+                if (MessageBox.Show("¿Desea eliminar el jugador?", "JUGADOR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                else
+                {
+                    UsuarioActivo = ClsDatos.UserId;
+                    TipoProceso = 12;
+                    SenSql1 = "UPDATE JUGADOR SET ID_ESTADO_JUGADOR_FK =  + 3 +  WHERE ID_JUGADOR=  + Id_Jugador + ";
 
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                    Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-            Entrenador.EliminarJugador(Txt_Eliminar_Id.Text);
+                    Entrenador.EliminarJugador(Txt_Eliminar_Id.Text);
+                    Btn_Eliminar_Jugador.Enabled = false;
+                }
+            
         }
         
         private void DatosCbx_Posicion()
@@ -140,6 +203,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
                 Cmb_Posiciones_Ingreso.DataSource = Datos;
                 Cmb_Posiciones_Ingreso.DisplayMember = "NOMBRE_POSICION";
                 Cmb_Posiciones_Ingreso.ResetText();
+                Cmb_Posicion_Modificar.DataSource = Datos;
+                Cmb_Posicion_Modificar.DisplayMember = "NOMBRE_POSICION";
+                Cmb_Posicion_Modificar.ResetText();
 
             }
             catch (Exception ex)

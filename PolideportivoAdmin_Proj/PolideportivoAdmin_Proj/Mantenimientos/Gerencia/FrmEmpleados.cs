@@ -242,33 +242,37 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             if (Txt_Nombre1_Modificar.Text == "" || Txt_Apellido1_Modificar.Text == "" || Txt_Telefono_Modificar.Text == "" || Txt_Email_Modificar.Text == "" || Txt_Nombre2_Modificar.Text == "" || Txt_Apellido2_Modificar.Text == "" || Txt_Direccion_Modificar.Text == "" || Txt_DPI_Modificar.Text == "" || Txt_NIT_Modificar.Text == "" || Txt_Usuario_Modificar.Text == "" || Txt_Password_Modificar.Text == "" || Cmb_TipoUsuario_Modificar.SelectedItem == null || Cmb_TipoPuesto_Modificar == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                UsuarioActivo = ClsDatos.UserId;
-                TipoProceso = 1;
-                SenSql1 = "UPDATE EMPLEADO SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 + , " +
-                    "APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 + , CORREO= + Email +, DIRECCION= + Direccion + , TELEFONO = + Telefono + " +
-                    " WHERE ID_EMPLEADO= + ID_Empleado + ";
+                if (MessageBox.Show("¿Desea modificar un  empleado?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                else
+                {
+                        UsuarioActivo = ClsDatos.UserId;
+                        TipoProceso = 1;
+                        SenSql1 = "UPDATE EMPLEADO SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 + , " +
+                            "APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 + , CORREO= + Email +, DIRECCION= + Direccion + , TELEFONO = + Telefono + " +
+                            " WHERE ID_EMPLEADO= + ID_Empleado + ";
 
-                SenSql2 = "UPDATE USUARIO SET ID_USUARIO = + Usuario + , PASSWORD= + Password + WHERE ID_USUARIO= + Usuario + ";
-                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
+                        SenSql2 = "UPDATE USUARIO SET ID_USUARIO = + Usuario + , PASSWORD= + Password + WHERE ID_USUARIO= + Usuario + ";
+                        Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                        Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
-                int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
-                int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
-                int TipoUsuario = Cmb_TipoUsuario_Modificar.SelectedIndex + 1;
-                Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, TipoUsuario, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
-                Txt_Busqueda_Modificar.Text = ""; 
-                Txt_Nombre1_Modificar.Text = ""; 
-                Txt_Apellido1_Modificar.Text = ""; 
-                Txt_Telefono_Modificar.Text = ""; 
-                Txt_Email_Modificar.Text = ""; 
-                Txt_Nombre2_Modificar.Text = ""; 
-                Txt_Apellido2_Modificar.Text = ""; 
-                Txt_Direccion_Modificar.Text = ""; 
-                Txt_DPI_Modificar.Text = ""; 
-                Txt_NIT_Modificar.Text = ""; 
-                Txt_Usuario_Modificar.Text = "";
-                Txt_Password_Modificar.Text = "";
-                Btn_Modificar.Enabled = false;
+                        int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
+                        int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
+                        int TipoUsuario = Cmb_TipoUsuario_Modificar.SelectedIndex + 1;
+                        Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, TipoUsuario, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
+                        Txt_Busqueda_Modificar.Text = "";
+                        Txt_Nombre1_Modificar.Text = "";
+                        Txt_Apellido1_Modificar.Text = "";
+                        Txt_Telefono_Modificar.Text = "";
+                        Txt_Email_Modificar.Text = "";
+                        Txt_Nombre2_Modificar.Text = "";
+                        Txt_Apellido2_Modificar.Text = "";
+                        Txt_Direccion_Modificar.Text = "";
+                        Txt_DPI_Modificar.Text = "";
+                        Txt_NIT_Modificar.Text = "";
+                        Txt_Usuario_Modificar.Text = "";
+                        Txt_Password_Modificar.Text = "";
+                        Btn_Modificar.Enabled = false;
+                }
             }
         }
 
@@ -299,32 +303,35 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Desea eliminar un  empleado?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+            else
+            {
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 2;
+                SenSql1 = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK =  + 2 +  WHERE ID_EMPLEADO= + ID_Empleado + ";
+                SenSql2 = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = + 4 +  WHERE ID_USUARIO= + Usuario + ";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 2;
-            SenSql1 = "UPDATE EMPLEADO SET ID_ESTADO_EMPLEADO_FK =  + 2 +  WHERE ID_EMPLEADO= + ID_Empleado + ";
-            SenSql2 = "UPDATE USUARIO SET ID_TIPO_USUARIO_FK = + 4 +  WHERE ID_USUARIO= + Usuario + ";
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
-
-            Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
-            Txt_Busqueda_Eliminar.Text = ""; 
-            Txt_Nombre1_Eliminar.Text = ""; 
-            Txt_Nombre2_Eliminar.Text = ""; 
-            Txt_Apellido1_Eliminar.Text = ""; 
-            Txt_Apellido2_Eliminar.Text = ""; 
-            Txt_Email_Eliminar.Text = ""; 
-            Txt_Eliminar_TipoPuesto.Text = ""; 
-            Txt_Direccion_Eliminar.Text = ""; 
-            Txt_Telefono_Eliminar.Text = ""; 
-            Dtp_FechaNacimiento_Eliminar.Text = ""; 
-            Txt_NIT_Eliminar.Text = ""; 
-            Txt_DPI_Eliminar.Text = ""; 
-            Txt_Usuario_Eliminar.Text = ""; 
-            Dtp_FechaContrato_Eliminar.Text = ""; 
-            Txt_Password_Eliminar.Text = ""; 
-            Txt_Eliminar_TipoUsuario.Text = "";
-            Btn_Eliminar.Enabled = false;
+                Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
+                Txt_Busqueda_Eliminar.Text = "";
+                Txt_Nombre1_Eliminar.Text = "";
+                Txt_Nombre2_Eliminar.Text = "";
+                Txt_Apellido1_Eliminar.Text = "";
+                Txt_Apellido2_Eliminar.Text = "";
+                Txt_Email_Eliminar.Text = "";
+                Txt_Eliminar_TipoPuesto.Text = "";
+                Txt_Direccion_Eliminar.Text = "";
+                Txt_Telefono_Eliminar.Text = "";
+                Dtp_FechaNacimiento_Eliminar.Text = "";
+                Txt_NIT_Eliminar.Text = "";
+                Txt_DPI_Eliminar.Text = "";
+                Txt_Usuario_Eliminar.Text = "";
+                Dtp_FechaContrato_Eliminar.Text = "";
+                Txt_Password_Eliminar.Text = "";
+                Txt_Eliminar_TipoUsuario.Text = "";
+                Btn_Eliminar.Enabled = false;
+            }
         }
 
         private void numero(object sender, KeyPressEventArgs e)

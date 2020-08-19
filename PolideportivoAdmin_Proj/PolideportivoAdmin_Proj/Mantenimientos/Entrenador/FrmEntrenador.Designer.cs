@@ -181,6 +181,7 @@
             this.Name = "FrmEntrenador";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.FrmEntrenador_Load);
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Menu.PerformLayout();

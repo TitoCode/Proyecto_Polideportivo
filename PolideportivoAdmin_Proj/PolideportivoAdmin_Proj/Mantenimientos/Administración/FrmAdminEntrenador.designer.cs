@@ -136,10 +136,12 @@
             this.Txt_Eliminar_Id_Entrenador.Name = "Txt_Eliminar_Id_Entrenador";
             this.Txt_Eliminar_Id_Entrenador.Size = new System.Drawing.Size(313, 13);
             this.Txt_Eliminar_Id_Entrenador.TabIndex = 12;
+            this.Txt_Eliminar_Id_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Btn_Eliminar_Entrenador
             // 
             this.Btn_Eliminar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar_Entrenador.Enabled = false;
             this.Btn_Eliminar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Eliminar_Entrenador.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -255,10 +257,12 @@
             this.Txt_Modificar_Id_Entenador.Name = "Txt_Modificar_Id_Entenador";
             this.Txt_Modificar_Id_Entenador.Size = new System.Drawing.Size(313, 13);
             this.Txt_Modificar_Id_Entenador.TabIndex = 12;
+            this.Txt_Modificar_Id_Entenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Btn_Modificar_Entrenador
             // 
             this.Btn_Modificar_Entrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Entrenador.Enabled = false;
             this.Btn_Modificar_Entrenador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Modificar_Entrenador.FlatAppearance.BorderSize = 0;
             this.Btn_Modificar_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,6 +301,7 @@
             this.Txt_Modificar_Apellido2_Entrenador.Name = "Txt_Modificar_Apellido2_Entrenador";
             this.Txt_Modificar_Apellido2_Entrenador.Size = new System.Drawing.Size(231, 15);
             this.Txt_Modificar_Apellido2_Entrenador.TabIndex = 3;
+            this.Txt_Modificar_Apellido2_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Apellido1_Entrenador
             // 
@@ -307,6 +312,7 @@
             this.Txt_Modificar_Apellido1_Entrenador.Name = "Txt_Modificar_Apellido1_Entrenador";
             this.Txt_Modificar_Apellido1_Entrenador.Size = new System.Drawing.Size(230, 15);
             this.Txt_Modificar_Apellido1_Entrenador.TabIndex = 2;
+            this.Txt_Modificar_Apellido1_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Nombre2_Entrenador
             // 
@@ -317,6 +323,7 @@
             this.Txt_Modificar_Nombre2_Entrenador.Name = "Txt_Modificar_Nombre2_Entrenador";
             this.Txt_Modificar_Nombre2_Entrenador.Size = new System.Drawing.Size(231, 15);
             this.Txt_Modificar_Nombre2_Entrenador.TabIndex = 1;
+            this.Txt_Modificar_Nombre2_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Nombre1_Entrenador
             // 
@@ -327,6 +334,7 @@
             this.Txt_Modificar_Nombre1_Entrenador.Name = "Txt_Modificar_Nombre1_Entrenador";
             this.Txt_Modificar_Nombre1_Entrenador.Size = new System.Drawing.Size(230, 15);
             this.Txt_Modificar_Nombre1_Entrenador.TabIndex = 0;
+            this.Txt_Modificar_Nombre1_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Tipo_Usuario_Entrenador
             // 
@@ -384,6 +392,7 @@
             this.Txt_Ingreso_Apellido2_Entrenador.Name = "Txt_Ingreso_Apellido2_Entrenador";
             this.Txt_Ingreso_Apellido2_Entrenador.Size = new System.Drawing.Size(231, 15);
             this.Txt_Ingreso_Apellido2_Entrenador.TabIndex = 3;
+            this.Txt_Ingreso_Apellido2_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Apellido1_Entrenador
             // 
@@ -394,6 +403,7 @@
             this.Txt_Ingreso_Apellido1_Entrenador.Name = "Txt_Ingreso_Apellido1_Entrenador";
             this.Txt_Ingreso_Apellido1_Entrenador.Size = new System.Drawing.Size(230, 15);
             this.Txt_Ingreso_Apellido1_Entrenador.TabIndex = 2;
+            this.Txt_Ingreso_Apellido1_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Nombre2_Entrenador
             // 
@@ -404,6 +414,7 @@
             this.Txt_Ingreso_Nombre2_Entrenador.Name = "Txt_Ingreso_Nombre2_Entrenador";
             this.Txt_Ingreso_Nombre2_Entrenador.Size = new System.Drawing.Size(231, 15);
             this.Txt_Ingreso_Nombre2_Entrenador.TabIndex = 1;
+            this.Txt_Ingreso_Nombre2_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Nombre1_Entrenador
             // 
@@ -414,6 +425,7 @@
             this.Txt_Ingreso_Nombre1_Entrenador.Name = "Txt_Ingreso_Nombre1_Entrenador";
             this.Txt_Ingreso_Nombre1_Entrenador.Size = new System.Drawing.Size(230, 15);
             this.Txt_Ingreso_Nombre1_Entrenador.TabIndex = 0;
+            this.Txt_Ingreso_Nombre1_Entrenador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Password
             // 
@@ -444,7 +456,7 @@
             this.Tbc_Entrenador.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Entrenador.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Entrenador.Name = "Tbc_Entrenador";
-            this.Tbc_Entrenador.SelectedIndex = 3;
+            this.Tbc_Entrenador.SelectedIndex = 1;
             this.Tbc_Entrenador.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Entrenador.TabIndex = 3;
             this.Tbc_Entrenador.UseSelectable = true;
@@ -835,6 +847,7 @@
             // Btn_CambiarFoto
             // 
             this.Btn_CambiarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_CambiarFoto.Enabled = false;
             this.Btn_CambiarFoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_CambiarFoto.FlatAppearance.BorderSize = 0;
             this.Btn_CambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
