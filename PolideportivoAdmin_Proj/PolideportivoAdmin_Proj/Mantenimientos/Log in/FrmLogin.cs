@@ -158,5 +158,10 @@ namespace PolideportivoAdmin_Proj
         {
             this.Close();
         }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBitacora));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_Bitacora = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_Bitacora = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
+            this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Dgv_Bitacora = new MetroFramework.Controls.MetroGrid();
             this.Tmr_Bitacora = new System.Windows.Forms.Timer(this.components);
             this.Tbc_Bitacora.SuspendLayout();
@@ -54,6 +57,8 @@
             // 
             // Tbp_Bitacora
             // 
+            this.Tbp_Bitacora.Controls.Add(this.Btn_Ayuda);
+            this.Tbp_Bitacora.Controls.Add(this.Lbl_Titulo);
             this.Tbp_Bitacora.Controls.Add(this.Dgv_Bitacora);
             this.Tbp_Bitacora.HorizontalScrollbarBarColor = true;
             this.Tbp_Bitacora.HorizontalScrollbarHighlightOnWheel = false;
@@ -66,6 +71,33 @@
             this.Tbp_Bitacora.VerticalScrollbarBarColor = true;
             this.Tbp_Bitacora.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Bitacora.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.TabIndex = 30;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            // 
+            // Lbl_Titulo
+            // 
+            this.Lbl_Titulo.AutoSize = true;
+            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo.Location = new System.Drawing.Point(264, 9);
+            this.Lbl_Titulo.Name = "Lbl_Titulo";
+            this.Lbl_Titulo.Size = new System.Drawing.Size(370, 18);
+            this.Lbl_Titulo.TabIndex = 29;
+            this.Lbl_Titulo.Text = "Bitácora (Actualización cada 5 segundos)";
             // 
             // Dgv_Bitacora
             // 
@@ -96,7 +128,7 @@
             this.Dgv_Bitacora.EnableHeadersVisualStyles = false;
             this.Dgv_Bitacora.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Bitacora.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Bitacora.Location = new System.Drawing.Point(0, 18);
+            this.Dgv_Bitacora.Location = new System.Drawing.Point(0, 51);
             this.Dgv_Bitacora.Name = "Dgv_Bitacora";
             this.Dgv_Bitacora.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -109,7 +141,7 @@
             this.Dgv_Bitacora.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_Bitacora.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Bitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Bitacora.Size = new System.Drawing.Size(906, 463);
+            this.Dgv_Bitacora.Size = new System.Drawing.Size(906, 430);
             this.Dgv_Bitacora.TabIndex = 2;
             // 
             // Tmr_Bitacora
@@ -130,6 +162,7 @@
             this.Text = "FrmBitacora";
             this.Tbc_Bitacora.ResumeLayout(false);
             this.Tbp_Bitacora.ResumeLayout(false);
+            this.Tbp_Bitacora.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Bitacora)).EndInit();
             this.ResumeLayout(false);
 
@@ -141,5 +174,7 @@
         private MetroFramework.Controls.MetroTabPage Tbp_Bitacora;
         private MetroFramework.Controls.MetroGrid Dgv_Bitacora;
         private System.Windows.Forms.Timer Tmr_Bitacora;
+        private System.Windows.Forms.Label Lbl_Titulo;
+        private System.Windows.Forms.Button Btn_Ayuda;
     }
 }

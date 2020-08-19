@@ -46,6 +46,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportes));
             this.Tbc_Reportes = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_EquipoCampeonato = new MetroFramework.Controls.MetroTabPage();
             this.Btn_BusquedaCampeonato = new System.Windows.Forms.Button();
@@ -75,6 +76,12 @@
             this.Btn_ReporteJugadoresSuspendidos = new System.Windows.Forms.Button();
             this.Dgv_Suspendidos = new MetroFramework.Controls.MetroGrid();
             this.Sfd_GuardarExcel = new System.Windows.Forms.SaveFileDialog();
+            this.Btn_Ayuda_ReporteEquipos = new System.Windows.Forms.Button();
+            this.Btn_Ayuda_ReporteJugador = new System.Windows.Forms.Button();
+            this.Btn_Ayuda_ReporteJugadorxEquipo = new System.Windows.Forms.Button();
+            this.Btn_Ayuda_Posiciones = new System.Windows.Forms.Button();
+            this.Btn_Ayuda_Partidos = new System.Windows.Forms.Button();
+            this.Btn_Ayuda_Suspendidos = new System.Windows.Forms.Button();
             this.Tbc_Reportes.SuspendLayout();
             this.Tbp_EquipoCampeonato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_EquiposCampeonatos)).BeginInit();
@@ -100,15 +107,15 @@
             this.Tbc_Reportes.Controls.Add(this.Tbp_Suspendidos);
             this.Tbc_Reportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Reportes.Location = new System.Drawing.Point(0, 0);
-            this.Tbc_Reportes.Margin = new System.Windows.Forms.Padding(4);
             this.Tbc_Reportes.Name = "Tbc_Reportes";
             this.Tbc_Reportes.SelectedIndex = 0;
-            this.Tbc_Reportes.Size = new System.Drawing.Size(1219, 644);
+            this.Tbc_Reportes.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Reportes.TabIndex = 10;
             this.Tbc_Reportes.UseSelectable = true;
             // 
             // Tbp_EquipoCampeonato
             // 
+            this.Tbp_EquipoCampeonato.Controls.Add(this.Btn_Ayuda_ReporteEquipos);
             this.Tbp_EquipoCampeonato.Controls.Add(this.Btn_BusquedaCampeonato);
             this.Tbp_EquipoCampeonato.Controls.Add(this.Lbl_IdEquipoCampeonato);
             this.Tbp_EquipoCampeonato.Controls.Add(this.Txt_IdEquipoCampeonato);
@@ -116,16 +123,15 @@
             this.Tbp_EquipoCampeonato.Controls.Add(this.Dgv_EquiposCampeonatos);
             this.Tbp_EquipoCampeonato.HorizontalScrollbarBarColor = true;
             this.Tbp_EquipoCampeonato.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_EquipoCampeonato.HorizontalScrollbarSize = 12;
+            this.Tbp_EquipoCampeonato.HorizontalScrollbarSize = 10;
             this.Tbp_EquipoCampeonato.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_EquipoCampeonato.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_EquipoCampeonato.Name = "Tbp_EquipoCampeonato";
-            this.Tbp_EquipoCampeonato.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_EquipoCampeonato.Size = new System.Drawing.Size(906, 481);
             this.Tbp_EquipoCampeonato.TabIndex = 4;
             this.Tbp_EquipoCampeonato.Text = "Equipos en Campeonato";
             this.Tbp_EquipoCampeonato.VerticalScrollbarBarColor = true;
             this.Tbp_EquipoCampeonato.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_EquipoCampeonato.VerticalScrollbarSize = 13;
+            this.Tbp_EquipoCampeonato.VerticalScrollbarSize = 10;
             // 
             // Btn_BusquedaCampeonato
             // 
@@ -134,10 +140,10 @@
             this.Btn_BusquedaCampeonato.FlatAppearance.BorderSize = 0;
             this.Btn_BusquedaCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_BusquedaCampeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_BusquedaCampeonato.Location = new System.Drawing.Point(654, 41);
-            this.Btn_BusquedaCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_BusquedaCampeonato.Location = new System.Drawing.Point(490, 33);
+            this.Btn_BusquedaCampeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_BusquedaCampeonato.Name = "Btn_BusquedaCampeonato";
-            this.Btn_BusquedaCampeonato.Size = new System.Drawing.Size(181, 50);
+            this.Btn_BusquedaCampeonato.Size = new System.Drawing.Size(136, 41);
             this.Btn_BusquedaCampeonato.TabIndex = 29;
             this.Btn_BusquedaCampeonato.Text = "Generar Busqueda";
             this.Btn_BusquedaCampeonato.UseVisualStyleBackColor = false;
@@ -148,9 +154,10 @@
             this.Lbl_IdEquipoCampeonato.AutoSize = true;
             this.Lbl_IdEquipoCampeonato.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_IdEquipoCampeonato.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_IdEquipoCampeonato.Location = new System.Drawing.Point(197, 55);
+            this.Lbl_IdEquipoCampeonato.Location = new System.Drawing.Point(148, 45);
+            this.Lbl_IdEquipoCampeonato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_IdEquipoCampeonato.Name = "Lbl_IdEquipoCampeonato";
-            this.Lbl_IdEquipoCampeonato.Size = new System.Drawing.Size(242, 23);
+            this.Lbl_IdEquipoCampeonato.Size = new System.Drawing.Size(190, 18);
             this.Lbl_IdEquipoCampeonato.TabIndex = 27;
             this.Lbl_IdEquipoCampeonato.Text = "Ingrese el ID del Campeonato";
             // 
@@ -158,10 +165,10 @@
             // 
             this.Txt_IdEquipoCampeonato.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_IdEquipoCampeonato.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_IdEquipoCampeonato.Location = new System.Drawing.Point(467, 59);
-            this.Txt_IdEquipoCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_IdEquipoCampeonato.Location = new System.Drawing.Point(350, 48);
+            this.Txt_IdEquipoCampeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_IdEquipoCampeonato.Name = "Txt_IdEquipoCampeonato";
-            this.Txt_IdEquipoCampeonato.Size = new System.Drawing.Size(157, 15);
+            this.Txt_IdEquipoCampeonato.Size = new System.Drawing.Size(118, 13);
             this.Txt_IdEquipoCampeonato.TabIndex = 28;
             // 
             // Btn_ReporteEquiposCampeonato
@@ -171,10 +178,10 @@
             this.Btn_ReporteEquiposCampeonato.FlatAppearance.BorderSize = 0;
             this.Btn_ReporteEquiposCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReporteEquiposCampeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReporteEquiposCampeonato.Location = new System.Drawing.Point(856, 41);
-            this.Btn_ReporteEquiposCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReporteEquiposCampeonato.Location = new System.Drawing.Point(642, 33);
+            this.Btn_ReporteEquiposCampeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReporteEquiposCampeonato.Name = "Btn_ReporteEquiposCampeonato";
-            this.Btn_ReporteEquiposCampeonato.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReporteEquiposCampeonato.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReporteEquiposCampeonato.TabIndex = 21;
             this.Btn_ReporteEquiposCampeonato.Text = "Generar Reporte Excel";
             this.Btn_ReporteEquiposCampeonato.UseVisualStyleBackColor = false;
@@ -211,8 +218,7 @@
             this.Dgv_EquiposCampeonatos.EnableHeadersVisualStyles = false;
             this.Dgv_EquiposCampeonatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_EquiposCampeonatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_EquiposCampeonatos.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_EquiposCampeonatos.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_EquiposCampeonatos.Location = new System.Drawing.Point(0, 85);
             this.Dgv_EquiposCampeonatos.Name = "Dgv_EquiposCampeonatos";
             this.Dgv_EquiposCampeonatos.ReadOnly = true;
             this.Dgv_EquiposCampeonatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -227,25 +233,25 @@
             this.Dgv_EquiposCampeonatos.RowHeadersWidth = 51;
             this.Dgv_EquiposCampeonatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_EquiposCampeonatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_EquiposCampeonatos.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_EquiposCampeonatos.Size = new System.Drawing.Size(906, 396);
             this.Dgv_EquiposCampeonatos.TabIndex = 2;
             // 
             // Tbp_Jugador
             // 
+            this.Tbp_Jugador.Controls.Add(this.Btn_Ayuda_ReporteJugador);
             this.Tbp_Jugador.Controls.Add(this.Dgv_Jugadores);
             this.Tbp_Jugador.Controls.Add(this.Btn_ReporteJugador);
             this.Tbp_Jugador.HorizontalScrollbarBarColor = true;
             this.Tbp_Jugador.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Jugador.HorizontalScrollbarSize = 12;
+            this.Tbp_Jugador.HorizontalScrollbarSize = 10;
             this.Tbp_Jugador.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Jugador.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Jugador.Name = "Tbp_Jugador";
-            this.Tbp_Jugador.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_Jugador.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Jugador.TabIndex = 0;
             this.Tbp_Jugador.Text = "Jugador";
             this.Tbp_Jugador.VerticalScrollbarBarColor = true;
             this.Tbp_Jugador.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Jugador.VerticalScrollbarSize = 13;
+            this.Tbp_Jugador.VerticalScrollbarSize = 10;
             // 
             // Dgv_Jugadores
             // 
@@ -278,8 +284,7 @@
             this.Dgv_Jugadores.EnableHeadersVisualStyles = false;
             this.Dgv_Jugadores.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Jugadores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Jugadores.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_Jugadores.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_Jugadores.Location = new System.Drawing.Point(0, 85);
             this.Dgv_Jugadores.Name = "Dgv_Jugadores";
             this.Dgv_Jugadores.ReadOnly = true;
             this.Dgv_Jugadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -294,7 +299,7 @@
             this.Dgv_Jugadores.RowHeadersWidth = 51;
             this.Dgv_Jugadores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Jugadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Jugadores.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_Jugadores.Size = new System.Drawing.Size(906, 396);
             this.Dgv_Jugadores.TabIndex = 29;
             // 
             // Btn_ReporteJugador
@@ -304,10 +309,10 @@
             this.Btn_ReporteJugador.FlatAppearance.BorderSize = 0;
             this.Btn_ReporteJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReporteJugador.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReporteJugador.Location = new System.Drawing.Point(654, 41);
-            this.Btn_ReporteJugador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReporteJugador.Location = new System.Drawing.Point(490, 33);
+            this.Btn_ReporteJugador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReporteJugador.Name = "Btn_ReporteJugador";
-            this.Btn_ReporteJugador.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReporteJugador.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReporteJugador.TabIndex = 21;
             this.Btn_ReporteJugador.Text = "Generar Reporte Excel";
             this.Btn_ReporteJugador.UseVisualStyleBackColor = false;
@@ -315,6 +320,7 @@
             // 
             // Tbp_JugadoreEquipo
             // 
+            this.Tbp_JugadoreEquipo.Controls.Add(this.Btn_Ayuda_ReporteJugadorxEquipo);
             this.Tbp_JugadoreEquipo.Controls.Add(this.Btn_Busqueda_Campeonato);
             this.Tbp_JugadoreEquipo.Controls.Add(this.Lbl_IdEquipo);
             this.Tbp_JugadoreEquipo.Controls.Add(this.Txt_IdEquipo);
@@ -322,16 +328,15 @@
             this.Tbp_JugadoreEquipo.Controls.Add(this.Dgv_JugadoresEquipo);
             this.Tbp_JugadoreEquipo.HorizontalScrollbarBarColor = true;
             this.Tbp_JugadoreEquipo.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_JugadoreEquipo.HorizontalScrollbarSize = 12;
+            this.Tbp_JugadoreEquipo.HorizontalScrollbarSize = 10;
             this.Tbp_JugadoreEquipo.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_JugadoreEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_JugadoreEquipo.Name = "Tbp_JugadoreEquipo";
-            this.Tbp_JugadoreEquipo.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_JugadoreEquipo.Size = new System.Drawing.Size(906, 481);
             this.Tbp_JugadoreEquipo.TabIndex = 5;
             this.Tbp_JugadoreEquipo.Text = "Jugadores por Equipo";
             this.Tbp_JugadoreEquipo.VerticalScrollbarBarColor = true;
             this.Tbp_JugadoreEquipo.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_JugadoreEquipo.VerticalScrollbarSize = 13;
+            this.Tbp_JugadoreEquipo.VerticalScrollbarSize = 10;
             // 
             // Btn_Busqueda_Campeonato
             // 
@@ -340,10 +345,10 @@
             this.Btn_Busqueda_Campeonato.FlatAppearance.BorderSize = 0;
             this.Btn_Busqueda_Campeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Busqueda_Campeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Busqueda_Campeonato.Location = new System.Drawing.Point(654, 41);
-            this.Btn_Busqueda_Campeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Busqueda_Campeonato.Location = new System.Drawing.Point(490, 33);
+            this.Btn_Busqueda_Campeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Busqueda_Campeonato.Name = "Btn_Busqueda_Campeonato";
-            this.Btn_Busqueda_Campeonato.Size = new System.Drawing.Size(181, 50);
+            this.Btn_Busqueda_Campeonato.Size = new System.Drawing.Size(136, 41);
             this.Btn_Busqueda_Campeonato.TabIndex = 29;
             this.Btn_Busqueda_Campeonato.Text = "Generar Busqueda";
             this.Btn_Busqueda_Campeonato.UseVisualStyleBackColor = false;
@@ -354,9 +359,10 @@
             this.Lbl_IdEquipo.AutoSize = true;
             this.Lbl_IdEquipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_IdEquipo.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_IdEquipo.Location = new System.Drawing.Point(197, 55);
+            this.Lbl_IdEquipo.Location = new System.Drawing.Point(148, 45);
+            this.Lbl_IdEquipo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_IdEquipo.Name = "Lbl_IdEquipo";
-            this.Lbl_IdEquipo.Size = new System.Drawing.Size(196, 23);
+            this.Lbl_IdEquipo.Size = new System.Drawing.Size(154, 18);
             this.Lbl_IdEquipo.TabIndex = 27;
             this.Lbl_IdEquipo.Text = "Ingrese el ID del Equipo";
             // 
@@ -364,10 +370,10 @@
             // 
             this.Txt_IdEquipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_IdEquipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_IdEquipo.Location = new System.Drawing.Point(467, 59);
-            this.Txt_IdEquipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_IdEquipo.Location = new System.Drawing.Point(350, 48);
+            this.Txt_IdEquipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_IdEquipo.Name = "Txt_IdEquipo";
-            this.Txt_IdEquipo.Size = new System.Drawing.Size(157, 15);
+            this.Txt_IdEquipo.Size = new System.Drawing.Size(118, 13);
             this.Txt_IdEquipo.TabIndex = 28;
             // 
             // Btn_ReporteJugadoresEquipo
@@ -377,10 +383,10 @@
             this.Btn_ReporteJugadoresEquipo.FlatAppearance.BorderSize = 0;
             this.Btn_ReporteJugadoresEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReporteJugadoresEquipo.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReporteJugadoresEquipo.Location = new System.Drawing.Point(856, 41);
-            this.Btn_ReporteJugadoresEquipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReporteJugadoresEquipo.Location = new System.Drawing.Point(642, 33);
+            this.Btn_ReporteJugadoresEquipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReporteJugadoresEquipo.Name = "Btn_ReporteJugadoresEquipo";
-            this.Btn_ReporteJugadoresEquipo.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReporteJugadoresEquipo.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReporteJugadoresEquipo.TabIndex = 21;
             this.Btn_ReporteJugadoresEquipo.Text = "Generar Reporte Excel";
             this.Btn_ReporteJugadoresEquipo.UseVisualStyleBackColor = false;
@@ -417,8 +423,7 @@
             this.Dgv_JugadoresEquipo.EnableHeadersVisualStyles = false;
             this.Dgv_JugadoresEquipo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_JugadoresEquipo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_JugadoresEquipo.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_JugadoresEquipo.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_JugadoresEquipo.Location = new System.Drawing.Point(0, 85);
             this.Dgv_JugadoresEquipo.Name = "Dgv_JugadoresEquipo";
             this.Dgv_JugadoresEquipo.ReadOnly = true;
             this.Dgv_JugadoresEquipo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -433,11 +438,12 @@
             this.Dgv_JugadoresEquipo.RowHeadersWidth = 51;
             this.Dgv_JugadoresEquipo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_JugadoresEquipo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_JugadoresEquipo.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_JugadoresEquipo.Size = new System.Drawing.Size(906, 396);
             this.Dgv_JugadoresEquipo.TabIndex = 3;
             // 
             // Tbp_PosicionesCampeonatos
             // 
+            this.Tbp_PosicionesCampeonatos.Controls.Add(this.Btn_Ayuda_Posiciones);
             this.Tbp_PosicionesCampeonatos.Controls.Add(this.Btn_BuscarCampeonato);
             this.Tbp_PosicionesCampeonatos.Controls.Add(this.Lbl_IdCampeonatoPosicion);
             this.Tbp_PosicionesCampeonatos.Controls.Add(this.Txt_IdCampeonatoPosicion);
@@ -445,16 +451,15 @@
             this.Tbp_PosicionesCampeonatos.Controls.Add(this.Dgv_Posiciones);
             this.Tbp_PosicionesCampeonatos.HorizontalScrollbarBarColor = true;
             this.Tbp_PosicionesCampeonatos.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_PosicionesCampeonatos.HorizontalScrollbarSize = 12;
+            this.Tbp_PosicionesCampeonatos.HorizontalScrollbarSize = 10;
             this.Tbp_PosicionesCampeonatos.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_PosicionesCampeonatos.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_PosicionesCampeonatos.Name = "Tbp_PosicionesCampeonatos";
-            this.Tbp_PosicionesCampeonatos.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_PosicionesCampeonatos.Size = new System.Drawing.Size(906, 481);
             this.Tbp_PosicionesCampeonatos.TabIndex = 3;
             this.Tbp_PosicionesCampeonatos.Text = "Tabla de Posiciones por Campeonato";
             this.Tbp_PosicionesCampeonatos.VerticalScrollbarBarColor = true;
             this.Tbp_PosicionesCampeonatos.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_PosicionesCampeonatos.VerticalScrollbarSize = 13;
+            this.Tbp_PosicionesCampeonatos.VerticalScrollbarSize = 10;
             // 
             // Btn_BuscarCampeonato
             // 
@@ -463,10 +468,10 @@
             this.Btn_BuscarCampeonato.FlatAppearance.BorderSize = 0;
             this.Btn_BuscarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_BuscarCampeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_BuscarCampeonato.Location = new System.Drawing.Point(654, 41);
-            this.Btn_BuscarCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_BuscarCampeonato.Location = new System.Drawing.Point(490, 33);
+            this.Btn_BuscarCampeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_BuscarCampeonato.Name = "Btn_BuscarCampeonato";
-            this.Btn_BuscarCampeonato.Size = new System.Drawing.Size(181, 50);
+            this.Btn_BuscarCampeonato.Size = new System.Drawing.Size(136, 41);
             this.Btn_BuscarCampeonato.TabIndex = 27;
             this.Btn_BuscarCampeonato.Text = "Generar Busqueda";
             this.Btn_BuscarCampeonato.UseVisualStyleBackColor = false;
@@ -477,9 +482,10 @@
             this.Lbl_IdCampeonatoPosicion.AutoSize = true;
             this.Lbl_IdCampeonatoPosicion.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_IdCampeonatoPosicion.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_IdCampeonatoPosicion.Location = new System.Drawing.Point(197, 55);
+            this.Lbl_IdCampeonatoPosicion.Location = new System.Drawing.Point(148, 45);
+            this.Lbl_IdCampeonatoPosicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_IdCampeonatoPosicion.Name = "Lbl_IdCampeonatoPosicion";
-            this.Lbl_IdCampeonatoPosicion.Size = new System.Drawing.Size(242, 23);
+            this.Lbl_IdCampeonatoPosicion.Size = new System.Drawing.Size(190, 18);
             this.Lbl_IdCampeonatoPosicion.TabIndex = 25;
             this.Lbl_IdCampeonatoPosicion.Text = "Ingrese el ID del Campeonato";
             // 
@@ -487,10 +493,10 @@
             // 
             this.Txt_IdCampeonatoPosicion.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_IdCampeonatoPosicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_IdCampeonatoPosicion.Location = new System.Drawing.Point(467, 59);
-            this.Txt_IdCampeonatoPosicion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_IdCampeonatoPosicion.Location = new System.Drawing.Point(350, 48);
+            this.Txt_IdCampeonatoPosicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_IdCampeonatoPosicion.Name = "Txt_IdCampeonatoPosicion";
-            this.Txt_IdCampeonatoPosicion.Size = new System.Drawing.Size(157, 15);
+            this.Txt_IdCampeonatoPosicion.Size = new System.Drawing.Size(118, 13);
             this.Txt_IdCampeonatoPosicion.TabIndex = 26;
             // 
             // Btn_ReportePosicionesCampeonato
@@ -500,10 +506,10 @@
             this.Btn_ReportePosicionesCampeonato.FlatAppearance.BorderSize = 0;
             this.Btn_ReportePosicionesCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReportePosicionesCampeonato.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReportePosicionesCampeonato.Location = new System.Drawing.Point(856, 41);
-            this.Btn_ReportePosicionesCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReportePosicionesCampeonato.Location = new System.Drawing.Point(642, 33);
+            this.Btn_ReportePosicionesCampeonato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReportePosicionesCampeonato.Name = "Btn_ReportePosicionesCampeonato";
-            this.Btn_ReportePosicionesCampeonato.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReportePosicionesCampeonato.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReportePosicionesCampeonato.TabIndex = 21;
             this.Btn_ReportePosicionesCampeonato.Text = "Generar Reporte Excel";
             this.Btn_ReportePosicionesCampeonato.UseVisualStyleBackColor = false;
@@ -540,8 +546,7 @@
             this.Dgv_Posiciones.EnableHeadersVisualStyles = false;
             this.Dgv_Posiciones.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Posiciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Posiciones.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_Posiciones.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_Posiciones.Location = new System.Drawing.Point(0, 85);
             this.Dgv_Posiciones.Name = "Dgv_Posiciones";
             this.Dgv_Posiciones.ReadOnly = true;
             this.Dgv_Posiciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -556,25 +561,25 @@
             this.Dgv_Posiciones.RowHeadersWidth = 51;
             this.Dgv_Posiciones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Posiciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Posiciones.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_Posiciones.Size = new System.Drawing.Size(906, 396);
             this.Dgv_Posiciones.TabIndex = 3;
             // 
             // Tbp_ResultadosPartidos
             // 
+            this.Tbp_ResultadosPartidos.Controls.Add(this.Btn_Ayuda_Partidos);
             this.Tbp_ResultadosPartidos.Controls.Add(this.Btn_ReporteResultadosPartidos);
             this.Tbp_ResultadosPartidos.Controls.Add(this.Dgv_Resultados);
             this.Tbp_ResultadosPartidos.HorizontalScrollbarBarColor = true;
             this.Tbp_ResultadosPartidos.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_ResultadosPartidos.HorizontalScrollbarSize = 12;
+            this.Tbp_ResultadosPartidos.HorizontalScrollbarSize = 10;
             this.Tbp_ResultadosPartidos.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_ResultadosPartidos.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_ResultadosPartidos.Name = "Tbp_ResultadosPartidos";
-            this.Tbp_ResultadosPartidos.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_ResultadosPartidos.Size = new System.Drawing.Size(906, 481);
             this.Tbp_ResultadosPartidos.TabIndex = 2;
             this.Tbp_ResultadosPartidos.Text = "Resultados de Partidos";
             this.Tbp_ResultadosPartidos.VerticalScrollbarBarColor = true;
             this.Tbp_ResultadosPartidos.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_ResultadosPartidos.VerticalScrollbarSize = 13;
+            this.Tbp_ResultadosPartidos.VerticalScrollbarSize = 10;
             // 
             // Btn_ReporteResultadosPartidos
             // 
@@ -583,10 +588,10 @@
             this.Btn_ReporteResultadosPartidos.FlatAppearance.BorderSize = 0;
             this.Btn_ReporteResultadosPartidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReporteResultadosPartidos.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReporteResultadosPartidos.Location = new System.Drawing.Point(654, 41);
-            this.Btn_ReporteResultadosPartidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReporteResultadosPartidos.Location = new System.Drawing.Point(490, 33);
+            this.Btn_ReporteResultadosPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReporteResultadosPartidos.Name = "Btn_ReporteResultadosPartidos";
-            this.Btn_ReporteResultadosPartidos.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReporteResultadosPartidos.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReporteResultadosPartidos.TabIndex = 21;
             this.Btn_ReporteResultadosPartidos.Text = "Generar Reporte Excel";
             this.Btn_ReporteResultadosPartidos.UseVisualStyleBackColor = false;
@@ -623,8 +628,7 @@
             this.Dgv_Resultados.EnableHeadersVisualStyles = false;
             this.Dgv_Resultados.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Resultados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Resultados.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_Resultados.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_Resultados.Location = new System.Drawing.Point(0, 85);
             this.Dgv_Resultados.Name = "Dgv_Resultados";
             this.Dgv_Resultados.ReadOnly = true;
             this.Dgv_Resultados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -639,25 +643,25 @@
             this.Dgv_Resultados.RowHeadersWidth = 51;
             this.Dgv_Resultados.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Resultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Resultados.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_Resultados.Size = new System.Drawing.Size(906, 396);
             this.Dgv_Resultados.TabIndex = 3;
             // 
             // Tbp_Suspendidos
             // 
+            this.Tbp_Suspendidos.Controls.Add(this.Btn_Ayuda_Suspendidos);
             this.Tbp_Suspendidos.Controls.Add(this.Btn_ReporteJugadoresSuspendidos);
             this.Tbp_Suspendidos.Controls.Add(this.Dgv_Suspendidos);
             this.Tbp_Suspendidos.HorizontalScrollbarBarColor = true;
             this.Tbp_Suspendidos.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Suspendidos.HorizontalScrollbarSize = 12;
+            this.Tbp_Suspendidos.HorizontalScrollbarSize = 10;
             this.Tbp_Suspendidos.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Suspendidos.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Suspendidos.Name = "Tbp_Suspendidos";
-            this.Tbp_Suspendidos.Size = new System.Drawing.Size(1211, 602);
+            this.Tbp_Suspendidos.Size = new System.Drawing.Size(906, 481);
             this.Tbp_Suspendidos.TabIndex = 1;
             this.Tbp_Suspendidos.Text = "Jugadores Suspendidos";
             this.Tbp_Suspendidos.VerticalScrollbarBarColor = true;
             this.Tbp_Suspendidos.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Suspendidos.VerticalScrollbarSize = 13;
+            this.Tbp_Suspendidos.VerticalScrollbarSize = 10;
             // 
             // Btn_ReporteJugadoresSuspendidos
             // 
@@ -666,10 +670,10 @@
             this.Btn_ReporteJugadoresSuspendidos.FlatAppearance.BorderSize = 0;
             this.Btn_ReporteJugadoresSuspendidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ReporteJugadoresSuspendidos.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReporteJugadoresSuspendidos.Location = new System.Drawing.Point(654, 41);
-            this.Btn_ReporteJugadoresSuspendidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_ReporteJugadoresSuspendidos.Location = new System.Drawing.Point(490, 33);
+            this.Btn_ReporteJugadoresSuspendidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_ReporteJugadoresSuspendidos.Name = "Btn_ReporteJugadoresSuspendidos";
-            this.Btn_ReporteJugadoresSuspendidos.Size = new System.Drawing.Size(181, 50);
+            this.Btn_ReporteJugadoresSuspendidos.Size = new System.Drawing.Size(136, 41);
             this.Btn_ReporteJugadoresSuspendidos.TabIndex = 20;
             this.Btn_ReporteJugadoresSuspendidos.Text = "Generar Reporte Excel";
             this.Btn_ReporteJugadoresSuspendidos.UseVisualStyleBackColor = false;
@@ -706,8 +710,7 @@
             this.Dgv_Suspendidos.EnableHeadersVisualStyles = false;
             this.Dgv_Suspendidos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Suspendidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Suspendidos.Location = new System.Drawing.Point(0, 114);
-            this.Dgv_Suspendidos.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_Suspendidos.Location = new System.Drawing.Point(0, 85);
             this.Dgv_Suspendidos.Name = "Dgv_Suspendidos";
             this.Dgv_Suspendidos.ReadOnly = true;
             this.Dgv_Suspendidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -722,7 +725,7 @@
             this.Dgv_Suspendidos.RowHeadersWidth = 51;
             this.Dgv_Suspendidos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Suspendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Suspendidos.Size = new System.Drawing.Size(1211, 488);
+            this.Dgv_Suspendidos.Size = new System.Drawing.Size(906, 396);
             this.Dgv_Suspendidos.TabIndex = 3;
             // 
             // Sfd_GuardarExcel
@@ -730,15 +733,111 @@
             this.Sfd_GuardarExcel.FileName = "Reporte_";
             this.Sfd_GuardarExcel.Filter = "Excel files (*.xlsx)|.xlsx";
             // 
+            // Btn_Ayuda_ReporteEquipos
+            // 
+            this.Btn_Ayuda_ReporteEquipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ReporteEquipos.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteEquipos.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ReporteEquipos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ReporteEquipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ReporteEquipos.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ReporteEquipos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ReporteEquipos.Image")));
+            this.Btn_Ayuda_ReporteEquipos.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_ReporteEquipos.Name = "Btn_Ayuda_ReporteEquipos";
+            this.Btn_Ayuda_ReporteEquipos.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ReporteEquipos.TabIndex = 30;
+            this.Btn_Ayuda_ReporteEquipos.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Ayuda_ReporteJugador
+            // 
+            this.Btn_Ayuda_ReporteJugador.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ReporteJugador.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteJugador.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ReporteJugador.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ReporteJugador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ReporteJugador.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ReporteJugador.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ReporteJugador.Image")));
+            this.Btn_Ayuda_ReporteJugador.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_ReporteJugador.Name = "Btn_Ayuda_ReporteJugador";
+            this.Btn_Ayuda_ReporteJugador.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ReporteJugador.TabIndex = 30;
+            this.Btn_Ayuda_ReporteJugador.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Ayuda_ReporteJugadorxEquipo
+            // 
+            this.Btn_Ayuda_ReporteJugadorxEquipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ReporteJugadorxEquipo.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ReporteJugadorxEquipo.Image")));
+            this.Btn_Ayuda_ReporteJugadorxEquipo.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_ReporteJugadorxEquipo.Name = "Btn_Ayuda_ReporteJugadorxEquipo";
+            this.Btn_Ayuda_ReporteJugadorxEquipo.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ReporteJugadorxEquipo.TabIndex = 30;
+            this.Btn_Ayuda_ReporteJugadorxEquipo.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Ayuda_Posiciones
+            // 
+            this.Btn_Ayuda_Posiciones.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Posiciones.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Posiciones.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Posiciones.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Posiciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Posiciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Posiciones.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Posiciones.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Posiciones.Image")));
+            this.Btn_Ayuda_Posiciones.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_Posiciones.Name = "Btn_Ayuda_Posiciones";
+            this.Btn_Ayuda_Posiciones.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Posiciones.TabIndex = 28;
+            this.Btn_Ayuda_Posiciones.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Ayuda_Partidos
+            // 
+            this.Btn_Ayuda_Partidos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Partidos.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Partidos.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Partidos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Partidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Partidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Partidos.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Partidos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Partidos.Image")));
+            this.Btn_Ayuda_Partidos.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_Partidos.Name = "Btn_Ayuda_Partidos";
+            this.Btn_Ayuda_Partidos.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Partidos.TabIndex = 28;
+            this.Btn_Ayuda_Partidos.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Ayuda_Suspendidos
+            // 
+            this.Btn_Ayuda_Suspendidos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Suspendidos.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Suspendidos.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Suspendidos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Suspendidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Suspendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Suspendidos.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Suspendidos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Suspendidos.Image")));
+            this.Btn_Ayuda_Suspendidos.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_Suspendidos.Name = "Btn_Ayuda_Suspendidos";
+            this.Btn_Ayuda_Suspendidos.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Suspendidos.TabIndex = 28;
+            this.Btn_Ayuda_Suspendidos.UseVisualStyleBackColor = false;
+            // 
             // FrmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1219, 644);
+            this.ClientSize = new System.Drawing.Size(914, 523);
             this.Controls.Add(this.Tbc_Reportes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmReportes";
             this.Text = "6";
             this.Load += new System.EventHandler(this.FrmReportes_Load);
@@ -793,5 +892,11 @@
         private System.Windows.Forms.Button Btn_BusquedaCampeonato;
         private System.Windows.Forms.Button Btn_Busqueda_Campeonato;
         private System.Windows.Forms.Button Btn_BuscarCampeonato;
+        private System.Windows.Forms.Button Btn_Ayuda_ReporteEquipos;
+        private System.Windows.Forms.Button Btn_Ayuda_ReporteJugador;
+        private System.Windows.Forms.Button Btn_Ayuda_ReporteJugadorxEquipo;
+        private System.Windows.Forms.Button Btn_Ayuda_Posiciones;
+        private System.Windows.Forms.Button Btn_Ayuda_Partidos;
+        private System.Windows.Forms.Button Btn_Ayuda_Suspendidos;
     }
 }
