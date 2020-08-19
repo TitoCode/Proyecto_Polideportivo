@@ -24,7 +24,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                 ID_Entrenador = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
 
-                string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Usuario + "','" + Password + "'," + 2 + ")";
+                string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Usuario + "','" + Password + "'," + 3 + ")";
                 string InsertarEntrenador = "INSERT INTO ENTRENADOR (ID_ENTRENADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_USUARIO_FK, FOTO_ENTRENADOR, ID_ESTADO_ENTRENADOR_FK) VALUES ('"
                     + ID_Entrenador + "','"+ Nombre1 + "','" + Nombre2 + "','" + Apellido1 + "','" + Apellido2 + "','" + FechaNacimiento + "','" + Usuario + "','" + Foto + "', '"+ 1 +"')";
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarUsuario, conexion.conexion());

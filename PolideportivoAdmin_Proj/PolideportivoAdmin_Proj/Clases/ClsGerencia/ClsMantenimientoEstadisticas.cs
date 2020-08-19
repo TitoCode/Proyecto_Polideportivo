@@ -1,34 +1,20 @@
-﻿using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+﻿using DocumentFormat.OpenXml.Drawing;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
-namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
+namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 {
-    public partial class FrmEstadisticas : Form
+    class ClsMantenimientoEstadisticas
     {
-        public FrmEstadisticas()
-        {
-            InitializeComponent();
-        }
-
-        ClsMantenimientoEstadisticas Estadisticas = new ClsMantenimientoEstadisticas();
         ClsConexion conexion = new ClsConexion();
-
-        private void FrmEstadisticas_Load(object sender, EventArgs e)
-        {
-            GraficoBitacora();
-        }
-
-        public void GraficoBitacora()
+        public (ArrayList Usuarios, ArrayList logs) GraficoBitacora()
         {
             ArrayList Usuarios = new ArrayList();
             ArrayList Logs = new ArrayList();
@@ -42,7 +28,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     Usuarios.Add(Lector.GetString(0));
                     Logs.Add(Lector.GetString(1));
                 }
-                Graf_Bitacora.Series[0].Points.DataBindXY(Usuarios, Logs);
+                return (Usuarios, Logs);
             }
             catch (Exception ex)
             {
@@ -51,9 +37,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return (Usuarios, Logs);
             }
-
-            
         }
     }
 }
