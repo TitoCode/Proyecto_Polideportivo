@@ -13,7 +13,11 @@ using PolideportivoAdmin_Proj.Mantenimientos.Gerencia;
 using PolideportivoAdmin_Proj.Clases;
 using PolideportivoAdmin_Proj.Clases.ClsUsuario;
 using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
+<<<<<<< HEAD
 using System.Data.Odbc;
+=======
+
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 {
@@ -25,8 +29,12 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
 
         ClsBitacora Bitacora = new ClsBitacora();
+<<<<<<< HEAD
         ClsConexion conexion = new ClsConexion();
          
+=======
+
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
         string UsuarioActivo = null;
         int TipoProceso;
         string SenSql1 = null;

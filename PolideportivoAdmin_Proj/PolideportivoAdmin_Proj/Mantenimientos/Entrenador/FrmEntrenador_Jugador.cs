@@ -24,6 +24,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             
         }
 
+<<<<<<< HEAD
         ClsBitacora Bitacora = new ClsBitacora();
         string UsuarioActivo = null;
         int TipoProceso = 0;
@@ -42,6 +43,16 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         {
 
         }
+=======
+        ClsJugador Jugador = new ClsJugador();
+        ClsMantenimientosJugador Entrenador = new ClsMantenimientosJugador();
+        ClsConexion conexion = new ClsConexion();
+        ClsBitacora Bitacora = new ClsBitacora();
+
+        string UsuarioActivo = null;
+        int TipoProceso = 0;
+        string SenSql1 = null;
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
 
         private void Btn_Fotografia_Click_1(object sender, EventArgs e)
         {
@@ -71,6 +82,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Ingresar_Jugador_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 10;
             SenSql1 = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_EQUIPO_FK, FOTO_JUGADOR, ID_POSICION_FK, ID_ESTADO_JUGADOR_FK) VALUES ("+
@@ -78,6 +90,16 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
             
+=======
+
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 10;
+            SenSql1 = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, FECHA_NACIMIENTO, ID_EQUIPO_FK, FOTO_JUGADOR, ID_POSICION_FK, ID_ESTADO_JUGADOR_FK) VALUES (" +
+                     " ID_Jugador + , + Nombre1 + , + Nombre2 + , + Apellido1 + , + Apellido2 + , + FechaNacimiento + , + ClsDatos.EquipoId + , + Foto + , + Posicion + , + 1 + )";
+
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             MemoryStream ms = new MemoryStream();
             Ptb_Foto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
@@ -98,6 +120,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Modificar_Jugador_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 11;
             SenSql1 = "UPDATE JUGADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 "+
@@ -105,6 +128,15 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
                                            "WHERE ID_JUGADOR= + ID_Jugador + ";
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
           
+=======
+
+            UsuarioActivo = ClsDatos.UserId;
+            TipoProceso = 11;
+            SenSql1 = "UPDATE JUGADOR SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 " +
+                                          ", APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 " +
+                                           "WHERE ID_JUGADOR= + ID_Jugador + ";
+            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
 
             Entrenador.ModificarJugador(Txt_Modificar_Id.Text, Txt_Modificar_Nombre1.Text, Txt_Modificar_Nombre2.Text, Txt_Modificar_Apellido1.Text, Txt_Modificar_Apellido2.Text);
         }
@@ -122,13 +154,20 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
 
         private void Btn_Eliminar_Jugador_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 12;
             SenSql1 = "UPDATE JUGADOR SET ID_ESTADO_JUGADOR_FK =  + 3 +  WHERE ID_JUGADOR=  + Id_Jugador + ";
 
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             Entrenador.EliminarJugador(Txt_Eliminar_Id.Text);
         }
         private void DatosCbx_Posicion()

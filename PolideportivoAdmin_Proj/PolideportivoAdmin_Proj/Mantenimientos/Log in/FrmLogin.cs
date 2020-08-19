@@ -40,7 +40,7 @@ namespace PolideportivoAdmin_Proj
             int TipoUsuario;
             if (TxtUsuario.Text == "" || TxtPassword.Text == "")
             {
-                MessageBox.Show("No se han completado los campos", "PRECAUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -97,8 +97,8 @@ namespace PolideportivoAdmin_Proj
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
                     Logeo.IDEquipoEntrenador(TxtUsuario.Text);
                     FrmEntrenador Formulario = new FrmEntrenador();
-                    //Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
-                    //Formulario.Lbl_Puesto.Text = "Gerente Administrativo";
+                    Formulario.Lbl_Usuario.Text = TxtUsuario.Text;
+                    Formulario.Lbl_Puesto.Text = "Entrenador";
                     TxtUsuario.Clear();
                     TxtPassword.Clear();
                     BtnIngreso.Focus();
@@ -117,7 +117,11 @@ namespace PolideportivoAdmin_Proj
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
+<<<<<<< HEAD
                     MessageBox.Show("Usuario o Contraseña Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+=======
+                    MessageBox.Show("ERROR: Usuario Inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
                     TxtPassword.Clear();
                     TxtUsuario.Focus();
                 }
@@ -132,10 +136,13 @@ namespace PolideportivoAdmin_Proj
                     SenSql1 = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO =  + Usuario +  AND PASSWORD =  + Password +  ;";
                     Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
+<<<<<<< HEAD
                     MessageBox.Show("Usuario no registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+=======
+                    MessageBox.Show("ADVERTENCIA: Usuario o contraseña incorrectos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
                     TxtPassword.Clear();
-                    TxtUsuario.Clear();
-                    TxtUsuario.Focus();
+                    TxtPassword.Focus();
                 }
 
                 if (TipoUsuario == 0)
@@ -153,6 +160,11 @@ namespace PolideportivoAdmin_Proj
                 }
 
             }                            
+        }
+
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }   
 }

@@ -46,24 +46,40 @@
             // 
             this.Lbl_Hora.AutoSize = true;
             this.Lbl_Hora.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.Lbl_Hora.Font = new System.Drawing.Font("Century Gothic", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Lbl_Hora.Location = new System.Drawing.Point(327, 387);
             this.Lbl_Hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Hora.Name = "Lbl_Hora";
             this.Lbl_Hora.Size = new System.Drawing.Size(0, 161);
+=======
+            this.Lbl_Hora.Font = new System.Drawing.Font("Times New Roman", 80.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Hora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Lbl_Hora.Location = new System.Drawing.Point(245, 314);
+            this.Lbl_Hora.Name = "Lbl_Hora";
+            this.Lbl_Hora.Size = new System.Drawing.Size(0, 122);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Lbl_Hora.TabIndex = 36;
             // 
             // Lbl_Fecha
             // 
             this.Lbl_Fecha.AutoSize = true;
             this.Lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.Lbl_Fecha.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.Lbl_Fecha.Location = new System.Drawing.Point(313, 536);
             this.Lbl_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Fecha.Name = "Lbl_Fecha";
             this.Lbl_Fecha.Size = new System.Drawing.Size(0, 51);
+=======
+            this.Lbl_Fecha.Font = new System.Drawing.Font("Times New Roman", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Fecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Lbl_Fecha.Location = new System.Drawing.Point(274, 435);
+            this.Lbl_Fecha.Name = "Lbl_Fecha";
+            this.Lbl_Fecha.Size = new System.Drawing.Size(0, 37);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Lbl_Fecha.TabIndex = 37;
             // 
             // Ptb_Logo

@@ -446,7 +446,11 @@
             this.Tbc_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Entrenador.Name = "Tbc_Entrenador";
             this.Tbc_Entrenador.SelectedIndex = 3;
+<<<<<<< HEAD
             this.Tbc_Entrenador.Size = new System.Drawing.Size(1219, 644);
+=======
+            this.Tbc_Entrenador.Size = new System.Drawing.Size(914, 523);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Tbc_Entrenador.TabIndex = 3;
             this.Tbc_Entrenador.UseSelectable = true;
             // 
@@ -629,10 +633,16 @@
             this.Btn_Fotografia.FlatAppearance.BorderSize = 0;
             this.Btn_Fotografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Fotografia.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.Btn_Fotografia.Location = new System.Drawing.Point(344, 432);
             this.Btn_Fotografia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Fotografia.Name = "Btn_Fotografia";
             this.Btn_Fotografia.Size = new System.Drawing.Size(199, 38);
+=======
+            this.Btn_Fotografia.Location = new System.Drawing.Point(258, 351);
+            this.Btn_Fotografia.Name = "Btn_Fotografia";
+            this.Btn_Fotografia.Size = new System.Drawing.Size(149, 31);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Btn_Fotografia.TabIndex = 52;
             this.Btn_Fotografia.Text = "SELECCIONAR";
             this.Btn_Fotografia.UseVisualStyleBackColor = false;
@@ -845,10 +855,16 @@
             this.Btn_CambiarFoto.FlatAppearance.BorderSize = 0;
             this.Btn_CambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_CambiarFoto.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.Btn_CambiarFoto.Location = new System.Drawing.Point(344, 432);
             this.Btn_CambiarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_CambiarFoto.Name = "Btn_CambiarFoto";
             this.Btn_CambiarFoto.Size = new System.Drawing.Size(199, 38);
+=======
+            this.Btn_CambiarFoto.Location = new System.Drawing.Point(258, 351);
+            this.Btn_CambiarFoto.Name = "Btn_CambiarFoto";
+            this.Btn_CambiarFoto.Size = new System.Drawing.Size(149, 31);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Btn_CambiarFoto.TabIndex = 52;
             this.Btn_CambiarFoto.Text = "SELECCIONAR";
             this.Btn_CambiarFoto.UseVisualStyleBackColor = false;

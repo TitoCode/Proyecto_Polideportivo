@@ -38,11 +38,16 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             DatosCmb_TipoUsuarioModificar();
+<<<<<<< HEAD
+=======
+            Ingreso.ListadoEmpleados(Dgw_Listado);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             
         }
 
         private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
             Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
             Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
@@ -59,6 +64,29 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Dtp_FechaContrato_Modificar.Text = Empleado.FechaContrato;
             Txt_Password_Modificar.Text = Empleado.Pasword;
             Cmb_TipoUsuario_Modificar.Text = Empleado.TipoUsuario;
+=======
+            if (Txt_Busqueda_Modificar.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
+                Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
+                Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
+                Txt_Apellido1_Modificar.Text = Empleado.Apellido1;
+                Txt_Apellido2_Modificar.Text = Empleado.Apellido2;
+                Txt_Email_Modificar.Text = Empleado.Email;
+                Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
+                Txt_Direccion_Modificar.Text = Empleado.Direccion;
+                Txt_Telefono_Modificar.Text = Empleado.Telefono;
+                Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
+                Txt_NIT_Modificar.Text = Empleado.NIT;
+                Txt_DPI_Modificar.Text = Empleado.DPI;
+                Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
+                Dtp_FechaContrato_Modificar.Text = Empleado.FechaContrato;
+                Txt_Password_Modificar.Text = Empleado.Pasword;
+                Cmb_TipoUsuario_Modificar.Text = Empleado.TipoUsuario;
+                Btn_Modificar.Enabled = true;
+            }
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
         }
 
         public void DatosCmb_TipoPuestoIngreso()
@@ -188,6 +216,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
 
         private void Btn_Ingreso_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 3;
@@ -202,12 +231,32 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             int TipoUsuario, TipoPuesto;
             TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
             TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
+=======
+            if (Txt_Nombre1_Ingreso.Text == "" || Txt_Apellido1_Ingreso.Text == "" || Txt_Telefono_Ingreso.Text == "" || Txt_Email_Ingreso.Text == "" || Txt_Nombre2_Ingreso.Text == "" || Txt_Apellido2_Ingreso.Text == "" || Txt_Direccion_Ingreso.Text == "" || Txt_DPI_Ingreso.Text == "" || Txt_NIT_Ingreso.Text == "" || Txt_Usuario_Ingreso.Text == "" || Txt_Password_Ingreso.Text == "" || Cmb_TipoUsuario_Ingreso.SelectedItem == null || Cmb_TipoPuesto_Ingreso == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 3;
+                SenSql1 = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ( + Usuario + , + Password + , + TipoUsuario + )";
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
 
-            Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
+                SenSql2 = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, TELEFONO, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO, ID_ESTADO_EMPLEADO_FK) VALUES ( + ID_Empleado + , + Nombre1 + , + Nombre2 + , + Apellido1 " +
+                    ", + Apellido2 + , + Email + , + TipoPuesto + , + Direccion + ,  + Telefono + ,  + FechaNacimiento + , + NIT + , + DPI + , + Usuario + , + FechaContrato + , + 1 + )";
+
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
+
+                int TipoUsuario, TipoPuesto;
+                TipoUsuario = Cmb_TipoUsuario_Ingreso.SelectedIndex + 1;
+                TipoPuesto = Cmb_TipoPuesto_Ingreso.SelectedIndex + 1;
+
+                Ingreso.IngresoEmpleado(Txt_Usuario_Ingreso.Text, Txt_Password_Ingreso.Text, TipoUsuario, Txt_Nombre1_Ingreso.Text, Txt_Nombre2_Ingreso.Text, Txt_Apellido1_Ingreso.Text, Txt_Apellido2_Ingreso.Text, Txt_Email_Ingreso.Text, TipoPuesto, Txt_Direccion_Ingreso.Text, Txt_Telefono_Ingreso.Text, Dtp_FechaNacimiento_Ingreso.Value.ToString(), Txt_NIT_Ingreso.Text, Txt_DPI_Ingreso.Text, Dtp_FechaContrato_Ingreso.Value.ToString());
+            }
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             UsuarioActivo = ClsDatos.UserId;
             TipoProceso = 1;
@@ -222,10 +271,30 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
             int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
             Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
+=======
+            if (Txt_Nombre1_Modificar.Text == "" || Txt_Apellido1_Modificar.Text == "" || Txt_Telefono_Modificar.Text == "" || Txt_Email_Modificar.Text == "" || Txt_Nombre2_Modificar.Text == "" || Txt_Apellido2_Modificar.Text == "" || Txt_Direccion_Modificar.Text == "" || Txt_DPI_Modificar.Text == "" || Txt_NIT_Modificar.Text == "" || Txt_Usuario_Modificar.Text == "" || Txt_Password_Modificar.Text == "" || Cmb_TipoUsuario_Modificar.SelectedItem == null || Cmb_TipoPuesto_Modificar == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 1;
+                SenSql1 = "UPDATE EMPLEADO SET NOMBRE1= + Nombre1 + , NOMBRE2= + Nombre2 + , " +
+                    "APELLIDO1= + Apellido1 + , APELLIDO2= + Apellido2 + , CORREO= + Email +, DIRECCION= + Direccion + , TELEFONO = + Telefono + " +
+                    " WHERE ID_EMPLEADO= + ID_Empleado + ";
+
+                SenSql2 = "UPDATE USUARIO SET ID_USUARIO = + Usuario + , PASSWORD= + Password + WHERE ID_USUARIO= + Usuario + ";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
+
+                int ID_Empleado = Convert.ToInt32(Txt_Busqueda_Modificar.Text);
+                int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
+                Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
+            }
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
         }
 
         private void Btn_Busqueda_Eliminar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Eliminar.Text);
             Txt_Nombre1_Eliminar.Text = Empleado.Nombre1;
             Txt_Nombre2_Eliminar.Text = Empleado.Nombre2;
@@ -242,6 +311,29 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Dtp_FechaContrato_Eliminar.Text = Empleado.FechaContrato;
             Txt_Password_Eliminar.Text = Empleado.Pasword;
             Cmb_TipoUsuario_Eliminar.Text = Empleado.TipoUsuario;
+=======
+            if (Txt_Busqueda_Eliminar.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Eliminar.Text);
+                Txt_Nombre1_Eliminar.Text = Empleado.Nombre1;
+                Txt_Nombre2_Eliminar.Text = Empleado.Nombre2;
+                Txt_Apellido1_Eliminar.Text = Empleado.Apellido1;
+                Txt_Apellido2_Eliminar.Text = Empleado.Apellido2;
+                Txt_Email_Eliminar.Text = Empleado.Email;
+                Cmb_TipoPuesto_Eliminar.Text = Empleado.TipoPuesto;
+                Txt_Direccion_Eliminar.Text = Empleado.Direccion;
+                Txt_Telefono_Eliminar.Text = Empleado.Telefono;
+                Dtp_FechaNacimiento_Eliminar.Text = Empleado.FechaNacimiento;//
+                Txt_NIT_Eliminar.Text = Empleado.NIT;
+                Txt_DPI_Eliminar.Text = Empleado.DPI;
+                Txt_Usuario_Eliminar.Text = Empleado.ID_Usuario;
+                Dtp_FechaContrato_Eliminar.Text = Empleado.FechaContrato;
+                Txt_Password_Eliminar.Text = Empleado.Pasword;
+                Cmb_TipoUsuario_Eliminar.Text = Empleado.TipoUsuario;
+                Btn_Eliminar.Enabled = true;
+            }
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -257,6 +349,14 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
         }
 
-        
+        private void numero(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Numeros(e);
+        }
+        private void letra(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Letras(e);
+        }
+
     }
 }

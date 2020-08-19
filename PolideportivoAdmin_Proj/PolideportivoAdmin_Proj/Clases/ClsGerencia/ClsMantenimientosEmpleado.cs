@@ -1,6 +1,7 @@
 ﻿using PolideportivoAdmin_Proj.Clases.ClsBaseDeDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.IO;
@@ -178,25 +179,26 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        public void ActualizarPerfil(string Usuario, string Password, byte[] Foto)
+        public void ActualizarPerfil(string Usuario, string Password, byte [] Foto)
         {
             
             try
             {
+                
+                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA = @Imagen WHERE ID_USUARIO_FK ='" + ClsDatos.UserId + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO = '" + Usuario + "', PASSWORD='" + Password +
+                                          "' WHERE ID_USUARIO='" + ClsDatos.UserId + "'";
 
-                string CambiarFoto = "UPDATE EMPLEADO SET FOTOGRAFIA ='"+ Foto +"' WHERE ID_USUARIO_FK='" + Usuario + "'";
-                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
-                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+                OdbcCommand Query_UPDATE2 = new OdbcCommand(CambiarFoto, conexion.conexion());
 
-                OdbcCommand Query_UPDATE1 = new OdbcCommand(CambiarFoto, conexion.conexion());
-                OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
+                Query_UPDATE2.Parameters.Add(new OdbcParameter("@Imagen", Foto));
 
                 Query_UPDATE1.ExecuteNonQuery();
                 Query_UPDATE2.ExecuteNonQuery();
 
                 MessageBox.Show("Modificación Exitosa", "FORMULARIO EMPLEADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                
+  
 
             }
             catch (Exception ex)
@@ -214,7 +216,35 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        
+        public void ListadoEmpleados(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarEmpleados = "SELECT ID_EMPLEADO, NOMBRE1 'PRIMER NOMBRE', NOMBRE2 'SEGUNDO NOMBRE', APELLIDO1 'PRIMER APELLIDO', APELLIDO2 'SEGUNDO APELLIDO', CORREO 'CORREO ELECTRONICO', TELEFONO FROM EMPLEADO";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
 
     }
 }

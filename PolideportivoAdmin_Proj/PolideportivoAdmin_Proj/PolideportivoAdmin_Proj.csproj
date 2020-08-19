@@ -72,8 +72,10 @@
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
+    <Compile Include="Clases\ClsUsuario\ClsMantenimientoBitacora.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
+    <Compile Include="Clases\ClsValidarKeyPress.cs" />
     <Compile Include="Mantenimientos\Administración\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,17 +118,41 @@
     <Compile Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.Designer.cs">
       <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEquipoEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmEquipoEntrenador.Designer.cs">
+      <DependentUpon>FrmEquipoEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.Designer.cs">
+      <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmBitacora.Designer.cs">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmEmpleados.Designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Gerencia\FrmEstadisticas.Designer.cs">
+      <DependentUpon>FrmEstadisticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmGerencia.cs">
       <SubType>Form</SubType>
@@ -139,12 +165,6 @@
     </Compile>
     <Compile Include="Mantenimientos\Gerencia\FrmReportes.Designer.cs">
       <DependentUpon>FrmReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\Gerencia\FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\Gerencia\FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Log in\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -175,20 +195,29 @@
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador_Jugador.resx">
       <DependentUpon>FrmEntrenador_Jugador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEquipoEntrenador.resx">
+      <DependentUpon>FrmEquipoEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.resx">
+      <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmBitacora.resx">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmEstadisticas.resx">
+      <DependentUpon>FrmEstadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmGerencia.resx">
       <DependentUpon>FrmGerencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Gerencia\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\Gerencia\FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Log in\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

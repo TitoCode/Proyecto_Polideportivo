@@ -33,11 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_Empleados = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_ListadoEmpleado = new MetroFramework.Controls.MetroTabPage();
-            this.Ttx_Busqueda_Listado = new MetroFramework.Controls.MetroTextBox();
             this.Dgw_Listado = new MetroFramework.Controls.MetroGrid();
-            this.ID_EMPLEADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
             this.Gpb_Usuario_Ingreso = new System.Windows.Forms.GroupBox();
             this.Cmb_TipoUsuario_Ingreso = new System.Windows.Forms.ComboBox();
@@ -174,14 +170,20 @@
             this.Tbc_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
+<<<<<<< HEAD
             this.Tbc_Empleados.SelectedIndex = 3;
             this.Tbc_Empleados.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Empleados.TabIndex = 22;
+=======
+            this.Tbc_Empleados.SelectedIndex = 0;
+            this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
+            this.Tbc_Empleados.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Tbc_Empleados.TabIndex = 1;
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Tbc_Empleados.UseSelectable = true;
             // 
             // Tbp_ListadoEmpleado
             // 
-            this.Tbp_ListadoEmpleado.Controls.Add(this.Ttx_Busqueda_Listado);
             this.Tbp_ListadoEmpleado.Controls.Add(this.Dgw_Listado);
             this.Tbp_ListadoEmpleado.HorizontalScrollbarBarColor = true;
             this.Tbp_ListadoEmpleado.HorizontalScrollbarHighlightOnWheel = false;
@@ -196,6 +198,7 @@
             this.Tbp_ListadoEmpleado.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_ListadoEmpleado.VerticalScrollbarSize = 13;
             // 
+<<<<<<< HEAD
             // Ttx_Busqueda_Listado
             // 
             // 
@@ -228,31 +231,31 @@
             this.Ttx_Busqueda_Listado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Ttx_Busqueda_Listado.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+=======
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             // Dgw_Listado
             // 
+            this.Dgw_Listado.AllowUserToAddRows = false;
+            this.Dgw_Listado.AllowUserToDeleteRows = false;
             this.Dgw_Listado.AllowUserToResizeRows = false;
             this.Dgw_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Dgw_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgw_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgw_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgw_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgw_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_EMPLEADO,
-            this.Nombre,
-            this.Nombre2});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle2;
@@ -260,45 +263,35 @@
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.Dgw_Listado.Location = new System.Drawing.Point(0, 101);
             this.Dgw_Listado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.Dgw_Listado.Location = new System.Drawing.Point(0, 3);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dgw_Listado.Name = "Dgw_Listado";
+            this.Dgw_Listado.ReadOnly = true;
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgw_Listado.RowHeadersVisible = false;
             this.Dgw_Listado.RowHeadersWidth = 51;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+<<<<<<< HEAD
             this.Dgw_Listado.Size = new System.Drawing.Size(1211, 501);
             this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Blue;
+=======
+            this.Dgw_Listado.Size = new System.Drawing.Size(906, 478);
+            this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Silver;
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dgw_Listado.TabIndex = 2;
-            // 
-            // ID_EMPLEADO
-            // 
-            this.ID_EMPLEADO.HeaderText = "Column1";
-            this.ID_EMPLEADO.MinimumWidth = 6;
-            this.ID_EMPLEADO.Name = "ID_EMPLEADO";
-            this.ID_EMPLEADO.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Column1";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Nombre2
-            // 
-            this.Nombre2.HeaderText = "Column1";
-            this.Nombre2.MinimumWidth = 6;
-            this.Nombre2.Name = "Nombre2";
-            this.Nombre2.Width = 125;
             // 
             // Tbp_Ingreso
             // 
@@ -446,9 +439,14 @@
             this.Dtp_FechaContrato_Ingreso.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.Dtp_FechaContrato_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+<<<<<<< HEAD
             this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(400, 385);
             this.Dtp_FechaContrato_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+=======
+            this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(300, 313);
+            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dtp_FechaContrato_Ingreso.Name = "Dtp_FechaContrato_Ingreso";
             this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(307, 26);
             this.Dtp_FechaContrato_Ingreso.TabIndex = 49;
@@ -459,9 +457,14 @@
             this.Dtp_FechaNacimiento_Ingreso.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+<<<<<<< HEAD
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(12, 321);
             this.Dtp_FechaNacimiento_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+=======
+            this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(9, 261);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(307, 26);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -498,6 +501,7 @@
             this.Txt_DPI_Ingreso.Name = "Txt_DPI_Ingreso";
             this.Txt_DPI_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_DPI_Ingreso.TabIndex = 44;
+            this.Txt_DPI_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Ingreso
             // 
@@ -530,6 +534,7 @@
             this.Txt_NIT_Ingreso.Name = "Txt_NIT_Ingreso";
             this.Txt_NIT_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_NIT_Ingreso.TabIndex = 42;
+            this.Txt_NIT_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Ingreso
             // 
@@ -615,6 +620,7 @@
             this.Txt_Nombre1_Ingreso.Name = "Txt_Nombre1_Ingreso";
             this.Txt_Nombre1_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre1_Ingreso.TabIndex = 28;
+            this.Txt_Nombre1_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Ingreso
             // 
@@ -647,6 +653,7 @@
             this.Txt_Telefono_Ingreso.Name = "Txt_Telefono_Ingreso";
             this.Txt_Telefono_Ingreso.Size = new System.Drawing.Size(164, 19);
             this.Txt_Telefono_Ingreso.TabIndex = 32;
+            this.Txt_Telefono_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Ingreso
             // 
@@ -668,6 +675,7 @@
             this.Txt_Apellido2_Ingreso.Name = "Txt_Apellido2_Ingreso";
             this.Txt_Apellido2_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido2_Ingreso.TabIndex = 31;
+            this.Txt_Apellido2_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Ingreso
             // 
@@ -689,6 +697,7 @@
             this.Txt_Apellido1_Ingreso.Name = "Txt_Apellido1_Ingreso";
             this.Txt_Apellido1_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido1_Ingreso.TabIndex = 30;
+            this.Txt_Apellido1_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Ingreso
             // 
@@ -699,6 +708,7 @@
             this.Txt_Nombre2_Ingreso.Name = "Txt_Nombre2_Ingreso";
             this.Txt_Nombre2_Ingreso.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre2_Ingreso.TabIndex = 29;
+            this.Txt_Nombre2_Ingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo2
             // 
@@ -778,6 +788,7 @@
             this.Txt_Busqueda_Modificar.Name = "Txt_Busqueda_Modificar";
             this.Txt_Busqueda_Modificar.Size = new System.Drawing.Size(417, 15);
             this.Txt_Busqueda_Modificar.TabIndex = 29;
+            this.Txt_Busqueda_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Gpb_Usuario_Modificar
             // 
@@ -960,6 +971,7 @@
             this.Txt_DPI_Modificar.Name = "Txt_DPI_Modificar";
             this.Txt_DPI_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_DPI_Modificar.TabIndex = 44;
+            this.Txt_DPI_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Modificar
             // 
@@ -994,6 +1006,7 @@
             this.Txt_NIT_Modificar.Name = "Txt_NIT_Modificar";
             this.Txt_NIT_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_NIT_Modificar.TabIndex = 42;
+            this.Txt_NIT_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Modificar
             // 
@@ -1081,6 +1094,7 @@
             this.Txt_Nombre1_Modificar.Name = "Txt_Nombre1_Modificar";
             this.Txt_Nombre1_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre1_Modificar.TabIndex = 28;
+            this.Txt_Nombre1_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Modificar
             // 
@@ -1113,6 +1127,7 @@
             this.Txt_Telefono_Modificar.Name = "Txt_Telefono_Modificar";
             this.Txt_Telefono_Modificar.Size = new System.Drawing.Size(164, 19);
             this.Txt_Telefono_Modificar.TabIndex = 32;
+            this.Txt_Telefono_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Modificar
             // 
@@ -1134,6 +1149,7 @@
             this.Txt_Apellido2_Modificar.Name = "Txt_Apellido2_Modificar";
             this.Txt_Apellido2_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido2_Modificar.TabIndex = 31;
+            this.Txt_Apellido2_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Modificar
             // 
@@ -1155,6 +1171,7 @@
             this.Txt_Apellido1_Modificar.Name = "Txt_Apellido1_Modificar";
             this.Txt_Apellido1_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido1_Modificar.TabIndex = 30;
+            this.Txt_Apellido1_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Modificar
             // 
@@ -1165,6 +1182,7 @@
             this.Txt_Nombre2_Modificar.Name = "Txt_Nombre2_Modificar";
             this.Txt_Nombre2_Modificar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre2_Modificar.TabIndex = 29;
+            this.Txt_Nombre2_Modificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo3
             // 
@@ -1196,6 +1214,7 @@
             // Btn_Modificar
             // 
             this.Btn_Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar.Enabled = false;
             this.Btn_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Modificar.FlatAppearance.BorderSize = 0;
             this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1233,6 +1252,7 @@
             // Btn_Eliminar
             // 
             this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Eliminar.Enabled = false;
             this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
             this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1358,6 +1378,7 @@
             this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
             this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(417, 15);
             this.Txt_Busqueda_Eliminar.TabIndex = 30;
+            this.Txt_Busqueda_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Gpb_Datos_Eliminar
             // 
@@ -1402,9 +1423,14 @@
             this.Dtp_FechaContrato_Eliminar.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.Dtp_FechaContrato_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+<<<<<<< HEAD
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(400, 385);
             this.Dtp_FechaContrato_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
+=======
+            this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(300, 313);
+            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
             this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaContrato_Eliminar.TabIndex = 49;
@@ -1416,9 +1442,14 @@
             this.Dtp_FechaNacimiento_Eliminar.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.Dtp_FechaNacimiento_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+<<<<<<< HEAD
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(12, 321);
             this.Dtp_FechaNacimiento_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
+=======
+            this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(9, 261);
+            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
+>>>>>>> e136fe018706aa0e462393dbea001106e8bfa1cd
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
             this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaNacimiento_Eliminar.TabIndex = 48;
@@ -1457,6 +1488,7 @@
             this.Txt_DPI_Eliminar.Name = "Txt_DPI_Eliminar";
             this.Txt_DPI_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_DPI_Eliminar.TabIndex = 44;
+            this.Txt_DPI_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Telefono_Eliminar
             // 
@@ -1492,6 +1524,7 @@
             this.Txt_NIT_Eliminar.Name = "Txt_NIT_Eliminar";
             this.Txt_NIT_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_NIT_Eliminar.TabIndex = 42;
+            this.Txt_NIT_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Direccion_Eliminar
             // 
@@ -1585,6 +1618,7 @@
             this.Txt_Nombre1_Eliminar.Name = "Txt_Nombre1_Eliminar";
             this.Txt_Nombre1_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre1_Eliminar.TabIndex = 28;
+            this.Txt_Nombre1_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Eliminar
             // 
@@ -1620,6 +1654,7 @@
             this.Txt_Telefono_Eliminar.Name = "Txt_Telefono_Eliminar";
             this.Txt_Telefono_Eliminar.Size = new System.Drawing.Size(164, 19);
             this.Txt_Telefono_Eliminar.TabIndex = 32;
+            this.Txt_Telefono_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Lbl_Apellido1_Eliminar
             // 
@@ -1643,6 +1678,7 @@
             this.Txt_Apellido2_Eliminar.Name = "Txt_Apellido2_Eliminar";
             this.Txt_Apellido2_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido2_Eliminar.TabIndex = 31;
+            this.Txt_Apellido2_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Apellido2_Eliminar
             // 
@@ -1666,6 +1702,7 @@
             this.Txt_Apellido1_Eliminar.Name = "Txt_Apellido1_Eliminar";
             this.Txt_Apellido1_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Apellido1_Eliminar.TabIndex = 30;
+            this.Txt_Apellido1_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Nombre2_Eliminar
             // 
@@ -1677,6 +1714,7 @@
             this.Txt_Nombre2_Eliminar.Name = "Txt_Nombre2_Eliminar";
             this.Txt_Nombre2_Eliminar.Size = new System.Drawing.Size(308, 19);
             this.Txt_Nombre2_Eliminar.TabIndex = 29;
+            this.Txt_Nombre2_Eliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo4
             // 
@@ -1731,11 +1769,7 @@
 
         private MetroFramework.Controls.MetroTabControl Tbc_Empleados;
         private MetroFramework.Controls.MetroTabPage Tbp_ListadoEmpleado;
-        private MetroFramework.Controls.MetroTextBox Ttx_Busqueda_Listado;
         private MetroFramework.Controls.MetroGrid Dgw_Listado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_EMPLEADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre2;
         private MetroFramework.Controls.MetroTabPage Tbp_Ingreso;
         private System.Windows.Forms.GroupBox Gpb_Usuario_Ingreso;
         private System.Windows.Forms.ComboBox Cmb_TipoUsuario_Ingreso;
