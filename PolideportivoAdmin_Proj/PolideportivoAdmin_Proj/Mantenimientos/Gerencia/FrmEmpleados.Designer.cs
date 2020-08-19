@@ -112,7 +112,6 @@
             this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Btn_Busqueda_Eliminar = new System.Windows.Forms.Button();
             this.Gpb_Usuario_Eliminar = new System.Windows.Forms.GroupBox();
-            this.Cmb_TipoUsuario_Eliminar = new System.Windows.Forms.ComboBox();
             this.Lbl_Usuario_Eliminar = new System.Windows.Forms.Label();
             this.Lbl_Password_Eliminar = new System.Windows.Forms.Label();
             this.Txt_Usuario_Eliminar = new System.Windows.Forms.TextBox();
@@ -123,7 +122,6 @@
             this.Dtp_FechaContrato_Eliminar = new MetroFramework.Controls.MetroDateTime();
             this.Dtp_FechaNacimiento_Eliminar = new MetroFramework.Controls.MetroDateTime();
             this.Lbl_FechaContrato_Eliminar = new System.Windows.Forms.Label();
-            this.Cmb_TipoPuesto_Eliminar = new System.Windows.Forms.ComboBox();
             this.Txt_DPI_Eliminar = new System.Windows.Forms.TextBox();
             this.Lbl_Telefono_Eliminar = new System.Windows.Forms.Label();
             this.Lbl_TipoPuesto_Eliminar = new System.Windows.Forms.Label();
@@ -145,6 +143,8 @@
             this.Txt_Apellido1_Eliminar = new System.Windows.Forms.TextBox();
             this.Txt_Nombre2_Eliminar = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo4 = new System.Windows.Forms.Label();
+            this.Txt_Eliminar_TipoUsuario = new System.Windows.Forms.TextBox();
+            this.Txt_Eliminar_TipoPuesto = new System.Windows.Forms.TextBox();
             this.Tbc_Empleados.SuspendLayout();
             this.Tbp_ListadoEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -169,7 +169,7 @@
             this.Tbc_Empleados.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
-            this.Tbc_Empleados.SelectedIndex = 0;
+            this.Tbc_Empleados.SelectedIndex = 3;
             this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Empleados.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tbc_Empleados.TabIndex = 1;
@@ -384,7 +384,7 @@
             this.Dtp_FechaContrato_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Ingreso.Name = "Dtp_FechaContrato_Ingreso";
             this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Ingreso.TabIndex = 49;
@@ -396,7 +396,7 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -748,7 +748,6 @@
             // 
             // Cmb_TipoUsuario_Modificar
             // 
-            this.Cmb_TipoUsuario_Modificar.Enabled = false;
             this.Cmb_TipoUsuario_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoUsuario_Modificar.FormattingEnabled = true;
             this.Cmb_TipoUsuario_Modificar.Location = new System.Drawing.Point(23, 153);
@@ -854,7 +853,7 @@
             this.Dtp_FechaContrato_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
             this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
@@ -867,7 +866,7 @@
             this.Dtp_FechaNacimiento_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
             this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
@@ -1229,7 +1228,7 @@
             // Gpb_Usuario_Eliminar
             // 
             this.Gpb_Usuario_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gpb_Usuario_Eliminar.Controls.Add(this.Cmb_TipoUsuario_Eliminar);
+            this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Eliminar_TipoUsuario);
             this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Usuario_Eliminar);
             this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_Password_Eliminar);
             this.Gpb_Usuario_Eliminar.Controls.Add(this.Txt_Usuario_Eliminar);
@@ -1242,16 +1241,6 @@
             this.Gpb_Usuario_Eliminar.TabIndex = 31;
             this.Gpb_Usuario_Eliminar.TabStop = false;
             this.Gpb_Usuario_Eliminar.Text = "Datos de Usuario";
-            // 
-            // Cmb_TipoUsuario_Eliminar
-            // 
-            this.Cmb_TipoUsuario_Eliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmb_TipoUsuario_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cmb_TipoUsuario_Eliminar.FormattingEnabled = true;
-            this.Cmb_TipoUsuario_Eliminar.Location = new System.Drawing.Point(23, 153);
-            this.Cmb_TipoUsuario_Eliminar.Name = "Cmb_TipoUsuario_Eliminar";
-            this.Cmb_TipoUsuario_Eliminar.Size = new System.Drawing.Size(231, 22);
-            this.Cmb_TipoUsuario_Eliminar.TabIndex = 26;
             // 
             // Lbl_Usuario_Eliminar
             // 
@@ -1327,10 +1316,10 @@
             // Gpb_Datos_Eliminar
             // 
             this.Gpb_Datos_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gpb_Datos_Eliminar.Controls.Add(this.Txt_Eliminar_TipoPuesto);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Dtp_FechaContrato_Eliminar);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Dtp_FechaNacimiento_Eliminar);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Lbl_FechaContrato_Eliminar);
-            this.Gpb_Datos_Eliminar.Controls.Add(this.Cmb_TipoPuesto_Eliminar);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Txt_DPI_Eliminar);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Lbl_Telefono_Eliminar);
             this.Gpb_Datos_Eliminar.Controls.Add(this.Lbl_TipoPuesto_Eliminar);
@@ -1366,7 +1355,7 @@
             this.Dtp_FechaContrato_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
             this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Eliminar.TabIndex = 49;
@@ -1379,7 +1368,7 @@
             this.Dtp_FechaNacimiento_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
             this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Eliminar.TabIndex = 48;
@@ -1397,17 +1386,6 @@
             this.Lbl_FechaContrato_Eliminar.Size = new System.Drawing.Size(138, 14);
             this.Lbl_FechaContrato_Eliminar.TabIndex = 45;
             this.Lbl_FechaContrato_Eliminar.Text = "FECHA DE CONTRATACIÓN";
-            // 
-            // Cmb_TipoPuesto_Eliminar
-            // 
-            this.Cmb_TipoPuesto_Eliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmb_TipoPuesto_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cmb_TipoPuesto_Eliminar.FormattingEnabled = true;
-            this.Cmb_TipoPuesto_Eliminar.Location = new System.Drawing.Point(9, 312);
-            this.Cmb_TipoPuesto_Eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.Cmb_TipoPuesto_Eliminar.Name = "Cmb_TipoPuesto_Eliminar";
-            this.Cmb_TipoPuesto_Eliminar.Size = new System.Drawing.Size(231, 22);
-            this.Cmb_TipoPuesto_Eliminar.TabIndex = 39;
             // 
             // Txt_DPI_Eliminar
             // 
@@ -1669,6 +1647,28 @@
             this.Lbl_Titulo4.TabIndex = 27;
             this.Lbl_Titulo4.Text = "Ingrese el ID del empleado";
             // 
+            // Txt_Eliminar_TipoUsuario
+            // 
+            this.Txt_Eliminar_TipoUsuario.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_TipoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_TipoUsuario.Enabled = false;
+            this.Txt_Eliminar_TipoUsuario.Location = new System.Drawing.Point(23, 159);
+            this.Txt_Eliminar_TipoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Eliminar_TipoUsuario.Name = "Txt_Eliminar_TipoUsuario";
+            this.Txt_Eliminar_TipoUsuario.Size = new System.Drawing.Size(231, 15);
+            this.Txt_Eliminar_TipoUsuario.TabIndex = 26;
+            // 
+            // Txt_Eliminar_TipoPuesto
+            // 
+            this.Txt_Eliminar_TipoPuesto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Eliminar_TipoPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Eliminar_TipoPuesto.Enabled = false;
+            this.Txt_Eliminar_TipoPuesto.Location = new System.Drawing.Point(9, 323);
+            this.Txt_Eliminar_TipoPuesto.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Eliminar_TipoPuesto.Name = "Txt_Eliminar_TipoPuesto";
+            this.Txt_Eliminar_TipoPuesto.Size = new System.Drawing.Size(231, 15);
+            this.Txt_Eliminar_TipoPuesto.TabIndex = 50;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1788,7 +1788,6 @@
         private System.Windows.Forms.Button Btn_Eliminar;
         private System.Windows.Forms.Button Btn_Busqueda_Eliminar;
         private System.Windows.Forms.GroupBox Gpb_Usuario_Eliminar;
-        private System.Windows.Forms.ComboBox Cmb_TipoUsuario_Eliminar;
         private System.Windows.Forms.Label Lbl_Usuario_Eliminar;
         private System.Windows.Forms.Label Lbl_Password_Eliminar;
         private System.Windows.Forms.TextBox Txt_Usuario_Eliminar;
@@ -1799,7 +1798,6 @@
         private MetroFramework.Controls.MetroDateTime Dtp_FechaContrato_Eliminar;
         private MetroFramework.Controls.MetroDateTime Dtp_FechaNacimiento_Eliminar;
         private System.Windows.Forms.Label Lbl_FechaContrato_Eliminar;
-        private System.Windows.Forms.ComboBox Cmb_TipoPuesto_Eliminar;
         private System.Windows.Forms.TextBox Txt_DPI_Eliminar;
         private System.Windows.Forms.Label Lbl_Telefono_Eliminar;
         private System.Windows.Forms.Label Lbl_TipoPuesto_Eliminar;
@@ -1821,5 +1819,7 @@
         private System.Windows.Forms.TextBox Txt_Apellido1_Eliminar;
         private System.Windows.Forms.TextBox Txt_Nombre2_Eliminar;
         private System.Windows.Forms.Label Lbl_Titulo4;
+        private System.Windows.Forms.TextBox Txt_Eliminar_TipoUsuario;
+        private System.Windows.Forms.TextBox Txt_Eliminar_TipoPuesto;
     }
 }

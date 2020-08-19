@@ -33,7 +33,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
                 string InsertarUsuario = "INSERT INTO USUARIO (ID_USUARIO, PASSWORD, ID_TIPO_USUARIO_FK) VALUES ('" + Usuario + "','" + Password + "'," + TipoUsuario + ")";
                 string InsertarEmpleado = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, CORREO, ID_TIPO_PUESTO, DIRECCION, TELEFONO, FECHA_NACIMIENTO, NIT, DPI, ID_USUARIO_FK, FECHA_CONTRATO, ID_ESTADO_EMPLEADO_FK) VALUES ('" + ID_Empleado + "','" + Nombre1 + "','" + Nombre2 + "','" + Apellido1 +
-                "','" + Apellido2 + "','" + Email + "','" + TipoPuesto + "','" + Direccion + "', '"+ Telefono + "', '" + FechaNacimiento + "','" + NIT + "','" + DPI + "','" + Usuario + "','" + FechaContrato + "','" + 1 + "')";
+                "','" + Apellido2 + "','" + Email + "','" + TipoPuesto + "','" + Direccion + "', '"+ Telefono + "', '" + FechaNacimiento.ToString() + "','" + NIT + "','" + DPI + "','" + Usuario + "','" + FechaContrato.ToString() + "','" + 1 + "')";
 
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarUsuario, conexion.conexion());
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarEmpleado, conexion.conexion());
@@ -58,7 +58,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
         }
 
-        public void ModificarEmpleado(string Usuario, string Password, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, string Direccion, int Telefono, int ID_Empleado)
+        public void ModificarEmpleado(string Usuario, string Password, int TipoUsuario, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Email, string Direccion, int Telefono, int ID_Empleado)
         {
             try
             {
@@ -67,8 +67,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                                            "', APELLIDO1='" + Apellido1 + "', APELLIDO2='" + Apellido2 + "', CORREO='" + Email +
                                            "', DIRECCION='" + Direccion + "', TELEFONO ='"+ Telefono +"' WHERE ID_EMPLEADO='" + ID_Empleado + "'";
 
-                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password + 
-                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password + "',ID_TIPO_USUARIO_FK ='"+ TipoUsuario + "' WHERE ID_USUARIO='" + Usuario + "'";
 
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarEmpleado, conexion.conexion());
                 OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
