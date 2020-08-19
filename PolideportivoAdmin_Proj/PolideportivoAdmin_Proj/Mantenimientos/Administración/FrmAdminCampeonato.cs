@@ -24,6 +24,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEquipo Equipo = new ClsEquipo();
         ClsCampeonato Campeonato = new ClsCampeonato();
+        ClsMantenimientosCampeonatos Mantenimiento = new ClsMantenimientosCampeonatos();
         List<int> IDs_Equipos = new List<int>();
 
         int ID_Campeonato;
@@ -506,6 +507,11 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         private void Btn_Agregar_Anotacion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Tmr_ListadoCampeonatos_Tick(object sender, EventArgs e)
+        {
+            Mantenimiento.ListadoCampeonatos(Dgv_ListadoCampeonatos);
         }
     }
 }

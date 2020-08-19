@@ -38,7 +38,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoIngreso();
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
-            Ingreso.ListadoEmpleados(Dgw_Listado);
             Txt_DPI_Ingreso.MaxLength = 13;
             Txt_DPI_Modificar.MaxLength = 13;
             Txt_Telefono_Ingreso.MaxLength = 8;

@@ -161,5 +161,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Txt_Eliminar_Deporte.Text = Equipo.ID_TipoDeporte;
             Txt_Eliminar_Entrenador.Text = Equipo.ID_Entrenador;
         }
+
+        private void Tmr_ListadoEquipos_Tick(object sender, EventArgs e)
+        {
+            Admin.ListadoEquipos(Dgv_ListadoEquipos);
+        }
     }
 }
