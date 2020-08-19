@@ -132,7 +132,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
                 for (int j =0; j < Rondas.GetLength(1); j++)
                 {
                     Console.Write("   " + (1 + Rondas[i, j].Local) + "-" + (1 + Rondas[i, j].Visitante));
-                    IngresoPartido(DateTime.Now.ToString(), IDs_Equipos[Rondas[i, j].Local], IDs_Equipos[Rondas[i, j].Visitante]);
+                    IngresoPartido(DateTime.Today.AddHours(12).ToString(), IDs_Equipos[Rondas[i, j].Local], IDs_Equipos[Rondas[i, j].Visitante]);
                 }
                 Console.WriteLine();
                 Fecha.AddDays(5);
