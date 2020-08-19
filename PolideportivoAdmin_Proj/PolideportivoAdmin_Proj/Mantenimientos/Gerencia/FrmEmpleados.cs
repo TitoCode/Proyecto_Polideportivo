@@ -38,33 +38,62 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             DatosCmb_TipoPuestoModificar();
             DatosCmb_TipoUsuarioIngreso();
             Ingreso.ListadoEmpleados(Dgw_Listado);
-            
+            Txt_DPI_Ingreso.MaxLength = 13;
+            Txt_DPI_Modificar.MaxLength = 13;
+            Txt_Telefono_Ingreso.MaxLength = 8;
+            Txt_Telefono_Modificar.MaxLength = 8;
         }
 
         private void Btn_Buscar_Modificar_Click(object sender, EventArgs e)
         {
+            
+            
             if (Txt_Busqueda_Modificar.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                Cmb_TipoUsuario_Modificar.Enabled = true;
-                Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
-                Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
-                Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
-                Txt_Apellido1_Modificar.Text = Empleado.Apellido1;
-                Txt_Apellido2_Modificar.Text = Empleado.Apellido2;
-                Txt_Email_Modificar.Text = Empleado.Email;
-                Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
-                Txt_Direccion_Modificar.Text = Empleado.Direccion;
-                Txt_Telefono_Modificar.Text = Empleado.Telefono;
-                Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
-                Txt_NIT_Modificar.Text = Empleado.NIT;
-                Txt_DPI_Modificar.Text = Empleado.DPI;
-                Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
-                Dtp_FechaContrato_Modificar.Text = Empleado.FechaContrato;
-                Txt_Password_Modificar.Text = Empleado.Pasword;
-                Cmb_TipoUsuario_Modificar.Text = Empleado.TipoUsuario;
-                Btn_Modificar.Enabled = true;
-            }
+                /*try
+                {
+                    string Consulta = "SELECT * from empleado WHERE ID_EMPLEADO ='" + Txt_Busqueda_Modificar.Text + "''";
+                    OdbcCommand Query_Validacion = new OdbcCommand(Consulta, conexion.conexion());
+                    OdbcDataReader Lector = Query_Validacion.ExecuteReader();
+                */
+                    /*if (Lector.HasRows == true)
+                    {*/
+                        Cmb_TipoUsuario_Modificar.Enabled = true;
+                        Empleado = Ingreso.BusquedaIDEmpleado(Txt_Busqueda_Modificar.Text);
+                        Txt_Nombre1_Modificar.Text = Empleado.Nombre1;
+                        Txt_Nombre2_Modificar.Text = Empleado.Nombre2;
+                        Txt_Apellido1_Modificar.Text = Empleado.Apellido1;
+                        Txt_Apellido2_Modificar.Text = Empleado.Apellido2;
+                        Txt_Email_Modificar.Text = Empleado.Email;
+                        Cmb_TipoPuesto_Modificar.Text = Empleado.TipoPuesto;
+                        Txt_Direccion_Modificar.Text = Empleado.Direccion;
+                        Txt_Telefono_Modificar.Text = Empleado.Telefono;
+                        Dtp_FechaNacimiento_Modificar.Text = Empleado.FechaNacimiento;
+                        Txt_NIT_Modificar.Text = Empleado.NIT;
+                        Txt_DPI_Modificar.Text = Empleado.DPI;
+                        Txt_Usuario_Modificar.Text = Empleado.ID_Usuario;
+                        Dtp_FechaContrato_Modificar.Text = Empleado.FechaContrato;
+                        Txt_Password_Modificar.Text = Empleado.Pasword;
+                        Cmb_TipoUsuario_Modificar.Text = Empleado.TipoUsuario;
+                        Btn_Modificar.Enabled = true;
+                    /*}
+                    else
+                    { */
+                       // MessageBox.Show("ERROR: El campo de busqueda no puede estar vacío.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
+               /* }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+            }*/
+
+        }
         }
 
         public void DatosCmb_TipoPuestoIngreso()
@@ -170,7 +199,11 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             if (Txt_Nombre1_Ingreso.Text == "" || Txt_Apellido1_Ingreso.Text == "" || Txt_Telefono_Ingreso.Text == "" || Txt_Email_Ingreso.Text == "" || Txt_Nombre2_Ingreso.Text == "" || Txt_Apellido2_Ingreso.Text == "" || Txt_Direccion_Ingreso.Text == "" || Txt_DPI_Ingreso.Text == "" || Txt_NIT_Ingreso.Text == "" || Txt_Usuario_Ingreso.Text == "" || Txt_Password_Ingreso.Text == "" || Cmb_TipoUsuario_Ingreso.SelectedItem == null || Cmb_TipoPuesto_Ingreso == null) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                if (Cmb_TipoUsuario_Ingreso.SelectedIndex == 2) { MessageBox.Show("ERROR: Usted no está autorizado para ingresar un entrenador.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+                string Consulta = "SELECT ID_TIPO_USUARIO_FK FROM USUARIO WHERE ID_USUARIO = '" + Txt_Usuario_Ingreso.Text +  "' ;";
+                OdbcCommand Query_Validacion = new OdbcCommand(Consulta, conexion.conexion());
+                OdbcDataReader Lector = Query_Validacion.ExecuteReader();
+                if (Lector.HasRows==true) { MessageBox.Show("ERROR: Usuario registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 else
                 {
                     UsuarioActivo = ClsDatos.UserId;
@@ -212,7 +245,18 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 int Telefono = Convert.ToInt32(Txt_Telefono_Modificar.Text);
                 int TipoUsuario = Cmb_TipoUsuario_Modificar.SelectedIndex + 1;
                 Ingreso.ModificarEmpleado(Txt_Usuario_Modificar.Text, Txt_Password_Modificar.Text, TipoUsuario, Txt_Nombre1_Modificar.Text, Txt_Nombre2_Modificar.Text, Txt_Apellido1_Modificar.Text, Txt_Apellido2_Modificar.Text, Txt_Email_Modificar.Text, Txt_Direccion_Modificar.Text, Telefono, ID_Empleado);
-                Txt_Busqueda_Modificar.Text = ""; Txt_Nombre1_Modificar.Text = ""; Txt_Apellido1_Modificar.Text = ""; Txt_Telefono_Modificar.Text = ""; Txt_Email_Modificar.Text = ""; Txt_Nombre2_Modificar.Text = ""; Txt_Apellido2_Modificar.Text = ""; Txt_Direccion_Modificar.Text = ""; Txt_DPI_Modificar.Text = ""; Txt_NIT_Modificar.Text = ""; Txt_Usuario_Modificar.Text = ""; Txt_Password_Modificar.Text = "";
+                Txt_Busqueda_Modificar.Text = ""; 
+                Txt_Nombre1_Modificar.Text = ""; 
+                Txt_Apellido1_Modificar.Text = ""; 
+                Txt_Telefono_Modificar.Text = ""; 
+                Txt_Email_Modificar.Text = ""; 
+                Txt_Nombre2_Modificar.Text = ""; 
+                Txt_Apellido2_Modificar.Text = ""; 
+                Txt_Direccion_Modificar.Text = ""; 
+                Txt_DPI_Modificar.Text = ""; 
+                Txt_NIT_Modificar.Text = ""; 
+                Txt_Usuario_Modificar.Text = "";
+                Txt_Password_Modificar.Text = "";
                 Btn_Modificar.Enabled = false;
             }
         }
@@ -253,7 +297,22 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql2);
 
             Ingreso.EliminarEmpleado(Txt_Usuario_Eliminar.Text, Txt_Busqueda_Eliminar.Text);
-            Txt_Busqueda_Eliminar.Text = ""; Txt_Nombre1_Eliminar.Text = ""; Txt_Nombre2_Eliminar.Text = ""; Txt_Apellido1_Eliminar.Text = ""; Txt_Apellido2_Eliminar.Text = ""; Txt_Email_Eliminar.Text = ""; Txt_Eliminar_TipoPuesto.Text = ""; Txt_Direccion_Eliminar.Text = ""; Txt_Telefono_Eliminar.Text = ""; Dtp_FechaNacimiento_Eliminar.Text = ""; Txt_NIT_Eliminar.Text = ""; Txt_DPI_Eliminar.Text = ""; Txt_Usuario_Eliminar.Text = ""; Dtp_FechaContrato_Eliminar.Text = ""; Txt_Password_Eliminar.Text = ""; Txt_Eliminar_TipoUsuario.Text = "";
+            Txt_Busqueda_Eliminar.Text = ""; 
+            Txt_Nombre1_Eliminar.Text = ""; 
+            Txt_Nombre2_Eliminar.Text = ""; 
+            Txt_Apellido1_Eliminar.Text = ""; 
+            Txt_Apellido2_Eliminar.Text = ""; 
+            Txt_Email_Eliminar.Text = ""; 
+            Txt_Eliminar_TipoPuesto.Text = ""; 
+            Txt_Direccion_Eliminar.Text = ""; 
+            Txt_Telefono_Eliminar.Text = ""; 
+            Dtp_FechaNacimiento_Eliminar.Text = ""; 
+            Txt_NIT_Eliminar.Text = ""; 
+            Txt_DPI_Eliminar.Text = ""; 
+            Txt_Usuario_Eliminar.Text = ""; 
+            Dtp_FechaContrato_Eliminar.Text = ""; 
+            Txt_Password_Eliminar.Text = ""; 
+            Txt_Eliminar_TipoUsuario.Text = "";
             Btn_Eliminar.Enabled = false;
         }
 
@@ -261,6 +320,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             ClsValidarKeyPress.Numeros(e);
         }
+ 
+
         private void letra(object sender, KeyPressEventArgs e)
         {
             ClsValidarKeyPress.Letras(e);

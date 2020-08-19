@@ -159,6 +159,10 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
                     }
 
                 }
+                else {
+                    MessageBox.Show("ERROR: El codigo de empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
 
                 return Empleado;
                 
