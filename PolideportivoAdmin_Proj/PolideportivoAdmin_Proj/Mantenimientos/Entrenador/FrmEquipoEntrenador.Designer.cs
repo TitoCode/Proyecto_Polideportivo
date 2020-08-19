@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Dgv_Equipos = new MetroFramework.Controls.MetroGrid();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Equipos)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_Equipos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_Equipos.RowHeadersVisible = false;
+            this.Dgv_Equipos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Equipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Equipos.Size = new System.Drawing.Size(890, 311);
             this.Dgv_Equipos.Style = MetroFramework.MetroColorStyle.Green;
@@ -98,11 +100,27 @@
             // 
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(159, 52);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(165, 52);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
             this.Lbl_Titulo.Size = new System.Drawing.Size(557, 55);
             this.Lbl_Titulo.TabIndex = 2;
             this.Lbl_Titulo.Text = "Equipos Del Entrenador";
+            // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(869, 479);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.TabIndex = 28;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
             // 
             // FrmEquipoEntrenador
             // 
@@ -110,6 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(914, 523);
+            this.Controls.Add(this.Btn_Ayuda);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.Dgv_Equipos);
             this.Controls.Add(this.pictureBox1);
@@ -129,5 +148,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroGrid Dgv_Equipos;
         private System.Windows.Forms.Label Lbl_Titulo;
+        private System.Windows.Forms.Button Btn_Ayuda;
     }
 }

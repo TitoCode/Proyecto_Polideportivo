@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PolideportivoAdmin_Proj.Clases.ClsGerencia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         public FrmTablaDePosiciones()
         {
             InitializeComponent();
+        }
+
+        ClsReportes Tabla = new ClsReportes();
+
+        private void Btn_BuscarID_Click(object sender, EventArgs e)
+        {
+            if (Txt_IDCampeonato.Text == "")
+            {
+                MessageBox.Show("No ha Completado el Campo del ID", "Datos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Tabla.Posiciones_Campeonato(Dgv_TablaPosiciones, Txt_IDCampeonato.Text);
+                Txt_IDCampeonato.Clear();
+            }
         }
     }
 }

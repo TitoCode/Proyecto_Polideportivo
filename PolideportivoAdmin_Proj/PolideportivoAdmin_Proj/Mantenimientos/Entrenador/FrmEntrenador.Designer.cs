@@ -38,6 +38,7 @@
             this.Btn_Equipo = new System.Windows.Forms.Button();
             this.Btn_TablaDePosiciones = new System.Windows.Forms.Button();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_Ayuda);
             this.Pnl_Menu.Controls.Add(this.Btn_Inicio);
             this.Pnl_Menu.Controls.Add(this.Lbl_Puesto);
             this.Pnl_Menu.Controls.Add(this.Lbl_Usuario);
@@ -170,6 +172,22 @@
             this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
             this.Pnl_Contenedor.TabIndex = 1;
             // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(0, 491);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.TabIndex = 29;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            // 
             // FrmEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +219,6 @@
         public System.Windows.Forms.Label Lbl_Puesto;
         public System.Windows.Forms.Label Lbl_Usuario;
         private System.Windows.Forms.Button Btn_Inicio;
+        private System.Windows.Forms.Button Btn_Ayuda;
     }
 }

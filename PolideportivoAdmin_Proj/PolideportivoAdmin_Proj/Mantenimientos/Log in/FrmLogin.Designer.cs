@@ -35,9 +35,10 @@
             this.Ptb_Password = new System.Windows.Forms.PictureBox();
             this.Ptb_Usuario = new System.Windows.Forms.PictureBox();
             this.Pnl_Superior = new System.Windows.Forms.Panel();
-            this.Btn_Cerrar = new System.Windows.Forms.Button();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Btn_Cerrar = new System.Windows.Forms.Button();
             this.Lbl_Informacion = new System.Windows.Forms.Label();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Usuario)).BeginInit();
             this.Pnl_Superior.SuspendLayout();
@@ -111,6 +112,17 @@
             this.Pnl_Superior.Size = new System.Drawing.Size(389, 32);
             this.Pnl_Superior.TabIndex = 8;
             // 
+            // Lbl_Titulo
+            // 
+            this.Lbl_Titulo.AutoSize = true;
+            this.Lbl_Titulo.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(194)))));
+            this.Lbl_Titulo.Location = new System.Drawing.Point(165, 9);
+            this.Lbl_Titulo.Name = "Lbl_Titulo";
+            this.Lbl_Titulo.Size = new System.Drawing.Size(57, 24);
+            this.Lbl_Titulo.TabIndex = 11;
+            this.Lbl_Titulo.Text = "Login";
+            // 
             // Btn_Cerrar
             // 
             this.Btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(37)))));
@@ -127,17 +139,6 @@
             this.Btn_Cerrar.UseVisualStyleBackColor = false;
             this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
             // 
-            // Lbl_Titulo
-            // 
-            this.Lbl_Titulo.AutoSize = true;
-            this.Lbl_Titulo.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(194)))));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(165, 9);
-            this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(57, 24);
-            this.Lbl_Titulo.TabIndex = 11;
-            this.Lbl_Titulo.Text = "Login";
-            // 
             // Lbl_Informacion
             // 
             this.Lbl_Informacion.AutoSize = true;
@@ -149,6 +150,23 @@
             this.Lbl_Informacion.TabIndex = 12;
             this.Lbl_Informacion.Text = "Ingresa Tus Credenciales";
             // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(37)))));
+            this.Btn_Ayuda.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(37)))));
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(0, 198);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.TabIndex = 13;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +174,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(389, 228);
+            this.Controls.Add(this.Btn_Ayuda);
             this.Controls.Add(this.Lbl_Informacion);
             this.Controls.Add(this.Pnl_Superior);
             this.Controls.Add(this.Ptb_Usuario);
@@ -188,6 +207,7 @@
         private System.Windows.Forms.Button Btn_Cerrar;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Label Lbl_Informacion;
+        private System.Windows.Forms.Button Btn_Ayuda;
     }
 }
 
