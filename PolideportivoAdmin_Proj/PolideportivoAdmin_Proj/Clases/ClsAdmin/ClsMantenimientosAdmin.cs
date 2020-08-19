@@ -101,6 +101,11 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                         Entrenador.TipoUsuario = Lector.GetString(8);
                     }
                 }
+                else
+                {
+                    MessageBox.Show("ERROR: El codigo de entrenador no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
                 return Entrenador;
             }
             catch (Exception ex)
