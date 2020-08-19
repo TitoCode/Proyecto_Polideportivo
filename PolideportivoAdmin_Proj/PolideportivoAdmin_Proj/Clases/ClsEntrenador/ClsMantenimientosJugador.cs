@@ -161,9 +161,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsEntrenador
             try
             {
 
-                string MostrarEmpleados = "SELECT J.ID_JUGADOR, concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , E.APELLIDO1, ' ' , E.APELLIDO2) AS 'Nombre Completo Del Jugador', T.NOMBRE_POSICION 'Tipo De Jugador', E.NOMBRE_ESTADO AS 'Estado Del Jugador'"+
-                                "FROM JUGADOR AS J, ESTADO_JUGADOR AS E, TIPO_JUGADOR AS T"+
-                                "WHERE J.ID_POSICION_FK = T.ID_TIPO_JUGADOR AND J.ID_ESTADO_JUGADOR_FK = E.ID_ESTADO_JUGADOR AND WHERE J.ID_EQUIPO_FK ='"+ ClsDatos.EquipoId +"'";
+                string MostrarEmpleados = "SELECT J.ID_JUGADOR, concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , J.APELLIDO1, ' ' , J.APELLIDO2) AS 'Nombre Completo Del Jugador', T.NOMBRE_POSICION 'Tipo De Jugador', E.NOMBRE_ESTADO AS 'Estado Del Jugador'" +
+                                "FROM JUGADOR AS J, ESTADO_JUGADOR AS E, TIPO_JUGADOR AS T "+
+                                "WHERE J.ID_POSICION_FK = T.ID_TIPO_JUGADOR AND J.ID_ESTADO_JUGADOR_FK = E.ID_ESTADO_JUGADOR AND J.ID_EQUIPO_FK ='"+ ClsDatos.EquipoId.ToString() + "'";
 
                 OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conexion.conexion());
                 OdbcDataAdapter Adaptador = new OdbcDataAdapter();
