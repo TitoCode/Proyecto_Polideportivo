@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
     {
 
         ClsConexion conexion = new ClsConexion();
+        ClsDatosCampeonato Campeonato = new ClsDatosCampeonato();
 
         public class Partido
         {
@@ -121,20 +123,15 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
 
         public void CampeonatoTvT(Partido[,] Rondas, List<int> IDs_Equipos, string nombre, int No_Equipos, int Sede, int deporte, string fecha)
         {
-            IngresoCampeonato(nombre, No_Equipos, Sede, deporte, fecha);
-            Console.WriteLine("IDA");
+            IngresoCampeonato(nombre, No_Equipos, Sede, deporte, fecha, IDs_Equipos);
             DateTime Fecha = new DateTime();
 
             for (int i =0; i < Rondas.GetLength(0); i++)
             {
-                Console.Write("Ronda " + (i + 1) + ": ");
-
                 for (int j =0; j < Rondas.GetLength(1); j++)
                 {
-                    Console.Write("   " + (1 + Rondas[i, j].Local) + "-" + (1 + Rondas[i, j].Visitante));
                     IngresoPartido(DateTime.Today.AddHours(12).ToString(), IDs_Equipos[Rondas[i, j].Local], IDs_Equipos[Rondas[i, j].Visitante]);
                 }
-                Console.WriteLine();
                 Fecha.AddDays(5);
             }
         }
@@ -160,8 +157,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
 
                 OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarPartido, conexion.conexion());
                 Query_Validacion3.ExecuteNonQuery();
-
-                MessageBox.Show("Ingreso Exitoso", "FORMULARIO PARTIDOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -173,7 +168,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
             }
         }
 
-        public void IngresoCampeonato(string nombre, int No_Equipos, int Sede, int deporte, string fecha)
+        public void IngresoCampeonato(string nombre, int No_Equipos, int Sede, int deporte, string fecha, List<int> IDs_Equipos)
         {
             try
             {
@@ -189,7 +184,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
                 OdbcCommand Query_Validacion2 = new OdbcCommand(InsertarCampeonato, conexion.conexion());
                 Query_Validacion2.ExecuteNonQuery();
 
-                MessageBox.Show("Ingreso Exitoso", "FORMULARIO CAMPEONATO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DetalleCampeonato(IDs_Equipos, ID_Campeonato);
             }
             catch (Exception ex)
             {
@@ -200,5 +195,172 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void ListadoCampeonatos(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarEquipos = "SELECT C.ID_CAMPEONATO, C.NOMBRE_CAMPEONATO AS 'NOMBRE DEL CAMPEONATO', T.NOMBRE_DEPORTE 'DEPORTE', S.NOMBRE_SEDE " +
+                    "FROM CAMPEONATO AS C, SEDE_POLIDEPORTIVO AS S, TIPO_DEPORTE AS T" +
+                    " WHERE C.ID_SEDE_POLI_FK = S.ID_SEDE AND C.ID_TIPO_DEPORTE_FK = T.ID_TIPO_DEPORTE;";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEquipos, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        public void Eliminatoria_Directa(int No_Equipos, List<int> IDs_Equipos)
+        {
+            string Marcador = "";
+            int ID_Partido;
+            string Fecha = DateTime.Today.AddHours(12).ToString();
+            try
+            {
+                int ID_Campeonato;
+                string Correlativo2 = "SELECT MAX(ID_CAMPEONATO) FROM CAMPEONATO";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(Correlativo2, conexion.conexion());
+                ID_Campeonato = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+
+                for (int i = 0; i < No_Equipos; i += 2)
+                {
+                    string Correlativo1 = "SELECT IFNULL(MAX(ID_PARTIDO),0) +1 FROM PARTIDO";
+                    OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo1, conexion.conexion());
+                    ID_Partido = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+
+                    string InsertarPartido = "INSERT INTO PARTIDO (ID_PARTIDO, ID_CAMPEONATO_FK, FECHA_PARTIDO, ID_LOCAL, ID_VISITANTE, MARCADOR, ID_ESTADO_PARTIDO_FK)" +
+                   "VALUES('" + ID_Partido + "','" + ID_Campeonato + "','" + Fecha + "','" + IDs_Equipos[i] + "','" + IDs_Equipos[i + 1] + "','" + Marcador + "','" + 1 + "')";
+                    OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarPartido, conexion.conexion());
+                    Query_Validacion3.ExecuteNonQuery();
+                    Fecha = DateTime.Parse(Fecha).AddDays(5).ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DetalleCampeonato(List<int> IDs_Equipos, int ID_Campeonato)
+        {
+            for (int i = 0; i < IDs_Equipos.Count; i++)
+            {
+                try
+                {
+                    string Correlativo = "SELECT IFNULL(MAX(ID_DETALLE_CAMPEONATO),0) +1 FROM EQUIPO_CAMPEONATO";
+                    OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo, conexion.conexion());
+                    int Id_Detalle_Campeonato = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+                    OdbcDataReader Ejecucion1 = Query_Validacion1.ExecuteReader();
+
+
+                    string InsertarCampeonato = "INSERT INTO EQUIPO_CAMPEONATO (ID_DETALLE_CAMPEONATO, ID_CAMPEONATO_FK, ID_EQUIPO_FK, PUNTOS_TORNEO)"
+                        + "VALUES('" + Id_Detalle_Campeonato + "','" + ID_Campeonato + "','" + IDs_Equipos[i] + "','" + 0 + "')";
+                    OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarCampeonato, conexion.conexion());
+                    Query_Validacion3.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public DataTable MostrarJugador(int Local, int Visitante)
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+
+                string CargarJugador = "SELECT concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , J.APELLIDO1, ' ' , J.APELLIDO2) AS 'NOMBRE' " +
+                    "FROM JUGADOR AS J, EQUIPOS AS E, CAMPEONATO AS C, PARTIDO AS P " +
+                    "WHERE J.ID_EQUIPO_FK = '" + Local + "' OR J.ID_EQUIPO_FK = '" + Visitante + "'";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargarJugador, conexion.conexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();   
+
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                return Datos;
+                //Cbx_Falta.DataSource = Datos;
+                //Cbx_Falta.DisplayMember = "NOMBRE";
+                //Cbx_Falta.ResetText();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+
+            }
+        }
+
+        public ClsDatosCampeonato BusquedaCampeonato(string ID_Campeonato)
+        {
+            try
+            {
+                string BuscarCampeonato = "SELECT C.NOMBRE_CAMPEONATO, C.CANTIDAD_EQUIPOS, C.FECHA_CREACION, SP.NOMBRE_SEDE, TD.NOMBRE_DEPORTE " +
+                    "FROM CAMPEONATO AS C, SEDE_POLIDEPORTIVO AS SP, TIPO_DEPORTE AS TD" +
+                    " WHERE C.ID_SEDE_POLI_FK = SP.ID_SEDE AND C.ID_TIPO_DEPORTE_FK = TD.ID_TIPO_DEPORTE AND C.ID_CAMPEONATO ='" + ID_Campeonato + "'";
+
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarCampeonato, conexion.conexion());
+                OdbcDataReader Lector = Query_Busqueda1.ExecuteReader();
+
+                if (Lector.HasRows == true)
+                {
+                    while (Lector.Read())
+                    {
+                        Campeonato.Nombre = Lector.GetString(0);
+                        Campeonato.No_Equipos = Lector.GetString(1);
+                        Campeonato.FechaCreacion = Lector.GetString(2);
+                        Campeonato.Sede = Lector.GetString(3);
+                        Campeonato.Deporte = Lector.GetString(4);
+                    }
+                }
+                return Campeonato;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Campeonato;
+            }
+        }
+
+
     }
 }
