@@ -232,6 +232,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 }
             }
         }
+        private void Tmr_Listado_Tick(object sender, EventArgs e)
+        {
+            Ingreso.ListadoEmpleados(Dgw_Listado);
+        }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {

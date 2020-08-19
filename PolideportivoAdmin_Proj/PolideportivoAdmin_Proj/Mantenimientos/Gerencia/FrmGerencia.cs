@@ -52,7 +52,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            switch (MessageBox.Show(this, "¿Está seguro que desea salir? Esta acción cerrará su sesión.", "Closing", MessageBoxButtons.YesNo))
+            switch (MessageBox.Show(this, "¿Está seguro que desea salir? Esta acción cerrará su sesión.", "Cerrar Sesión", MessageBoxButtons.YesNo))
             {
                 case DialogResult.No:
                     e.Cancel = true;
