@@ -20,7 +20,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsUsuario
             try
             {
 
-                string MostrarEmpleados = "SELECT * FROM BITACORA";
+                string MostrarEmpleados = "SELECT * FROM BITACORA ORDER BY ID_BITACORA DESC";
 
                 OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conexion.conexion());
                 OdbcDataAdapter Adaptador = new OdbcDataAdapter();

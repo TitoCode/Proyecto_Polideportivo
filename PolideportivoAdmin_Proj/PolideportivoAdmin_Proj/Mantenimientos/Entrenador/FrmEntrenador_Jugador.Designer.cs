@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenador_Jugador));
             this.Tbc_Jugadores = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_Listado = new MetroFramework.Controls.MetroTabPage();
             this.Dgw_Listado = new MetroFramework.Controls.MetroGrid();
-            this.ID_EMPLEADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
             this.Btn_Fotografia = new System.Windows.Forms.Button();
             this.Gpb_Datos_Ingreso = new System.Windows.Forms.GroupBox();
@@ -98,6 +96,7 @@
             this.Txt_Eliminar_Id = new System.Windows.Forms.TextBox();
             this.Btn_Eliminar_Jugador = new System.Windows.Forms.Button();
             this.Btn_Eliminar_Buscar_Jugador = new System.Windows.Forms.Button();
+            this.Tmr_Jugadores = new System.Windows.Forms.Timer(this.components);
             this.Tbc_Jugadores.SuspendLayout();
             this.Tbp_Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -121,7 +120,7 @@
             this.Tbc_Jugadores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Jugadores.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Jugadores.Name = "Tbc_Jugadores";
-            this.Tbc_Jugadores.SelectedIndex = 1;
+            this.Tbc_Jugadores.SelectedIndex = 0;
             this.Tbc_Jugadores.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Jugadores.TabIndex = 1;
             this.Tbc_Jugadores.UseSelectable = true;
@@ -144,66 +143,49 @@
             // Dgw_Listado
             // 
             this.Dgw_Listado.AllowUserToResizeRows = false;
+            this.Dgw_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgw_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Dgw_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgw_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgw_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgw_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Dgw_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgw_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_EMPLEADO,
-            this.Nombre,
-            this.Nombre2});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgw_Listado.DefaultCellStyle = dataGridViewCellStyle8;
             this.Dgw_Listado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Dgw_Listado.EnableHeadersVisualStyles = false;
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgw_Listado.Location = new System.Drawing.Point(0, 3);
+            this.Dgw_Listado.Location = new System.Drawing.Point(0, 17);
             this.Dgw_Listado.Name = "Dgw_Listado";
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgw_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.Dgw_Listado.RowHeadersVisible = false;
             this.Dgw_Listado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgw_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgw_Listado.Size = new System.Drawing.Size(906, 478);
+            this.Dgw_Listado.Size = new System.Drawing.Size(906, 464);
             this.Dgw_Listado.Style = MetroFramework.MetroColorStyle.Blue;
             this.Dgw_Listado.TabIndex = 5;
-            // 
-            // ID_EMPLEADO
-            // 
-            this.ID_EMPLEADO.HeaderText = "Column1";
-            this.ID_EMPLEADO.Name = "ID_EMPLEADO";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Column1";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Nombre2
-            // 
-            this.Nombre2.HeaderText = "Column1";
-            this.Nombre2.Name = "Nombre2";
             // 
             // Tbp_Ingreso
             // 
@@ -290,7 +272,7 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(10, 154);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(230, 25);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -519,7 +501,7 @@
             this.Dtp_Modificar_Fdn.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_Modificar_Fdn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fdn.Location = new System.Drawing.Point(10, 154);
-            this.Dtp_Modificar_Fdn.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_Modificar_Fdn.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_Modificar_Fdn.Name = "Dtp_Modificar_Fdn";
             this.Dtp_Modificar_Fdn.Size = new System.Drawing.Size(230, 25);
             this.Dtp_Modificar_Fdn.TabIndex = 48;
@@ -804,7 +786,7 @@
             this.Dtp_Eliminar_Fdn.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_Eliminar_Fdn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Eliminar_Fdn.Location = new System.Drawing.Point(10, 154);
-            this.Dtp_Eliminar_Fdn.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_Eliminar_Fdn.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_Eliminar_Fdn.Name = "Dtp_Eliminar_Fdn";
             this.Dtp_Eliminar_Fdn.Size = new System.Drawing.Size(230, 25);
             this.Dtp_Eliminar_Fdn.TabIndex = 48;
@@ -984,6 +966,12 @@
             this.Btn_Eliminar_Buscar_Jugador.UseVisualStyleBackColor = false;
             this.Btn_Eliminar_Buscar_Jugador.Click += new System.EventHandler(this.Btn_Eliminar_Buscar_Jugador_Click);
             // 
+            // Tmr_Jugadores
+            // 
+            this.Tmr_Jugadores.Enabled = true;
+            this.Tmr_Jugadores.Interval = 2000;
+            this.Tmr_Jugadores.Tick += new System.EventHandler(this.Tmr_Jugadores_Tick);
+            // 
             // FrmEntrenador_Jugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1021,9 +1009,6 @@
         private MetroFramework.Controls.MetroTabControl Tbc_Jugadores;
         private MetroFramework.Controls.MetroTabPage Tbp_Listado;
         private MetroFramework.Controls.MetroGrid Dgw_Listado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_EMPLEADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre2;
         private MetroFramework.Controls.MetroTabPage Tbp_Ingreso;
         private MetroFramework.Controls.MetroTabPage Tbp_Modificar;
         private MetroFramework.Controls.MetroTabPage Tbp_Eliminar;
@@ -1084,5 +1069,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox Txt_Posicion_Eliminar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer Tmr_Jugadores;
     }
 }

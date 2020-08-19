@@ -103,7 +103,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             Ptb_FotoUsuario.Image = devolverImagen;
         }
 
-
         private byte[] SqlaByte()
         {
             string BuscarDatoEmpleado = "SELECT FOTO_ENTRENADOR FROM ENTRENADOR WHERE ID_USUARIO_FK ='" + ClsDatos.UserId + "'";
