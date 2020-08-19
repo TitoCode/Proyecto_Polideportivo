@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -48,6 +51,9 @@
       <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SpreadsheetLight, Version=3.4.11.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.4.11\lib\net40\SpreadsheetLight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +79,7 @@
     <Compile Include="Clases\ClsGerencia\ClsGerencia.cs" />
     <Compile Include="Clases\ClsGerencia\ClsMantenimientosEmpleado.cs" />
     <Compile Include="Clases\ClsBaseDeDatos\ClsConexion.cs" />
+    <Compile Include="Clases\ClsGerencia\ClsReportes.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientoBitacora.cs" />
     <Compile Include="Clases\ClsUsuario\ClsMantenimientosLogin.cs" />
     <Compile Include="Clases\ClsUsuario\ClsUsuario.cs" />
