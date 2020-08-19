@@ -163,5 +163,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         {
             Entrenador.ListaEquipo(Dgw_Listado);
         }
+    
     }
 }
