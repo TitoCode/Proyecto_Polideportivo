@@ -28,17 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Tbp_Estadistica = new MetroFramework.Controls.MetroTabPage();
             this.Tbc_Estadistica = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_Futbol = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Basquet = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Beisbol = new MetroFramework.Controls.MetroTabPage();
             this.Tbp_Voleibol = new MetroFramework.Controls.MetroTabPage();
+            this.Graf_Bitacora = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Tbp_Estadistica.SuspendLayout();
             this.Tbc_Estadistica.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Graf_Bitacora)).BeginInit();
             this.SuspendLayout();
             // 
             // Tbp_Estadistica
             // 
+            this.Tbp_Estadistica.Controls.Add(this.Graf_Bitacora);
             this.Tbp_Estadistica.HorizontalScrollbarBarColor = true;
             this.Tbp_Estadistica.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Estadistica.HorizontalScrollbarSize = 10;
@@ -122,6 +129,23 @@
             this.Tbp_Voleibol.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Voleibol.VerticalScrollbarSize = 10;
             // 
+            // Graf_Bitacora
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.Graf_Bitacora.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Graf_Bitacora.Legends.Add(legend1);
+            this.Graf_Bitacora.Location = new System.Drawing.Point(27, 160);
+            this.Graf_Bitacora.Name = "Graf_Bitacora";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.Graf_Bitacora.Series.Add(series1);
+            this.Graf_Bitacora.Size = new System.Drawing.Size(300, 300);
+            this.Graf_Bitacora.TabIndex = 2;
+            this.Graf_Bitacora.Text = "chart1";
+            // 
             // FrmEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +156,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEstadisticas";
             this.Text = "FrmEstadisticas";
+            this.Load += new System.EventHandler(this.FrmEstadisticas_Load);
+            this.Tbp_Estadistica.ResumeLayout(false);
             this.Tbc_Estadistica.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Graf_Bitacora)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +172,6 @@
         private MetroFramework.Controls.MetroTabPage Tbp_Basquet;
         private MetroFramework.Controls.MetroTabPage Tbp_Beisbol;
         private MetroFramework.Controls.MetroTabPage Tbp_Voleibol;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Graf_Bitacora;
     }
 }
