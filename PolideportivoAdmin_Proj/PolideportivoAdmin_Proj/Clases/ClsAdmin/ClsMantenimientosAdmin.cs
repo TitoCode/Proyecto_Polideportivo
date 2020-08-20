@@ -245,6 +245,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                         Equipo.ID_TipoDeporte = Lector1.GetString(5);
                     }
                 }
+                else {
+                    MessageBox.Show("ERROR: El codigo del equipo no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
               
                 return Equipo;
             }
