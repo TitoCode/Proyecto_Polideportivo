@@ -142,10 +142,10 @@
     <Compile Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.Designer.cs">
       <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\FrmAdminCalendario.cs">
+    <Compile Include="Mantenimientos\Administración\FrmAdminCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\FrmAdminCalendario.Designer.cs">
+    <Compile Include="Mantenimientos\Administración\FrmAdminCalendario.Designer.cs">
       <DependentUpon>FrmAdminCalendario.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\FrmBase.cs">
@@ -219,7 +219,7 @@
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.resx">
       <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\FrmAdminCalendario.resx">
+    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminCalendario.resx">
       <DependentUpon>FrmAdminCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
