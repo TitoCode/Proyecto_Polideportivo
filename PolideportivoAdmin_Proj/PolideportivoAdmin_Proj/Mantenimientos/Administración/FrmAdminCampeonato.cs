@@ -432,7 +432,6 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarCampeonato, conexion.conexion());
                 Query_UPDATE1.ExecuteNonQuery();
                 MessageBox.Show("Campeonato modificado con éxito.", "FORMULARIO ADMINNISTRACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             catch (Exception ex) 
             {
