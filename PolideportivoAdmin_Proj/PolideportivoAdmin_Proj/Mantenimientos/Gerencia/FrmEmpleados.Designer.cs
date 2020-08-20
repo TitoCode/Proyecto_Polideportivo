@@ -29,14 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
             this.Tbc_Empleados = new MetroFramework.Controls.MetroTabControl();
             this.Tbp_ListadoEmpleado = new MetroFramework.Controls.MetroTabPage();
+            this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.Btn_Ayuda_ListadoEmpleados = new System.Windows.Forms.Button();
             this.Dgw_Listado = new MetroFramework.Controls.MetroGrid();
             this.Tbp_Ingreso = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Ingreso = new System.Windows.Forms.Button();
             this.Gpb_Usuario_Ingreso = new System.Windows.Forms.GroupBox();
             this.Cmb_TipoUsuario_Ingreso = new System.Windows.Forms.ComboBox();
             this.Lbl_Usuario_Ingreso = new System.Windows.Forms.Label();
@@ -74,6 +77,7 @@
             this.Lbl_IDTelefono = new System.Windows.Forms.Label();
             this.Lbl_IDUsuario = new System.Windows.Forms.Label();
             this.Tbp_Modificar = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Modificar = new System.Windows.Forms.Button();
             this.Txt_Busqueda_Modificar = new System.Windows.Forms.TextBox();
             this.Gpb_Usuario_Modificar = new System.Windows.Forms.GroupBox();
             this.Cmb_TipoUsuario_Modificar = new System.Windows.Forms.ComboBox();
@@ -111,6 +115,7 @@
             this.Btn_Buscar_Modificar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Tbp_Eliminar = new MetroFramework.Controls.MetroTabPage();
+            this.Btn_Ayuda_Eliminar = new System.Windows.Forms.Button();
             this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Btn_Busqueda_Eliminar = new System.Windows.Forms.Button();
             this.Gpb_Usuario_Eliminar = new System.Windows.Forms.GroupBox();
@@ -148,11 +153,6 @@
             this.Txt_Nombre2_Eliminar = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo4 = new System.Windows.Forms.Label();
             this.Tmr_Listado = new System.Windows.Forms.Timer(this.components);
-            this.Btn_Ayuda_Ingreso = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_Modificar = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_Eliminar = new System.Windows.Forms.Button();
-            this.Btn_Ayuda_ListadoEmpleados = new System.Windows.Forms.Button();
-            this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Tbc_Empleados.SuspendLayout();
             this.Tbp_ListadoEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Listado)).BeginInit();
@@ -177,7 +177,7 @@
             this.Tbc_Empleados.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
-            this.Tbc_Empleados.SelectedIndex = 3;
+            this.Tbc_Empleados.SelectedIndex = 0;
             this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Empleados.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tbc_Empleados.TabIndex = 1;
@@ -199,6 +199,33 @@
             this.Tbp_ListadoEmpleado.VerticalScrollbarBarColor = true;
             this.Tbp_ListadoEmpleado.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_ListadoEmpleado.VerticalScrollbarSize = 10;
+            // 
+            // Lbl_Titulo
+            // 
+            this.Lbl_Titulo.AutoSize = true;
+            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo.Location = new System.Drawing.Point(345, 17);
+            this.Lbl_Titulo.Name = "Lbl_Titulo";
+            this.Lbl_Titulo.Size = new System.Drawing.Size(198, 18);
+            this.Lbl_Titulo.TabIndex = 28;
+            this.Lbl_Titulo.Text = "Listado de Empleados";
+            // 
+            // Btn_Ayuda_ListadoEmpleados
+            // 
+            this.Btn_Ayuda_ListadoEmpleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_ListadoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_ListadoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_ListadoEmpleados.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_ListadoEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEmpleados.Image")));
+            this.Btn_Ayuda_ListadoEmpleados.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ListadoEmpleados.Name = "Btn_Ayuda_ListadoEmpleados";
+            this.Btn_Ayuda_ListadoEmpleados.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ListadoEmpleados.TabIndex = 27;
+            this.Btn_Ayuda_ListadoEmpleados.UseVisualStyleBackColor = false;
             // 
             // Dgw_Listado
             // 
@@ -271,6 +298,22 @@
             this.Tbp_Ingreso.VerticalScrollbarBarColor = true;
             this.Tbp_Ingreso.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Ingreso.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_Ingreso
+            // 
+            this.Btn_Ayuda_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
+            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
+            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Ingreso.TabIndex = 26;
+            this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
             // 
             // Gpb_Usuario_Ingreso
             // 
@@ -396,7 +439,7 @@
             this.Dtp_FechaContrato_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Ingreso.Name = "Dtp_FechaContrato_Ingreso";
             this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Ingreso.TabIndex = 49;
@@ -408,7 +451,7 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -732,6 +775,22 @@
             this.Tbp_Modificar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Modificar.VerticalScrollbarSize = 10;
             // 
+            // Btn_Ayuda_Modificar
+            // 
+            this.Btn_Ayuda_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Modificar.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
+            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
+            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Modificar.TabIndex = 30;
+            this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
+            // 
             // Txt_Busqueda_Modificar
             // 
             this.Txt_Busqueda_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -866,7 +925,7 @@
             this.Dtp_FechaContrato_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
             this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
@@ -879,7 +938,7 @@
             this.Dtp_FechaNacimiento_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(0, 25);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
             this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(231, 25);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
@@ -1206,6 +1265,22 @@
             this.Tbp_Eliminar.VerticalScrollbarBarColor = true;
             this.Tbp_Eliminar.VerticalScrollbarHighlightOnWheel = false;
             this.Tbp_Eliminar.VerticalScrollbarSize = 10;
+            // 
+            // Btn_Ayuda_Eliminar
+            // 
+            this.Btn_Ayuda_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Ayuda_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_Ayuda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
+            this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
+            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
+            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Eliminar.TabIndex = 34;
+            this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
             // 
             // Btn_Eliminar
             // 
@@ -1688,81 +1763,6 @@
             this.Tmr_Listado.Enabled = true;
             this.Tmr_Listado.Interval = 2000;
             this.Tmr_Listado.Tick += new System.EventHandler(this.Tmr_Listado_Tick);
-            // 
-            // Btn_Ayuda_Ingreso
-            // 
-            this.Btn_Ayuda_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
-            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
-            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Ingreso.TabIndex = 26;
-            this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Modificar
-            // 
-            this.Btn_Ayuda_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
-            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
-            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Modificar.TabIndex = 30;
-            this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Eliminar
-            // 
-            this.Btn_Ayuda_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
-            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
-            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_Eliminar.TabIndex = 34;
-            this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_ListadoEmpleados
-            // 
-            this.Btn_Ayuda_ListadoEmpleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_ListadoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_ListadoEmpleados.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_ListadoEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEmpleados.Image")));
-            this.Btn_Ayuda_ListadoEmpleados.Location = new System.Drawing.Point(870, 3);
-            this.Btn_Ayuda_ListadoEmpleados.Name = "Btn_Ayuda_ListadoEmpleados";
-            this.Btn_Ayuda_ListadoEmpleados.Size = new System.Drawing.Size(33, 32);
-            this.Btn_Ayuda_ListadoEmpleados.TabIndex = 27;
-            this.Btn_Ayuda_ListadoEmpleados.UseVisualStyleBackColor = false;
-            // 
-            // Lbl_Titulo
-            // 
-            this.Lbl_Titulo.AutoSize = true;
-            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(345, 17);
-            this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(198, 18);
-            this.Lbl_Titulo.TabIndex = 28;
-            this.Lbl_Titulo.Text = "Listado de Empleados";
             // 
             // FrmEmpleados
             // 
