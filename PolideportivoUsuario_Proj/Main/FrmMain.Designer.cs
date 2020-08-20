@@ -50,8 +50,8 @@
             this.ClmhEntrenador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ClmhDepo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ClmhEstadoE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TbpCalendario = new System.Windows.Forms.TabPage();
             this.TbpPartido = new System.Windows.Forms.TabPage();
+            this.LblResultadoP = new System.Windows.Forms.Label();
             this.LblEstadoP = new System.Windows.Forms.Label();
             this.LsvSanciones = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,9 +77,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TmrInicio = new System.Windows.Forms.Timer(this.components);
-            this.LblResultadoP = new System.Windows.Forms.Label();
             this.LblBienvenida = new System.Windows.Forms.Label();
+            this.TbpCalendario = new System.Windows.Forms.TabPage();
             this.LsvCalendario = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,14 +87,15 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TmrInicio = new System.Windows.Forms.Timer(this.components);
             this.TmrCalendario = new System.Windows.Forms.Timer(this.components);
             this.BtnAyuda = new MaterialSkin.Controls.MaterialRaisedButton();
             this.TbcPrincipal.SuspendLayout();
             this.TbpInicio.SuspendLayout();
             this.TbpJugadores.SuspendLayout();
             this.TbpEquipo.SuspendLayout();
-            this.TbpCalendario.SuspendLayout();
             this.TbpPartido.SuspendLayout();
+            this.TbpCalendario.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -325,19 +325,10 @@
             this.ClmhEstadoE.Text = "Estado";
             this.ClmhEstadoE.Width = 1000;
             // 
-            // TbpCalendario
-            // 
-            this.TbpCalendario.Controls.Add(this.LsvCalendario);
-            this.TbpCalendario.Location = new System.Drawing.Point(4, 22);
-            this.TbpCalendario.Name = "TbpCalendario";
-            this.TbpCalendario.Padding = new System.Windows.Forms.Padding(3);
-            this.TbpCalendario.Size = new System.Drawing.Size(1014, 675);
-            this.TbpCalendario.TabIndex = 4;
-            this.TbpCalendario.Text = "Calendario";
-            this.TbpCalendario.UseVisualStyleBackColor = true;
-            // 
             // TbpPartido
             // 
+            this.TbpPartido.Controls.Add(this.BtnBusquedaTorneo);
+            this.TbpPartido.Controls.Add(this.TxtBusquedaTorneo);
             this.TbpPartido.Controls.Add(this.LblResultadoP);
             this.TbpPartido.Controls.Add(this.LblEstadoP);
             this.TbpPartido.Controls.Add(this.LsvSanciones);
@@ -346,8 +337,6 @@
             this.TbpPartido.Controls.Add(this.LblEncabezadoEstado);
             this.TbpPartido.Controls.Add(this.LblJugadoresSancionados);
             this.TbpPartido.Controls.Add(this.LblMejorJugador);
-            this.TbpPartido.Controls.Add(this.BtnBusquedaTorneo);
-            this.TbpPartido.Controls.Add(this.TxtBusquedaTorneo);
             this.TbpPartido.Controls.Add(this.LsvVisitante);
             this.TbpPartido.Controls.Add(this.LblVisitante);
             this.TbpPartido.Controls.Add(this.LblLocal);
@@ -360,6 +349,18 @@
             this.TbpPartido.TabIndex = 5;
             this.TbpPartido.Text = "Partido";
             this.TbpPartido.UseVisualStyleBackColor = true;
+            // 
+            // LblResultadoP
+            // 
+            this.LblResultadoP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblResultadoP.AutoSize = true;
+            this.LblResultadoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblResultadoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(136)))), ((int)(((byte)(209)))));
+            this.LblResultadoP.Location = new System.Drawing.Point(514, 533);
+            this.LblResultadoP.Name = "LblResultadoP";
+            this.LblResultadoP.Size = new System.Drawing.Size(0, 39);
+            this.LblResultadoP.TabIndex = 16;
+            this.LblResultadoP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LblEstadoP
             // 
@@ -389,7 +390,7 @@
             this.LsvSanciones.MouseState = MaterialSkin.MouseState.OUT;
             this.LsvSanciones.Name = "LsvSanciones";
             this.LsvSanciones.OwnerDraw = true;
-            this.LsvSanciones.Size = new System.Drawing.Size(500, 71);
+            this.LsvSanciones.Size = new System.Drawing.Size(500, 97);
             this.LsvSanciones.TabIndex = 14;
             this.LsvSanciones.UseCompatibleStateImageBehavior = false;
             this.LsvSanciones.View = System.Windows.Forms.View.Details;
@@ -397,12 +398,12 @@
             // columnHeader11
             // 
             this.columnHeader11.Text = "Jugador";
-            this.columnHeader11.Width = 400;
+            this.columnHeader11.Width = 350;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "Sanción";
-            this.columnHeader13.Width = 100;
+            this.columnHeader13.Width = 150;
             // 
             // LsvMejorJugador
             // 
@@ -623,24 +624,6 @@
             this.columnHeader4.Text = "Posición";
             this.columnHeader4.Width = 179;
             // 
-            // TmrInicio
-            // 
-            this.TmrInicio.Enabled = true;
-            this.TmrInicio.Interval = 1;
-            this.TmrInicio.Tick += new System.EventHandler(this.TmrInicio_Tick);
-            // 
-            // LblResultadoP
-            // 
-            this.LblResultadoP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblResultadoP.AutoSize = true;
-            this.LblResultadoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblResultadoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(136)))), ((int)(((byte)(209)))));
-            this.LblResultadoP.Location = new System.Drawing.Point(514, 533);
-            this.LblResultadoP.Name = "LblResultadoP";
-            this.LblResultadoP.Size = new System.Drawing.Size(0, 39);
-            this.LblResultadoP.TabIndex = 16;
-            this.LblResultadoP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // LblBienvenida
             // 
             this.LblBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -652,6 +635,17 @@
             this.LblBienvenida.TabIndex = 17;
             this.LblBienvenida.Text = "INGRESE UN CÓDIGO DE PARTIDO";
             this.LblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TbpCalendario
+            // 
+            this.TbpCalendario.Controls.Add(this.LsvCalendario);
+            this.TbpCalendario.Location = new System.Drawing.Point(4, 22);
+            this.TbpCalendario.Name = "TbpCalendario";
+            this.TbpCalendario.Padding = new System.Windows.Forms.Padding(3);
+            this.TbpCalendario.Size = new System.Drawing.Size(1014, 675);
+            this.TbpCalendario.TabIndex = 4;
+            this.TbpCalendario.Text = "Calendario";
+            this.TbpCalendario.UseVisualStyleBackColor = true;
             // 
             // LsvCalendario
             // 
@@ -717,6 +711,12 @@
             this.columnHeader19.Text = "Estado";
             this.columnHeader19.Width = 1000;
             // 
+            // TmrInicio
+            // 
+            this.TmrInicio.Enabled = true;
+            this.TmrInicio.Interval = 1;
+            this.TmrInicio.Tick += new System.EventHandler(this.TmrInicio_Tick);
+            // 
             // TmrCalendario
             // 
             this.TmrCalendario.Enabled = true;
@@ -756,9 +756,9 @@
             this.TbpJugadores.PerformLayout();
             this.TbpEquipo.ResumeLayout(false);
             this.TbpEquipo.PerformLayout();
-            this.TbpCalendario.ResumeLayout(false);
             this.TbpPartido.ResumeLayout(false);
             this.TbpPartido.PerformLayout();
+            this.TbpCalendario.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

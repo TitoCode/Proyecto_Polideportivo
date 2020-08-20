@@ -228,6 +228,44 @@ namespace PolideportivoUsuario_Proj
             }
 
         }
+        public void jugadoresSancionados(string ID_Partido)
+        {
+            try
+            {
+                string MostrarJugadores = "SELECT CONCAT(J.NOMBRE1, ' ', J.NOMBRE2, ' ', J.APELLIDO1, ' ', J.APELLIDO2) " +
+                    "AS 'Nombre Del Jugador', F.NOMBRE 'Falta Realizada' " +
+                    "FROM DETALLE_FALTA AS DF, FALTA AS F, JUGADOR AS J, PARTIDO AS P " +
+                    "WHERE DF.ID_FALTA_FK = F.ID_FALTA AND DF.ID_PARTIDO_FK = P.ID_PARTIDO " +
+                    "AND DF.ID_JUGADOR_FK = J.ID_JUGADOR AND DF.ID_PARTIDO_FK = '"+ID_Partido+"'";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarJugadores, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+
+                foreach (DataRow row in tabla.Rows)
+                {
+                    ListViewItem item = new ListViewItem(row[0].ToString());
+                    for (int i = 1; i < tabla.Columns.Count; i++)
+                    {
+                        item.SubItems.Add(row[i].ToString());
+                    }
+                    LsvSanciones.Items.Add(item);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
 
         public void marcadorPartido(string ID_Partido)
         {
@@ -257,6 +295,7 @@ namespace PolideportivoUsuario_Proj
             }
 
         }
+
 
         private int validarTorneo(string id_torneo) {
             string validarTorneo = "SELECT * FROM partido as p WHERE p.ID_PARTIDO ='"+id_torneo+"' ";
@@ -307,6 +346,7 @@ namespace PolideportivoUsuario_Proj
             LsvLocal.Items.Clear();
             LsvVisitante.Items.Clear();
             LsvMejorJugador.Items.Clear();
+            LsvSanciones.Items.Clear();
             LblEstadoP.Text = "";
             LblResultadoP.Text = "";
             if (TxtBusquedaTorneo.Text=="") { 
@@ -334,6 +374,7 @@ namespace PolideportivoUsuario_Proj
                     mejorJugador(TxtBusquedaTorneo.Text.ToString());
                     estadoPartido(TxtBusquedaTorneo.Text.ToString());
                     marcadorPartido(TxtBusquedaTorneo.Text.ToString());
+                    jugadoresSancionados(TxtBusquedaTorneo.Text.ToString());
                     TxtBusquedaTorneo.Text = "";
                 }
             }
