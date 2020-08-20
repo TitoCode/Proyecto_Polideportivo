@@ -325,5 +325,37 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
+        public void ListadoPartidos(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarPartidos = "SELECT P.ID_PARTIDO AS 'No. Partido', C.NOMBRE_CAMPEONATO AS 'Nombre Del Campeonato', P.FECHA_PARTIDO AS 'Fecha Del Partido', E1.NOMBRE_EQUIPO AS 'Equipo Local', E2.NOMBRE_EQUIPO AS 'Equipo Visitante', concat(P.MARCADOR_LOCAL, '-' ,P.MARCADOR_VISITANTE) AS 'MARCADOR', EP.NOMBRE_ESTADO 'Estado Del Partido'" +
+                    " FROM CAMPEONATO AS C, EQUIPO AS E, ESTADO_PARTIDO AS EP, PARTIDO AS P" +
+                    " INNER JOIN EQUIPO E1 ON P.ID_LOCAL = E1.ID_EQUIPO" +
+                    " INNER JOIN EQUIPO E2 ON P.ID_VISITANTE = E2.ID_EQUIPO" +
+                    " WHERE P.ID_CAMPEONATO_FK = C.ID_CAMPEONATO AND P.ID_ESTADO_PARTIDO_FK = EP.ID_ESTADO AND P.ID_LOCAL = E.ID_EQUIPO;";
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarPartidos, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
     }
 }
