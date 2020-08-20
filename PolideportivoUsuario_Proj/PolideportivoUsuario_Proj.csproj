@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2104528-8788-40C4-AF76-989B8495D2D1}</ProjectGuid>
+    <ProjectGuid>{F3675F3E-121B-4AFB-B2DA-B49FF9E4FABE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PolideportivoUsuario_Proj</RootNamespace>
     <AssemblyName>PolideportivoUsuario_Proj</AssemblyName>
@@ -49,17 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Clases\ClsConexion.cs" />
+    <Compile Include="Main\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -83,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscando-lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscando-lupa%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
