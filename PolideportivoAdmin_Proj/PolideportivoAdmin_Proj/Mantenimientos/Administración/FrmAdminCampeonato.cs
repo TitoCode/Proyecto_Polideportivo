@@ -24,6 +24,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         ClsMantenimientosAdmin Admin = new ClsMantenimientosAdmin();
         ClsEquipo Equipo = new ClsEquipo();
         ClsCampeonato Campeonato = new ClsCampeonato();
+        ClsDatosCampeonato DatosCampeonato = new ClsDatosCampeonato();
+        ClsPartido DatosPartido = new ClsPartido();
+
         List<int> IDs_Equipos = new List<int>();
 
         private void Rdb_Todos_CheckedChanged(object sender, EventArgs e)
@@ -267,81 +270,30 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Buscar_Campeonato_Click(object sender, EventArgs e)
         {
-            Campeonato.BusquedaCampeonato(Txt_Modificar_Id_Campeonato.Text);
+            DatosCampeonato = Campeonato.BusquedaCampeonato(Txt_Modificar_Id_Campeonato.Text);
+            Txt_Modificar_Nombre_Campeonato.Text = DatosCampeonato.Nombre;
+            Txt_Modificar_Cantidad_Equipos_Campeonato.Text = DatosCampeonato.No_Equipos;
+            Cbx_Modificar_Sede_Campeonato.Text = DatosCampeonato.Sede;
+            Txt_Modificar_Deporte_Campeonato.Text = DatosCampeonato.Deporte;
+            Dtp_Modificar_Fecha_Campeonato.Text = DatosCampeonato.FechaCreacion;
         }
 
         private void Btn_Modificar_Campeonato_Click(object sender, EventArgs e)
         {
-            try 
-            {
-                string ModificarCampeonato = "UPDATE CAMPEONATO SET ID_SEDE_POLI_FK='" + (Cbx_Modificar_Sede_Campeonato.SelectedIndex + 1) + "'";
-                OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarCampeonato, conexion.conexion());
-                Query_UPDATE1.ExecuteNonQuery();
-                MessageBox.Show("Campeonato modificado con éxito.", "FORMULARIO ADMINNISTRACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show("Error al ejecutar SQL: " +
-                System.Environment.NewLine + System.Environment.NewLine +
-                ex.GetType().ToString() + System.Environment.NewLine +
-                ex.Message, "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            int Sede = Cbx_Modificar_Sede_Campeonato.SelectedIndex + 1;
+            Campeonato.ModificarCampeonato(Sede);
         }
 
         private void Btn_Buscar_Partido_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int Id_Local, Id_visitante;
-                string Local, Visitante;
-
-                string BuscarLocal = "SELECT P.ID_LOCAL FROM PARTIDO AS P, CAMPEONATO AS C" +
-                  " WHERE P.ID_CAMPEONATO_FK = C.ID_CAMPEONATO AND P.ID_PARTIDO ='" + Txt_Modificar_Id_Partido.Text + "'";
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarLocal, conexion.conexion());
-                Id_Local = Convert.ToInt32(Query_Busqueda1.ExecuteScalar());
-
-                string BuscarVisitante = "SELECT P.ID_VISITANTE FROM PARTIDO AS P, CAMPEONATO AS C" +
-                  " WHERE P.ID_CAMPEONATO_FK = C.ID_CAMPEONATO AND P.ID_PARTIDO ='" + Txt_Modificar_Id_Partido.Text + "'";
-                OdbcCommand Query_Busqueda2 = new OdbcCommand(BuscarVisitante, conexion.conexion());
-                Id_visitante = Convert.ToInt32(Query_Busqueda2.ExecuteScalar());
-
-                string BuscarNombreLocal = "SELECT NOMBRE_EQUIPO FROM EQUIPO WHERE ID_EQUIPO ='" + Id_Local + "'";
-                OdbcCommand Query_Busqueda3 = new OdbcCommand(BuscarNombreLocal, conexion.conexion());
-                Local = Convert.ToString(Query_Busqueda3.ExecuteScalar());
-
-                string BuscarNombreVisitante = "SELECT NOMBRE_EQUIPO FROM EQUIPO WHERE ID_EQUIPO ='" + Id_visitante + "'";
-                OdbcCommand Query_Busqueda4 = new OdbcCommand(BuscarNombreVisitante, conexion.conexion());
-                Visitante = Convert.ToString(Query_Busqueda4.ExecuteScalar());
-
-                string BuscarPartido = "SELECT P.FECHA_PARTIDO, P.MARCADOR, " +
-                    "C.NOMBRE_CAMPEONATO, EP.NOMBRE_ESTADO FROM PARTIDO AS P, CAMPEONATO AS C, ESTADO_PARTIDO AS EP " +
-                    "WHERE C.ID_CAMPEONATO = P.ID_CAMPEONATO_FK AND P.ID_PARTIDO ='" + Txt_Modificar_Id_Partido.Text + "'";
-                OdbcCommand Query_Busqueda5 = new OdbcCommand(BuscarPartido, conexion.conexion());
-                OdbcDataReader Lector = Query_Busqueda5.ExecuteReader();
-
-                if (Lector.HasRows == true)
-                {
-                    while (Lector.Read())
-                    {
-                        Dtp_Modificar_Fecha_Partido.Text = Lector.GetString(0);
-                        Txt_Modificar_Marcador_Partido.Text = Lector.GetString(1);
-                        Txt_Modificar_Nombre_Campeonato_Partido.Text = Lector.GetString(2);
-                        Cbx_Modificar_Estado_Partido.Text = Lector.GetString(3);
-                        Txt_Modificar_Local_Partido.Text =Local;
-                        Txt_Modificar_Visitante_Partido.Text = Visitante;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ejecutar SQL: " +
-                System.Environment.NewLine + System.Environment.NewLine +
-                ex.GetType().ToString() + System.Environment.NewLine +
-                ex.Message, "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            DatosPartido = Campeonato.BuscarPartido(Txt_Modificar_Id_Partido.Text);
+            Txt_Modificar_Nombre_Campeonato_Partido.Text = DatosPartido.NombreCampeonato;
+            Txt_Modificar_Local_Partido.Text = DatosPartido.Local;
+            Txt_Modificar_Visitante_Partido.Text = DatosPartido.Visitante;
+            Txt_Modificar_MarcadorLocal.Text = DatosPartido.MarcadorLocal;
+            Txt_Modificar_MarcadorVisitante.Text = DatosPartido.MarcadorVisitante;
+            Cbx_Modificar_Estado_Partido.Text = DatosPartido.Estado;
+            Dtp_Modificar_Fecha_Partido.Text = DatosPartido.FechaPartido;
         }
 
         private void Btn_Agregar_Falta_Click(object sender, EventArgs e)
