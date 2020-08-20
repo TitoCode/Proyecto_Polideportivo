@@ -22,8 +22,9 @@ namespace PolideportivoUsuario_Proj
         ClsConexion conexion = new ClsConexion();
         public FrmMain()
         {
-            
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
+            BackColor = Color.Transparent;
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;

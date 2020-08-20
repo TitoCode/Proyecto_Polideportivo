@@ -53,10 +53,13 @@
             this.TbpCalendario = new System.Windows.Forms.TabPage();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.TmrInicio = new System.Windows.Forms.Timer(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.PnlGeneral.SuspendLayout();
             this.TbpInicio.SuspendLayout();
             this.TbpJugadores.SuspendLayout();
             this.TbpEquipos.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabSelector2
@@ -81,6 +84,7 @@
             this.PnlGeneral.Controls.Add(this.TbpJugadores);
             this.PnlGeneral.Controls.Add(this.TbpEquipos);
             this.PnlGeneral.Controls.Add(this.TbpCalendario);
+            this.PnlGeneral.Controls.Add(this.tabPage1);
             this.PnlGeneral.Depth = 0;
             this.PnlGeneral.Location = new System.Drawing.Point(-2, 93);
             this.PnlGeneral.MouseState = MaterialSkin.MouseState.HOVER;
@@ -315,6 +319,28 @@
             this.TmrInicio.Interval = 1;
             this.TmrInicio.Tick += new System.EventHandler(this.TmrInicio_Tick);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.materialTabSelector1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1018, 481);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.BaseTabControl = null;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(10, 6);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(799, 23);
+            this.materialTabSelector1.TabIndex = 0;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +358,7 @@
             this.TbpJugadores.PerformLayout();
             this.TbpEquipos.ResumeLayout(false);
             this.TbpEquipos.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,6 +387,8 @@
         private System.Windows.Forms.ColumnHeader ClmhPosicion;
         private System.Windows.Forms.ColumnHeader ClmhEstadoJugador;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
     }
 }
 
