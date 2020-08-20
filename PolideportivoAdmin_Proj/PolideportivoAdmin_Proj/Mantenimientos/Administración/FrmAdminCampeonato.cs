@@ -196,7 +196,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_IngresoEquipo_Click(object sender, EventArgs e)
         {
-            if (Txt_IdEquipo.Text == "" ) { MessageBox.Show("ADVERTENCIA:No se ha ingresado el ID del equipo que se desea ingresar.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (Txt_IdEquipo.Text == "" ) { MessageBox.Show("ADVERTENCIA:No se ha ingresado el ID del equipo que se desea ingresar.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
                 Equipo = Admin.BusquedaIDEquipo(Txt_IdEquipo.Text);
@@ -230,7 +230,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Ingresar_Campeonato_Click(object sender, EventArgs e)
         {
-            if (Txt_Crear_Campeonato.Text == "" || Cbx_Crear_Deporte.Text == "" || Cbx_Crear_Sede.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos del campeonato.", "ADERTENCIA"+ MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Txt_Crear_Campeonato.Text == "" || Cbx_Crear_Deporte.Text == "" || Cbx_Crear_Sede.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos del campeonato.", "ADVERTENCIA", MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else
             {
                 if (MessageBox.Show("¿Desea crear un nuevo campeonato?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
@@ -242,7 +242,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
                     if (Rbtn_Eliminatoria.Checked == true)
                     {
-                        if (Dgv_Equipos_Campeonato.RowCount < 3) { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun equipo al campeonato." + "ADERTENCIA" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+                        if (Dgv_Equipos_Campeonato.RowCount < 3) { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun equipo al campeonato." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
                         else
                         {
                             if (Convert.ToInt32(Dgv_Equipos_Campeonato.RowCount - 1) != Convert.ToInt32(Cbx_Equipos.SelectedItem))
@@ -263,10 +263,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                     }
                     else if (Rbtn_Todos.Checked == true)
                     {
-                        if (Dgv_Equipos_Campeonato.RowCount < 3) { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun equipo al campeonato." + "ADERTENCIA" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+                        if (Dgv_Equipos_Campeonato.RowCount < 3) { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun equipo al campeonato." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
                         else
                         {
-                            if (Rbtn_Ida.Checked == false && Rbtn_IdaVuelta.Checked == false) { MessageBox.Show("ADVERTENCIA:No se ha selecionado una opcion: 'Ida' o 'Ida y Vuelta'." + "ADERTENCIA" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+                            if (Rbtn_Ida.Checked == false && Rbtn_IdaVuelta.Checked == false) { MessageBox.Show("ADVERTENCIA:No se ha selecionado una opcion: 'Ida' o 'Ida y Vuelta'." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
                             else
                             {
                                 int No_Equipos = (int)Nud_Cantidad_Todos.Value;
@@ -300,7 +300,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         private void Btn_Modificar_Buscar_Campeonato_Click(object sender, EventArgs e)
         {
 
-            if (Txt_Modificar_Id_Campeonato.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun ID de campeonato."+ "ADERTENCIA"+ MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Txt_Modificar_Id_Campeonato.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun ID de campeonato.", "ADVERTENCIA", MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else 
             {
                 DatosCampeonato = Campeonato.BusquedaCampeonato(Txt_Modificar_Id_Campeonato.Text);
@@ -314,7 +314,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Modificar_Campeonato_Click(object sender, EventArgs e)
         {
-            if (Cbx_Modificar_Sede_Campeonato.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha seleccionado una sede."+ "ADERTENCIA"+ MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Cbx_Modificar_Sede_Campeonato.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha seleccionado una sede.", "ADVERTENCIA", MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else
             {
                 if (MessageBox.Show("¿Desea modificar el campeonato?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
@@ -334,7 +334,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Buscar_Partido_Click(object sender, EventArgs e)
         {
-            if (Txt_Modificar_Id_Partido.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado un id de partido."+ "ADERTENCIA"+ MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Txt_Modificar_Id_Partido.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado un id de partido.", "ADVERTENCIA", MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else
             {
                 DatosPartido = Campeonato.BuscarPartido(Txt_Modificar_Id_Partido.Text);
@@ -350,7 +350,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Agregar_Falta_Click(object sender, EventArgs e)
         {
-            if (Cbx_Falta.Text == "" || Txt_FaltaJugador.Text == "" || Rtxt_Descripcion_Falta.Text =="") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos de la falta." + "ADERTENCIA" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Cbx_Falta.Text == "" || Txt_FaltaJugador.Text == "" || Rtxt_Descripcion_Falta.Text =="") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos de la falta." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else
             {
                 if (MessageBox.Show("¿Desea agregar la falta?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
@@ -368,7 +368,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Agregar_Anotacion_Click(object sender, EventArgs e)
         {
-            if (Txt_Anotacion.Text == "" || Txt_AnotacionJugador.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos sobre la anotacion del jugador." + "ADERTENCIA" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation); }
+            if (Txt_Anotacion.Text == "" || Txt_AnotacionJugador.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos sobre la anotacion del jugador." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
             else 
             {
                 if (MessageBox.Show("¿Desea agregar la falta?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
@@ -399,8 +399,8 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             DateTime FechaPartido = Dtp_Modificar_Fecha_Partido.Value.Date;
 
-            if (Txt_Modificar_MarcadorLocal.Text == "" || Txt_Modificar_MarcadorVisitante.Text == "" || Cbx_Modificar_Estado_Partido.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos del partido."+ "ADERTENCIA"+ MessageBoxButtons.OK+ MessageBoxIcon.Exclamation); }
-            else if (FechaPartido < DateTime.Now) { MessageBox.Show("ADVERTENCIA:La fecha seleccionada ya ha pasado."+ "ADERTENCIA"+ MessageBoxButtons.OK+ MessageBoxIcon.Exclamation); }
+            if (Txt_Modificar_MarcadorLocal.Text == "" || Txt_Modificar_MarcadorVisitante.Text == "" || Cbx_Modificar_Estado_Partido.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado uno o mas datos del partido."+ "ADVERTENCIA"+ MessageBoxButtons.OK+ MessageBoxIcon.Exclamation); }
+            else if (FechaPartido < DateTime.Now) { MessageBox.Show("ADVERTENCIA:La fecha seleccionada ya ha pasado.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
                 if (MessageBox.Show("¿Desea modificar el partido?", "EMPLEADO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
@@ -432,7 +432,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Buscar_PartidoControl_Click(object sender, EventArgs e)
         {
-            if (Txt_IDPartido_Control.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun ID de partido."+ "ADERTENCIA"+ MessageBoxButtons.OK+ MessageBoxIcon.Exclamation); }
+            if (Txt_IDPartido_Control.Text == "") { MessageBox.Show("ADVERTENCIA:No se ha ingresado ningun ID de partido.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
                 Campeonato.ListadoJugadoresPartido(Dgv_Jugadores, Txt_IDPartido_Control.Text);
@@ -443,7 +443,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             if (Txt_IdEquipo.Text == "")
             {
-                MessageBox.Show("ADVERTENCIA:No se ha ingresado el ID del equipo que se desea remover."+ "ADERTENCIA"+ MessageBoxButtons.OK+ MessageBoxIcon.Exclamation);
+                MessageBox.Show("ADVERTENCIA:No se ha ingresado el ID del equipo que se desea remover.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else 
             {
