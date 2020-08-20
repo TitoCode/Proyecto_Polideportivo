@@ -108,6 +108,8 @@
             this.Rtxt_Descripcion_Falta = new System.Windows.Forms.RichTextBox();
             this.Lbl_Tipo_Falta = new System.Windows.Forms.Label();
             this.Gbx_Modificar_Partido = new System.Windows.Forms.GroupBox();
+            this.Txt_Modificar_MarcadorLocal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Cbx_Modificar_Estado_Partido = new System.Windows.Forms.ComboBox();
             this.Lbl_Modificar_Estado_Partido = new System.Windows.Forms.Label();
             this.Btn_Modificar_Partido = new System.Windows.Forms.Button();
@@ -116,7 +118,7 @@
             this.Lbl_Modificar_Marcador_Partido = new System.Windows.Forms.Label();
             this.Txt_Modificar_Visitante_Partido = new System.Windows.Forms.TextBox();
             this.Lbl_Modificar_Visitante_Partido = new System.Windows.Forms.Label();
-            this.Txt_Modificar_Marcador_Partido = new System.Windows.Forms.TextBox();
+            this.Txt_Modificar_MarcadorVisitante = new System.Windows.Forms.TextBox();
             this.Lbl_Modificar_Fecha_Partido = new System.Windows.Forms.Label();
             this.Lbl_Modificar_Local_Partido = new System.Windows.Forms.Label();
             this.Txt_Modificar_Nombre_Campeonato_Partido = new System.Windows.Forms.TextBox();
@@ -240,7 +242,7 @@
             this.Tbc_Campeonato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Campeonato.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Campeonato.Name = "Tbc_Campeonato";
-            this.Tbc_Campeonato.SelectedIndex = 0;
+            this.Tbc_Campeonato.SelectedIndex = 3;
             this.Tbc_Campeonato.Size = new System.Drawing.Size(914, 523);
             this.Tbc_Campeonato.TabIndex = 3;
             this.Tbc_Campeonato.UseSelectable = true;
@@ -780,11 +782,13 @@
             // Dtp_Modificar_Fecha_Campeonato
             // 
             this.Dtp_Modificar_Fecha_Campeonato.Enabled = false;
+            this.Dtp_Modificar_Fecha_Campeonato.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fecha_Campeonato.Location = new System.Drawing.Point(208, 201);
             this.Dtp_Modificar_Fecha_Campeonato.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Modificar_Fecha_Campeonato.Name = "Dtp_Modificar_Fecha_Campeonato";
             this.Dtp_Modificar_Fecha_Campeonato.Size = new System.Drawing.Size(415, 22);
             this.Dtp_Modificar_Fecha_Campeonato.TabIndex = 20;
+            this.Dtp_Modificar_Fecha_Campeonato.Value = new System.DateTime(2020, 8, 19, 0, 0, 0, 0);
             // 
             // Lbl_Modificar_Fecha_Creacion_Campeonato
             // 
@@ -1136,6 +1140,8 @@
             // Gbx_Modificar_Partido
             // 
             this.Gbx_Modificar_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorLocal);
+            this.Gbx_Modificar_Partido.Controls.Add(this.label1);
             this.Gbx_Modificar_Partido.Controls.Add(this.Cbx_Modificar_Estado_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Estado_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Btn_Modificar_Partido);
@@ -1144,7 +1150,7 @@
             this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Marcador_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Visitante_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Visitante_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Marcador_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorVisitante);
             this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Fecha_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Local_Partido);
             this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Nombre_Campeonato_Partido);
@@ -1156,6 +1162,27 @@
             this.Gbx_Modificar_Partido.TabIndex = 35;
             this.Gbx_Modificar_Partido.TabStop = false;
             this.Gbx_Modificar_Partido.Text = "Datos del Partido";
+            // 
+            // Txt_Modificar_MarcadorLocal
+            // 
+            this.Txt_Modificar_MarcadorLocal.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_MarcadorLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_MarcadorLocal.Enabled = false;
+            this.Txt_Modificar_MarcadorLocal.Location = new System.Drawing.Point(169, 228);
+            this.Txt_Modificar_MarcadorLocal.Name = "Txt_Modificar_MarcadorLocal";
+            this.Txt_Modificar_MarcadorLocal.Size = new System.Drawing.Size(52, 15);
+            this.Txt_Modificar_MarcadorLocal.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(152, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 14);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "-";
             // 
             // Cbx_Modificar_Estado_Partido
             // 
@@ -1206,7 +1233,6 @@
             // Dtp_Modificar_Fecha_Partido
             // 
             this.Dtp_Modificar_Fecha_Partido.Enabled = false;
-            this.Dtp_Modificar_Fecha_Partido.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fecha_Partido.Location = new System.Drawing.Point(100, 104);
             this.Dtp_Modificar_Fecha_Partido.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Modificar_Fecha_Partido.Name = "Dtp_Modificar_Fecha_Partido";
@@ -1245,15 +1271,15 @@
             this.Lbl_Modificar_Visitante_Partido.TabIndex = 16;
             this.Lbl_Modificar_Visitante_Partido.Text = "VISITANTE";
             // 
-            // Txt_Modificar_Marcador_Partido
+            // Txt_Modificar_MarcadorVisitante
             // 
-            this.Txt_Modificar_Marcador_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_Marcador_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Marcador_Partido.Enabled = false;
-            this.Txt_Modificar_Marcador_Partido.Location = new System.Drawing.Point(94, 228);
-            this.Txt_Modificar_Marcador_Partido.Name = "Txt_Modificar_Marcador_Partido";
-            this.Txt_Modificar_Marcador_Partido.Size = new System.Drawing.Size(134, 15);
-            this.Txt_Modificar_Marcador_Partido.TabIndex = 15;
+            this.Txt_Modificar_MarcadorVisitante.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_MarcadorVisitante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_MarcadorVisitante.Enabled = false;
+            this.Txt_Modificar_MarcadorVisitante.Location = new System.Drawing.Point(94, 228);
+            this.Txt_Modificar_MarcadorVisitante.Name = "Txt_Modificar_MarcadorVisitante";
+            this.Txt_Modificar_MarcadorVisitante.Size = new System.Drawing.Size(52, 15);
+            this.Txt_Modificar_MarcadorVisitante.TabIndex = 15;
             // 
             // Lbl_Modificar_Fecha_Partido
             // 
@@ -1441,7 +1467,7 @@
         private System.Windows.Forms.Label Lbl_Modificar_Marcador_Partido;
         private System.Windows.Forms.TextBox Txt_Modificar_Visitante_Partido;
         private System.Windows.Forms.Label Lbl_Modificar_Visitante_Partido;
-        private System.Windows.Forms.TextBox Txt_Modificar_Marcador_Partido;
+        private System.Windows.Forms.TextBox Txt_Modificar_MarcadorVisitante;
         private System.Windows.Forms.Label Lbl_Modificar_Fecha_Partido;
         private System.Windows.Forms.Label Lbl_Modificar_Local_Partido;
         private System.Windows.Forms.TextBox Txt_Modificar_Nombre_Campeonato_Partido;
@@ -1473,5 +1499,7 @@
         private System.Windows.Forms.Button Btn_Ayuda_ModificarPartido;
         private System.Windows.Forms.Timer Tmr_ListadoCampeonatos;
         private MetroFramework.Controls.MetroGrid Dgv_ListadoCampeonatos;
+        private System.Windows.Forms.TextBox Txt_Modificar_MarcadorLocal;
+        private System.Windows.Forms.Label label1;
     }
 }
