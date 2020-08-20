@@ -36,6 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
             this.Lbl_Crear_Sede = new System.Windows.Forms.Label();
             this.Lbl_Crear_Cantidad_Equipos = new System.Windows.Forms.Label();
@@ -91,22 +94,6 @@
             this.Txt_Modificar_Id_Campeonato = new System.Windows.Forms.TextBox();
             this.Tbp_Modificar_Partido = new MetroFramework.Controls.MetroTabPage();
             this.Btn_Ayuda_ModificarPartido = new System.Windows.Forms.Button();
-            this.Gbx_Anotacion = new System.Windows.Forms.GroupBox();
-            this.Btn_Agregar_Anotacion = new System.Windows.Forms.Button();
-            this.Dtp_Hora_Anotacion = new System.Windows.Forms.DateTimePicker();
-            this.Lbl_Anotacion_Hora = new System.Windows.Forms.Label();
-            this.Txt_Anotacion = new System.Windows.Forms.TextBox();
-            this.Cbx_Anotacion_Jugador = new System.Windows.Forms.ComboBox();
-            this.Lbl_Anotacion = new System.Windows.Forms.Label();
-            this.Lbl_Anotacion_Jugador = new System.Windows.Forms.Label();
-            this.Gbx_Modificar_Partido_Faltas = new System.Windows.Forms.GroupBox();
-            this.Btn_Agregar_Falta = new System.Windows.Forms.Button();
-            this.Cbx_Falta_Jugador = new System.Windows.Forms.ComboBox();
-            this.Cbx_Falta = new System.Windows.Forms.ComboBox();
-            this.Lbl_Descripcion_Falta = new System.Windows.Forms.Label();
-            this.Lbl_Falta_Jugador = new System.Windows.Forms.Label();
-            this.Rtxt_Descripcion_Falta = new System.Windows.Forms.RichTextBox();
-            this.Lbl_Tipo_Falta = new System.Windows.Forms.Label();
             this.Gbx_Modificar_Partido = new System.Windows.Forms.GroupBox();
             this.Txt_Modificar_MarcadorLocal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -127,6 +114,27 @@
             this.Btn_Buscar_Partido = new System.Windows.Forms.Button();
             this.Txt_Modificar_Id_Partido = new System.Windows.Forms.TextBox();
             this.Tmr_ListadoCampeonatos = new System.Windows.Forms.Timer(this.components);
+            this.Tbp_ControlPartido = new MetroFramework.Controls.MetroTabPage();
+            this.Gbx_Anotacion = new System.Windows.Forms.GroupBox();
+            this.Txt_AnotacionJugador = new System.Windows.Forms.TextBox();
+            this.Btn_Agregar_Anotacion = new System.Windows.Forms.Button();
+            this.Dtp_Hora_Anotacion = new System.Windows.Forms.DateTimePicker();
+            this.Lbl_Anotacion_Hora = new System.Windows.Forms.Label();
+            this.Txt_Anotacion = new System.Windows.Forms.TextBox();
+            this.Lbl_Anotacion = new System.Windows.Forms.Label();
+            this.Lbl_Anotacion_Jugador = new System.Windows.Forms.Label();
+            this.Gbx_Modificar_Partido_Faltas = new System.Windows.Forms.GroupBox();
+            this.Txt_FaltaJugador = new System.Windows.Forms.TextBox();
+            this.Btn_Agregar_Falta = new System.Windows.Forms.Button();
+            this.Cbx_Falta = new System.Windows.Forms.ComboBox();
+            this.Lbl_Descripcion_Falta = new System.Windows.Forms.Label();
+            this.Lbl_Falta_Jugador = new System.Windows.Forms.Label();
+            this.Rtxt_Descripcion_Falta = new System.Windows.Forms.RichTextBox();
+            this.Lbl_Tipo_Falta = new System.Windows.Forms.Label();
+            this.Dgv_Jugadores = new MetroFramework.Controls.MetroGrid();
+            this.Lbl_ControlPartido = new System.Windows.Forms.Label();
+            this.Btn_Buscar_PartidoControl = new System.Windows.Forms.Button();
+            this.Txt_IDPartido_Control = new System.Windows.Forms.TextBox();
             this.Tbc_Campeonato.SuspendLayout();
             this.Tbp_Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoCampeonatos)).BeginInit();
@@ -140,9 +148,11 @@
             this.Tbp_Modificar.SuspendLayout();
             this.Gbx_Modificar_Campeonato.SuspendLayout();
             this.Tbp_Modificar_Partido.SuspendLayout();
+            this.Gbx_Modificar_Partido.SuspendLayout();
+            this.Tbp_ControlPartido.SuspendLayout();
             this.Gbx_Anotacion.SuspendLayout();
             this.Gbx_Modificar_Partido_Faltas.SuspendLayout();
-            this.Gbx_Modificar_Partido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Jugadores)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_Crear_Tipo_Deporte
@@ -239,6 +249,7 @@
             this.Tbc_Campeonato.Controls.Add(this.Tbp_Crear);
             this.Tbc_Campeonato.Controls.Add(this.Tbp_Modificar);
             this.Tbc_Campeonato.Controls.Add(this.Tbp_Modificar_Partido);
+            this.Tbc_Campeonato.Controls.Add(this.Tbp_ControlPartido);
             this.Tbc_Campeonato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Campeonato.Location = new System.Drawing.Point(0, 0);
             this.Tbc_Campeonato.Name = "Tbc_Campeonato";
@@ -904,8 +915,6 @@
             // Tbp_Modificar_Partido
             // 
             this.Tbp_Modificar_Partido.Controls.Add(this.Btn_Ayuda_ModificarPartido);
-            this.Tbp_Modificar_Partido.Controls.Add(this.Gbx_Anotacion);
-            this.Tbp_Modificar_Partido.Controls.Add(this.Gbx_Modificar_Partido_Faltas);
             this.Tbp_Modificar_Partido.Controls.Add(this.Gbx_Modificar_Partido);
             this.Tbp_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Id_Partido);
             this.Tbp_Modificar_Partido.Controls.Add(this.Btn_Buscar_Partido);
@@ -938,25 +947,283 @@
             this.Btn_Ayuda_ModificarPartido.TabIndex = 38;
             this.Btn_Ayuda_ModificarPartido.UseVisualStyleBackColor = false;
             // 
+            // Gbx_Modificar_Partido
+            // 
+            this.Gbx_Modificar_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorLocal);
+            this.Gbx_Modificar_Partido.Controls.Add(this.label1);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Cbx_Modificar_Estado_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Estado_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Btn_Modificar_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Local_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Dtp_Modificar_Fecha_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Marcador_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Visitante_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Visitante_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorVisitante);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Fecha_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Local_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Nombre_Campeonato_Partido);
+            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Campeonato_Partido);
+            this.Gbx_Modificar_Partido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gbx_Modificar_Partido.Location = new System.Drawing.Point(142, 59);
+            this.Gbx_Modificar_Partido.Name = "Gbx_Modificar_Partido";
+            this.Gbx_Modificar_Partido.Size = new System.Drawing.Size(598, 390);
+            this.Gbx_Modificar_Partido.TabIndex = 35;
+            this.Gbx_Modificar_Partido.TabStop = false;
+            this.Gbx_Modificar_Partido.Text = "Datos del Partido";
+            // 
+            // Txt_Modificar_MarcadorLocal
+            // 
+            this.Txt_Modificar_MarcadorLocal.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_MarcadorLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_MarcadorLocal.Location = new System.Drawing.Point(302, 235);
+            this.Txt_Modificar_MarcadorLocal.Name = "Txt_Modificar_MarcadorLocal";
+            this.Txt_Modificar_MarcadorLocal.Size = new System.Drawing.Size(52, 15);
+            this.Txt_Modificar_MarcadorLocal.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(285, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 14);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "-";
+            // 
+            // Cbx_Modificar_Estado_Partido
+            // 
+            this.Cbx_Modificar_Estado_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Cbx_Modificar_Estado_Partido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbx_Modificar_Estado_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cbx_Modificar_Estado_Partido.FormattingEnabled = true;
+            this.Cbx_Modificar_Estado_Partido.Location = new System.Drawing.Point(196, 282);
+            this.Cbx_Modificar_Estado_Partido.Name = "Cbx_Modificar_Estado_Partido";
+            this.Cbx_Modificar_Estado_Partido.Size = new System.Drawing.Size(202, 22);
+            this.Cbx_Modificar_Estado_Partido.TabIndex = 35;
+            // 
+            // Lbl_Modificar_Estado_Partido
+            // 
+            this.Lbl_Modificar_Estado_Partido.AutoSize = true;
+            this.Lbl_Modificar_Estado_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Estado_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Estado_Partido.Location = new System.Drawing.Point(270, 265);
+            this.Lbl_Modificar_Estado_Partido.Name = "Lbl_Modificar_Estado_Partido";
+            this.Lbl_Modificar_Estado_Partido.Size = new System.Drawing.Size(47, 14);
+            this.Lbl_Modificar_Estado_Partido.TabIndex = 34;
+            this.Lbl_Modificar_Estado_Partido.Text = "ESTADO";
+            // 
+            // Btn_Modificar_Partido
+            // 
+            this.Btn_Modificar_Partido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Partido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Modificar_Partido.FlatAppearance.BorderSize = 0;
+            this.Btn_Modificar_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Modificar_Partido.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Modificar_Partido.Location = new System.Drawing.Point(227, 332);
+            this.Btn_Modificar_Partido.Name = "Btn_Modificar_Partido";
+            this.Btn_Modificar_Partido.Size = new System.Drawing.Size(136, 41);
+            this.Btn_Modificar_Partido.TabIndex = 33;
+            this.Btn_Modificar_Partido.Text = "MODIFICAR";
+            this.Btn_Modificar_Partido.UseVisualStyleBackColor = false;
+            this.Btn_Modificar_Partido.Click += new System.EventHandler(this.Btn_Modificar_Partido_Click);
+            // 
+            // Txt_Modificar_Local_Partido
+            // 
+            this.Txt_Modificar_Local_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_Local_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_Local_Partido.Enabled = false;
+            this.Txt_Modificar_Local_Partido.Location = new System.Drawing.Point(308, 169);
+            this.Txt_Modificar_Local_Partido.Name = "Txt_Modificar_Local_Partido";
+            this.Txt_Modificar_Local_Partido.Size = new System.Drawing.Size(127, 15);
+            this.Txt_Modificar_Local_Partido.TabIndex = 21;
+            // 
+            // Dtp_Modificar_Fecha_Partido
+            // 
+            this.Dtp_Modificar_Fecha_Partido.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Dtp_Modificar_Fecha_Partido.Location = new System.Drawing.Point(76, 109);
+            this.Dtp_Modificar_Fecha_Partido.Margin = new System.Windows.Forms.Padding(2);
+            this.Dtp_Modificar_Fecha_Partido.Name = "Dtp_Modificar_Fecha_Partido";
+            this.Dtp_Modificar_Fecha_Partido.Size = new System.Drawing.Size(433, 22);
+            this.Dtp_Modificar_Fecha_Partido.TabIndex = 20;
+            // 
+            // Lbl_Modificar_Marcador_Partido
+            // 
+            this.Lbl_Modificar_Marcador_Partido.AutoSize = true;
+            this.Lbl_Modificar_Marcador_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Marcador_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Marcador_Partido.Location = new System.Drawing.Point(259, 218);
+            this.Lbl_Modificar_Marcador_Partido.Name = "Lbl_Modificar_Marcador_Partido";
+            this.Lbl_Modificar_Marcador_Partido.Size = new System.Drawing.Size(67, 14);
+            this.Lbl_Modificar_Marcador_Partido.TabIndex = 19;
+            this.Lbl_Modificar_Marcador_Partido.Text = "MARCADOR";
+            // 
+            // Txt_Modificar_Visitante_Partido
+            // 
+            this.Txt_Modificar_Visitante_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_Visitante_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_Visitante_Partido.Enabled = false;
+            this.Txt_Modificar_Visitante_Partido.Location = new System.Drawing.Point(152, 169);
+            this.Txt_Modificar_Visitante_Partido.Name = "Txt_Modificar_Visitante_Partido";
+            this.Txt_Modificar_Visitante_Partido.Size = new System.Drawing.Size(127, 15);
+            this.Txt_Modificar_Visitante_Partido.TabIndex = 17;
+            // 
+            // Lbl_Modificar_Visitante_Partido
+            // 
+            this.Lbl_Modificar_Visitante_Partido.AutoSize = true;
+            this.Lbl_Modificar_Visitante_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Visitante_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Visitante_Partido.Location = new System.Drawing.Point(184, 152);
+            this.Lbl_Modificar_Visitante_Partido.Name = "Lbl_Modificar_Visitante_Partido";
+            this.Lbl_Modificar_Visitante_Partido.Size = new System.Drawing.Size(58, 14);
+            this.Lbl_Modificar_Visitante_Partido.TabIndex = 16;
+            this.Lbl_Modificar_Visitante_Partido.Text = "VISITANTE";
+            // 
+            // Txt_Modificar_MarcadorVisitante
+            // 
+            this.Txt_Modificar_MarcadorVisitante.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_MarcadorVisitante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_MarcadorVisitante.Location = new System.Drawing.Point(227, 235);
+            this.Txt_Modificar_MarcadorVisitante.Name = "Txt_Modificar_MarcadorVisitante";
+            this.Txt_Modificar_MarcadorVisitante.Size = new System.Drawing.Size(52, 15);
+            this.Txt_Modificar_MarcadorVisitante.TabIndex = 15;
+            // 
+            // Lbl_Modificar_Fecha_Partido
+            // 
+            this.Lbl_Modificar_Fecha_Partido.AutoSize = true;
+            this.Lbl_Modificar_Fecha_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Fecha_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Fecha_Partido.Location = new System.Drawing.Point(240, 88);
+            this.Lbl_Modificar_Fecha_Partido.Name = "Lbl_Modificar_Fecha_Partido";
+            this.Lbl_Modificar_Fecha_Partido.Size = new System.Drawing.Size(109, 14);
+            this.Lbl_Modificar_Fecha_Partido.TabIndex = 10;
+            this.Lbl_Modificar_Fecha_Partido.Text = "FECHA DEL PARTIDO";
+            // 
+            // Lbl_Modificar_Local_Partido
+            // 
+            this.Lbl_Modificar_Local_Partido.AutoSize = true;
+            this.Lbl_Modificar_Local_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Local_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Local_Partido.Location = new System.Drawing.Point(351, 152);
+            this.Lbl_Modificar_Local_Partido.Name = "Lbl_Modificar_Local_Partido";
+            this.Lbl_Modificar_Local_Partido.Size = new System.Drawing.Size(38, 14);
+            this.Lbl_Modificar_Local_Partido.TabIndex = 12;
+            this.Lbl_Modificar_Local_Partido.Text = "LOCAL";
+            // 
+            // Txt_Modificar_Nombre_Campeonato_Partido
+            // 
+            this.Txt_Modificar_Nombre_Campeonato_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_Nombre_Campeonato_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_Nombre_Campeonato_Partido.Enabled = false;
+            this.Txt_Modificar_Nombre_Campeonato_Partido.Location = new System.Drawing.Point(76, 53);
+            this.Txt_Modificar_Nombre_Campeonato_Partido.Name = "Txt_Modificar_Nombre_Campeonato_Partido";
+            this.Txt_Modificar_Nombre_Campeonato_Partido.Size = new System.Drawing.Size(433, 15);
+            this.Txt_Modificar_Nombre_Campeonato_Partido.TabIndex = 4;
+            // 
+            // Lbl_Modificar_Campeonato_Partido
+            // 
+            this.Lbl_Modificar_Campeonato_Partido.AutoSize = true;
+            this.Lbl_Modificar_Campeonato_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Campeonato_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Campeonato_Partido.Location = new System.Drawing.Point(218, 36);
+            this.Lbl_Modificar_Campeonato_Partido.Name = "Lbl_Modificar_Campeonato_Partido";
+            this.Lbl_Modificar_Campeonato_Partido.Size = new System.Drawing.Size(149, 14);
+            this.Lbl_Modificar_Campeonato_Partido.TabIndex = 9;
+            this.Lbl_Modificar_Campeonato_Partido.Text = "NOMBRE DEL CAMPEONATO";
+            // 
+            // Lbl_Modificar_Id_Partido
+            // 
+            this.Lbl_Modificar_Id_Partido.AutoSize = true;
+            this.Lbl_Modificar_Id_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Modificar_Id_Partido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Modificar_Id_Partido.Location = new System.Drawing.Point(8, 21);
+            this.Lbl_Modificar_Id_Partido.Name = "Lbl_Modificar_Id_Partido";
+            this.Lbl_Modificar_Id_Partido.Size = new System.Drawing.Size(174, 14);
+            this.Lbl_Modificar_Id_Partido.TabIndex = 34;
+            this.Lbl_Modificar_Id_Partido.Text = "Ingrese el  ID del Partido";
+            // 
+            // Btn_Buscar_Partido
+            // 
+            this.Btn_Buscar_Partido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Buscar_Partido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Buscar_Partido.FlatAppearance.BorderSize = 0;
+            this.Btn_Buscar_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar_Partido.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar_Partido.Location = new System.Drawing.Point(576, 15);
+            this.Btn_Buscar_Partido.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Buscar_Partido.Name = "Btn_Buscar_Partido";
+            this.Btn_Buscar_Partido.Size = new System.Drawing.Size(101, 26);
+            this.Btn_Buscar_Partido.TabIndex = 32;
+            this.Btn_Buscar_Partido.Text = "BUSCAR";
+            this.Btn_Buscar_Partido.UseVisualStyleBackColor = false;
+            this.Btn_Buscar_Partido.Click += new System.EventHandler(this.Btn_Buscar_Partido_Click);
+            // 
+            // Txt_Modificar_Id_Partido
+            // 
+            this.Txt_Modificar_Id_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_Modificar_Id_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Modificar_Id_Partido.Location = new System.Drawing.Point(200, 22);
+            this.Txt_Modificar_Id_Partido.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Modificar_Id_Partido.Name = "Txt_Modificar_Id_Partido";
+            this.Txt_Modificar_Id_Partido.Size = new System.Drawing.Size(341, 13);
+            this.Txt_Modificar_Id_Partido.TabIndex = 33;
+            // 
+            // Tmr_ListadoCampeonatos
+            // 
+            this.Tmr_ListadoCampeonatos.Enabled = true;
+            this.Tmr_ListadoCampeonatos.Interval = 2000;
+            this.Tmr_ListadoCampeonatos.Tick += new System.EventHandler(this.Tmr_ListadoCampeonatos_Tick);
+            // 
+            // Tbp_ControlPartido
+            // 
+            this.Tbp_ControlPartido.Controls.Add(this.Lbl_ControlPartido);
+            this.Tbp_ControlPartido.Controls.Add(this.Btn_Buscar_PartidoControl);
+            this.Tbp_ControlPartido.Controls.Add(this.Txt_IDPartido_Control);
+            this.Tbp_ControlPartido.Controls.Add(this.Dgv_Jugadores);
+            this.Tbp_ControlPartido.Controls.Add(this.Gbx_Anotacion);
+            this.Tbp_ControlPartido.Controls.Add(this.Gbx_Modificar_Partido_Faltas);
+            this.Tbp_ControlPartido.HorizontalScrollbarBarColor = true;
+            this.Tbp_ControlPartido.HorizontalScrollbarHighlightOnWheel = false;
+            this.Tbp_ControlPartido.HorizontalScrollbarSize = 10;
+            this.Tbp_ControlPartido.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_ControlPartido.Name = "Tbp_ControlPartido";
+            this.Tbp_ControlPartido.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_ControlPartido.TabIndex = 4;
+            this.Tbp_ControlPartido.Text = "Control Del Partido";
+            this.Tbp_ControlPartido.VerticalScrollbarBarColor = true;
+            this.Tbp_ControlPartido.VerticalScrollbarHighlightOnWheel = false;
+            this.Tbp_ControlPartido.VerticalScrollbarSize = 10;
+            // 
             // Gbx_Anotacion
             // 
             this.Gbx_Anotacion.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gbx_Anotacion.Controls.Add(this.Txt_AnotacionJugador);
             this.Gbx_Anotacion.Controls.Add(this.Btn_Agregar_Anotacion);
             this.Gbx_Anotacion.Controls.Add(this.Dtp_Hora_Anotacion);
             this.Gbx_Anotacion.Controls.Add(this.Lbl_Anotacion_Hora);
             this.Gbx_Anotacion.Controls.Add(this.Txt_Anotacion);
-            this.Gbx_Anotacion.Controls.Add(this.Cbx_Anotacion_Jugador);
             this.Gbx_Anotacion.Controls.Add(this.Lbl_Anotacion);
             this.Gbx_Anotacion.Controls.Add(this.Lbl_Anotacion_Jugador);
             this.Gbx_Anotacion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gbx_Anotacion.Location = new System.Drawing.Point(16, 265);
+            this.Gbx_Anotacion.Location = new System.Drawing.Point(25, 258);
             this.Gbx_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Gbx_Anotacion.Name = "Gbx_Anotacion";
             this.Gbx_Anotacion.Padding = new System.Windows.Forms.Padding(2);
             this.Gbx_Anotacion.Size = new System.Drawing.Size(461, 191);
-            this.Gbx_Anotacion.TabIndex = 37;
+            this.Gbx_Anotacion.TabIndex = 39;
             this.Gbx_Anotacion.TabStop = false;
             this.Gbx_Anotacion.Text = "Anotación del Jugador";
+            // 
+            // Txt_AnotacionJugador
+            // 
+            this.Txt_AnotacionJugador.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_AnotacionJugador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_AnotacionJugador.Location = new System.Drawing.Point(11, 46);
+            this.Txt_AnotacionJugador.Name = "Txt_AnotacionJugador";
+            this.Txt_AnotacionJugador.Size = new System.Drawing.Size(427, 15);
+            this.Txt_AnotacionJugador.TabIndex = 40;
             // 
             // Btn_Agregar_Anotacion
             // 
@@ -965,10 +1232,10 @@
             this.Btn_Agregar_Anotacion.FlatAppearance.BorderSize = 0;
             this.Btn_Agregar_Anotacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar_Anotacion.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Agregar_Anotacion.Location = new System.Drawing.Point(174, 150);
+            this.Btn_Agregar_Anotacion.Location = new System.Drawing.Point(136, 141);
             this.Btn_Agregar_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Agregar_Anotacion.Name = "Btn_Agregar_Anotacion";
-            this.Btn_Agregar_Anotacion.Size = new System.Drawing.Size(80, 26);
+            this.Btn_Agregar_Anotacion.Size = new System.Drawing.Size(150, 26);
             this.Btn_Agregar_Anotacion.TabIndex = 39;
             this.Btn_Agregar_Anotacion.Text = "AGREGAR";
             this.Btn_Agregar_Anotacion.UseVisualStyleBackColor = false;
@@ -977,7 +1244,7 @@
             // Dtp_Hora_Anotacion
             // 
             this.Dtp_Hora_Anotacion.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.Dtp_Hora_Anotacion.Location = new System.Drawing.Point(301, 102);
+            this.Dtp_Hora_Anotacion.Location = new System.Drawing.Point(246, 93);
             this.Dtp_Hora_Anotacion.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Hora_Anotacion.Name = "Dtp_Hora_Anotacion";
             this.Dtp_Hora_Anotacion.Size = new System.Drawing.Size(133, 22);
@@ -987,7 +1254,7 @@
             // 
             this.Lbl_Anotacion_Hora.AutoSize = true;
             this.Lbl_Anotacion_Hora.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Anotacion_Hora.Location = new System.Drawing.Point(342, 80);
+            this.Lbl_Anotacion_Hora.Location = new System.Drawing.Point(291, 76);
             this.Lbl_Anotacion_Hora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Anotacion_Hora.Name = "Lbl_Anotacion_Hora";
             this.Lbl_Anotacion_Hora.Size = new System.Drawing.Size(37, 14);
@@ -998,28 +1265,16 @@
             // 
             this.Txt_Anotacion.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Anotacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Anotacion.Enabled = false;
-            this.Txt_Anotacion.Location = new System.Drawing.Point(14, 111);
+            this.Txt_Anotacion.Location = new System.Drawing.Point(74, 99);
             this.Txt_Anotacion.Name = "Txt_Anotacion";
             this.Txt_Anotacion.Size = new System.Drawing.Size(105, 15);
             this.Txt_Anotacion.TabIndex = 36;
-            // 
-            // Cbx_Anotacion_Jugador
-            // 
-            this.Cbx_Anotacion_Jugador.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Cbx_Anotacion_Jugador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbx_Anotacion_Jugador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Anotacion_Jugador.FormattingEnabled = true;
-            this.Cbx_Anotacion_Jugador.Location = new System.Drawing.Point(14, 56);
-            this.Cbx_Anotacion_Jugador.Name = "Cbx_Anotacion_Jugador";
-            this.Cbx_Anotacion_Jugador.Size = new System.Drawing.Size(420, 22);
-            this.Cbx_Anotacion_Jugador.TabIndex = 36;
             // 
             // Lbl_Anotacion
             // 
             this.Lbl_Anotacion.AutoSize = true;
             this.Lbl_Anotacion.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Anotacion.Location = new System.Drawing.Point(28, 94);
+            this.Lbl_Anotacion.Location = new System.Drawing.Point(90, 76);
             this.Lbl_Anotacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Anotacion.Name = "Lbl_Anotacion";
             this.Lbl_Anotacion.Size = new System.Drawing.Size(67, 14);
@@ -1030,32 +1285,41 @@
             // 
             this.Lbl_Anotacion_Jugador.AutoSize = true;
             this.Lbl_Anotacion_Jugador.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Anotacion_Jugador.Location = new System.Drawing.Point(11, 30);
+            this.Lbl_Anotacion_Jugador.Location = new System.Drawing.Point(15, 29);
             this.Lbl_Anotacion_Jugador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Anotacion_Jugador.Name = "Lbl_Anotacion_Jugador";
-            this.Lbl_Anotacion_Jugador.Size = new System.Drawing.Size(57, 14);
+            this.Lbl_Anotacion_Jugador.Size = new System.Drawing.Size(93, 14);
             this.Lbl_Anotacion_Jugador.TabIndex = 0;
-            this.Lbl_Anotacion_Jugador.Text = "JUGADOR";
+            this.Lbl_Anotacion_Jugador.Text = "ID DEL JUGADOR";
             // 
             // Gbx_Modificar_Partido_Faltas
             // 
             this.Gbx_Modificar_Partido_Faltas.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Txt_FaltaJugador);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Btn_Agregar_Falta);
-            this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Cbx_Falta_Jugador);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Cbx_Falta);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Lbl_Descripcion_Falta);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Lbl_Falta_Jugador);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Rtxt_Descripcion_Falta);
             this.Gbx_Modificar_Partido_Faltas.Controls.Add(this.Lbl_Tipo_Falta);
             this.Gbx_Modificar_Partido_Faltas.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gbx_Modificar_Partido_Faltas.Location = new System.Drawing.Point(16, 66);
+            this.Gbx_Modificar_Partido_Faltas.Location = new System.Drawing.Point(25, 62);
             this.Gbx_Modificar_Partido_Faltas.Margin = new System.Windows.Forms.Padding(2);
             this.Gbx_Modificar_Partido_Faltas.Name = "Gbx_Modificar_Partido_Faltas";
             this.Gbx_Modificar_Partido_Faltas.Padding = new System.Windows.Forms.Padding(2);
             this.Gbx_Modificar_Partido_Faltas.Size = new System.Drawing.Size(461, 192);
-            this.Gbx_Modificar_Partido_Faltas.TabIndex = 36;
+            this.Gbx_Modificar_Partido_Faltas.TabIndex = 38;
             this.Gbx_Modificar_Partido_Faltas.TabStop = false;
             this.Gbx_Modificar_Partido_Faltas.Text = "Faltas del Partido";
+            // 
+            // Txt_FaltaJugador
+            // 
+            this.Txt_FaltaJugador.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_FaltaJugador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_FaltaJugador.Location = new System.Drawing.Point(7, 100);
+            this.Txt_FaltaJugador.Name = "Txt_FaltaJugador";
+            this.Txt_FaltaJugador.Size = new System.Drawing.Size(187, 15);
+            this.Txt_FaltaJugador.TabIndex = 41;
             // 
             // Btn_Agregar_Falta
             // 
@@ -1064,25 +1328,14 @@
             this.Btn_Agregar_Falta.FlatAppearance.BorderSize = 0;
             this.Btn_Agregar_Falta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar_Falta.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Agregar_Falta.Location = new System.Drawing.Point(174, 151);
+            this.Btn_Agregar_Falta.Location = new System.Drawing.Point(136, 151);
             this.Btn_Agregar_Falta.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Agregar_Falta.Name = "Btn_Agregar_Falta";
-            this.Btn_Agregar_Falta.Size = new System.Drawing.Size(80, 26);
+            this.Btn_Agregar_Falta.Size = new System.Drawing.Size(150, 26);
             this.Btn_Agregar_Falta.TabIndex = 38;
             this.Btn_Agregar_Falta.Text = "AGREGAR";
             this.Btn_Agregar_Falta.UseVisualStyleBackColor = false;
             this.Btn_Agregar_Falta.Click += new System.EventHandler(this.Btn_Agregar_Falta_Click);
-            // 
-            // Cbx_Falta_Jugador
-            // 
-            this.Cbx_Falta_Jugador.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Cbx_Falta_Jugador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbx_Falta_Jugador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Falta_Jugador.FormattingEnabled = true;
-            this.Cbx_Falta_Jugador.Location = new System.Drawing.Point(7, 101);
-            this.Cbx_Falta_Jugador.Name = "Cbx_Falta_Jugador";
-            this.Cbx_Falta_Jugador.Size = new System.Drawing.Size(187, 22);
-            this.Cbx_Falta_Jugador.TabIndex = 37;
             // 
             // Cbx_Falta
             // 
@@ -1113,9 +1366,9 @@
             this.Lbl_Falta_Jugador.Location = new System.Drawing.Point(4, 83);
             this.Lbl_Falta_Jugador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Falta_Jugador.Name = "Lbl_Falta_Jugador";
-            this.Lbl_Falta_Jugador.Size = new System.Drawing.Size(57, 14);
+            this.Lbl_Falta_Jugador.Size = new System.Drawing.Size(93, 14);
             this.Lbl_Falta_Jugador.TabIndex = 3;
-            this.Lbl_Falta_Jugador.Text = "JUGADOR";
+            this.Lbl_Falta_Jugador.Text = "ID DEL JUGADOR";
             // 
             // Rtxt_Descripcion_Falta
             // 
@@ -1137,235 +1390,90 @@
             this.Lbl_Tipo_Falta.TabIndex = 0;
             this.Lbl_Tipo_Falta.Text = "FALTA";
             // 
-            // Gbx_Modificar_Partido
+            // Dgv_Jugadores
             // 
-            this.Gbx_Modificar_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorLocal);
-            this.Gbx_Modificar_Partido.Controls.Add(this.label1);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Cbx_Modificar_Estado_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Estado_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Btn_Modificar_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Local_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Dtp_Modificar_Fecha_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Marcador_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Visitante_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Visitante_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_MarcadorVisitante);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Fecha_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Local_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Txt_Modificar_Nombre_Campeonato_Partido);
-            this.Gbx_Modificar_Partido.Controls.Add(this.Lbl_Modificar_Campeonato_Partido);
-            this.Gbx_Modificar_Partido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gbx_Modificar_Partido.Location = new System.Drawing.Point(521, 66);
-            this.Gbx_Modificar_Partido.Name = "Gbx_Modificar_Partido";
-            this.Gbx_Modificar_Partido.Size = new System.Drawing.Size(321, 390);
-            this.Gbx_Modificar_Partido.TabIndex = 35;
-            this.Gbx_Modificar_Partido.TabStop = false;
-            this.Gbx_Modificar_Partido.Text = "Datos del Partido";
+            this.Dgv_Jugadores.AllowUserToAddRows = false;
+            this.Dgv_Jugadores.AllowUserToDeleteRows = false;
+            this.Dgv_Jugadores.AllowUserToResizeRows = false;
+            this.Dgv_Jugadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_Jugadores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_Jugadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_Jugadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Dgv_Jugadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Jugadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.Dgv_Jugadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_Jugadores.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Dgv_Jugadores.EnableHeadersVisualStyles = false;
+            this.Dgv_Jugadores.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Dgv_Jugadores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Dgv_Jugadores.Location = new System.Drawing.Point(519, 87);
+            this.Dgv_Jugadores.Name = "Dgv_Jugadores";
+            this.Dgv_Jugadores.ReadOnly = true;
+            this.Dgv_Jugadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Jugadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.Dgv_Jugadores.RowHeadersVisible = false;
+            this.Dgv_Jugadores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Dgv_Jugadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_Jugadores.Size = new System.Drawing.Size(368, 362);
+            this.Dgv_Jugadores.TabIndex = 40;
             // 
-            // Txt_Modificar_MarcadorLocal
+            // Lbl_ControlPartido
             // 
-            this.Txt_Modificar_MarcadorLocal.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_MarcadorLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_MarcadorLocal.Enabled = false;
-            this.Txt_Modificar_MarcadorLocal.Location = new System.Drawing.Point(169, 228);
-            this.Txt_Modificar_MarcadorLocal.Name = "Txt_Modificar_MarcadorLocal";
-            this.Txt_Modificar_MarcadorLocal.Size = new System.Drawing.Size(52, 15);
-            this.Txt_Modificar_MarcadorLocal.TabIndex = 37;
+            this.Lbl_ControlPartido.AutoSize = true;
+            this.Lbl_ControlPartido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_ControlPartido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_ControlPartido.Location = new System.Drawing.Point(8, 21);
+            this.Lbl_ControlPartido.Name = "Lbl_ControlPartido";
+            this.Lbl_ControlPartido.Size = new System.Drawing.Size(174, 14);
+            this.Lbl_ControlPartido.TabIndex = 43;
+            this.Lbl_ControlPartido.Text = "Ingrese el  ID del Partido";
             // 
-            // label1
+            // Btn_Buscar_PartidoControl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 14);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "-";
+            this.Btn_Buscar_PartidoControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Buscar_PartidoControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
+            this.Btn_Buscar_PartidoControl.FlatAppearance.BorderSize = 0;
+            this.Btn_Buscar_PartidoControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar_PartidoControl.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar_PartidoControl.Location = new System.Drawing.Point(576, 15);
+            this.Btn_Buscar_PartidoControl.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Buscar_PartidoControl.Name = "Btn_Buscar_PartidoControl";
+            this.Btn_Buscar_PartidoControl.Size = new System.Drawing.Size(101, 26);
+            this.Btn_Buscar_PartidoControl.TabIndex = 41;
+            this.Btn_Buscar_PartidoControl.Text = "BUSCAR";
+            this.Btn_Buscar_PartidoControl.UseVisualStyleBackColor = false;
+            this.Btn_Buscar_PartidoControl.Click += new System.EventHandler(this.Btn_Buscar_PartidoControl_Click);
             // 
-            // Cbx_Modificar_Estado_Partido
+            // Txt_IDPartido_Control
             // 
-            this.Cbx_Modificar_Estado_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Cbx_Modificar_Estado_Partido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbx_Modificar_Estado_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbx_Modificar_Estado_Partido.FormattingEnabled = true;
-            this.Cbx_Modificar_Estado_Partido.Location = new System.Drawing.Point(66, 275);
-            this.Cbx_Modificar_Estado_Partido.Name = "Cbx_Modificar_Estado_Partido";
-            this.Cbx_Modificar_Estado_Partido.Size = new System.Drawing.Size(202, 22);
-            this.Cbx_Modificar_Estado_Partido.TabIndex = 35;
-            // 
-            // Lbl_Modificar_Estado_Partido
-            // 
-            this.Lbl_Modificar_Estado_Partido.AutoSize = true;
-            this.Lbl_Modificar_Estado_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Estado_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Estado_Partido.Location = new System.Drawing.Point(137, 258);
-            this.Lbl_Modificar_Estado_Partido.Name = "Lbl_Modificar_Estado_Partido";
-            this.Lbl_Modificar_Estado_Partido.Size = new System.Drawing.Size(47, 14);
-            this.Lbl_Modificar_Estado_Partido.TabIndex = 34;
-            this.Lbl_Modificar_Estado_Partido.Text = "ESTADO";
-            // 
-            // Btn_Modificar_Partido
-            // 
-            this.Btn_Modificar_Partido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Modificar_Partido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Modificar_Partido.FlatAppearance.BorderSize = 0;
-            this.Btn_Modificar_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Modificar_Partido.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Modificar_Partido.Location = new System.Drawing.Point(94, 334);
-            this.Btn_Modificar_Partido.Name = "Btn_Modificar_Partido";
-            this.Btn_Modificar_Partido.Size = new System.Drawing.Size(136, 41);
-            this.Btn_Modificar_Partido.TabIndex = 33;
-            this.Btn_Modificar_Partido.Text = "MODIFICAR";
-            this.Btn_Modificar_Partido.UseVisualStyleBackColor = false;
-            // 
-            // Txt_Modificar_Local_Partido
-            // 
-            this.Txt_Modificar_Local_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_Local_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Local_Partido.Enabled = false;
-            this.Txt_Modificar_Local_Partido.Location = new System.Drawing.Point(175, 162);
-            this.Txt_Modificar_Local_Partido.Name = "Txt_Modificar_Local_Partido";
-            this.Txt_Modificar_Local_Partido.Size = new System.Drawing.Size(127, 15);
-            this.Txt_Modificar_Local_Partido.TabIndex = 21;
-            // 
-            // Dtp_Modificar_Fecha_Partido
-            // 
-            this.Dtp_Modificar_Fecha_Partido.Enabled = false;
-            this.Dtp_Modificar_Fecha_Partido.Location = new System.Drawing.Point(100, 104);
-            this.Dtp_Modificar_Fecha_Partido.Margin = new System.Windows.Forms.Padding(2);
-            this.Dtp_Modificar_Fecha_Partido.Name = "Dtp_Modificar_Fecha_Partido";
-            this.Dtp_Modificar_Fecha_Partido.Size = new System.Drawing.Size(134, 22);
-            this.Dtp_Modificar_Fecha_Partido.TabIndex = 20;
-            // 
-            // Lbl_Modificar_Marcador_Partido
-            // 
-            this.Lbl_Modificar_Marcador_Partido.AutoSize = true;
-            this.Lbl_Modificar_Marcador_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Marcador_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Marcador_Partido.Location = new System.Drawing.Point(126, 211);
-            this.Lbl_Modificar_Marcador_Partido.Name = "Lbl_Modificar_Marcador_Partido";
-            this.Lbl_Modificar_Marcador_Partido.Size = new System.Drawing.Size(67, 14);
-            this.Lbl_Modificar_Marcador_Partido.TabIndex = 19;
-            this.Lbl_Modificar_Marcador_Partido.Text = "MARCADOR";
-            // 
-            // Txt_Modificar_Visitante_Partido
-            // 
-            this.Txt_Modificar_Visitante_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_Visitante_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Visitante_Partido.Enabled = false;
-            this.Txt_Modificar_Visitante_Partido.Location = new System.Drawing.Point(19, 162);
-            this.Txt_Modificar_Visitante_Partido.Name = "Txt_Modificar_Visitante_Partido";
-            this.Txt_Modificar_Visitante_Partido.Size = new System.Drawing.Size(127, 15);
-            this.Txt_Modificar_Visitante_Partido.TabIndex = 17;
-            // 
-            // Lbl_Modificar_Visitante_Partido
-            // 
-            this.Lbl_Modificar_Visitante_Partido.AutoSize = true;
-            this.Lbl_Modificar_Visitante_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Visitante_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Visitante_Partido.Location = new System.Drawing.Point(51, 145);
-            this.Lbl_Modificar_Visitante_Partido.Name = "Lbl_Modificar_Visitante_Partido";
-            this.Lbl_Modificar_Visitante_Partido.Size = new System.Drawing.Size(58, 14);
-            this.Lbl_Modificar_Visitante_Partido.TabIndex = 16;
-            this.Lbl_Modificar_Visitante_Partido.Text = "VISITANTE";
-            // 
-            // Txt_Modificar_MarcadorVisitante
-            // 
-            this.Txt_Modificar_MarcadorVisitante.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_MarcadorVisitante.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_MarcadorVisitante.Enabled = false;
-            this.Txt_Modificar_MarcadorVisitante.Location = new System.Drawing.Point(94, 228);
-            this.Txt_Modificar_MarcadorVisitante.Name = "Txt_Modificar_MarcadorVisitante";
-            this.Txt_Modificar_MarcadorVisitante.Size = new System.Drawing.Size(52, 15);
-            this.Txt_Modificar_MarcadorVisitante.TabIndex = 15;
-            // 
-            // Lbl_Modificar_Fecha_Partido
-            // 
-            this.Lbl_Modificar_Fecha_Partido.AutoSize = true;
-            this.Lbl_Modificar_Fecha_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Fecha_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Fecha_Partido.Location = new System.Drawing.Point(110, 83);
-            this.Lbl_Modificar_Fecha_Partido.Name = "Lbl_Modificar_Fecha_Partido";
-            this.Lbl_Modificar_Fecha_Partido.Size = new System.Drawing.Size(109, 14);
-            this.Lbl_Modificar_Fecha_Partido.TabIndex = 10;
-            this.Lbl_Modificar_Fecha_Partido.Text = "FECHA DEL PARTIDO";
-            // 
-            // Lbl_Modificar_Local_Partido
-            // 
-            this.Lbl_Modificar_Local_Partido.AutoSize = true;
-            this.Lbl_Modificar_Local_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Local_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Local_Partido.Location = new System.Drawing.Point(218, 145);
-            this.Lbl_Modificar_Local_Partido.Name = "Lbl_Modificar_Local_Partido";
-            this.Lbl_Modificar_Local_Partido.Size = new System.Drawing.Size(38, 14);
-            this.Lbl_Modificar_Local_Partido.TabIndex = 12;
-            this.Lbl_Modificar_Local_Partido.Text = "LOCAL";
-            // 
-            // Txt_Modificar_Nombre_Campeonato_Partido
-            // 
-            this.Txt_Modificar_Nombre_Campeonato_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_Nombre_Campeonato_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Nombre_Campeonato_Partido.Enabled = false;
-            this.Txt_Modificar_Nombre_Campeonato_Partido.Location = new System.Drawing.Point(19, 52);
-            this.Txt_Modificar_Nombre_Campeonato_Partido.Name = "Txt_Modificar_Nombre_Campeonato_Partido";
-            this.Txt_Modificar_Nombre_Campeonato_Partido.Size = new System.Drawing.Size(283, 15);
-            this.Txt_Modificar_Nombre_Campeonato_Partido.TabIndex = 4;
-            // 
-            // Lbl_Modificar_Campeonato_Partido
-            // 
-            this.Lbl_Modificar_Campeonato_Partido.AutoSize = true;
-            this.Lbl_Modificar_Campeonato_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Campeonato_Partido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Campeonato_Partido.Location = new System.Drawing.Point(85, 35);
-            this.Lbl_Modificar_Campeonato_Partido.Name = "Lbl_Modificar_Campeonato_Partido";
-            this.Lbl_Modificar_Campeonato_Partido.Size = new System.Drawing.Size(149, 14);
-            this.Lbl_Modificar_Campeonato_Partido.TabIndex = 9;
-            this.Lbl_Modificar_Campeonato_Partido.Text = "NOMBRE DEL CAMPEONATO";
-            // 
-            // Lbl_Modificar_Id_Partido
-            // 
-            this.Lbl_Modificar_Id_Partido.AutoSize = true;
-            this.Lbl_Modificar_Id_Partido.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Modificar_Id_Partido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Modificar_Id_Partido.Location = new System.Drawing.Point(13, 12);
-            this.Lbl_Modificar_Id_Partido.Name = "Lbl_Modificar_Id_Partido";
-            this.Lbl_Modificar_Id_Partido.Size = new System.Drawing.Size(174, 14);
-            this.Lbl_Modificar_Id_Partido.TabIndex = 34;
-            this.Lbl_Modificar_Id_Partido.Text = "Ingrese el  ID del Partido";
-            // 
-            // Btn_Buscar_Partido
-            // 
-            this.Btn_Buscar_Partido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Buscar_Partido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(177)))), ((int)(((byte)(221)))));
-            this.Btn_Buscar_Partido.FlatAppearance.BorderSize = 0;
-            this.Btn_Buscar_Partido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Buscar_Partido.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Buscar_Partido.Location = new System.Drawing.Point(361, 30);
-            this.Btn_Buscar_Partido.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Buscar_Partido.Name = "Btn_Buscar_Partido";
-            this.Btn_Buscar_Partido.Size = new System.Drawing.Size(70, 26);
-            this.Btn_Buscar_Partido.TabIndex = 32;
-            this.Btn_Buscar_Partido.Text = "BUSCAR";
-            this.Btn_Buscar_Partido.UseVisualStyleBackColor = false;
-            this.Btn_Buscar_Partido.Click += new System.EventHandler(this.Btn_Buscar_Partido_Click);
-            // 
-            // Txt_Modificar_Id_Partido
-            // 
-            this.Txt_Modificar_Id_Partido.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Txt_Modificar_Id_Partido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Id_Partido.Location = new System.Drawing.Point(15, 37);
-            this.Txt_Modificar_Id_Partido.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Modificar_Id_Partido.Name = "Txt_Modificar_Id_Partido";
-            this.Txt_Modificar_Id_Partido.Size = new System.Drawing.Size(341, 13);
-            this.Txt_Modificar_Id_Partido.TabIndex = 33;
-            // 
-            // Tmr_ListadoCampeonatos
-            // 
-            this.Tmr_ListadoCampeonatos.Enabled = true;
-            this.Tmr_ListadoCampeonatos.Interval = 2000;
-            this.Tmr_ListadoCampeonatos.Tick += new System.EventHandler(this.Tmr_ListadoCampeonatos_Tick);
+            this.Txt_IDPartido_Control.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Txt_IDPartido_Control.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_IDPartido_Control.Location = new System.Drawing.Point(200, 22);
+            this.Txt_IDPartido_Control.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_IDPartido_Control.Name = "Txt_IDPartido_Control";
+            this.Txt_IDPartido_Control.Size = new System.Drawing.Size(341, 13);
+            this.Txt_IDPartido_Control.TabIndex = 42;
             // 
             // FrmAdminCampeonato
             // 
@@ -1399,12 +1507,15 @@
             this.Gbx_Modificar_Campeonato.PerformLayout();
             this.Tbp_Modificar_Partido.ResumeLayout(false);
             this.Tbp_Modificar_Partido.PerformLayout();
+            this.Gbx_Modificar_Partido.ResumeLayout(false);
+            this.Gbx_Modificar_Partido.PerformLayout();
+            this.Tbp_ControlPartido.ResumeLayout(false);
+            this.Tbp_ControlPartido.PerformLayout();
             this.Gbx_Anotacion.ResumeLayout(false);
             this.Gbx_Anotacion.PerformLayout();
             this.Gbx_Modificar_Partido_Faltas.ResumeLayout(false);
             this.Gbx_Modificar_Partido_Faltas.PerformLayout();
-            this.Gbx_Modificar_Partido.ResumeLayout(false);
-            this.Gbx_Modificar_Partido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Jugadores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1476,22 +1587,6 @@
         private System.Windows.Forms.Label Lbl_Modificar_Estado_Partido;
         private System.Windows.Forms.Button Btn_Modificar_Partido;
         private System.Windows.Forms.ComboBox Cbx_Modificar_Estado_Partido;
-        private System.Windows.Forms.GroupBox Gbx_Anotacion;
-        private System.Windows.Forms.Button Btn_Agregar_Anotacion;
-        private System.Windows.Forms.DateTimePicker Dtp_Hora_Anotacion;
-        private System.Windows.Forms.Label Lbl_Anotacion_Hora;
-        private System.Windows.Forms.TextBox Txt_Anotacion;
-        private System.Windows.Forms.ComboBox Cbx_Anotacion_Jugador;
-        private System.Windows.Forms.Label Lbl_Anotacion;
-        private System.Windows.Forms.Label Lbl_Anotacion_Jugador;
-        private System.Windows.Forms.GroupBox Gbx_Modificar_Partido_Faltas;
-        private System.Windows.Forms.Button Btn_Agregar_Falta;
-        private System.Windows.Forms.ComboBox Cbx_Falta_Jugador;
-        private System.Windows.Forms.ComboBox Cbx_Falta;
-        private System.Windows.Forms.Label Lbl_Descripcion_Falta;
-        private System.Windows.Forms.Label Lbl_Falta_Jugador;
-        private System.Windows.Forms.RichTextBox Rtxt_Descripcion_Falta;
-        private System.Windows.Forms.Label Lbl_Tipo_Falta;
         private System.Windows.Forms.Button Btn_Ayuda;
         private System.Windows.Forms.Button Btn_Ayuda_IngresoCampeonato;
         private System.Windows.Forms.Button Btn_Ayuda_ModificarCampeonato;
@@ -1501,5 +1596,26 @@
         private MetroFramework.Controls.MetroGrid Dgv_ListadoCampeonatos;
         private System.Windows.Forms.TextBox Txt_Modificar_MarcadorLocal;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroTabPage Tbp_ControlPartido;
+        private System.Windows.Forms.Label Lbl_ControlPartido;
+        private System.Windows.Forms.Button Btn_Buscar_PartidoControl;
+        private System.Windows.Forms.TextBox Txt_IDPartido_Control;
+        private MetroFramework.Controls.MetroGrid Dgv_Jugadores;
+        private System.Windows.Forms.GroupBox Gbx_Anotacion;
+        private System.Windows.Forms.TextBox Txt_AnotacionJugador;
+        private System.Windows.Forms.Button Btn_Agregar_Anotacion;
+        private System.Windows.Forms.DateTimePicker Dtp_Hora_Anotacion;
+        private System.Windows.Forms.Label Lbl_Anotacion_Hora;
+        private System.Windows.Forms.TextBox Txt_Anotacion;
+        private System.Windows.Forms.Label Lbl_Anotacion;
+        private System.Windows.Forms.Label Lbl_Anotacion_Jugador;
+        private System.Windows.Forms.GroupBox Gbx_Modificar_Partido_Faltas;
+        private System.Windows.Forms.TextBox Txt_FaltaJugador;
+        private System.Windows.Forms.Button Btn_Agregar_Falta;
+        private System.Windows.Forms.ComboBox Cbx_Falta;
+        private System.Windows.Forms.Label Lbl_Descripcion_Falta;
+        private System.Windows.Forms.Label Lbl_Falta_Jugador;
+        private System.Windows.Forms.RichTextBox Rtxt_Descripcion_Falta;
+        private System.Windows.Forms.Label Lbl_Tipo_Falta;
     }
 }

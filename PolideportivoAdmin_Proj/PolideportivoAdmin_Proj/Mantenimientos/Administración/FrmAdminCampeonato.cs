@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 {
@@ -298,17 +299,47 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Agregar_Falta_Click(object sender, EventArgs e)
         {
-
+            int Falta = Cbx_Falta.SelectedIndex + 1;
+            Campeonato.DetalleFalta(Txt_IDPartido_Control.Text, Falta, Txt_FaltaJugador.Text, Rtxt_Descripcion_Falta.Text);
         }
 
         private void Btn_Agregar_Anotacion_Click(object sender, EventArgs e)
         {
-
+            string Fecha = "";
+            Fecha += Dtp_Hora_Anotacion.Value.Date.ToShortDateString();
+            Fecha += " ";
+            Fecha += Dtp_Hora_Anotacion.Value.Hour.ToString();
+            Fecha += ":";
+            Fecha += Dtp_Hora_Anotacion.Value.Minute.ToString();
+            Fecha += ":";
+            Fecha += Dtp_Hora_Anotacion.Value.Second.ToString();
+            Campeonato.DetalleJugador(Txt_IDPartido_Control.Text, Txt_AnotacionJugador.Text, Txt_Anotacion.Text, Fecha);
         }
 
         private void Tmr_ListadoCampeonatos_Tick(object sender, EventArgs e)
         {
             Campeonato.ListadoCampeonatos(Dgv_ListadoCampeonatos);
+        }
+
+        private void Btn_Modificar_Partido_Click(object sender, EventArgs e)
+        {
+            string Fecha = "";
+            Fecha += Dtp_Hora_Anotacion.Value.Date.ToShortDateString();
+            Fecha += " ";
+            Fecha += Dtp_Hora_Anotacion.Value.Hour.ToString();
+            Fecha += ":";
+            Fecha += Dtp_Hora_Anotacion.Value.Minute.ToString();
+            Fecha += ":";
+            Fecha += Dtp_Hora_Anotacion.Value.Second.ToString();
+            int Local = Convert.ToInt32(Txt_Modificar_MarcadorLocal.Text);
+            int Visitante = Convert.ToInt32(Txt_Modificar_MarcadorVisitante.Text);
+            int Estado = Cbx_Modificar_Estado_Partido.SelectedIndex + 1;
+            Campeonato.ModificarPartido(Txt_Modificar_Id_Partido.Text, Fecha, Local, Visitante, Estado);
+        }
+
+        private void Btn_Buscar_PartidoControl_Click(object sender, EventArgs e)
+        {
+            Campeonato.ListadoJugadoresPartido(Dgv_Jugadores, Txt_IDPartido_Control.Text);
         }
     }
 }

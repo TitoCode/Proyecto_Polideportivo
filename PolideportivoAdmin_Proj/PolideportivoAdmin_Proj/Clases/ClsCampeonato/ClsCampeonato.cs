@@ -295,40 +295,6 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
             }
         }
 
-        public DataTable MostrarJugador(int Local, int Visitante)
-        {
-            DataTable Datos = new DataTable();
-            try
-            {
-
-                string CargarJugador = "SELECT concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , J.APELLIDO1, ' ' , J.APELLIDO2) AS 'NOMBRE' " +
-                    "FROM JUGADOR AS J, EQUIPOS AS E, CAMPEONATO AS C, PARTIDO AS P " +
-                    "WHERE J.ID_EQUIPO_FK = '" + Local + "' OR J.ID_EQUIPO_FK = '" + Visitante + "'";
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargarJugador, conexion.conexion());
-                OdbcDataAdapter Lector = new OdbcDataAdapter();   
-
-                Lector.SelectCommand = Query_Busqueda1;
-                Lector.Fill(Datos);
-
-                return Datos;
-                //Cbx_Falta.DataSource = Datos;
-                //Cbx_Falta.DisplayMember = "NOMBRE";
-                //Cbx_Falta.ResetText();
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return Datos;
-
-            }
-        }
-
         public ClsDatosCampeonato BusquedaCampeonato(string ID_Campeonato)
         {
             try
@@ -448,7 +414,190 @@ namespace PolideportivoAdmin_Proj.Clases.ClsCampeonato
             }
         }
 
+        public void ListadoJugadoresPartido(DataGridView Listado, string ID_Partido)
+        {
+            try
+            {
+                string MostrarJugadores = "SELECT J.ID_JUGADOR, concat(J.NOMBRE1, ' ' , J.NOMBRE2, ' ' , J.APELLIDO1, ' ' , J.APELLIDO2) AS 'Nombre Completo Del Jugador' " +
+                                "FROM JUGADOR AS J, EQUIPO AS E, PARTIDO AS P " +
+                                "WHERE P.ID_LOCAL = E.ID_EQUIPO AND P.ID_PARTIDO ='" + ID_Partido + "'";
 
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarJugadores, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;  
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void DetalleFalta(string ID_Partido, int ID_Falta, string ID_Jugador, string Descripcion)
+        {
+            try
+            {
+                int ID_DetalleFalta;
+                string Correlativo1 = "SELECT IFNULL(MAX(ID_DETALLE_FALTA),0) +1 FROM DETALLE_FALTA";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo1, conexion.conexion());
+                ID_DetalleFalta = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+
+                int ID_Campeonato;
+                string Correlativo2 = "SELECT ID_CAMPEONATO_FK FROM PARTIDO" +
+                    " WHERE ID_PARTIDO = '" + ID_Partido + "'";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(Correlativo2, conexion.conexion());
+                ID_Campeonato = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+
+                string InsertarDetallePartido = "INSERT INTO DETALLE_FALTA (ID_DETALLE_FALTA, ID_FALTA_FK, ID_PARTIDO_FK, ID_JUGADOR_FK, ID_CAMPEONATO_FK, DESCRIPCION_FALTA) " +
+                    "VALUES('" + ID_DetalleFalta + "','" + ID_Falta + "','" + ID_Partido + "','" + ID_Jugador + "','" + ID_Campeonato + "','" + Descripcion + "')";
+
+                OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarDetallePartido, conexion.conexion());
+                Query_Validacion3.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void DetalleJugador(string ID_Partido, string ID_Jugador, string Anotacion, string Fecha)
+        {
+            try
+            {
+                int ID_DetalleJugador;
+                string Correlativo1 = "SELECT IFNULL(MAX(ID_DETALLE_JUGADOR),0) +1 FROM DETALLE_JUGADOR";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(Correlativo1, conexion.conexion());
+                ID_DetalleJugador = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+
+                int ID_Campeonato;
+                string Correlativo2 = "SELECT ID_CAMPEONATO_FK FROM PARTIDO" +
+                    " WHERE ID_PARTIDO = '" + ID_Partido + "'";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(Correlativo2, conexion.conexion());
+                ID_Campeonato = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+
+                string InsertarDetallePartido = "INSERT INTO DETALLE_JUGADOR (ID_DETALLE_JUGADOR, ID_PARTIDO_FK, ID_CAMPEONATO_FK, ID_JUGADOR_PARTIDO_FK, ANOTACION, FECHA_PARTIDO) " +
+                    "VALUES('" + ID_DetalleJugador + "','" + ID_Partido + "','" + ID_Campeonato + "','" + ID_Jugador + "','" + Anotacion + "','" + Fecha + "')";
+
+                OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarDetallePartido, conexion.conexion());
+                Query_Validacion3.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                System.Environment.NewLine + System.Environment.NewLine +
+                ex.GetType().ToString() + System.Environment.NewLine +
+                ex.Message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ModificarPartido(string ID_Partido, string Fecha, int Local, int Visitante, int Estado)
+        {
+            if(Estado != 2)
+            {
+                try
+                {
+                    string ModificarPartido = "UPDATE PARTIDO SET FECHA_PARTIDO ='" + Fecha + "', MARCADOR_LOCAL ='" + Local + "', MARCADOR_VISITANTE ='" + Visitante + "', ID_ESTADO_PARTIDO_FK ='" + Estado + "' WHERE ID_PARTIDO='" + ID_Partido + "'";
+                    OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarPartido, conexion.conexion());
+                    Query_UPDATE1.ExecuteNonQuery();
+
+                    int PuntosLocal;
+                    string Puntos1 = "SELECT PUNTOS_TORNEO " +
+                        "FROM EQUIPO_CAMPEONATO AS EC, EQUIPO AS E, PARTIDO AS P " +
+                        "WHERE EC.ID_EQUIPO_FK = E.ID_EQUIPO AND P.ID_LOCAL = E.ID_EQUIPO AND P.ID_PARTIDO ='" + ID_Partido + "'";
+                    OdbcCommand Query_Validacion1 = new OdbcCommand(Puntos1, conexion.conexion());
+                    PuntosLocal = Convert.ToInt32(Query_Validacion1.ExecuteScalar());
+
+                    int PuntosVisitante;
+                    string Puntos2 = "SELECT PUNTOS_TORNEO " +
+                        "FROM EQUIPO_CAMPEONATO AS EC, EQUIPO AS E, PARTIDO AS P " +
+                        "WHERE EC.ID_EQUIPO_FK = E.ID_EQUIPO AND P.ID_VISITANTE = E.ID_EQUIPO AND P.ID_PARTIDO ='" + ID_Partido + "'";
+                    OdbcCommand Query_Validacion2 = new OdbcCommand(Puntos2, conexion.conexion());
+                    PuntosVisitante = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+
+                    int ID_Local;
+                    string Corelativo1 = "SELECT ID_EQUIPO_FK " +
+                        "FROM EQUIPO_CAMPEONATO AS EC, EQUIPO AS E, PARTIDO AS P " +
+                        "WHERE EC.ID_EQUIPO_FK = E.ID_EQUIPO AND P.ID_LOCAL = E.ID_EQUIPO AND P.ID_PARTIDO ='" + ID_Partido + "'";
+                    OdbcCommand Query_Validacion3 = new OdbcCommand(Corelativo1, conexion.conexion());
+                    ID_Local = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                    int ID_Visitante;
+                    string Correlativo2 = "SELECT ID_EQUIPO_FK " +
+                        "FROM EQUIPO_CAMPEONATO AS EC, EQUIPO AS E, PARTIDO AS P " +
+                        "WHERE EC.ID_EQUIPO_FK = E.ID_EQUIPO AND P.ID_VISITANTE = E.ID_EQUIPO AND P.ID_PARTIDO ='" + ID_Partido + "'";
+                    OdbcCommand Query_Validacion4 = new OdbcCommand(Correlativo2, conexion.conexion());
+                    ID_Visitante = Convert.ToInt32(Query_Validacion4.ExecuteScalar());
+
+                    if (Local > Visitante)
+                    {
+                        PuntosLocal = PuntosLocal + 3;
+
+                    }
+                    else if (Visitante > Local)
+                    {
+                        PuntosVisitante = PuntosVisitante + 3;
+                    }
+                    else
+                    {
+                        PuntosLocal = PuntosLocal + 0;
+                        PuntosVisitante = PuntosVisitante + 0;
+                    }
+
+                    string ModificarLocal = "UPDATE EQUIPO_CAMPEONATO SET PUNTOS_TORNEO ='" + PuntosLocal + "' WHERE ID_EQUIPO_FK='" + ID_Local + "'";
+                    OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarLocal, conexion.conexion());
+                    Query_UPDATE2.ExecuteNonQuery();
+
+                    string ModificarVisitante = "UPDATE EQUIPO_CAMPEONATO SET PUNTOS_TORNEO ='" + PuntosVisitante + "' WHERE ID_EQUIPO_FK='" + ID_Visitante + "'";
+                    OdbcCommand Query_UPDATE3 = new OdbcCommand(ModificarVisitante, conexion.conexion());
+                    Query_UPDATE3.ExecuteNonQuery();
+
+                    MessageBox.Show("Equipo modificado con éxito.", "FORMULARIO PARTIDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                try
+                {
+                    string ModificarPartido = "UPDATE PARTIDO SET FECHA_PARTIDO ='" + Fecha + "', MARCADOR_LOCAL ='" + Local + "', MARCADOR_VISITANTE ='" + Visitante + "', ID_ESTADO_PARTIDO_FK ='" + Estado + "' WHERE ID_PARTIDO='" + ID_Partido + "'";
+                    OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarPartido, conexion.conexion());
+                    Query_UPDATE1.ExecuteNonQuery();
+
+                    MessageBox.Show("Equipo modificado con éxito.", "FORMULARIO PARTIDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+
+        }
 
     }
 }
