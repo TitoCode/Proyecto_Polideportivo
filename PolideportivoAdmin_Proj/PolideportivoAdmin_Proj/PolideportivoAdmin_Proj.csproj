@@ -112,6 +112,12 @@
     <Compile Include="Mantenimientos\Administración\FrmAdminEquipo.designer.cs">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminTablaPosiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administración\FrmAdminTablaPosiciones.Designer.cs">
+      <DependentUpon>FrmAdminTablaPosiciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Entrenador\FrmEntrenador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.Designer.cs">
       <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmAdminCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmAdminCalendario.Designer.cs">
+      <DependentUpon>FrmAdminCalendario.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\FrmBase.cs">
       <SubType>Form</SubType>
@@ -192,6 +204,9 @@
     <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminEquipo.resx">
       <DependentUpon>FrmAdminEquipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Administración\FrmAdminTablaPosiciones.resx">
+      <DependentUpon>FrmAdminTablaPosiciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmEntrenador.resx">
       <DependentUpon>FrmEntrenador.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Entrenador\FrmTablaDePosiciones.resx">
       <DependentUpon>FrmTablaDePosiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmAdminCalendario.resx">
+      <DependentUpon>FrmAdminCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>

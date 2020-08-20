@@ -84,7 +84,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsGerencia
 
             try
             {
-                string Resultados_Partidos = "SELECT P.ID_PARTIDO, C.NOMBRE_CAMPEONATO, P.MARCADOR FROM PARTIDO AS P, CAMPEONATO AS C WHERE P.ID_CAMPEONATO_FK = C.ID_CAMPEONATO";
+                string Resultados_Partidos = "SELECT P.ID_PARTIDO, C.NOMBRE_CAMPEONATO, concat(P.MARCADOR_LOCAL, '-', P.MARCADOR_VISITANTE) AS MARCADOR FROM PARTIDO AS P, CAMPEONATO AS C WHERE P.ID_CAMPEONATO_FK = C.ID_CAMPEONATO";
 
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(Resultados_Partidos, conexion.conexion());
                 OdbcDataAdapter MostrarPartidos = new OdbcDataAdapter();
