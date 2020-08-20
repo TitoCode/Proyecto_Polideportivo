@@ -123,43 +123,64 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Btn_Editar_Buscar_Click(object sender, EventArgs e)
         {
-            Equipo = Admin.BusquedaIDEquipo(Txt_Modificar_Id_Equipo.Text);
-            Txt_Editar_Nombre_Equipo.Text = Equipo.Nombre;
-            Txt_Editar_Deporte.Text = Equipo.ID_TipoDeporte;
-            Txt_Editar_Entrenador.Text = Equipo.ID_Entrenador;
+            if (Txt_Modificar_Id_Equipo.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Equipo = Admin.BusquedaIDEquipo(Txt_Modificar_Id_Equipo.Text);
+                Txt_Editar_Nombre_Equipo.Text = Equipo.Nombre;
+                Txt_Editar_Deporte.Text = Equipo.ID_TipoDeporte;
+                Txt_Editar_Entrenador.Text = Equipo.ID_Entrenador;
+                Btn_Modificar_Equipo.Enabled = true;
+            }
 
         }
 
         private void Btn_Modificar_Equipo_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Desea modificar el equipo?", "EQUIPO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+            else
+            {
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 17;
+                SenSql1 = "UPDATE EQUIPO SET NOMBRE_EQUIPO= + Nombre +  WHERE ID_EQUIPO= + Id_Equipo + ";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 17;
-            SenSql1 = "UPDATE EQUIPO SET NOMBRE_EQUIPO= + Nombre +  WHERE ID_EQUIPO= + Id_Equipo + ";
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
-
-            int Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
-            Admin.ModificarEquipo(Txt_Editar_Nombre_Equipo.Text, Txt_Modificar_Id_Equipo.Text);
+                int Id_Entrenador = Cbx_Crear_Entrenador.SelectedIndex + 1;
+                Admin.ModificarEquipo(Txt_Editar_Nombre_Equipo.Text, Txt_Modificar_Id_Equipo.Text);
+                Txt_Editar_Nombre_Equipo.Text = "";
+                Txt_Modificar_Id_Equipo.Text = "";
+                Btn_Modificar_Equipo.Enabled = false;
+            }
         }
 
         private void Btn_Eliminar_Equipo_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Desea eliminar el equipo?", "EQUIPO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+            else
+            {
+                UsuarioActivo = ClsDatos.UserId;
+                TipoProceso = 18;
+                SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";
 
-            UsuarioActivo = ClsDatos.UserId;
-            TipoProceso = 18;
-            SenSql1 = "UPDATE EQUIPO SET ID_ESTADO_EQUIPO_FK= + 3 +  WHERE ID_EQUIPO= + Id_Equipo + ";
+                Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
 
-            Bitacora.IngresoBitacora(TipoProceso, UsuarioActivo, SenSql1);
+                Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
 
-            Admin.EliminarEquipo(Txt_Eliminar_Id_Equipo.Text);
+                Btn_Eliminar_Equipo.Enabled = true;
+            }
         }
 
         private void Btn_Eliminar_Buscar_Click(object sender, EventArgs e)
         {
-            Equipo = Admin.BusquedaIDEquipo(Txt_Modificar_Id_Equipo.Text);
-            Txt_Eliminar_Nombre_Equipo.Text = Equipo.Nombre;
-            Txt_Eliminar_Deporte.Text = Equipo.ID_TipoDeporte;
-            Txt_Eliminar_Entrenador.Text = Equipo.ID_Entrenador;
+            if (Txt_Eliminar_Id_Equipo.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                Equipo = Admin.BusquedaIDEquipo(Txt_Eliminar_Id_Equipo.Text);
+                Txt_Eliminar_Nombre_Equipo.Text = Equipo.Nombre;
+                Txt_Eliminar_Deporte.Text = Equipo.ID_TipoDeporte;
+                Txt_Eliminar_Entrenador.Text = Equipo.ID_Entrenador;
+                Btn_Eliminar_Equipo.Enabled = true;
+            }
         }
 
         private void Tmr_ListadoEquipos_Tick(object sender, EventArgs e)

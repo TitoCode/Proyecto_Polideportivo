@@ -229,6 +229,15 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         {
             Entrenador.ListaEquipo(Dgw_Listado);
         }
-    
+        private void numero(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Numeros(e);
+        }
+
+        private void letra(object sender, KeyPressEventArgs e)
+        {
+            ClsValidarKeyPress.Letras(e);
+        }
+
     }
 }
