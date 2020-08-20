@@ -96,6 +96,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Btn_Inicio.ForeColor = Color.White;
             Btn_TablaPosiciones.BackColor = Color.FromArgb(10, 37, 73);
             Btn_TablaPosiciones.ForeColor = Color.White;
+            AbrirFormEnPanel(new FrmAdminCalendario());
         }
 
         private void Btn_Equipo_Click(object sender, EventArgs e)

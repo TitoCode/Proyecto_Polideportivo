@@ -100,9 +100,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
                 OdbcCommand Query_Busqueda2 = new OdbcCommand(BuscarDatoCampeonatos, conexion.conexion());
                 Campeonatos = Convert.ToInt32(Query_Busqueda2.ExecuteScalar());
 
-                Lbl_EstadisticasUsuarios.Text = Convert.ToString(Usuarios);
-                Lbl_EstadisticasEmpleados.Text = Convert.ToString(Empleados);
-                Lbl_EstadisticaEntrenadores.Text = Convert.ToString(Entrenadores);
+                //Lbl_EstadisticasUsuarios.Text = Convert.ToString(Usuarios);
+                //Lbl_EstadisticasEmpleados.Text = Convert.ToString(Empleados);
+                //Lbl_EstadisticaEntrenadores.Text = Convert.ToString(Entrenadores);
 
             }
             catch (Exception ex)
