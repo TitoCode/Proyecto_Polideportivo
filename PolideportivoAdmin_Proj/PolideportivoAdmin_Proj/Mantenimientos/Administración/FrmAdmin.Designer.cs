@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Lbl_Usuario = new System.Windows.Forms.Label();
             this.Btn_Ayuda = new System.Windows.Forms.Button();
             this.Lbl_Puesto = new System.Windows.Forms.Label();
             this.Btn_Inicio = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.Btn_Campeonato = new System.Windows.Forms.Button();
             this.Btn_Equipo = new System.Windows.Forms.Button();
             this.Btn_Entrenador = new System.Windows.Forms.Button();
-            this.Lbl_Usuario = new System.Windows.Forms.Label();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_FotoUsuario)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,17 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
             this.Pnl_Menu.TabIndex = 18;
+            // 
+            // Lbl_Usuario
+            // 
+            this.Lbl_Usuario.AutoSize = true;
+            this.Lbl_Usuario.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Lbl_Usuario.Location = new System.Drawing.Point(11, 131);
+            this.Lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Usuario.Name = "Lbl_Usuario";
+            this.Lbl_Usuario.Size = new System.Drawing.Size(0, 14);
+            this.Lbl_Usuario.TabIndex = 30;
             // 
             // Btn_Ayuda
             // 
@@ -232,17 +243,6 @@
             this.Btn_Entrenador.UseVisualStyleBackColor = true;
             this.Btn_Entrenador.Click += new System.EventHandler(this.Btn_Entrenador_Click);
             // 
-            // Lbl_Usuario
-            // 
-            this.Lbl_Usuario.AutoSize = true;
-            this.Lbl_Usuario.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Usuario.Location = new System.Drawing.Point(11, 131);
-            this.Lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Usuario.Name = "Lbl_Usuario";
-            this.Lbl_Usuario.Size = new System.Drawing.Size(0, 14);
-            this.Lbl_Usuario.TabIndex = 30;
-            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +254,7 @@
             this.Name = "FrmAdmin";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Menu.PerformLayout();

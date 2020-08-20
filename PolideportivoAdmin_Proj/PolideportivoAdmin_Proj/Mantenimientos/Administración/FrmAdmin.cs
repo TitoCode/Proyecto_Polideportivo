@@ -18,7 +18,17 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             InitializeComponent();
             
         }
-
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            switch (MessageBox.Show(this, "¿Está seguro que desea salir? Esta acción cerrará su sesión.", "Cerrar Sesión", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    break;
+            }
+        }
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmBase());
