@@ -323,7 +323,7 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(10, 154);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(230, 25);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -350,6 +350,7 @@
             this.Txt_Ingreso_Apellido1.Name = "Txt_Ingreso_Apellido1";
             this.Txt_Ingreso_Apellido1.Size = new System.Drawing.Size(230, 15);
             this.Txt_Ingreso_Apellido1.TabIndex = 2;
+            this.Txt_Ingreso_Apellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Apellido2
             // 
@@ -360,6 +361,7 @@
             this.Txt_Ingreso_Apellido2.Name = "Txt_Ingreso_Apellido2";
             this.Txt_Ingreso_Apellido2.Size = new System.Drawing.Size(231, 15);
             this.Txt_Ingreso_Apellido2.TabIndex = 3;
+            this.Txt_Ingreso_Apellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Nombre2
             // 
@@ -370,6 +372,7 @@
             this.Txt_Ingreso_Nombre2.Name = "Txt_Ingreso_Nombre2";
             this.Txt_Ingreso_Nombre2.Size = new System.Drawing.Size(231, 15);
             this.Txt_Ingreso_Nombre2.TabIndex = 1;
+            this.Txt_Ingreso_Nombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Ingreso_Nombre1
             // 
@@ -380,6 +383,7 @@
             this.Txt_Ingreso_Nombre1.Name = "Txt_Ingreso_Nombre1";
             this.Txt_Ingreso_Nombre1.Size = new System.Drawing.Size(230, 15);
             this.Txt_Ingreso_Nombre1.TabIndex = 0;
+            this.Txt_Ingreso_Nombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Nombre1_Ingreso
             // 
@@ -569,7 +573,7 @@
             this.Dtp_Modificar_Fdn.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_Modificar_Fdn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Modificar_Fdn.Location = new System.Drawing.Point(10, 154);
-            this.Dtp_Modificar_Fdn.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_Modificar_Fdn.MinimumSize = new System.Drawing.Size(0, 25);
             this.Dtp_Modificar_Fdn.Name = "Dtp_Modificar_Fdn";
             this.Dtp_Modificar_Fdn.Size = new System.Drawing.Size(230, 25);
             this.Dtp_Modificar_Fdn.TabIndex = 48;
@@ -644,6 +648,7 @@
             this.Txt_Modificar_Nombre1.Name = "Txt_Modificar_Nombre1";
             this.Txt_Modificar_Nombre1.Size = new System.Drawing.Size(230, 15);
             this.Txt_Modificar_Nombre1.TabIndex = 0;
+            this.Txt_Modificar_Nombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Nombre2
             // 
@@ -654,6 +659,7 @@
             this.Txt_Modificar_Nombre2.Name = "Txt_Modificar_Nombre2";
             this.Txt_Modificar_Nombre2.Size = new System.Drawing.Size(231, 15);
             this.Txt_Modificar_Nombre2.TabIndex = 1;
+            this.Txt_Modificar_Nombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Apellido1
             // 
@@ -664,6 +670,7 @@
             this.Txt_Modificar_Apellido1.Name = "Txt_Modificar_Apellido1";
             this.Txt_Modificar_Apellido1.Size = new System.Drawing.Size(230, 15);
             this.Txt_Modificar_Apellido1.TabIndex = 2;
+            this.Txt_Modificar_Apellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Txt_Modificar_Apellido2
             // 
@@ -674,6 +681,7 @@
             this.Txt_Modificar_Apellido2.Name = "Txt_Modificar_Apellido2";
             this.Txt_Modificar_Apellido2.Size = new System.Drawing.Size(231, 15);
             this.Txt_Modificar_Apellido2.TabIndex = 3;
+            this.Txt_Modificar_Apellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.letra);
             // 
             // Lbl_Titulo3
             // 
@@ -710,6 +718,7 @@
             this.Txt_Modificar_Id.Name = "Txt_Modificar_Id";
             this.Txt_Modificar_Id.Size = new System.Drawing.Size(313, 13);
             this.Txt_Modificar_Id.TabIndex = 32;
+            this.Txt_Modificar_Id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // label2
             // 
@@ -1019,6 +1028,7 @@
             this.Txt_Eliminar_Id.Name = "Txt_Eliminar_Id";
             this.Txt_Eliminar_Id.Size = new System.Drawing.Size(313, 13);
             this.Txt_Eliminar_Id.TabIndex = 37;
+            this.Txt_Eliminar_Id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // Btn_Eliminar_Jugador
             // 

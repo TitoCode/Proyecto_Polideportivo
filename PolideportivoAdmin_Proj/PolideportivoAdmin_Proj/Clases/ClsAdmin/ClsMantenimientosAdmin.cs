@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Text;
@@ -52,8 +53,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                                           "', APELLIDO1='" + Apellido1 + "', APELLIDO2='" + Apellido2 +
                                           "' WHERE ID_ENTRENADOR='" + ID_Entrenador + "'";
 
-                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO='" + Usuario + "', PASSWORD='" + Password +
-                                          "' WHERE ID_USUARIO='" + Usuario + "'";
+                string ModificarUsuario = "UPDATE USUARIO SET ID_USUARIO ='" + Usuario + "', PASSWORD = '" + Password +"' WHERE ID_USUARIO='" + Usuario + "'";
 
                 OdbcCommand Query_UPDATE1 = new OdbcCommand(ModificarEntrenador, conexion.conexion());
                 OdbcCommand Query_UPDATE2 = new OdbcCommand(ModificarUsuario, conexion.conexion());
@@ -81,7 +81,7 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             {
                 string BuscarEntrenador = "SELECT E.ID_ENTRENADOR, E.NOMBRE1, E.NOMBRE2, E.APELLIDO1, E.APELLIDO2,  E.FECHA_NACIMIENTO, E.ID_USUARIO_FK, U.PASSWORD," +
                                 " TU.NOMBRE_TIPO FROM ENTRENADOR AS E, USUARIO AS U, TIPO_USUARIO AS TU" +
-                                " WHERE U.ID_TIPO_USUARIO_FK = TU.ID_TIPO_USUARIO AND E.ID_ENTRENADOR ='" + ID_Entrenador + "'";
+                                " WHERE U.ID_TIPO_USUARIO_FK = TU.ID_TIPO_USUARIO AND E.ID_ENTRENADOR ='" + ID_Entrenador + "'AND E.ID_USUARIO_FK = U.ID_USUARIO";
 
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEntrenador, conexion.conexion());
                 OdbcDataReader Lector = Query_Busqueda1.ExecuteReader();
@@ -225,7 +225,9 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
             string NombreCompletoEntrenador;
             try
             {
-                string BuscarEquipos = "SELECT E.NOMBRE_EQUIPO, EN.NOMBRE1, EN.NOMBRE2, EN.APELLIDO1, EN.APELLIDO2, TP.NOMBRE_DEPORTE FROM EQUIPO AS E, ENTRENADOR AS EN, TIPO_DEPORTE AS TP WHERE ID_EQUIPO =" + ID_Equipo;
+                string BuscarEquipos = "SELECT E.NOMBRE_EQUIPO, EN.NOMBRE1, EN.NOMBRE2, EN.APELLIDO1, EN.APELLIDO2, " +
+                    "TP.NOMBRE_DEPORTE FROM EQUIPO AS E, ENTRENADOR AS EN, TIPO_DEPORTE AS TP" +
+                    " WHERE ID_EQUIPO ='" + ID_Equipo+ "' AND E.ID_ENTRENADOR_FK = EN.ID_ENTRENADOR and tp.ID_TIPO_DEPORTE = E.ID_TIPO_DEPORTE__FK";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(BuscarEquipos, conexion.conexion());
                 OdbcDataReader Lector1 = Query_Busqueda1.ExecuteReader();
 
@@ -243,6 +245,10 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
                         Equipo.ID_TipoDeporte = Lector1.GetString(5);
                     }
                 }
+                else {
+                    MessageBox.Show("ERROR: El codigo del equipo no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+              
                 return Equipo;
             }
             catch (Exception ex)
@@ -257,9 +263,67 @@ namespace PolideportivoAdmin_Proj.Clases.ClsAdmin
 
         }
 
-        public void Listado()
+        public void ListadoEntrenadores(DataGridView Listado)
         {
 
+            try
+            {
+
+                string MostrarEntrenadores = "SELECT E.ID_ENTRENADOR, E.NOMBRE1 'PRIMER NOMBRE', E.NOMBRE2 'SEGUNDO NOMBRE', E.APELLIDO1 'PRIMER APELLIDO', E.APELLIDO2 'SEGUNDO APELLIDO', E.ID_USUARIO_FK 'Usuario Del Empleado', ES.NOMBRE_ESTADO " +
+                    "FROM ENTRENADOR AS E, ESTADO_EMPLEADO AS ES"+
+                    " WHERE E.ID_ESTADO_ENTRENADOR_FK = ES.ID_ESTADO_EMPLEADO;";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEntrenadores, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
+
+        public void ListadoEquipos(DataGridView Listado)
+        {
+
+            try
+            {
+
+                string MostrarEquipos = "SELECT EQ.ID_EQUIPO, EQ.NOMBRE_EQUIPO AS 'NOMBRE DEL EQUIPO', concat(E.NOMBRE1, ' ' , E.NOMBRE2, ' ' , E.APELLIDO1, ' ' , E.APELLIDO2) AS 'NOMBRE DEL ENTRENADOR', T.NOMBRE_DEPORTE 'DEPORTE', ES.NOMBRE_ESTADO " +
+                    "FROM EQUIPO AS EQ, ENTRENADOR AS E, TIPO_DEPORTE AS T, ESTADO_EQUIPO AS ES" +
+                    " WHERE EQ.ID_ENTRENADOR_FK = E.ID_ENTRENADOR AND EQ.ID_TIPO_DEPORTE__FK = T.ID_TIPO_DEPORTE AND EQ.ID_ESTADO_EQUIPO_FK = ES.ID_ESTADO_EQUIPO;";
+
+                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEquipos, conexion.conexion());
+                OdbcDataAdapter Adaptador = new OdbcDataAdapter();
+                Adaptador.SelectCommand = Query_SELECT;
+                DataTable tabla = new DataTable();
+                Adaptador.Fill(tabla);
+                Listado.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
     }
 }
