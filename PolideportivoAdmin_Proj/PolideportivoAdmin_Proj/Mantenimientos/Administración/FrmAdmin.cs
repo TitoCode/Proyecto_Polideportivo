@@ -147,6 +147,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Btn_Equipo.ForeColor = Color.White;
             Btn_Campeonato.BackColor = Color.FromArgb(10, 37, 73);
             Btn_Campeonato.ForeColor = Color.White;
+            AbrirFormEnPanel(new FrmAdminTablaPosiciones());
         }
     }
 }
