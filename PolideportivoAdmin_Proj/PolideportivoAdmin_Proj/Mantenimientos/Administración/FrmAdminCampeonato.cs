@@ -269,10 +269,23 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                             if (Rbtn_Ida.Checked == false && Rbtn_IdaVuelta.Checked == false) { MessageBox.Show("ADVERTENCIA:No se ha selecionado una opcion: 'Ida' o 'Ida y Vuelta'." , "ADVERTENCIA" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation); }
                             else
                             {
-                                int No_Equipos = (int)Nud_Cantidad_Todos.Value;
-                                Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text, No_Equipos, Sede, Deporte, DateTime.Now.ToString());
-                                MessageBox.Show("Ingreso correcto de Campeonato" + MessageBoxButtons.OK + MessageBoxIcon.Error);
-                                VaciarCampos();
+                                if (Rbtn_IdaVuelta.Checked == true)
+                                {
+                                    int No_Equipos = (int)Nud_Cantidad_Todos.Value;
+                                    Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text, No_Equipos, Sede, Deporte, DateTime.Now.ToString());
+                                    Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text, No_Equipos, Sede, Deporte, DateTime.Now.ToString());
+                                    MessageBox.Show("Ingreso correcto de Campeonato" + MessageBoxButtons.OK + MessageBoxIcon.Error);
+                                    VaciarCampos();
+                                }
+                                else
+                                {
+                                    int No_Equipos = (int)Nud_Cantidad_Todos.Value;
+                                    Campeonato.CampeonatoTvT(Campeonato.TipoCampeonato(No_Equipos), IDs_Equipos, Txt_Crear_Campeonato.Text, No_Equipos, Sede, Deporte, DateTime.Now.ToString());
+                                    MessageBox.Show("Ingreso correcto de Campeonato" + MessageBoxButtons.OK + MessageBoxIcon.Error);
+                                    VaciarCampos();
+                                }
+                                
+                                   
                             }
                         }
                     }
@@ -293,8 +306,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
 
         private void Rdb_Eliminatoria_CheckedChanged(object sender, EventArgs e)
         {
-            if (Rbtn_Eliminatoria.Checked == true) { Lbl_Crear_Cantidad_Equipos.Visible = true; Cbx_Equipos.Visible = true; }
-            else { Lbl_Crear_Cantidad_Equipos.Visible = false; Cbx_Equipos.Visible = false; }
+            
         }
 
         private void Btn_Modificar_Buscar_Campeonato_Click(object sender, EventArgs e)
@@ -475,7 +487,7 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Nud_Cantidad_Todos.Value = 2;
             if (Dgv_Equipos_Campeonato.SelectedRows.Count > 0)
             {
-                for (int i = 0; i < Dgv_Equipos_Campeonato.RowCount; i++)
+                for (int i = 0; i > Dgv_Equipos_Campeonato.RowCount; i++)
                 {
                     Dgv_Equipos_Campeonato.Rows.Remove(Dgv_Equipos_Campeonato.Rows[i]);
                 }
