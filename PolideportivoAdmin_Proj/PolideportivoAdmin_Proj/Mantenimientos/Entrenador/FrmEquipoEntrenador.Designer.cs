@@ -43,9 +43,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(806, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1075, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -78,7 +79,8 @@
             this.Dgv_Equipos.EnableHeadersVisualStyles = false;
             this.Dgv_Equipos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Equipos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Equipos.Location = new System.Drawing.Point(12, 128);
+            this.Dgv_Equipos.Location = new System.Drawing.Point(16, 158);
+            this.Dgv_Equipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_Equipos.Name = "Dgv_Equipos";
             this.Dgv_Equipos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -90,9 +92,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_Equipos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_Equipos.RowHeadersVisible = false;
+            this.Dgv_Equipos.RowHeadersWidth = 51;
             this.Dgv_Equipos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Equipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Equipos.Size = new System.Drawing.Size(890, 311);
+            this.Dgv_Equipos.Size = new System.Drawing.Size(1187, 383);
             this.Dgv_Equipos.Style = MetroFramework.MetroColorStyle.Green;
             this.Dgv_Equipos.TabIndex = 1;
             // 
@@ -100,9 +103,10 @@
             // 
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(165, 52);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(220, 64);
+            this.Lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(557, 55);
+            this.Lbl_Titulo.Size = new System.Drawing.Size(683, 69);
             this.Lbl_Titulo.TabIndex = 2;
             this.Lbl_Titulo.Text = "Equipos Del Entrenador";
             // 
@@ -116,23 +120,26 @@
             this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(869, 479);
+            this.Btn_Ayuda.Location = new System.Drawing.Point(1159, 590);
+            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda.TabIndex = 28;
             this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
             // 
             // FrmEquipoEntrenador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Btn_Ayuda);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.Dgv_Equipos);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmEquipoEntrenador";
             this.Text = "FrmEquipoEntrenador";
             this.Load += new System.EventHandler(this.FrmEquipoEntrenador_Load);

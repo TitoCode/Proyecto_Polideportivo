@@ -239,5 +239,24 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
             ClsValidarKeyPress.Letras(e);
         }
 
+        private void Btn_Ayuda_Eliminar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0037.html");
+        }
+
+        private void Btn_Ayuda_Modificar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0036.html");
+        }
+
+        private void Btn_Ayuda_Ingreso_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0035.html");
+        }
+
+        private void Btn_Ayuda_ListadoJugadores_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0034.html");
+        }
     }
 }

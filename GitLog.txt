@@ -1,0 +1,425 @@
+*   65d29ba "Actualizacion"
+[31m|[m[32m\[m  
+[31m|[m *   931e6ca Merge pull request #70 from TitoCode/Johana_Campos
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m * 855916c Calendario y Tabla Posiciones 2
+[31m|[m * [34m|[m   5a2d7c2 Merge pull request #69 from TitoCode/Alexander_Sandoval
+[31m|[m [34m|[m[36m\[m [34m\[m  
+[31m|[m [34m|[m [36m|[m[34m/[m  
+[31m|[m [34m|[m[34m/[m[36m|[m   
+[31m|[m [34m|[m * 3442dd4 Version final proyecto usuario
+* [34m|[m [36m|[m   6d8ac71 "correcciones"
+[1;31m|[m[34m\[m [34m\[m [36m\[m  
+[1;31m|[m [34m|[m[34m/[m [36m/[m  
+[1;31m|[m * [36m|[m   500b2c3 Merge pull request #68 from TitoCode/Manuel_Garcia
+[1;31m|[m [1;33m|[m[1;34m\[m [36m\[m  
+* [1;33m|[m [1;34m\[m [36m\[m   4f380c7 Merge branch 'master' of github.com:TitoCode/Proyecto_Polideportivo into Manuel_Garcia
+[1;34m|[m[1;33m\[m [1;33m\[m [1;34m\[m [36m\[m  
+[1;34m|[m [1;33m|[m[1;33m/[m [1;34m/[m [36m/[m  
+[1;34m|[m [1;33m|[m [1;34m/[m [36m/[m   
+[1;34m|[m [1;33m|[m[1;34m/[m [36m/[m    
+[1;34m|[m[1;34m/[m[1;33m|[m [36m|[m     
+[1;34m|[m * [36m|[m   0d015d6 Merge pull request #67 from TitoCode/Johana_Campos
+[1;34m|[m [31m|[m[32m\[m [36m\[m  
+[1;34m|[m [31m|[m * [36m|[m cfa5ce3 Calendario y Tabla Posiciones
+[1;34m|[m [31m|[m[31m/[m [36m/[m  
+[1;34m|[m * [36m|[m   d60d09e Merge pull request #66 from TitoCode/Johana_Campos
+[1;34m|[m [33m|[m[34m\[m [36m\[m  
+[1;34m|[m [33m|[m * [36m\[m   cc81558 Merge branch 'master' into Johana_Campos
+[1;34m|[m [33m|[m [35m|[m[33m\[m [36m\[m  
+[1;34m|[m [33m|[m [35m|[m[33m/[m [36m/[m  
+[1;34m|[m [33m|[m[33m/[m[35m|[m [36m|[m   
+[1;34m|[m [33m|[m * [36m|[m cc190d0 Estadisticas Sistemas y Futbol
+* [33m|[m [36m|[m [36m|[m a910873 Arreglos Campeonato/Reporte
+[33m|[m[33m/[m [36m/[m [36m/[m  
+* [36m|[m [36m|[m   203b652 Merge pull request #65 from TitoCode/Augusto_Rodas
+[1;31m|[m[1;32m\[m [36m\[m [36m\[m  
+[1;31m|[m * [36m|[m [36m|[m b1842af Mas Validaciones de Campeonato
+* [1;32m|[m [36m|[m [36m|[m   a66fb73 Merge pull request #64 from TitoCode/Alexander_Sandoval
+[1;32m|[m[36m\[m [1;32m\[m [36m\[m [36m\[m  
+[1;32m|[m [36m|[m[1;32m/[m [36m/[m [36m/[m  
+[1;32m|[m[1;32m/[m[36m|[m [36m|[m [36m/[m   
+[1;32m|[m [36m|[m [36m|[m[36m/[m    
+[1;32m|[m [36m|[m[36m/[m[36m|[m     
+[1;32m|[m * [36m|[m d679ac1 Cambios
+* [1;34m|[m [36m|[m   c856295 Merge pull request #63 from TitoCode/Augusto_Rodas
+[36m|[m[1;36m\[m [1;34m\[m [36m\[m  
+[36m|[m [1;36m|[m[36m_[m[1;34m|[m[36m/[m  
+[36m|[m[36m/[m[1;36m|[m [1;34m|[m   
+[36m|[m * [1;34m|[m dce433b Validaciones Campeonato
+[36m|[m[36m/[m [1;34m/[m  
+* [1;34m|[m   741433a Merge pull request #62 from TitoCode/Augusto_Rodas
+[31m|[m[32m\[m [1;34m\[m  
+[31m|[m * [1;34m\[m   96de538 Merge branch 'master' into Augusto_Rodas
+[31m|[m [33m|[m[31m\[m [1;34m\[m  
+[31m|[m [33m|[m[31m/[m [1;34m/[m  
+[31m|[m[31m/[m[33m|[m [1;34m|[m   
+* [33m|[m [1;34m|[m   b20f2fa Merge pull request #61 from TitoCode/Johana_Campos
+[1;34m|[m[36m\[m [33m\[m [1;34m\[m  
+[1;34m|[m [36m|[m[1;34m_[m[33m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[36m|[m [33m|[m   
+[1;34m|[m * [33m|[m ee7140a Form Administrativo Casi Terminado
+* [36m|[m [33m|[m   501e2d2 Merge pull request #60 from TitoCode/Alexander_Sandoval
+[1;31m|[m[1;32m\[m [36m\[m [33m\[m  
+[1;31m|[m * [36m|[m [33m|[m 7714a5c Validacion 3.0
+* [1;32m|[m [36m|[m [33m|[m   181cf07 Merge pull request #59 from TitoCode/Alexander_Sandoval
+[36m|[m[1;32m\[m [1;32m\[m [36m\[m [33m\[m  
+[36m|[m [1;32m|[m[1;32m/[m [36m/[m [33m/[m  
+[36m|[m [1;32m|[m [36m/[m [33m/[m   
+[36m|[m [1;32m|[m[36m/[m [33m/[m    
+[36m|[m[36m/[m[1;32m|[m [33m|[m     
+[36m|[m * [33m|[m   f39a6e2 Ayuda
+[36m|[m [1;35m|[m[36m\[m [33m\[m  
+[36m|[m [1;35m|[m[36m/[m [33m/[m  
+[36m|[m[36m/[m[1;35m|[m [33m|[m   
+* [1;35m|[m [33m|[m   88c9b89 Merge pull request #58 from TitoCode/Johana_Campos
+[31m|[m[32m\[m [1;35m\[m [33m\[m  
+[31m|[m * [1;35m|[m [33m|[m 41da98e Liempieza de Código Campeonatos
+[31m|[m[31m/[m [1;35m/[m [33m/[m  
+[31m|[m * [33m|[m 6621fdc Actualizacion consultas Mantenimientos Admin
+[31m|[m[31m/[m [33m/[m  
+* [33m|[m   591c9e4 Merge pull request #57 from TitoCode/Johana_Campos
+[33m|[m[34m\[m [33m\[m  
+[33m|[m * [33m|[m 1f3c150 Liempieza de Código Campeonatos
+[33m|[m[33m/[m [33m/[m  
+* [33m|[m   3bb82ab Merge pull request #56 from TitoCode/Johana_Campos
+[35m|[m[36m\[m [33m\[m  
+[35m|[m * [33m|[m 9dd5c56 Listados completados y Nueva Clase Mantenimientos
+[35m|[m[35m/[m [33m/[m  
+[35m|[m * efacf93  Actualizando
+[35m|[m[35m/[m  
+*   2c17b8f Merge pull request #55 from TitoCode/Johana_Campos
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * 96c7dbd Avances Estadisticas 2
+[1;31m|[m[1;31m/[m  
+*   0aa4d1c Merge pull request #54 from TitoCode/Johana_Campos
+[1;33m|[m[1;34m\[m  
+[1;33m|[m *   e432934 Vamos ya es lo ultimo lol
+[1;33m|[m [1;35m|[m[1;33m\[m  
+[1;33m|[m [1;35m|[m[1;33m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m   
+* [1;35m|[m   25b0054 Merge pull request #53 from TitoCode/Augusto_Rodas
+[31m|[m[32m\[m [1;35m\[m  
+[31m|[m * [1;35m|[m f01a3b8 Modificacion Campeonato y Parte de Modificacion Partido
+[31m|[m [32m|[m *   5d7b0d1 Merge With Alex
+[31m|[m [32m|[m [33m|[m[31m\[m  
+[31m|[m [32m|[m[31m_[m[33m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m [33m|[m   
+* [32m|[m [33m|[m   ce2df13 Merge pull request #52 from TitoCode/Alexander_Sandoval
+[35m|[m[36m\[m [32m\[m [33m\[m  
+[35m|[m * [32m|[m [33m|[m 012d628 Validaciones 2.0
+[35m|[m[35m/[m [32m/[m [33m/[m  
+[35m|[m [32m|[m * 68d5abc Avances Estadisticas
+[35m|[m [32m|[m[35m/[m  
+[35m|[m[35m/[m[32m|[m   
+* [32m|[m   3e72047 Merge pull request #51 from TitoCode/Johana_Campos
+[1;31m|[m[1;32m\[m [32m\[m  
+[1;31m|[m * [32m|[m 3073dd1 Admin botones nuevos
+[1;31m|[m * [32m|[m   8936176 With Reports Man
+[1;31m|[m [1;33m|[m[1;34m\[m [32m\[m  
+[1;31m|[m * [1;34m|[m [32m|[m 5848c91 Error en Entrenador resolvido
+* [1;34m|[m [1;34m|[m [32m|[m   b676eff Merge pull request #50 from TitoCode/Alexander_Sandoval
+[1;35m|[m[1;36m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;35m|[m * [1;34m|[m [1;34m|[m [32m|[m dc3da58 Pls podes subirte bien?
+[1;35m|[m[1;35m/[m [1;34m/[m [1;34m/[m [32m/[m  
+* [1;34m|[m [1;34m|[m [32m|[m   991b3f5 Merge pull request #49 from TitoCode/Alexander_Sandoval
+[31m|[m[32m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[31m|[m * [1;34m|[m [1;34m|[m [32m|[m 7f4b6b9 Timer
+[31m|[m[31m/[m [1;34m/[m [1;34m/[m [32m/[m  
+* [1;34m|[m [1;34m|[m [32m|[m   1689a68 Merge pull request #48 from TitoCode/Alexander_Sandoval
+[33m|[m[34m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[33m|[m * [1;34m\[m [1;34m\[m [32m\[m   043413f Merge branch 'master' into Alexander_Sandoval
+[33m|[m [35m|[m[33m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[33m|[m [35m|[m[33m/[m [1;34m/[m [1;34m/[m [32m/[m  
+[33m|[m[33m/[m[35m|[m [1;34m|[m [1;34m|[m [32m|[m   
+* [35m|[m [1;34m|[m [1;34m|[m [32m|[m   3f2418c Merge pull request #47 from TitoCode/revert-46-Alexander_Sandoval
+[1;31m|[m[1;32m\[m [35m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;31m|[m * [35m|[m [1;34m|[m [1;34m|[m [32m|[m a9696c7 Revert "Alexander sandoval"
+[1;31m|[m[1;31m/[m [35m/[m [1;34m/[m [1;34m/[m [32m/[m  
+[1;31m|[m * [1;34m|[m [1;34m|[m [32m|[m c5a2459 Corrección de errores
+[1;31m|[m[1;31m/[m [1;34m/[m [1;34m/[m [32m/[m  
+* [1;34m|[m [1;34m|[m [32m|[m   acd0e0c Merge pull request #46 from TitoCode/Alexander_Sandoval
+[1;33m|[m[1;34m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;33m|[m * [1;34m\[m [1;34m\[m [32m\[m   2c1fa82 Merge branch 'master' into Alexander_Sandoval
+[1;33m|[m [1;35m|[m[1;33m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m[1;33m/[m [1;34m/[m [1;34m/[m [32m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m [1;34m|[m [1;34m|[m [32m|[m   
+* [1;35m|[m [1;34m|[m [1;34m|[m [32m|[m   c3ba014 Merge pull request #45 from TitoCode/Augusto_Rodas
+[1;34m|[m[32m\[m [1;35m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;34m|[m [32m|[m[1;34m_[m[1;35m|[m[1;34m_[m[1;34m|[m[1;34m/[m [32m/[m  
+[1;34m|[m[1;34m/[m[32m|[m [1;35m|[m [1;34m|[m [32m/[m   
+[1;34m|[m [32m|[m [1;35m|[m[32m_[m[1;34m|[m[32m/[m    
+[1;34m|[m [32m|[m[32m/[m[1;35m|[m [1;34m|[m     
+[1;34m|[m * [1;35m|[m [1;34m|[m d1e37ec Eliminatorias Funcional
+[1;34m|[m * [1;35m|[m [1;34m|[m   1247916 Otro commit
+[1;34m|[m [33m|[m[1;34m\[m [1;35m\[m [1;34m\[m  
+[1;34m|[m [33m|[m [1;34m|[m [1;35m|[m[1;34m/[m  
+[1;34m|[m [33m|[m [1;34m|[m[1;34m/[m[1;35m|[m   
+[1;34m|[m * [1;34m|[m [1;35m|[m 5acc5a6 Otra actualizacion
+[1;34m|[m * [1;34m|[m [1;35m|[m   4a49ed0 Volviendo a actualizar
+[1;34m|[m [35m|[m[36m\[m [1;34m\[m [1;35m\[m  
+[1;34m|[m * [36m|[m [1;34m|[m [1;35m|[m 3898f5a Acutalizando
+* [36m|[m [36m|[m [1;34m|[m [1;35m|[m   c2b0792 Merge pull request #44 from TitoCode/Manuel_Garcia
+[1;34m|[m[1;32m\[m [36m\[m [36m\[m [1;34m\[m [1;35m\[m  
+[1;34m|[m [1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[36m|[m[1;34m/[m [1;35m/[m  
+[1;34m|[m[1;34m/[m[1;32m|[m [36m|[m [36m|[m [1;35m|[m   
+[1;34m|[m * [36m|[m [36m|[m [1;35m|[m c7f1356 Reportes Finalizados
+[1;34m|[m * [36m|[m [36m|[m [1;35m|[m   29345df Reparando la rama2.0
+[1;34m|[m [1;33m|[m[1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 9482ce2 Reparando rama
+[1;34m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 40562f8 Si funciona ?
+[1;34m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m   3e87573 Merge pull request #27 from TitoCode/Manuel_Garcia
+[1;34m|[m [1;35m|[m[1;36m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [1;35m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m f1ae6ac Bitacoras en Admin
+[1;34m|[m [1;35m|[m[1;35m/[m [1;34m/[m [36m/[m [36m/[m [1;35m/[m  
+[1;34m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m   b7019cb Merge pull request #26 from TitoCode/Sthefany_Campos
+[1;34m|[m [31m|[m[32m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [31m|[m * [1;34m\[m [36m\[m [36m\[m [1;35m\[m   801e7b3 Merge branch 'master' into Sthefany_Campos
+[1;34m|[m [31m|[m [33m|[m[31m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [31m|[m [33m|[m[31m/[m [1;34m/[m [36m/[m [36m/[m [1;35m/[m  
+[1;34m|[m [31m|[m[31m/[m[33m|[m [1;34m|[m [36m|[m [36m|[m [1;35m|[m   
+[1;34m|[m * [33m|[m [1;34m|[m [36m|[m [36m|[m [1;35m|[m   9c8f7ef Merge pull request #25 from TitoCode/Manuel_Garcia
+[1;34m|[m [35m|[m[36m\[m [33m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [35m|[m * [33m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m   4d0a06f Merge branch 'master' into Manuel_Garcia
+[1;34m|[m [35m|[m [1;31m|[m[35m\[m [33m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [35m|[m [1;31m|[m[35m/[m [33m/[m [1;34m/[m [36m/[m [36m/[m [1;35m/[m  
+[1;34m|[m [35m|[m[35m/[m[1;31m|[m [33m|[m [1;34m|[m [36m|[m [36m|[m [1;35m|[m   
+[1;34m|[m [35m|[m * [33m|[m [1;34m|[m [36m|[m [36m|[m [1;35m|[m 904793a Bitacoras funcionales
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 563f3c8 Cambios Entrenador
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 917d9b0 Cls Bitacora
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m c0804b2 Round Robi Campeonatos
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 92b3884 Recuperacion
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m 2142ff7 Salvacion lo hizo
+[1;34m|[m [35m|[m [1;32m|[m * [1;34m|[m [36m|[m [36m|[m [1;35m|[m f35b13e Revert "Bitacoras"
+* [35m|[m [1;32m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [1;35m|[m   e810a7a Merge pull request #43 from TitoCode/Johana_Campos
+[1;34m|[m[1;34m\[m [35m\[m [1;32m\[m [1;32m\[m [1;34m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;34m|[m [1;34m|[m[1;34m_[m[35m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;32m|[m[1;34m/[m [36m/[m [36m/[m [1;35m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m [1;35m|[m   
+[1;34m|[m * [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m [1;35m|[m 0d0fb6c Form Gerencia y Entrenador Terminados
+[1;34m|[m * [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m [1;35m|[m 081d1c7 Actualizacion Proyect Usuario
+[1;34m|[m[1;34m/[m [35m/[m [1;32m/[m [1;32m/[m [36m/[m [36m/[m [1;35m/[m  
+* [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m [1;35m|[m   e136fe0 Merge pull request #42 from TitoCode/Alexander_Sandoval
+[1;35m|[m[1;36m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [36m\[m [1;35m\[m  
+[1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m * 999eccd Validación Gerencia 1.0 Finalizada
+[1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m * 00baad4 Validacion de fechas
+[1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m * f5599f2 Validaciones segunda revision general
+[1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m * 509900e Validaciones primera revison general
+[1;35m|[m [1;36m|[m [35m|[m[1;36m_[m[1;32m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[36m|[m[1;36m/[m  
+[1;35m|[m [1;36m|[m[1;36m/[m[35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m   
+[1;35m|[m * [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m 0f4721d Nueva interfaz usuario
+[1;35m|[m[1;35m/[m [35m/[m [1;32m/[m [1;32m/[m [36m/[m [36m/[m  
+* [35m|[m [1;32m|[m [1;32m|[m [36m|[m [36m|[m   bf01cb5 Merge pull request #41 from TitoCode/Johana_Campos
+[36m|[m[32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [36m\[m  
+[36m|[m [32m|[m[36m_[m[35m|[m[36m_[m[1;32m|[m[36m_[m[1;32m|[m[36m_[m[36m|[m[36m/[m  
+[36m|[m[36m/[m[32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m   
+[36m|[m * [35m|[m [1;32m|[m [1;32m|[m [36m|[m 305aedf Master 5.0
+* [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m   2ab6d50 Merge pull request #40 from TitoCode/Johana_Campos
+[36m|[m[32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m  
+[36m|[m [32m|[m[32m/[m [35m/[m [1;32m/[m [1;32m/[m [36m/[m  
+[36m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m/[m   
+[36m|[m [32m|[m[36m_[m[35m|[m[36m_[m[1;32m|[m[36m_[m[1;32m|[m[36m/[m    
+[36m|[m[36m/[m[32m|[m [35m|[m [1;32m|[m [1;32m|[m     
+[36m|[m * [35m|[m [1;32m|[m [1;32m|[m ace907f Rediseño en forms y Campeonato tvt
+[36m|[m[36m/[m [35m/[m [1;32m/[m [1;32m/[m  
+* [35m|[m [1;32m|[m [1;32m|[m 9a0359a Validaciones en Login y FrmGerencia Alex ingresadas por master
+* [35m|[m [1;32m|[m [1;32m|[m 3484cf0 Bitacoras Manuel ingresadas por master
+* [35m|[m [1;32m|[m [1;32m|[m 25ed41e Master 5.0
+* [35m|[m [1;32m|[m [1;32m|[m cb8a499 Master 4.0
+[35m|[m[35m/[m [1;32m/[m [1;32m/[m  
+* [1;32m|[m [1;32m|[m 40c72b3 Master 3.0
+* [1;32m|[m [1;32m|[m   1807f38 Merge pull request #23 from TitoCode/Sthefany_Campos
+[1;32m|[m[36m\[m [1;32m\[m [1;32m\[m  
+[1;32m|[m [36m|[m[1;32m_[m[1;32m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[36m|[m [1;32m|[m   
+[1;32m|[m * [1;32m|[m   d68157b Prueba
+[1;32m|[m [1;31m|[m[1;32m\[m [1;32m\[m  
+[1;32m|[m [1;31m|[m * [1;32m\[m   a864b03 Actualizacion Master
+[1;32m|[m [1;31m|[m [1;33m|[m[1;32m\[m [1;32m\[m  
+[1;32m|[m [1;31m|[m[1;32m_[m[1;33m|[m[1;32m/[m [1;32m/[m  
+[1;32m|[m[1;32m/[m[1;31m|[m [1;33m|[m [1;32m|[m   
+[1;32m|[m * [1;33m|[m [1;32m|[m   1727aa0 Second Chance
+[1;32m|[m [1;33m|[m[1;32m\[m [1;33m\[m [1;32m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m [1;32m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m [1;32m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m [1;32m/[m    
+* [1;33m|[m [1;32m|[m   680c468 Merge pull request #22 from TitoCode/Manuel_Garcia
+[31m|[m[1;32m\[m [1;33m\[m [1;32m\[m  
+[31m|[m [1;32m|[m [1;33m|[m[1;32m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[1;33m|[m   
+[31m|[m * [1;33m|[m b97f388 Bitacoras
+[31m|[m[31m/[m [1;33m/[m  
+* [1;33m|[m   b5d33ca Merge pull request #21 from TitoCode/Sthefany_Campos
+[33m|[m[34m\[m [1;33m\[m  
+[33m|[m [34m|[m * c8a7efc Actualizacion Admin
+[33m|[m [34m|[m[34m/[m  
+[33m|[m * fd0c224 Form Gerencia para Bitacora
+[33m|[m *   183a932  Actualizacion con Man y Yisus
+[33m|[m [35m|[m[33m\[m  
+[33m|[m [35m|[m[33m/[m  
+[33m|[m[33m/[m[35m|[m   
+* [35m|[m   4d5cf07 Merge pull request #20 from TitoCode/Carlos_Rodas
+[1;31m|[m[1;32m\[m [35m\[m  
+[1;31m|[m * [35m\[m   53058d3 Merge branch 'master' into Carlos_Rodas
+[1;31m|[m [1;33m|[m[1;31m\[m [35m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [35m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [35m|[m   
+[1;31m|[m * [35m|[m 213210d Mantenimeinto de Equipos Funcional, Falta Eliminar Equipos
+[1;31m|[m * [35m|[m   7d33980 Tefa estuvo aqui
+[1;31m|[m [1;35m|[m[1;36m\[m [35m\[m  
+[1;31m|[m * [1;36m\[m [35m\[m   1db5a6b Merge branch 'master' of https://github.com/TitoCode/Proyecto_Polideportivo into Carlos_Rodas
+[1;31m|[m [31m|[m[32m\[m [1;36m\[m [35m\[m  
+[1;31m|[m [31m|[m [32m|[m [1;36m|[m * 120a931  Actualizacion Entrenador 2 y Panel Contenedor
+[1;31m|[m [31m|[m [32m|[m [1;36m|[m *   5c2aa26 Merge con Man
+[1;31m|[m [31m|[m [32m|[m [1;36m|[m [33m|[m[1;31m\[m  
+[1;31m|[m [31m|[m[1;31m_[m[32m|[m[1;31m_[m[1;36m|[m[1;31m_[m[33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[31m|[m [32m|[m [1;36m|[m [33m|[m   
+* [31m|[m [32m|[m [1;36m|[m [33m|[m   4be5bf7 Merge pull request #19 from TitoCode/Manuel_Garcia
+[35m|[m[36m\[m [31m\[m [32m\[m [1;36m\[m [33m\[m  
+[35m|[m * [31m|[m [32m|[m [1;36m|[m [33m|[m 6f08b0f Reportes Agregados2.0
+* [36m|[m [31m|[m [32m|[m [1;36m|[m [33m|[m   1294d69 Merge pull request #18 from TitoCode/Manuel_Garcia
+[1;36m|[m[36m\[m [36m\[m [31m\[m [32m\[m [1;36m\[m [33m\[m  
+[1;36m|[m [36m|[m[36m/[m [31m/[m [32m/[m [1;36m/[m [33m/[m  
+[1;36m|[m [36m|[m [31m|[m [32m|[m [1;36m/[m [33m/[m   
+[1;36m|[m [36m|[m[1;36m_[m[31m|[m[1;36m_[m[32m|[m[1;36m/[m [33m/[m    
+[1;36m|[m[1;36m/[m[36m|[m [31m|[m [32m|[m [33m|[m     
+[1;36m|[m * [31m|[m [32m|[m [33m|[m e6b6b33 Reportes Agregados
+[1;36m|[m * [31m|[m [32m|[m [33m|[m   8fdbd85 Actualizacion+
+[1;36m|[m [1;33m|[m[1;36m\[m [31m\[m [32m\[m [33m\[m  
+[1;36m|[m [1;33m|[m[1;36m/[m [31m/[m [32m/[m [33m/[m  
+[1;36m|[m[1;36m/[m[1;33m|[m [31m|[m [32m|[m [33m|[m   
+* [1;33m|[m [31m|[m [32m|[m [33m|[m   3d246c8 Merge pull request #17 from TitoCode/Sthefany_Campos
+[1;35m|[m[1;36m\[m [1;33m\[m [31m\[m [32m\[m [33m\[m  
+* [1;36m\[m [1;33m\[m [31m\[m [32m\[m [33m\[m   630c123 Merge pull request #16 from TitoCode/Sthefany_Campos
+[31m|[m[32m\[m [1;36m\[m [1;33m\[m [31m\[m [32m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m * [31m|[m [32m|[m [33m|[m 2ab7315 Actualizacion rama
+[31m|[m [32m|[m [1;36m|[m * [31m|[m [32m|[m [33m|[m   45bc919 Actualizacion de rama
+[31m|[m [32m|[m [1;36m|[m [33m|[m[31m\[m [31m\[m [32m\[m [33m\[m  
+[31m|[m [32m|[m[31m_[m[1;36m|[m[31m_[m[33m|[m[31m/[m [31m/[m [32m/[m [33m/[m  
+[31m|[m[31m/[m[32m|[m [1;36m|[m [33m|[m [31m|[m [32m|[m [33m|[m   
+[31m|[m [32m|[m [1;36m|[m * [31m|[m [32m|[m [33m|[m   fd3aa6b i solucion
+[31m|[m [32m|[m [1;36m|[m [35m|[m[36m\[m [31m\[m [32m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m * [36m|[m [31m|[m [32m|[m [33m|[m 404e330 Correción final rama
+[31m|[m [32m|[m [1;36m|[m * [36m|[m [31m|[m [32m|[m [33m|[m 4629a5f Actualizacion rama
+[31m|[m [32m|[m [1;36m|[m * [36m|[m [31m|[m [32m|[m [33m|[m   037e5dc Merge branch 'Manuel_Garcia' of https://github.com/TitoCode/Proyecto_Polideportivo into Manuel_Garcia i prueba
+[31m|[m [32m|[m [1;36m|[m [1;31m|[m[1;32m\[m [36m\[m [31m\[m [32m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m [1;31m|[m * [36m\[m [31m\[m [32m\[m [33m\[m   949e626 Tefa estuvo aqui
+[31m|[m [32m|[m [1;36m|[m [1;31m|[m [1;33m|[m[32m\[m [36m\[m [31m\[m [32m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m [1;31m|[m [1;33m|[m [32m|[m [36m|[m[32m_[m[31m|[m[32m/[m [33m/[m  
+[31m|[m [32m|[m [1;36m|[m [1;31m|[m [1;33m|[m [32m|[m[32m/[m[36m|[m [31m|[m [33m|[m   
+[31m|[m [32m|[m [1;36m|[m * [1;33m|[m [32m|[m [36m|[m [31m|[m [33m|[m   6d85866 Intento para resolver conlficto de merge en rama Manuel_Garcia..
+[31m|[m [32m|[m [1;36m|[m [1;33m|[m[32m\[m [1;33m\[m [32m\[m [36m\[m [31m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m [1;33m|[m [32m|[m[1;33m/[m [32m/[m [36m/[m [31m/[m [33m/[m  
+[31m|[m [32m|[m [1;36m|[m [1;33m|[m[1;33m/[m[32m|[m [32m/[m [36m/[m [31m/[m [33m/[m   
+[31m|[m [32m|[m [1;36m|[m [1;33m|[m [32m|[m[32m/[m [36m/[m [31m/[m [33m/[m    
+[31m|[m [32m|[m [1;36m|[m * [32m|[m [36m|[m [31m|[m [33m|[m   6e9474d update de Rama
+[31m|[m [32m|[m [1;36m|[m [31m|[m[32m\[m [32m\[m [36m\[m [31m\[m [33m\[m  
+[31m|[m [32m|[m [1;36m|[m [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m * d9d4e36  Actualizacion Entrenador
+[31m|[m [32m|[m [1;36m|[m [31m|[m[1;36m_[m[32m|[m[1;36m_[m[32m|[m[1;36m_[m[36m|[m[1;36m_[m[31m|[m[1;36m/[m  
+[31m|[m [32m|[m [1;36m|[m[1;36m/[m[31m|[m [32m|[m [32m|[m [36m|[m [31m|[m   
+[31m|[m [32m|[m * [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m a699e91 Nueva version
+[31m|[m [32m|[m[32m/[m [31m/[m [32m/[m [32m/[m [36m/[m [31m/[m  
+[31m|[m * [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m 5d16476 Actualizacion Gerencia a Master
+[31m|[m[31m/[m [31m/[m [32m/[m [32m/[m [36m/[m [31m/[m  
+* [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m   6c3d518 Merge pull request #15 from TitoCode/Sthefany_Campos
+[33m|[m[34m\[m [31m\[m [32m\[m [32m\[m [36m\[m [31m\[m  
+[33m|[m * [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m 01bc49c Actualizacion Gerencia
+[33m|[m * [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m   1349bbe With Yisus
+[33m|[m [35m|[m[33m\[m [31m\[m [32m\[m [32m\[m [36m\[m [31m\[m  
+[33m|[m [35m|[m[33m/[m [31m/[m [32m/[m [32m/[m [36m/[m [31m/[m  
+[33m|[m[33m/[m[35m|[m [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m   
+* [35m|[m [31m|[m [32m|[m [32m|[m [36m|[m [31m|[m   1d53aaa Merge pull request #14 from TitoCode/Carlos_Rodas
+[36m|[m[1;32m\[m [35m\[m [31m\[m [32m\[m [32m\[m [36m\[m [31m\[m  
+[36m|[m [1;32m|[m[36m_[m[35m|[m[36m_[m[31m|[m[36m_[m[32m|[m[36m_[m[32m|[m[36m/[m [31m/[m  
+[36m|[m[36m/[m[1;32m|[m [35m|[m [31m|[m [32m|[m [32m|[m [31m|[m   
+[36m|[m * [35m|[m [31m|[m [32m|[m [32m|[m [31m|[m e45ed6a Se agrega Form AdminEntrenador y sus mantenimientos
+[36m|[m * [35m|[m [31m|[m [32m|[m [32m|[m [31m|[m   6fe6045 i Prueba 2
+[36m|[m [1;33m|[m[36m\[m [35m\[m [31m\[m [32m\[m [32m\[m [31m\[m  
+[36m|[m [1;33m|[m[36m/[m [35m/[m [31m/[m [32m/[m [32m/[m [31m/[m  
+[36m|[m[36m/[m[1;33m|[m [35m|[m [31m|[m [32m|[m [32m|[m [31m|[m   
+* [1;33m|[m [35m|[m [31m|[m [32m|[m [32m|[m [31m|[m   69c60fc Merge pull request #13 from TitoCode/Sthefany_Campos
+[32m|[m[1;36m\[m [1;33m\[m [35m\[m [31m\[m [32m\[m [32m\[m [31m\[m  
+[32m|[m [1;36m|[m[32m_[m[1;33m|[m[32m_[m[35m|[m[32m_[m[31m|[m[32m_[m[32m|[m[32m/[m [31m/[m  
+[32m|[m[32m/[m[1;36m|[m [1;33m|[m [35m|[m [31m|[m [32m|[m [31m|[m   
+[32m|[m [1;36m|[m * [35m|[m [31m|[m [32m|[m [31m|[m 9735c39 Atualizando a Rama Maestra
+[32m|[m [1;36m|[m * [35m|[m [31m|[m [32m|[m [31m|[m   60a2645 Merge branch 'master' of https://github.com/TitoCode/Proyecto_Polideportivo into Carlos_Rodas
+[32m|[m [1;36m|[m [31m|[m[32m\[m [35m\[m [31m\[m [32m\[m [31m\[m  
+[32m|[m [1;36m|[m[32m_[m[31m|[m[32m/[m [35m/[m [31m/[m [32m/[m [31m/[m  
+[32m|[m[32m/[m[1;36m|[m [31m|[m [35m|[m [31m|[m [32m|[m [31m/[m   
+[32m|[m [1;36m|[m [31m|[m [35m|[m[31m_[m[31m|[m[31m_[m[32m|[m[31m/[m    
+[32m|[m [1;36m|[m [31m|[m[31m/[m[35m|[m [31m|[m [32m|[m     
+* [1;36m|[m [31m|[m [35m|[m [31m|[m [32m|[m   b338cb2 Merge pull request #12 from TitoCode/Sthefany_Campos
+[33m|[m[34m\[m [1;36m\[m [31m\[m [35m\[m [31m\[m [32m\[m  
+[33m|[m [34m|[m [1;36m|[m * [35m\[m [31m\[m [32m\[m   dae2030 Merge branch 'Manuel_Garcia' of https://github.com/TitoCode/Proyecto_Polideportivo into Carlos_Rodas
+[33m|[m [34m|[m [1;36m|[m [35m|[m[36m\[m [35m\[m [31m\[m [32m\[m  
+[33m|[m [34m|[m [1;36m|[m * [36m\[m [35m\[m [31m\[m [32m\[m   8420e1a Merge branch 'Manuel_Garcia' of https://github.com/TitoCode/Proyecto_Polideportivo into Carlos_Rodas
+[33m|[m [34m|[m [1;36m|[m [1;31m|[m[1;32m\[m [36m\[m [35m\[m [31m\[m [32m\[m  
+[33m|[m [34m|[m [1;36m|[m * [1;32m|[m [36m|[m [35m|[m [31m|[m [32m|[m 49c9c6c Correccion de objetos a estandar de Codigo.
+[33m|[m [34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m * [31m|[m [32m|[m 9e03f52 Actualizacion Form Admin
+[33m|[m [34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m * [31m|[m [32m|[m 88b57fd Cambios estandarizacion Gerencia con .sln
+[33m|[m [34m|[m [1;36m|[m [1;32m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m/[m [31m/[m [32m/[m  
+[33m|[m [34m|[m [1;36m|[m[1;36m/[m[1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m   
+[33m|[m [34m|[m * [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m 4eb761b Cambios estandarizacion Gerencia
+[33m|[m [34m|[m[34m/[m [1;32m/[m [1;32m/[m [36m/[m [31m/[m [32m/[m  
+[33m|[m * [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m 9e0c954 Nuevo master
+[33m|[m * [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m   2a14abb Actualizar con master
+[33m|[m [1;33m|[m[33m\[m [1;32m\[m [1;32m\[m [36m\[m [31m\[m [32m\[m  
+[33m|[m [1;33m|[m[33m/[m [1;32m/[m [1;32m/[m [36m/[m [31m/[m [32m/[m  
+[33m|[m[33m/[m[1;33m|[m [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m   
+* [1;33m|[m [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m b61f817 New Master con full mantenimientos
+* [1;33m|[m [1;32m|[m [1;32m|[m [36m|[m [31m|[m [32m|[m   a22ef30 Merge pull request #8 from TitoCode/Manuel_Garcia
+[1;32m|[m[31m\[m [1;33m\[m [1;32m\[m [1;32m\[m [36m\[m [31m\[m [32m\[m  
+[1;32m|[m [31m|[m[1;32m_[m[1;33m|[m[1;32m/[m [1;32m/[m [36m/[m [31m/[m [32m/[m  
+[1;32m|[m[1;32m/[m[31m|[m [1;33m|[m [1;32m|[m [36m|[m [31m/[m [32m/[m   
+[1;32m|[m [31m|[m [1;33m|[m[31m_[m[1;32m|[m[31m_[m[36m|[m[31m/[m [32m/[m    
+[1;32m|[m [31m|[m[31m/[m[1;33m|[m [1;32m|[m [36m|[m [32m|[m     
+[1;32m|[m * [1;33m|[m [1;32m|[m [36m|[m [32m|[m fdcca00 Funcion Modificar
+[1;32m|[m [36m|[m [1;33m|[m[36m_[m[1;32m|[m[36m/[m [32m/[m  
+[1;32m|[m [36m|[m[36m/[m[1;33m|[m [1;32m|[m [32m|[m   
+[1;32m|[m [36m|[m * [1;32m|[m [32m|[m c07c529 Renovación de Master
+[1;32m|[m [36m|[m * [1;32m|[m [32m|[m 03350e6 Renovación de Mantenimientos Full
+[1;32m|[m [36m|[m [32m|[m [1;32m|[m[32m/[m  
+[1;32m|[m [36m|[m [32m|[m[32m/[m[1;32m|[m   
+[1;32m|[m [36m|[m * [1;32m|[m 39f1a48 Renovación de Mantenimientos
+[1;32m|[m [36m|[m[36m/[m [1;32m/[m  
+[1;32m|[m * [1;32m|[m 1879078 Eliminacion Completado
+[1;32m|[m [1;32m|[m[1;32m/[m  
+[1;32m|[m * 7fbca9a Funcion Insertar
+[1;32m|[m[1;32m/[m  
+*   0f2b5f4 Merge pull request #7 from TitoCode/Sthefany_Campos
+[31m|[m[32m\[m  
+[31m|[m *   047686b Merge branch 'master' into Sthefany_Campos
+[31m|[m [33m|[m[31m\[m  
+[31m|[m [33m|[m[31m/[m  
+[31m|[m[31m/[m[33m|[m   
+* [33m|[m   bb3d8af Merge pull request #6 from TitoCode/Manuel_Garcia
+[35m|[m[36m\[m [33m\[m  
+[35m|[m * [33m|[m 51e1343 Insertar Form Gerencia
+[35m|[m [36m|[m * 0e293a6 Diseño Menu con Alexander
+[35m|[m [36m|[m[35m/[m  
+[35m|[m[35m/[m[36m|[m   
+* [36m|[m   f04eb9f Merge pull request #5 from TitoCode/Carlos_Rodas
+[36m|[m[1;32m\[m [36m\[m  
+[36m|[m [1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;32m|[m   
+[36m|[m * bfbf649 Formularios de Administracion
+[36m|[m[36m/[m  
+*   a102ff4 Merge pull request #4 from TitoCode/Sthefany_Campos
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * 2a87fe9 Proyecto Admin y Login
+[1;33m|[m * 25a31bd Eliminación botón Login Proyecto Usuario
+[1;33m|[m * 62feb8d Eliminación botón Login Proyecto Usuario
+[1;33m|[m * 42498fc Proyecto Base Administrativo y mantenimiento Login
+[1;33m|[m * 869697f Eliminación botón Login del header
+[1;33m|[m *   cb9c7d5 With Man
+[1;33m|[m [1;35m|[m[1;36m\[m  
+[1;33m|[m [1;35m|[m * 6262474 agregado txt
+[1;33m|[m [1;35m|[m * 50d6e0e Add files via upload
+[1;33m|[m [1;35m|[m[1;33m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m   
+* [1;35m|[m   704b5f7 Merge pull request #1 from TitoCode/Sthefany_Campos
+[31m|[m[32m\[m [1;35m\[m  
+[31m|[m [32m|[m * 2ad58b5 Header Form Main
+[31m|[m [32m|[m[32m/[m  
+[31m|[m * a34fa6e Add files via upload
+[31m|[m[31m/[m  
+* 1d14f5c Initial commit
