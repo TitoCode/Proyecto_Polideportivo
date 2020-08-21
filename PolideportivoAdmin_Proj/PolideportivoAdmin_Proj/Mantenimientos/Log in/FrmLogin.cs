@@ -154,7 +154,7 @@ namespace PolideportivoAdmin_Proj
 
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
-
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0001.html");
         }
     }   
 }

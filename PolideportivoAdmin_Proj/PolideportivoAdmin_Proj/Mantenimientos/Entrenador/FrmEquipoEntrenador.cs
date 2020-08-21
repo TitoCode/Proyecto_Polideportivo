@@ -24,5 +24,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Entrenador
         {
             Entrenador.BusquedaEquipos(Dgv_Equipos);
         }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0032.html");
+        }
     }
 }
