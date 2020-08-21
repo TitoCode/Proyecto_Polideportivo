@@ -175,11 +175,11 @@
             this.Tbc_Empleados.Controls.Add(this.Tbp_Eliminar);
             this.Tbc_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Empleados.Location = new System.Drawing.Point(0, 0);
-            this.Tbc_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbc_Empleados.Margin = new System.Windows.Forms.Padding(4);
             this.Tbc_Empleados.Multiline = true;
             this.Tbc_Empleados.Name = "Tbc_Empleados";
             this.Tbc_Empleados.SelectedIndex = 0;
-            this.Tbc_Empleados.Size = new System.Drawing.Size(914, 523);
+            this.Tbc_Empleados.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Empleados.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tbc_Empleados.TabIndex = 1;
             this.Tbc_Empleados.UseSelectable = true;
@@ -193,7 +193,7 @@
             this.Tbp_ListadoEmpleado.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_ListadoEmpleado.HorizontalScrollbarSize = 12;
             this.Tbp_ListadoEmpleado.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_ListadoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_ListadoEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_ListadoEmpleado.Name = "Tbp_ListadoEmpleado";
             this.Tbp_ListadoEmpleado.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_ListadoEmpleado.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(460, 21);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(345, 17);
             this.Lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
             this.Lbl_Titulo.Size = new System.Drawing.Size(257, 25);
@@ -224,39 +224,13 @@
             this.Btn_Ayuda_ListadoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_ListadoEmpleados.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_ListadoEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEmpleados.Image")));
-            this.Btn_Ayuda_ListadoEmpleados.Location = new System.Drawing.Point(1160, 4);
-            this.Btn_Ayuda_ListadoEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Ayuda_ListadoEmpleados.Name = "Btn_Ayuda_ListadoEmpleados";
-            this.Btn_Ayuda_ListadoEmpleados.Size = new System.Drawing.Size(44, 39);
-            this.Btn_Ayuda_ListadoEmpleados.TabIndex = 27;
-            this.Btn_Ayuda_ListadoEmpleados.UseVisualStyleBackColor = false;
-            // 
-            // Lbl_Titulo
-            // 
-            this.Lbl_Titulo.AutoSize = true;
-            this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(345, 17);
-            this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(198, 18);
-            this.Lbl_Titulo.TabIndex = 28;
-            this.Lbl_Titulo.Text = "Listado de Empleados";
-            // 
-            // Btn_Ayuda_ListadoEmpleados
-            // 
-            this.Btn_Ayuda_ListadoEmpleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_ListadoEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_ListadoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_ListadoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_ListadoEmpleados.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_ListadoEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEmpleados.Image")));
             this.Btn_Ayuda_ListadoEmpleados.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ListadoEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Ayuda_ListadoEmpleados.Name = "Btn_Ayuda_ListadoEmpleados";
             this.Btn_Ayuda_ListadoEmpleados.Size = new System.Drawing.Size(33, 32);
             this.Btn_Ayuda_ListadoEmpleados.TabIndex = 27;
             this.Btn_Ayuda_ListadoEmpleados.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_ListadoEmpleados.Click += new System.EventHandler(this.Btn_Ayuda_ListadoEmpleados_Click);
             // 
             // Dgw_Listado
             // 
@@ -290,7 +264,7 @@
             this.Dgw_Listado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgw_Listado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Dgw_Listado.Location = new System.Drawing.Point(0, 79);
-            this.Dgw_Listado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgw_Listado.Margin = new System.Windows.Forms.Padding(4);
             this.Dgw_Listado.Name = "Dgw_Listado";
             this.Dgw_Listado.ReadOnly = true;
             this.Dgw_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -323,7 +297,7 @@
             this.Tbp_Ingreso.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Ingreso.HorizontalScrollbarSize = 12;
             this.Tbp_Ingreso.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_Ingreso.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Ingreso.Name = "Tbp_Ingreso";
             this.Tbp_Ingreso.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Ingreso.TabIndex = 1;
@@ -342,28 +316,13 @@
             this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
-            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(1160, 4);
-            this.Btn_Ayuda_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
-            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(44, 39);
-            this.Btn_Ayuda_Ingreso.TabIndex = 26;
-            this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Ingreso
-            // 
-            this.Btn_Ayuda_Ingreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
             this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Ingreso.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
             this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
             this.Btn_Ayuda_Ingreso.TabIndex = 26;
             this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Ingreso.Click += new System.EventHandler(this.Btn_Ayuda_Ingreso_Click);
             // 
             // Gpb_Usuario_Ingreso
             // 
@@ -376,9 +335,9 @@
             this.Gpb_Usuario_Ingreso.Controls.Add(this.Lbl_TipoUsuario_Ingreso);
             this.Gpb_Usuario_Ingreso.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Usuario_Ingreso.Location = new System.Drawing.Point(805, 103);
-            this.Gpb_Usuario_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Ingreso.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Ingreso.Name = "Gpb_Usuario_Ingreso";
-            this.Gpb_Usuario_Ingreso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Ingreso.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Ingreso.Size = new System.Drawing.Size(367, 251);
             this.Gpb_Usuario_Ingreso.TabIndex = 25;
             this.Gpb_Usuario_Ingreso.TabStop = false;
@@ -390,7 +349,7 @@
             this.Cmb_TipoUsuario_Ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoUsuario_Ingreso.FormattingEnabled = true;
             this.Cmb_TipoUsuario_Ingreso.Location = new System.Drawing.Point(31, 188);
-            this.Cmb_TipoUsuario_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cmb_TipoUsuario_Ingreso.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_TipoUsuario_Ingreso.Name = "Cmb_TipoUsuario_Ingreso";
             this.Cmb_TipoUsuario_Ingreso.Size = new System.Drawing.Size(307, 26);
             this.Cmb_TipoUsuario_Ingreso.TabIndex = 26;
@@ -477,9 +436,9 @@
             this.Gpb_Datos_Ingreso.Controls.Add(this.Txt_Nombre2_Ingreso);
             this.Gpb_Datos_Ingreso.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Datos_Ingreso.Location = new System.Drawing.Point(21, 66);
-            this.Gpb_Datos_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Ingreso.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Ingreso.Name = "Gpb_Datos_Ingreso";
-            this.Gpb_Datos_Ingreso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Ingreso.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Ingreso.Size = new System.Drawing.Size(736, 516);
             this.Gpb_Datos_Ingreso.TabIndex = 24;
             this.Gpb_Datos_Ingreso.TabStop = false;
@@ -491,8 +450,8 @@
             this.Dtp_FechaContrato_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Ingreso.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
-            this.Dtp_FechaContrato_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_FechaContrato_Ingreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaContrato_Ingreso.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaContrato_Ingreso.Name = "Dtp_FechaContrato_Ingreso";
             this.Dtp_FechaContrato_Ingreso.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaContrato_Ingreso.TabIndex = 49;
@@ -504,8 +463,8 @@
             this.Dtp_FechaNacimiento_Ingreso.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Ingreso.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(4, 25);
-            this.Dtp_FechaNacimiento_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_FechaNacimiento_Ingreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaNacimiento_Ingreso.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaNacimiento_Ingreso.Name = "Dtp_FechaNacimiento_Ingreso";
             this.Dtp_FechaNacimiento_Ingreso.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaNacimiento_Ingreso.TabIndex = 48;
@@ -812,7 +771,7 @@
             this.Tbp_Modificar.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Modificar.HorizontalScrollbarSize = 12;
             this.Tbp_Modificar.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Modificar.Name = "Tbp_Modificar";
             this.Tbp_Modificar.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Modificar.TabIndex = 2;
@@ -831,35 +790,20 @@
             this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
-            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(1160, 4);
-            this.Btn_Ayuda_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
-            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(44, 39);
-            this.Btn_Ayuda_Modificar.TabIndex = 30;
-            this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Modificar
-            // 
-            this.Btn_Ayuda_Modificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
             this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
             this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
             this.Btn_Ayuda_Modificar.TabIndex = 30;
             this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Modificar.Click += new System.EventHandler(this.Btn_Ayuda_Modificar_Click);
             // 
             // Txt_Busqueda_Modificar
             // 
             this.Txt_Busqueda_Modificar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Busqueda_Modificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Busqueda_Modificar.Location = new System.Drawing.Point(340, 25);
-            this.Txt_Busqueda_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_Busqueda_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Busqueda_Modificar.Name = "Txt_Busqueda_Modificar";
             this.Txt_Busqueda_Modificar.Size = new System.Drawing.Size(417, 15);
             this.Txt_Busqueda_Modificar.TabIndex = 29;
@@ -876,9 +820,9 @@
             this.Gpb_Usuario_Modificar.Controls.Add(this.Lbl_TipoUsuario_Modificar);
             this.Gpb_Usuario_Modificar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Usuario_Modificar.Location = new System.Drawing.Point(805, 103);
-            this.Gpb_Usuario_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Modificar.Name = "Gpb_Usuario_Modificar";
-            this.Gpb_Usuario_Modificar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Modificar.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Modificar.Size = new System.Drawing.Size(367, 251);
             this.Gpb_Usuario_Modificar.TabIndex = 28;
             this.Gpb_Usuario_Modificar.TabStop = false;
@@ -889,7 +833,7 @@
             this.Cmb_TipoUsuario_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cmb_TipoUsuario_Modificar.FormattingEnabled = true;
             this.Cmb_TipoUsuario_Modificar.Location = new System.Drawing.Point(31, 188);
-            this.Cmb_TipoUsuario_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cmb_TipoUsuario_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_TipoUsuario_Modificar.Name = "Cmb_TipoUsuario_Modificar";
             this.Cmb_TipoUsuario_Modificar.Size = new System.Drawing.Size(307, 26);
             this.Cmb_TipoUsuario_Modificar.TabIndex = 26;
@@ -976,9 +920,9 @@
             this.Gpb_Datos_Modificar.Controls.Add(this.Txt_Nombre2_Modificar);
             this.Gpb_Datos_Modificar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Datos_Modificar.Location = new System.Drawing.Point(21, 66);
-            this.Gpb_Datos_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Modificar.Name = "Gpb_Datos_Modificar";
-            this.Gpb_Datos_Modificar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Modificar.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Modificar.Size = new System.Drawing.Size(736, 516);
             this.Gpb_Datos_Modificar.TabIndex = 27;
             this.Gpb_Datos_Modificar.TabStop = false;
@@ -991,10 +935,10 @@
             this.Dtp_FechaContrato_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaContrato_Modificar.Location = new System.Drawing.Point(300, 313);
-            this.Dtp_FechaContrato_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaContrato_Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaContrato_Modificar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaContrato_Modificar.Name = "Dtp_FechaContrato_Modificar";
-            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(307, 26);
+            this.Dtp_FechaContrato_Modificar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaContrato_Modificar.TabIndex = 49;
             this.Dtp_FechaContrato_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -1005,10 +949,10 @@
             this.Dtp_FechaNacimiento_Modificar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Modificar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Modificar.Location = new System.Drawing.Point(9, 261);
-            this.Dtp_FechaNacimiento_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(4, 25);
+            this.Dtp_FechaNacimiento_Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaNacimiento_Modificar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaNacimiento_Modificar.Name = "Dtp_FechaNacimiento_Modificar";
-            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(307, 26);
+            this.Dtp_FechaNacimiento_Modificar.Size = new System.Drawing.Size(307, 27);
             this.Dtp_FechaNacimiento_Modificar.TabIndex = 48;
             this.Dtp_FechaNacimiento_Modificar.Value = new System.DateTime(2020, 8, 12, 0, 0, 0, 0);
             // 
@@ -1315,7 +1259,7 @@
             this.Tbp_Eliminar.HorizontalScrollbarHighlightOnWheel = false;
             this.Tbp_Eliminar.HorizontalScrollbarSize = 12;
             this.Tbp_Eliminar.Location = new System.Drawing.Point(4, 38);
-            this.Tbp_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Eliminar.Name = "Tbp_Eliminar";
             this.Tbp_Eliminar.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Eliminar.TabIndex = 3;
@@ -1334,28 +1278,13 @@
             this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
-            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(1160, 4);
-            this.Btn_Ayuda_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
-            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(44, 39);
-            this.Btn_Ayuda_Eliminar.TabIndex = 34;
-            this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Ayuda_Eliminar
-            // 
-            this.Btn_Ayuda_Eliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ayuda_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.Btn_Ayuda_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
-            this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
             this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
             this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
             this.Btn_Ayuda_Eliminar.TabIndex = 34;
             this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Eliminar.Click += new System.EventHandler(this.Btn_Ayuda_Eliminar_Click);
             // 
             // Btn_Eliminar
             // 
@@ -1400,9 +1329,9 @@
             this.Gpb_Usuario_Eliminar.Controls.Add(this.Lbl_TipoUsuario_Eliminar);
             this.Gpb_Usuario_Eliminar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Usuario_Eliminar.Location = new System.Drawing.Point(805, 103);
-            this.Gpb_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Eliminar.Name = "Gpb_Usuario_Eliminar";
-            this.Gpb_Usuario_Eliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Usuario_Eliminar.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Usuario_Eliminar.Size = new System.Drawing.Size(367, 251);
             this.Gpb_Usuario_Eliminar.TabIndex = 31;
             this.Gpb_Usuario_Eliminar.TabStop = false;
@@ -1482,7 +1411,7 @@
             this.Txt_Busqueda_Eliminar.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Busqueda_Eliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Busqueda_Eliminar.Location = new System.Drawing.Point(340, 25);
-            this.Txt_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_Busqueda_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Busqueda_Eliminar.Name = "Txt_Busqueda_Eliminar";
             this.Txt_Busqueda_Eliminar.Size = new System.Drawing.Size(417, 15);
             this.Txt_Busqueda_Eliminar.TabIndex = 30;
@@ -1517,9 +1446,9 @@
             this.Gpb_Datos_Eliminar.Controls.Add(this.Txt_Nombre2_Eliminar);
             this.Gpb_Datos_Eliminar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_Datos_Eliminar.Location = new System.Drawing.Point(21, 66);
-            this.Gpb_Datos_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Eliminar.Name = "Gpb_Datos_Eliminar";
-            this.Gpb_Datos_Eliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos_Eliminar.Padding = new System.Windows.Forms.Padding(4);
             this.Gpb_Datos_Eliminar.Size = new System.Drawing.Size(736, 516);
             this.Gpb_Datos_Eliminar.TabIndex = 28;
             this.Gpb_Datos_Eliminar.TabStop = false;
@@ -1543,7 +1472,7 @@
             this.Dtp_FechaContrato_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaContrato_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_FechaContrato_Eliminar.Location = new System.Drawing.Point(400, 385);
-            this.Dtp_FechaContrato_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_FechaContrato_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Dtp_FechaContrato_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaContrato_Eliminar.Name = "Dtp_FechaContrato_Eliminar";
             this.Dtp_FechaContrato_Eliminar.Size = new System.Drawing.Size(307, 27);
@@ -1557,7 +1486,7 @@
             this.Dtp_FechaNacimiento_Eliminar.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.Dtp_FechaNacimiento_Eliminar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaNacimiento_Eliminar.Location = new System.Drawing.Point(12, 321);
-            this.Dtp_FechaNacimiento_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_FechaNacimiento_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Dtp_FechaNacimiento_Eliminar.MinimumSize = new System.Drawing.Size(0, 27);
             this.Dtp_FechaNacimiento_Eliminar.Name = "Dtp_FechaNacimiento_Eliminar";
             this.Dtp_FechaNacimiento_Eliminar.Size = new System.Drawing.Size(307, 27);
@@ -1840,7 +1769,7 @@
             this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Tbc_Empleados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmpleados";
             this.Text = "FrmEmpleados";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);

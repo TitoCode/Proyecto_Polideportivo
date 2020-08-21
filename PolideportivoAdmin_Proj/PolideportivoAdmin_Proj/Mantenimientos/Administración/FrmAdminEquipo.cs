@@ -190,5 +190,25 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
         {
             Admin.ListadoEquipos(Dgv_ListadoEquipos);
         }
+
+        private void Btn_Ayuda_Eliminar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0027.html");
+        }
+
+        private void Btn_Ayuda_Modificar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0026.html");
+        }
+
+        private void Btn_Ayuda_Ingreso_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0025.html");
+        }
+
+        private void Btn_Ayuda_ListadoEquipos_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0024.html");
+        }
     }
 }

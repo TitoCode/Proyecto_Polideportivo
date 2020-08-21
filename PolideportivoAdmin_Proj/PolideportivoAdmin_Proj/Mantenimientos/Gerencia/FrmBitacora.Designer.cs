@@ -49,9 +49,10 @@
             this.Tbc_Bitacora.Controls.Add(this.Tbp_Bitacora);
             this.Tbc_Bitacora.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Bitacora.Location = new System.Drawing.Point(0, 0);
+            this.Tbc_Bitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Bitacora.Name = "Tbc_Bitacora";
             this.Tbc_Bitacora.SelectedIndex = 0;
-            this.Tbc_Bitacora.Size = new System.Drawing.Size(914, 523);
+            this.Tbc_Bitacora.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Bitacora.TabIndex = 0;
             this.Tbc_Bitacora.UseSelectable = true;
             // 
@@ -62,15 +63,16 @@
             this.Tbp_Bitacora.Controls.Add(this.Dgv_Bitacora);
             this.Tbp_Bitacora.HorizontalScrollbarBarColor = true;
             this.Tbp_Bitacora.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Bitacora.HorizontalScrollbarSize = 10;
+            this.Tbp_Bitacora.HorizontalScrollbarSize = 12;
             this.Tbp_Bitacora.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Bitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Bitacora.Name = "Tbp_Bitacora";
-            this.Tbp_Bitacora.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Bitacora.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Bitacora.TabIndex = 0;
             this.Tbp_Bitacora.Text = "Log de la Bitácora";
             this.Tbp_Bitacora.VerticalScrollbarBarColor = true;
             this.Tbp_Bitacora.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Bitacora.VerticalScrollbarSize = 10;
+            this.Tbp_Bitacora.VerticalScrollbarSize = 13;
             // 
             // Btn_Ayuda
             // 
@@ -82,20 +84,23 @@
             this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda.Location = new System.Drawing.Point(1153, 4);
+            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda.TabIndex = 30;
             this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
             // 
             // Lbl_Titulo
             // 
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(264, 9);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(352, 11);
+            this.Lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(370, 18);
+            this.Lbl_Titulo.Size = new System.Drawing.Size(478, 25);
             this.Lbl_Titulo.TabIndex = 29;
             this.Lbl_Titulo.Text = "Bitácora (Actualización cada 5 segundos)";
             // 
@@ -128,7 +133,8 @@
             this.Dgv_Bitacora.EnableHeadersVisualStyles = false;
             this.Dgv_Bitacora.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Bitacora.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Bitacora.Location = new System.Drawing.Point(0, 51);
+            this.Dgv_Bitacora.Location = new System.Drawing.Point(0, 73);
+            this.Dgv_Bitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_Bitacora.Name = "Dgv_Bitacora";
             this.Dgv_Bitacora.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -139,9 +145,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_Bitacora.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_Bitacora.RowHeadersWidth = 51;
             this.Dgv_Bitacora.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Bitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Bitacora.Size = new System.Drawing.Size(906, 430);
+            this.Dgv_Bitacora.Size = new System.Drawing.Size(1211, 529);
             this.Dgv_Bitacora.TabIndex = 2;
             // 
             // Tmr_Bitacora
@@ -152,12 +159,13 @@
             // 
             // FrmBitacora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Tbc_Bitacora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmBitacora";
             this.Text = "FrmBitacora";
             this.Tbc_Bitacora.ResumeLayout(false);

@@ -47,10 +47,10 @@
             this.Btn_BuscarID.FlatAppearance.BorderSize = 0;
             this.Btn_BuscarID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_BuscarID.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_BuscarID.Location = new System.Drawing.Point(680, 53);
-            this.Btn_BuscarID.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_BuscarID.Location = new System.Drawing.Point(907, 65);
+            this.Btn_BuscarID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_BuscarID.Name = "Btn_BuscarID";
-            this.Btn_BuscarID.Size = new System.Drawing.Size(141, 28);
+            this.Btn_BuscarID.Size = new System.Drawing.Size(188, 34);
             this.Btn_BuscarID.TabIndex = 37;
             this.Btn_BuscarID.Text = "BUSCAR";
             this.Btn_BuscarID.UseVisualStyleBackColor = false;
@@ -60,10 +60,10 @@
             // 
             this.Txt_IDCampeonato.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_IDCampeonato.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_IDCampeonato.Location = new System.Drawing.Point(290, 61);
-            this.Txt_IDCampeonato.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_IDCampeonato.Location = new System.Drawing.Point(387, 75);
+            this.Txt_IDCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_IDCampeonato.Name = "Txt_IDCampeonato";
-            this.Txt_IDCampeonato.Size = new System.Drawing.Size(313, 13);
+            this.Txt_IDCampeonato.Size = new System.Drawing.Size(417, 15);
             this.Txt_IDCampeonato.TabIndex = 36;
             // 
             // Lbl_Titulo1
@@ -71,9 +71,10 @@
             this.Lbl_Titulo1.AutoSize = true;
             this.Lbl_Titulo1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo1.Location = new System.Drawing.Point(46, 60);
+            this.Lbl_Titulo1.Location = new System.Drawing.Point(61, 74);
+            this.Lbl_Titulo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo1.Name = "Lbl_Titulo1";
-            this.Lbl_Titulo1.Size = new System.Drawing.Size(204, 14);
+            this.Lbl_Titulo1.Size = new System.Drawing.Size(254, 18);
             this.Lbl_Titulo1.TabIndex = 35;
             this.Lbl_Titulo1.Text = "Ingrese el ID del Campeonato";
             // 
@@ -87,11 +88,13 @@
             this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(869, 33);
+            this.Btn_Ayuda.Location = new System.Drawing.Point(1159, 41);
+            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda.TabIndex = 38;
             this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
             // 
             // Dgv_TablaPosiciones
             // 
@@ -123,7 +126,8 @@
             this.Dgv_TablaPosiciones.EnableHeadersVisualStyles = false;
             this.Dgv_TablaPosiciones.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_TablaPosiciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_TablaPosiciones.Location = new System.Drawing.Point(0, 105);
+            this.Dgv_TablaPosiciones.Location = new System.Drawing.Point(0, 130);
+            this.Dgv_TablaPosiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_TablaPosiciones.Name = "Dgv_TablaPosiciones";
             this.Dgv_TablaPosiciones.ReadOnly = true;
             this.Dgv_TablaPosiciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -135,23 +139,25 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_TablaPosiciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_TablaPosiciones.RowHeadersWidth = 51;
             this.Dgv_TablaPosiciones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_TablaPosiciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_TablaPosiciones.Size = new System.Drawing.Size(914, 418);
+            this.Dgv_TablaPosiciones.Size = new System.Drawing.Size(1219, 514);
             this.Dgv_TablaPosiciones.TabIndex = 39;
             // 
             // FrmAdminTablaPosiciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Dgv_TablaPosiciones);
             this.Controls.Add(this.Btn_Ayuda);
             this.Controls.Add(this.Btn_BuscarID);
             this.Controls.Add(this.Txt_IDCampeonato);
             this.Controls.Add(this.Lbl_Titulo1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdminTablaPosiciones";
             this.Text = "FrmAdminTablaPosiciones";
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_TablaPosiciones)).EndInit();

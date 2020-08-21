@@ -149,5 +149,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Btn_Campeonato.ForeColor = Color.White;
             AbrirFormEnPanel(new FrmAdminTablaPosiciones());
         }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0012.html");
+        }
     }
 }

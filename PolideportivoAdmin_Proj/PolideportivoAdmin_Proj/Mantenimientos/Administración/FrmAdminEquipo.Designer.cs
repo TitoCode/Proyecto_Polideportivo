@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminEquipo));
             this.Cbx_Crear_Deporte = new System.Windows.Forms.ComboBox();
             this.Lbl_Crear_Tipo_Deporte = new System.Windows.Forms.Label();
@@ -91,9 +91,10 @@
             // 
             this.Cbx_Crear_Deporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cbx_Crear_Deporte.FormattingEnabled = true;
-            this.Cbx_Crear_Deporte.Location = new System.Drawing.Point(198, 129);
+            this.Cbx_Crear_Deporte.Location = new System.Drawing.Point(264, 159);
+            this.Cbx_Crear_Deporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbx_Crear_Deporte.Name = "Cbx_Crear_Deporte";
-            this.Cbx_Crear_Deporte.Size = new System.Drawing.Size(420, 22);
+            this.Cbx_Crear_Deporte.Size = new System.Drawing.Size(559, 26);
             this.Cbx_Crear_Deporte.TabIndex = 13;
             // 
             // Lbl_Crear_Tipo_Deporte
@@ -101,9 +102,10 @@
             this.Lbl_Crear_Tipo_Deporte.AutoSize = true;
             this.Lbl_Crear_Tipo_Deporte.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Crear_Tipo_Deporte.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Crear_Tipo_Deporte.Location = new System.Drawing.Point(24, 133);
+            this.Lbl_Crear_Tipo_Deporte.Location = new System.Drawing.Point(32, 164);
+            this.Lbl_Crear_Tipo_Deporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Crear_Tipo_Deporte.Name = "Lbl_Crear_Tipo_Deporte";
-            this.Lbl_Crear_Tipo_Deporte.Size = new System.Drawing.Size(54, 14);
+            this.Lbl_Crear_Tipo_Deporte.Size = new System.Drawing.Size(64, 18);
             this.Lbl_Crear_Tipo_Deporte.TabIndex = 12;
             this.Lbl_Crear_Tipo_Deporte.Text = "DEPORTE";
             // 
@@ -112,9 +114,10 @@
             this.Lbl_Crear_Cantidad_Equipos.AutoSize = true;
             this.Lbl_Crear_Cantidad_Equipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Crear_Cantidad_Equipos.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Crear_Cantidad_Equipos.Location = new System.Drawing.Point(24, 90);
+            this.Lbl_Crear_Cantidad_Equipos.Location = new System.Drawing.Point(32, 111);
+            this.Lbl_Crear_Cantidad_Equipos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Crear_Cantidad_Equipos.Name = "Lbl_Crear_Cantidad_Equipos";
-            this.Lbl_Crear_Cantidad_Equipos.Size = new System.Drawing.Size(78, 14);
+            this.Lbl_Crear_Cantidad_Equipos.Size = new System.Drawing.Size(93, 18);
             this.Lbl_Crear_Cantidad_Equipos.TabIndex = 10;
             this.Lbl_Crear_Cantidad_Equipos.Text = "ENTRENADOR";
             // 
@@ -123,9 +126,10 @@
             this.Lbl_Crear_Nombre_Equipo.AutoSize = true;
             this.Lbl_Crear_Nombre_Equipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Crear_Nombre_Equipo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Crear_Nombre_Equipo.Location = new System.Drawing.Point(24, 47);
+            this.Lbl_Crear_Nombre_Equipo.Location = new System.Drawing.Point(32, 58);
+            this.Lbl_Crear_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Crear_Nombre_Equipo.Name = "Lbl_Crear_Nombre_Equipo";
-            this.Lbl_Crear_Nombre_Equipo.Size = new System.Drawing.Size(117, 14);
+            this.Lbl_Crear_Nombre_Equipo.Size = new System.Drawing.Size(141, 18);
             this.Lbl_Crear_Nombre_Equipo.TabIndex = 9;
             this.Lbl_Crear_Nombre_Equipo.Text = "NOMBRE DEL EQUIPO";
             // 
@@ -136,9 +140,10 @@
             this.Btn_Ingresar_Equipo.FlatAppearance.BorderSize = 0;
             this.Btn_Ingresar_Equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Ingresar_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ingresar_Equipo.Location = new System.Drawing.Point(352, 361);
+            this.Btn_Ingresar_Equipo.Location = new System.Drawing.Point(469, 444);
+            this.Btn_Ingresar_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ingresar_Equipo.Name = "Btn_Ingresar_Equipo";
-            this.Btn_Ingresar_Equipo.Size = new System.Drawing.Size(136, 41);
+            this.Btn_Ingresar_Equipo.Size = new System.Drawing.Size(181, 50);
             this.Btn_Ingresar_Equipo.TabIndex = 8;
             this.Btn_Ingresar_Equipo.Text = "INGRESAR";
             this.Btn_Ingresar_Equipo.UseVisualStyleBackColor = false;
@@ -148,28 +153,30 @@
             // 
             this.Cbx_Crear_Entrenador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cbx_Crear_Entrenador.FormattingEnabled = true;
-            this.Cbx_Crear_Entrenador.Location = new System.Drawing.Point(198, 86);
+            this.Cbx_Crear_Entrenador.Location = new System.Drawing.Point(264, 106);
+            this.Cbx_Crear_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbx_Crear_Entrenador.Name = "Cbx_Crear_Entrenador";
-            this.Cbx_Crear_Entrenador.Size = new System.Drawing.Size(420, 22);
+            this.Cbx_Crear_Entrenador.Size = new System.Drawing.Size(559, 26);
             this.Cbx_Crear_Entrenador.TabIndex = 7;
             // 
             // Txt_Crear_Nombre_Equipo
             // 
             this.Txt_Crear_Nombre_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Crear_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Crear_Nombre_Equipo.Location = new System.Drawing.Point(198, 46);
+            this.Txt_Crear_Nombre_Equipo.Location = new System.Drawing.Point(264, 57);
+            this.Txt_Crear_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Crear_Nombre_Equipo.Name = "Txt_Crear_Nombre_Equipo";
-            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(420, 15);
+            this.Txt_Crear_Nombre_Equipo.Size = new System.Drawing.Size(560, 19);
             this.Txt_Crear_Nombre_Equipo.TabIndex = 4;
             // 
             // Txt_Modificar_Id_Equipo
             // 
             this.Txt_Modificar_Id_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Modificar_Id_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Modificar_Id_Equipo.Location = new System.Drawing.Point(299, 70);
-            this.Txt_Modificar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Modificar_Id_Equipo.Location = new System.Drawing.Point(399, 86);
+            this.Txt_Modificar_Id_Equipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Modificar_Id_Equipo.Name = "Txt_Modificar_Id_Equipo";
-            this.Txt_Modificar_Id_Equipo.Size = new System.Drawing.Size(341, 13);
+            this.Txt_Modificar_Id_Equipo.Size = new System.Drawing.Size(455, 15);
             this.Txt_Modificar_Id_Equipo.TabIndex = 15;
             // 
             // Btn_Editar_Buscar
@@ -179,10 +186,10 @@
             this.Btn_Editar_Buscar.FlatAppearance.BorderSize = 0;
             this.Btn_Editar_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Editar_Buscar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Editar_Buscar.Location = new System.Drawing.Point(702, 57);
-            this.Btn_Editar_Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Editar_Buscar.Location = new System.Drawing.Point(936, 70);
+            this.Btn_Editar_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Editar_Buscar.Name = "Btn_Editar_Buscar";
-            this.Btn_Editar_Buscar.Size = new System.Drawing.Size(136, 26);
+            this.Btn_Editar_Buscar.Size = new System.Drawing.Size(181, 32);
             this.Btn_Editar_Buscar.TabIndex = 14;
             this.Btn_Editar_Buscar.Text = "BUSCAR";
             this.Btn_Editar_Buscar.UseVisualStyleBackColor = false;
@@ -193,9 +200,10 @@
             this.Lbl_Editar_Deporte.AutoSize = true;
             this.Lbl_Editar_Deporte.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Editar_Deporte.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Editar_Deporte.Location = new System.Drawing.Point(35, 124);
+            this.Lbl_Editar_Deporte.Location = new System.Drawing.Point(47, 153);
+            this.Lbl_Editar_Deporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Editar_Deporte.Name = "Lbl_Editar_Deporte";
-            this.Lbl_Editar_Deporte.Size = new System.Drawing.Size(54, 14);
+            this.Lbl_Editar_Deporte.Size = new System.Drawing.Size(64, 18);
             this.Lbl_Editar_Deporte.TabIndex = 12;
             this.Lbl_Editar_Deporte.Text = "DEPORTE";
             // 
@@ -204,9 +212,10 @@
             this.Lbl_Editar_Entrenador.AutoSize = true;
             this.Lbl_Editar_Entrenador.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Editar_Entrenador.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Editar_Entrenador.Location = new System.Drawing.Point(35, 88);
+            this.Lbl_Editar_Entrenador.Location = new System.Drawing.Point(47, 108);
+            this.Lbl_Editar_Entrenador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Editar_Entrenador.Name = "Lbl_Editar_Entrenador";
-            this.Lbl_Editar_Entrenador.Size = new System.Drawing.Size(142, 14);
+            this.Lbl_Editar_Entrenador.Size = new System.Drawing.Size(170, 18);
             this.Lbl_Editar_Entrenador.TabIndex = 10;
             this.Lbl_Editar_Entrenador.Text = "ENTRENADOR DEL EQUIPO";
             // 
@@ -215,9 +224,10 @@
             this.Lbl_Editar_Nombre_Equipo.AutoSize = true;
             this.Lbl_Editar_Nombre_Equipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Editar_Nombre_Equipo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Editar_Nombre_Equipo.Location = new System.Drawing.Point(35, 49);
+            this.Lbl_Editar_Nombre_Equipo.Location = new System.Drawing.Point(47, 60);
+            this.Lbl_Editar_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Editar_Nombre_Equipo.Name = "Lbl_Editar_Nombre_Equipo";
-            this.Lbl_Editar_Nombre_Equipo.Size = new System.Drawing.Size(117, 14);
+            this.Lbl_Editar_Nombre_Equipo.Size = new System.Drawing.Size(141, 18);
             this.Lbl_Editar_Nombre_Equipo.TabIndex = 9;
             this.Lbl_Editar_Nombre_Equipo.Text = "NOMBRE DEL EQUIPO";
             // 
@@ -229,9 +239,10 @@
             this.Btn_Modificar_Equipo.FlatAppearance.BorderSize = 0;
             this.Btn_Modificar_Equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Modificar_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Modificar_Equipo.Location = new System.Drawing.Point(352, 361);
+            this.Btn_Modificar_Equipo.Location = new System.Drawing.Point(469, 444);
+            this.Btn_Modificar_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Modificar_Equipo.Name = "Btn_Modificar_Equipo";
-            this.Btn_Modificar_Equipo.Size = new System.Drawing.Size(136, 41);
+            this.Btn_Modificar_Equipo.Size = new System.Drawing.Size(181, 50);
             this.Btn_Modificar_Equipo.TabIndex = 8;
             this.Btn_Modificar_Equipo.Text = "MODIFICAR";
             this.Btn_Modificar_Equipo.UseVisualStyleBackColor = false;
@@ -241,19 +252,20 @@
             // 
             this.Txt_Editar_Nombre_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Editar_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Editar_Nombre_Equipo.Location = new System.Drawing.Point(208, 48);
+            this.Txt_Editar_Nombre_Equipo.Location = new System.Drawing.Point(277, 59);
+            this.Txt_Editar_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Editar_Nombre_Equipo.Name = "Txt_Editar_Nombre_Equipo";
-            this.Txt_Editar_Nombre_Equipo.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Editar_Nombre_Equipo.Size = new System.Drawing.Size(552, 19);
             this.Txt_Editar_Nombre_Equipo.TabIndex = 4;
             // 
             // Txt_Eliminar_Id_Equipo
             // 
             this.Txt_Eliminar_Id_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Id_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Eliminar_Id_Equipo.Location = new System.Drawing.Point(299, 70);
-            this.Txt_Eliminar_Id_Equipo.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Eliminar_Id_Equipo.Location = new System.Drawing.Point(399, 86);
+            this.Txt_Eliminar_Id_Equipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Eliminar_Id_Equipo.Name = "Txt_Eliminar_Id_Equipo";
-            this.Txt_Eliminar_Id_Equipo.Size = new System.Drawing.Size(341, 13);
+            this.Txt_Eliminar_Id_Equipo.Size = new System.Drawing.Size(455, 15);
             this.Txt_Eliminar_Id_Equipo.TabIndex = 16;
             // 
             // Btn_Eliminar_Buscar
@@ -263,10 +275,10 @@
             this.Btn_Eliminar_Buscar.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar_Buscar.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Eliminar_Buscar.Location = new System.Drawing.Point(702, 57);
-            this.Btn_Eliminar_Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Eliminar_Buscar.Location = new System.Drawing.Point(936, 70);
+            this.Btn_Eliminar_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Eliminar_Buscar.Name = "Btn_Eliminar_Buscar";
-            this.Btn_Eliminar_Buscar.Size = new System.Drawing.Size(136, 26);
+            this.Btn_Eliminar_Buscar.Size = new System.Drawing.Size(181, 32);
             this.Btn_Eliminar_Buscar.TabIndex = 14;
             this.Btn_Eliminar_Buscar.Text = "BUSCAR";
             this.Btn_Eliminar_Buscar.UseVisualStyleBackColor = false;
@@ -280,9 +292,10 @@
             this.Btn_Eliminar_Equipo.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar_Equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Eliminar_Equipo.Location = new System.Drawing.Point(352, 361);
+            this.Btn_Eliminar_Equipo.Location = new System.Drawing.Point(469, 444);
+            this.Btn_Eliminar_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Eliminar_Equipo.Name = "Btn_Eliminar_Equipo";
-            this.Btn_Eliminar_Equipo.Size = new System.Drawing.Size(136, 41);
+            this.Btn_Eliminar_Equipo.Size = new System.Drawing.Size(181, 50);
             this.Btn_Eliminar_Equipo.TabIndex = 8;
             this.Btn_Eliminar_Equipo.Text = "ELIMINAR";
             this.Btn_Eliminar_Equipo.UseVisualStyleBackColor = false;
@@ -293,9 +306,10 @@
             this.Txt_Eliminar_Nombre_Equipo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Nombre_Equipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Eliminar_Nombre_Equipo.Enabled = false;
-            this.Txt_Eliminar_Nombre_Equipo.Location = new System.Drawing.Point(210, 46);
+            this.Txt_Eliminar_Nombre_Equipo.Location = new System.Drawing.Point(280, 57);
+            this.Txt_Eliminar_Nombre_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Eliminar_Nombre_Equipo.Name = "Txt_Eliminar_Nombre_Equipo";
-            this.Txt_Eliminar_Nombre_Equipo.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Eliminar_Nombre_Equipo.Size = new System.Drawing.Size(552, 19);
             this.Txt_Eliminar_Nombre_Equipo.TabIndex = 4;
             // 
             // Tbc_Equipo
@@ -306,9 +320,10 @@
             this.Tbc_Equipo.Controls.Add(this.Tpb_Eliminar);
             this.Tbc_Equipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Equipo.Location = new System.Drawing.Point(0, 0);
+            this.Tbc_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Equipo.Name = "Tbc_Equipo";
-            this.Tbc_Equipo.SelectedIndex = 2;
-            this.Tbc_Equipo.Size = new System.Drawing.Size(914, 523);
+            this.Tbc_Equipo.SelectedIndex = 0;
+            this.Tbc_Equipo.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Equipo.TabIndex = 2;
             this.Tbc_Equipo.UseSelectable = true;
             // 
@@ -319,24 +334,26 @@
             this.Tbp_Listado.Controls.Add(this.Btn_Ayuda_ListadoEquipos);
             this.Tbp_Listado.HorizontalScrollbarBarColor = true;
             this.Tbp_Listado.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Listado.HorizontalScrollbarSize = 10;
+            this.Tbp_Listado.HorizontalScrollbarSize = 12;
             this.Tbp_Listado.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Listado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Listado.Name = "Tbp_Listado";
-            this.Tbp_Listado.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Listado.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Listado.TabIndex = 0;
             this.Tbp_Listado.Text = "Listado de Equipos";
             this.Tbp_Listado.VerticalScrollbarBarColor = true;
             this.Tbp_Listado.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Listado.VerticalScrollbarSize = 10;
+            this.Tbp_Listado.VerticalScrollbarSize = 13;
             // 
             // Lbl_Titulo
             // 
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(356, 17);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(475, 21);
+            this.Lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(171, 18);
+            this.Lbl_Titulo.Size = new System.Drawing.Size(224, 25);
             this.Lbl_Titulo.TabIndex = 30;
             this.Lbl_Titulo.Text = "Listado de Equipos";
             // 
@@ -348,42 +365,44 @@
             this.Dgv_ListadoEquipos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_ListadoEquipos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgv_ListadoEquipos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_ListadoEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_ListadoEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_ListadoEquipos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_ListadoEquipos.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_ListadoEquipos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Dgv_ListadoEquipos.EnableHeadersVisualStyles = false;
             this.Dgv_ListadoEquipos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_ListadoEquipos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_ListadoEquipos.Location = new System.Drawing.Point(0, 58);
+            this.Dgv_ListadoEquipos.Location = new System.Drawing.Point(0, 81);
+            this.Dgv_ListadoEquipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_ListadoEquipos.Name = "Dgv_ListadoEquipos";
             this.Dgv_ListadoEquipos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_ListadoEquipos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ListadoEquipos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_ListadoEquipos.RowHeadersVisible = false;
+            this.Dgv_ListadoEquipos.RowHeadersWidth = 51;
             this.Dgv_ListadoEquipos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_ListadoEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_ListadoEquipos.Size = new System.Drawing.Size(906, 423);
+            this.Dgv_ListadoEquipos.Size = new System.Drawing.Size(1211, 521);
             this.Dgv_ListadoEquipos.TabIndex = 29;
             // 
             // Btn_Ayuda_ListadoEquipos
@@ -396,11 +415,13 @@
             this.Btn_Ayuda_ListadoEquipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_ListadoEquipos.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_ListadoEquipos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_ListadoEquipos.Image")));
-            this.Btn_Ayuda_ListadoEquipos.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_ListadoEquipos.Location = new System.Drawing.Point(1160, 4);
+            this.Btn_Ayuda_ListadoEquipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_ListadoEquipos.Name = "Btn_Ayuda_ListadoEquipos";
-            this.Btn_Ayuda_ListadoEquipos.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_ListadoEquipos.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_ListadoEquipos.TabIndex = 28;
             this.Btn_Ayuda_ListadoEquipos.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_ListadoEquipos.Click += new System.EventHandler(this.Btn_Ayuda_ListadoEquipos_Click);
             // 
             // Tbp_Ingreso
             // 
@@ -410,15 +431,16 @@
             this.Tbp_Ingreso.Controls.Add(this.Btn_Ingresar_Equipo);
             this.Tbp_Ingreso.HorizontalScrollbarBarColor = true;
             this.Tbp_Ingreso.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Ingreso.HorizontalScrollbarSize = 10;
+            this.Tbp_Ingreso.HorizontalScrollbarSize = 12;
             this.Tbp_Ingreso.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Ingreso.Name = "Tbp_Ingreso";
-            this.Tbp_Ingreso.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Ingreso.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Ingreso.TabIndex = 1;
             this.Tbp_Ingreso.Text = "Ingresar un Nuevo Equipo";
             this.Tbp_Ingreso.VerticalScrollbarBarColor = true;
             this.Tbp_Ingreso.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Ingreso.VerticalScrollbarSize = 10;
+            this.Tbp_Ingreso.VerticalScrollbarSize = 13;
             // 
             // Btn_Ayuda_Ingreso
             // 
@@ -430,20 +452,23 @@
             this.Btn_Ayuda_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Ingreso.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Ingreso.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Ingreso.Image")));
-            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Ingreso.Location = new System.Drawing.Point(1160, 4);
+            this.Btn_Ayuda_Ingreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_Ingreso.Name = "Btn_Ayuda_Ingreso";
-            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Ingreso.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_Ingreso.TabIndex = 27;
             this.Btn_Ayuda_Ingreso.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Ingreso.Click += new System.EventHandler(this.Btn_Ayuda_Ingreso_Click);
             // 
             // Lbl_Titulo2
             // 
             this.Lbl_Titulo2.AutoSize = true;
             this.Lbl_Titulo2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo2.Location = new System.Drawing.Point(308, 75);
+            this.Lbl_Titulo2.Location = new System.Drawing.Point(411, 92);
+            this.Lbl_Titulo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo2.Name = "Lbl_Titulo2";
-            this.Lbl_Titulo2.Size = new System.Drawing.Size(244, 18);
+            this.Lbl_Titulo2.Size = new System.Drawing.Size(318, 25);
             this.Lbl_Titulo2.TabIndex = 24;
             this.Lbl_Titulo2.Text = "Ingrese los siguiente datos";
             // 
@@ -457,9 +482,11 @@
             this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Tipo_Deporte);
             this.Gpb_Datos.Controls.Add(this.Lbl_Crear_Cantidad_Equipos);
             this.Gpb_Datos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_Datos.Location = new System.Drawing.Point(95, 138);
+            this.Gpb_Datos.Location = new System.Drawing.Point(127, 170);
+            this.Gpb_Datos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Gpb_Datos.Name = "Gpb_Datos";
-            this.Gpb_Datos.Size = new System.Drawing.Size(700, 183);
+            this.Gpb_Datos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gpb_Datos.Size = new System.Drawing.Size(933, 225);
             this.Gpb_Datos.TabIndex = 14;
             this.Gpb_Datos.TabStop = false;
             this.Gpb_Datos.Text = "Datos del Equipo";
@@ -474,15 +501,16 @@
             this.Tbp_Modifcar.Controls.Add(this.Btn_Modificar_Equipo);
             this.Tbp_Modifcar.HorizontalScrollbarBarColor = true;
             this.Tbp_Modifcar.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Modifcar.HorizontalScrollbarSize = 10;
+            this.Tbp_Modifcar.HorizontalScrollbarSize = 12;
             this.Tbp_Modifcar.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Modifcar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Modifcar.Name = "Tbp_Modifcar";
-            this.Tbp_Modifcar.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Modifcar.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Modifcar.TabIndex = 2;
             this.Tbp_Modifcar.Text = "Modificar un Equipo";
             this.Tbp_Modifcar.VerticalScrollbarBarColor = true;
             this.Tbp_Modifcar.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Modifcar.VerticalScrollbarSize = 10;
+            this.Tbp_Modifcar.VerticalScrollbarSize = 13;
             // 
             // Btn_Ayuda_Modificar
             // 
@@ -494,20 +522,23 @@
             this.Btn_Ayuda_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Modificar.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Modificar.Image")));
-            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Modificar.Location = new System.Drawing.Point(1160, 4);
+            this.Btn_Ayuda_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_Modificar.Name = "Btn_Ayuda_Modificar";
-            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Modificar.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_Modificar.TabIndex = 31;
             this.Btn_Ayuda_Modificar.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Modificar.Click += new System.EventHandler(this.Btn_Ayuda_Modificar_Click);
             // 
             // Lbl_Titulo3
             // 
             this.Lbl_Titulo3.AutoSize = true;
             this.Lbl_Titulo3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo3.Location = new System.Drawing.Point(82, 69);
+            this.Lbl_Titulo3.Location = new System.Drawing.Point(109, 85);
+            this.Lbl_Titulo3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo3.Name = "Lbl_Titulo3";
-            this.Lbl_Titulo3.Size = new System.Drawing.Size(166, 14);
+            this.Lbl_Titulo3.Size = new System.Drawing.Size(204, 18);
             this.Lbl_Titulo3.TabIndex = 27;
             this.Lbl_Titulo3.Text = "Ingrese el ID del Equipo";
             // 
@@ -521,9 +552,11 @@
             this.groupBox1.Controls.Add(this.Txt_Editar_Nombre_Equipo);
             this.groupBox1.Controls.Add(this.Lbl_Editar_Nombre_Equipo);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(100, 137);
+            this.groupBox1.Location = new System.Drawing.Point(133, 169);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(703, 183);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(937, 225);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Equipo";
@@ -533,9 +566,10 @@
             this.Txt_Editar_Entrenador.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Editar_Entrenador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Editar_Entrenador.Enabled = false;
-            this.Txt_Editar_Entrenador.Location = new System.Drawing.Point(208, 87);
+            this.Txt_Editar_Entrenador.Location = new System.Drawing.Point(277, 107);
+            this.Txt_Editar_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Editar_Entrenador.Name = "Txt_Editar_Entrenador";
-            this.Txt_Editar_Entrenador.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Editar_Entrenador.Size = new System.Drawing.Size(552, 19);
             this.Txt_Editar_Entrenador.TabIndex = 15;
             // 
             // Txt_Editar_Deporte
@@ -543,9 +577,10 @@
             this.Txt_Editar_Deporte.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Editar_Deporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Editar_Deporte.Enabled = false;
-            this.Txt_Editar_Deporte.Location = new System.Drawing.Point(208, 123);
+            this.Txt_Editar_Deporte.Location = new System.Drawing.Point(277, 151);
+            this.Txt_Editar_Deporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Editar_Deporte.Name = "Txt_Editar_Deporte";
-            this.Txt_Editar_Deporte.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Editar_Deporte.Size = new System.Drawing.Size(552, 19);
             this.Txt_Editar_Deporte.TabIndex = 14;
             // 
             // Tpb_Eliminar
@@ -558,15 +593,16 @@
             this.Tpb_Eliminar.Controls.Add(this.Btn_Eliminar_Equipo);
             this.Tpb_Eliminar.HorizontalScrollbarBarColor = true;
             this.Tpb_Eliminar.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tpb_Eliminar.HorizontalScrollbarSize = 10;
+            this.Tpb_Eliminar.HorizontalScrollbarSize = 12;
             this.Tpb_Eliminar.Location = new System.Drawing.Point(4, 38);
+            this.Tpb_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tpb_Eliminar.Name = "Tpb_Eliminar";
-            this.Tpb_Eliminar.Size = new System.Drawing.Size(906, 481);
+            this.Tpb_Eliminar.Size = new System.Drawing.Size(1211, 602);
             this.Tpb_Eliminar.TabIndex = 3;
             this.Tpb_Eliminar.Text = "Eliminar un Equipo";
             this.Tpb_Eliminar.VerticalScrollbarBarColor = true;
             this.Tpb_Eliminar.VerticalScrollbarHighlightOnWheel = false;
-            this.Tpb_Eliminar.VerticalScrollbarSize = 10;
+            this.Tpb_Eliminar.VerticalScrollbarSize = 13;
             // 
             // Btn_Ayuda_Eliminar
             // 
@@ -578,20 +614,23 @@
             this.Btn_Ayuda_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Eliminar.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Eliminar.Image")));
-            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(870, 3);
+            this.Btn_Ayuda_Eliminar.Location = new System.Drawing.Point(1160, 4);
+            this.Btn_Ayuda_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_Eliminar.Name = "Btn_Ayuda_Eliminar";
-            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Eliminar.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_Eliminar.TabIndex = 35;
             this.Btn_Ayuda_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Eliminar.Click += new System.EventHandler(this.Btn_Ayuda_Eliminar_Click);
             // 
             // Lbl_Titulo4
             // 
             this.Lbl_Titulo4.AutoSize = true;
             this.Lbl_Titulo4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo4.Location = new System.Drawing.Point(82, 69);
+            this.Lbl_Titulo4.Location = new System.Drawing.Point(109, 85);
+            this.Lbl_Titulo4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo4.Name = "Lbl_Titulo4";
-            this.Lbl_Titulo4.Size = new System.Drawing.Size(166, 14);
+            this.Lbl_Titulo4.Size = new System.Drawing.Size(204, 18);
             this.Lbl_Titulo4.TabIndex = 30;
             this.Lbl_Titulo4.Text = "Ingrese el ID del Equipo";
             // 
@@ -605,9 +644,11 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.Txt_Eliminar_Nombre_Equipo);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(100, 137);
+            this.groupBox2.Location = new System.Drawing.Point(133, 169);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(703, 183);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(937, 225);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
@@ -617,9 +658,10 @@
             this.Txt_Eliminar_Deporte.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Deporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Eliminar_Deporte.Enabled = false;
-            this.Txt_Eliminar_Deporte.Location = new System.Drawing.Point(210, 123);
+            this.Txt_Eliminar_Deporte.Location = new System.Drawing.Point(280, 151);
+            this.Txt_Eliminar_Deporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Eliminar_Deporte.Name = "Txt_Eliminar_Deporte";
-            this.Txt_Eliminar_Deporte.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Eliminar_Deporte.Size = new System.Drawing.Size(552, 19);
             this.Txt_Eliminar_Deporte.TabIndex = 15;
             // 
             // Txt_Eliminar_Entrenador
@@ -627,9 +669,10 @@
             this.Txt_Eliminar_Entrenador.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Txt_Eliminar_Entrenador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Eliminar_Entrenador.Enabled = false;
-            this.Txt_Eliminar_Entrenador.Location = new System.Drawing.Point(210, 87);
+            this.Txt_Eliminar_Entrenador.Location = new System.Drawing.Point(280, 107);
+            this.Txt_Eliminar_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Eliminar_Entrenador.Name = "Txt_Eliminar_Entrenador";
-            this.Txt_Eliminar_Entrenador.Size = new System.Drawing.Size(414, 15);
+            this.Txt_Eliminar_Entrenador.Size = new System.Drawing.Size(552, 19);
             this.Txt_Eliminar_Entrenador.TabIndex = 14;
             // 
             // label2
@@ -637,9 +680,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 88);
+            this.label2.Location = new System.Drawing.Point(47, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 14);
+            this.label2.Size = new System.Drawing.Size(170, 18);
             this.label2.TabIndex = 10;
             this.label2.Text = "ENTRENADOR DEL EQUIPO";
             // 
@@ -648,9 +692,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 124);
+            this.label3.Location = new System.Drawing.Point(47, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 14);
+            this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "DEPORTE";
             // 
@@ -659,9 +704,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 49);
+            this.label4.Location = new System.Drawing.Point(47, 60);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 14);
+            this.label4.Size = new System.Drawing.Size(141, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "NOMBRE DEL EQUIPO";
             // 
@@ -673,12 +719,13 @@
             // 
             // FrmAdminEquipo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Tbc_Equipo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdminEquipo";
             this.Load += new System.EventHandler(this.FrmAdminEquipo_Load);
             this.Tbc_Equipo.ResumeLayout(false);
