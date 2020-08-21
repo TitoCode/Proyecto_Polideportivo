@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstadisticas));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Tbp_Estadistica = new MetroFramework.Controls.MetroTabPage();
             this.Lbl_EstadisticasEmpleados = new System.Windows.Forms.Label();
             this.Lbl_CantidadUsuarios = new System.Windows.Forms.Label();
@@ -72,24 +72,26 @@
             this.Tbp_Estadistica.Controls.Add(this.Graf_Bitacora);
             this.Tbp_Estadistica.HorizontalScrollbarBarColor = true;
             this.Tbp_Estadistica.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tbp_Estadistica.HorizontalScrollbarSize = 10;
+            this.Tbp_Estadistica.HorizontalScrollbarSize = 12;
             this.Tbp_Estadistica.Location = new System.Drawing.Point(4, 38);
+            this.Tbp_Estadistica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Estadistica.Name = "Tbp_Estadistica";
-            this.Tbp_Estadistica.Size = new System.Drawing.Size(906, 481);
+            this.Tbp_Estadistica.Size = new System.Drawing.Size(1211, 602);
             this.Tbp_Estadistica.TabIndex = 0;
             this.Tbp_Estadistica.Text = "Del Sistema";
             this.Tbp_Estadistica.VerticalScrollbarBarColor = true;
             this.Tbp_Estadistica.VerticalScrollbarHighlightOnWheel = false;
-            this.Tbp_Estadistica.VerticalScrollbarSize = 10;
+            this.Tbp_Estadistica.VerticalScrollbarSize = 13;
             // 
             // Lbl_EstadisticasEmpleados
             // 
             this.Lbl_EstadisticasEmpleados.AutoSize = true;
             this.Lbl_EstadisticasEmpleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_EstadisticasEmpleados.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EstadisticasEmpleados.Location = new System.Drawing.Point(444, 226);
+            this.Lbl_EstadisticasEmpleados.Location = new System.Drawing.Point(592, 278);
+            this.Lbl_EstadisticasEmpleados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_EstadisticasEmpleados.Name = "Lbl_EstadisticasEmpleados";
-            this.Lbl_EstadisticasEmpleados.Size = new System.Drawing.Size(0, 18);
+            this.Lbl_EstadisticasEmpleados.Size = new System.Drawing.Size(0, 25);
             this.Lbl_EstadisticasEmpleados.TabIndex = 39;
             // 
             // Lbl_CantidadUsuarios
@@ -97,9 +99,10 @@
             this.Lbl_CantidadUsuarios.AutoSize = true;
             this.Lbl_CantidadUsuarios.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_CantidadUsuarios.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CantidadUsuarios.Location = new System.Drawing.Point(642, 196);
+            this.Lbl_CantidadUsuarios.Location = new System.Drawing.Point(856, 241);
+            this.Lbl_CantidadUsuarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_CantidadUsuarios.Name = "Lbl_CantidadUsuarios";
-            this.Lbl_CantidadUsuarios.Size = new System.Drawing.Size(183, 18);
+            this.Lbl_CantidadUsuarios.Size = new System.Drawing.Size(242, 23);
             this.Lbl_CantidadUsuarios.TabIndex = 38;
             this.Lbl_CantidadUsuarios.Text = "Cantidad De Usuarios";
             // 
@@ -108,9 +111,10 @@
             this.Lbl_CantidadEntrenadores.AutoSize = true;
             this.Lbl_CantidadEntrenadores.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_CantidadEntrenadores.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CantidadEntrenadores.Location = new System.Drawing.Point(35, 196);
+            this.Lbl_CantidadEntrenadores.Location = new System.Drawing.Point(47, 241);
+            this.Lbl_CantidadEntrenadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_CantidadEntrenadores.Name = "Lbl_CantidadEntrenadores";
-            this.Lbl_CantidadEntrenadores.Size = new System.Drawing.Size(222, 18);
+            this.Lbl_CantidadEntrenadores.Size = new System.Drawing.Size(293, 23);
             this.Lbl_CantidadEntrenadores.TabIndex = 37;
             this.Lbl_CantidadEntrenadores.Text = "Cantidad De Entrenadores";
             // 
@@ -119,9 +123,10 @@
             this.Lbl_CantidadEmpleados.AutoSize = true;
             this.Lbl_CantidadEmpleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_CantidadEmpleados.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CantidadEmpleados.Location = new System.Drawing.Point(348, 196);
+            this.Lbl_CantidadEmpleados.Location = new System.Drawing.Point(464, 241);
+            this.Lbl_CantidadEmpleados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_CantidadEmpleados.Name = "Lbl_CantidadEmpleados";
-            this.Lbl_CantidadEmpleados.Size = new System.Drawing.Size(201, 18);
+            this.Lbl_CantidadEmpleados.Size = new System.Drawing.Size(265, 23);
             this.Lbl_CantidadEmpleados.TabIndex = 36;
             this.Lbl_CantidadEmpleados.Text = "Cantidad De Empleados";
             // 
@@ -130,9 +135,10 @@
             this.Lbl_CantidadIngreso.AutoSize = true;
             this.Lbl_CantidadIngreso.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_CantidadIngreso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CantidadIngreso.Location = new System.Drawing.Point(293, 296);
+            this.Lbl_CantidadIngreso.Location = new System.Drawing.Point(391, 364);
+            this.Lbl_CantidadIngreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_CantidadIngreso.Name = "Lbl_CantidadIngreso";
-            this.Lbl_CantidadIngreso.Size = new System.Drawing.Size(304, 18);
+            this.Lbl_CantidadIngreso.Size = new System.Drawing.Size(390, 25);
             this.Lbl_CantidadIngreso.TabIndex = 35;
             this.Lbl_CantidadIngreso.Text = "Cantidad de Ingresos Por Usuario";
             // 
@@ -141,9 +147,10 @@
             this.Lbl_EstadisticasUsuarios.AutoSize = true;
             this.Lbl_EstadisticasUsuarios.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_EstadisticasUsuarios.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EstadisticasUsuarios.Location = new System.Drawing.Point(733, 226);
+            this.Lbl_EstadisticasUsuarios.Location = new System.Drawing.Point(977, 278);
+            this.Lbl_EstadisticasUsuarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_EstadisticasUsuarios.Name = "Lbl_EstadisticasUsuarios";
-            this.Lbl_EstadisticasUsuarios.Size = new System.Drawing.Size(0, 18);
+            this.Lbl_EstadisticasUsuarios.Size = new System.Drawing.Size(0, 25);
             this.Lbl_EstadisticasUsuarios.TabIndex = 34;
             // 
             // Lbl_EstadisticaEntrenadores
@@ -151,16 +158,18 @@
             this.Lbl_EstadisticaEntrenadores.AutoSize = true;
             this.Lbl_EstadisticaEntrenadores.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_EstadisticaEntrenadores.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EstadisticaEntrenadores.Location = new System.Drawing.Point(140, 226);
+            this.Lbl_EstadisticaEntrenadores.Location = new System.Drawing.Point(187, 278);
+            this.Lbl_EstadisticaEntrenadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_EstadisticaEntrenadores.Name = "Lbl_EstadisticaEntrenadores";
-            this.Lbl_EstadisticaEntrenadores.Size = new System.Drawing.Size(0, 18);
+            this.Lbl_EstadisticaEntrenadores.Size = new System.Drawing.Size(0, 25);
             this.Lbl_EstadisticaEntrenadores.TabIndex = 33;
             // 
             // Ptb_Usuarios
             // 
             this.Ptb_Usuarios.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Ptb_Usuarios.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Usuarios.Image")));
-            this.Ptb_Usuarios.Location = new System.Drawing.Point(674, 65);
+            this.Ptb_Usuarios.Location = new System.Drawing.Point(899, 80);
+            this.Ptb_Usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Ptb_Usuarios.Name = "Ptb_Usuarios";
             this.Ptb_Usuarios.Size = new System.Drawing.Size(128, 128);
             this.Ptb_Usuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -171,7 +180,8 @@
             // 
             this.Ptb_Empleados.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Ptb_Empleados.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Empleados.Image")));
-            this.Ptb_Empleados.Location = new System.Drawing.Point(385, 65);
+            this.Ptb_Empleados.Location = new System.Drawing.Point(513, 80);
+            this.Ptb_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Ptb_Empleados.Name = "Ptb_Empleados";
             this.Ptb_Empleados.Size = new System.Drawing.Size(128, 128);
             this.Ptb_Empleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -182,7 +192,8 @@
             // 
             this.Ptb_Entrenador.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Ptb_Entrenador.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Entrenador.Image")));
-            this.Ptb_Entrenador.Location = new System.Drawing.Point(89, 65);
+            this.Ptb_Entrenador.Location = new System.Drawing.Point(119, 80);
+            this.Ptb_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Ptb_Entrenador.Name = "Ptb_Entrenador";
             this.Ptb_Entrenador.Size = new System.Drawing.Size(128, 128);
             this.Ptb_Entrenador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -194,9 +205,10 @@
             this.Lbl_Titulo1.AutoSize = true;
             this.Lbl_Titulo1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo1.Location = new System.Drawing.Point(337, 17);
+            this.Lbl_Titulo1.Location = new System.Drawing.Point(449, 21);
+            this.Lbl_Titulo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo1.Name = "Lbl_Titulo1";
-            this.Lbl_Titulo1.Size = new System.Drawing.Size(217, 18);
+            this.Lbl_Titulo1.Size = new System.Drawing.Size(286, 25);
             this.Lbl_Titulo1.TabIndex = 29;
             this.Lbl_Titulo1.Text = "Estadísticas Del Sistema";
             // 
@@ -210,27 +222,30 @@
             this.Btn_Ayuda_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Sistema.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Sistema.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Sistema.Image")));
-            this.Btn_Ayuda_Sistema.Location = new System.Drawing.Point(865, 3);
+            this.Btn_Ayuda_Sistema.Location = new System.Drawing.Point(1153, 4);
+            this.Btn_Ayuda_Sistema.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_Sistema.Name = "Btn_Ayuda_Sistema";
-            this.Btn_Ayuda_Sistema.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Sistema.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_Sistema.TabIndex = 28;
             this.Btn_Ayuda_Sistema.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Sistema.Click += new System.EventHandler(this.Btn_Ayuda_Sistema_Click);
             // 
             // Graf_Bitacora
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Graf_Bitacora.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Graf_Bitacora.Legends.Add(legend2);
-            this.Graf_Bitacora.Location = new System.Drawing.Point(143, 317);
+            chartArea1.Name = "ChartArea1";
+            this.Graf_Bitacora.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Graf_Bitacora.Legends.Add(legend1);
+            this.Graf_Bitacora.Location = new System.Drawing.Point(191, 390);
+            this.Graf_Bitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Graf_Bitacora.Name = "Graf_Bitacora";
             this.Graf_Bitacora.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series2.Legend = "Legend1";
-            series2.Name = "Usuarios";
-            this.Graf_Bitacora.Series.Add(series2);
-            this.Graf_Bitacora.Size = new System.Drawing.Size(622, 156);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.Legend = "Legend1";
+            series1.Name = "Usuarios";
+            this.Graf_Bitacora.Series.Add(series1);
+            this.Graf_Bitacora.Size = new System.Drawing.Size(829, 192);
             this.Graf_Bitacora.TabIndex = 2;
             this.Graf_Bitacora.Text = "chart1";
             // 
@@ -239,20 +254,22 @@
             this.Tbc_Estadistica.Controls.Add(this.Tbp_Estadistica);
             this.Tbc_Estadistica.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Estadistica.Location = new System.Drawing.Point(0, 0);
+            this.Tbc_Estadistica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_Estadistica.Name = "Tbc_Estadistica";
             this.Tbc_Estadistica.SelectedIndex = 0;
-            this.Tbc_Estadistica.Size = new System.Drawing.Size(914, 523);
+            this.Tbc_Estadistica.Size = new System.Drawing.Size(1219, 644);
             this.Tbc_Estadistica.TabIndex = 0;
             this.Tbc_Estadistica.UseSelectable = true;
             // 
             // FrmEstadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Tbc_Estadistica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmEstadisticas";
             this.Text = "FrmEstadisticas";
             this.Load += new System.EventHandler(this.FrmEstadisticas_Load);

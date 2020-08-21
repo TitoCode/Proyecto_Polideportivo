@@ -32,5 +32,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                 Txt_IDCampeonato.Clear();
             }
         }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0029.html");
+        }
     }
 }

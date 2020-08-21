@@ -50,9 +50,10 @@
             // 
             this.Pnl_Contenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Pnl_Contenedor.Location = new System.Drawing.Point(155, 0);
+            this.Pnl_Contenedor.Location = new System.Drawing.Point(206, 0);
+            this.Pnl_Contenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Contenedor.Name = "Pnl_Contenedor";
-            this.Pnl_Contenedor.Size = new System.Drawing.Size(914, 523);
+            this.Pnl_Contenedor.Size = new System.Drawing.Size(1219, 644);
             this.Pnl_Contenedor.TabIndex = 5;
             // 
             // Pnl_Menu
@@ -71,8 +72,9 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Entrenador);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(155, 523);
+            this.Pnl_Menu.Size = new System.Drawing.Size(207, 644);
             this.Pnl_Menu.TabIndex = 18;
             // 
             // Lbl_Usuario
@@ -80,10 +82,9 @@
             this.Lbl_Usuario.AutoSize = true;
             this.Lbl_Usuario.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Usuario.Location = new System.Drawing.Point(11, 131);
-            this.Lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Usuario.Location = new System.Drawing.Point(15, 161);
             this.Lbl_Usuario.Name = "Lbl_Usuario";
-            this.Lbl_Usuario.Size = new System.Drawing.Size(0, 14);
+            this.Lbl_Usuario.Size = new System.Drawing.Size(0, 18);
             this.Lbl_Usuario.TabIndex = 30;
             // 
             // Btn_Ayuda
@@ -96,21 +97,22 @@
             this.Btn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(0, 491);
+            this.Btn_Ayuda.Location = new System.Drawing.Point(0, 604);
+            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda.TabIndex = 29;
             this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
             // 
             // Lbl_Puesto
             // 
             this.Lbl_Puesto.AutoSize = true;
             this.Lbl_Puesto.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Puesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Puesto.Location = new System.Drawing.Point(11, 161);
-            this.Lbl_Puesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Puesto.Location = new System.Drawing.Point(15, 198);
             this.Lbl_Puesto.Name = "Lbl_Puesto";
-            this.Lbl_Puesto.Size = new System.Drawing.Size(0, 14);
+            this.Lbl_Puesto.Size = new System.Drawing.Size(0, 18);
             this.Lbl_Puesto.TabIndex = 14;
             // 
             // Btn_Inicio
@@ -121,9 +123,10 @@
             this.Btn_Inicio.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Inicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Inicio.Image")));
-            this.Btn_Inicio.Location = new System.Drawing.Point(0, 184);
+            this.Btn_Inicio.Location = new System.Drawing.Point(0, 226);
+            this.Btn_Inicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Inicio.Name = "Btn_Inicio";
-            this.Btn_Inicio.Size = new System.Drawing.Size(155, 35);
+            this.Btn_Inicio.Size = new System.Drawing.Size(207, 43);
             this.Btn_Inicio.TabIndex = 13;
             this.Btn_Inicio.Text = "      INICIO";
             this.Btn_Inicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -133,10 +136,10 @@
             // Ptb_FotoUsuario
             // 
             this.Ptb_FotoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_FotoUsuario.Image")));
-            this.Ptb_FotoUsuario.Location = new System.Drawing.Point(37, 11);
-            this.Ptb_FotoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.Ptb_FotoUsuario.Location = new System.Drawing.Point(49, 14);
+            this.Ptb_FotoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_FotoUsuario.Name = "Ptb_FotoUsuario";
-            this.Ptb_FotoUsuario.Size = new System.Drawing.Size(75, 93);
+            this.Ptb_FotoUsuario.Size = new System.Drawing.Size(100, 114);
             this.Ptb_FotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ptb_FotoUsuario.TabIndex = 12;
             this.Ptb_FotoUsuario.TabStop = false;
@@ -150,9 +153,10 @@
             this.Btn_TablaPosiciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_TablaPosiciones.Image = ((System.Drawing.Image)(resources.GetObject("Btn_TablaPosiciones.Image")));
             this.Btn_TablaPosiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_TablaPosiciones.Location = new System.Drawing.Point(0, 421);
+            this.Btn_TablaPosiciones.Location = new System.Drawing.Point(0, 518);
+            this.Btn_TablaPosiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_TablaPosiciones.Name = "Btn_TablaPosiciones";
-            this.Btn_TablaPosiciones.Size = new System.Drawing.Size(155, 47);
+            this.Btn_TablaPosiciones.Size = new System.Drawing.Size(207, 58);
             this.Btn_TablaPosiciones.TabIndex = 11;
             this.Btn_TablaPosiciones.Text = "      TABLA DE         POSICIONES";
             this.Btn_TablaPosiciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -168,9 +172,10 @@
             this.Btn_Calendario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Calendario.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Calendario.Image")));
             this.Btn_Calendario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Calendario.Location = new System.Drawing.Point(0, 375);
+            this.Btn_Calendario.Location = new System.Drawing.Point(0, 462);
+            this.Btn_Calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Calendario.Name = "Btn_Calendario";
-            this.Btn_Calendario.Size = new System.Drawing.Size(155, 31);
+            this.Btn_Calendario.Size = new System.Drawing.Size(207, 38);
             this.Btn_Calendario.TabIndex = 10;
             this.Btn_Calendario.Text = "      CALENDARIO";
             this.Btn_Calendario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,10 +187,9 @@
             this.Lbl_Password.AutoSize = true;
             this.Lbl_Password.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_Password.Location = new System.Drawing.Point(141, 166);
-            this.Lbl_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Password.Location = new System.Drawing.Point(188, 204);
             this.Lbl_Password.Name = "Lbl_Password";
-            this.Lbl_Password.Size = new System.Drawing.Size(0, 15);
+            this.Lbl_Password.Size = new System.Drawing.Size(0, 17);
             this.Lbl_Password.TabIndex = 9;
             this.Lbl_Password.Visible = false;
             // 
@@ -197,9 +201,10 @@
             this.Btn_Campeonato.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Campeonato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Campeonato.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Campeonato.Image")));
-            this.Btn_Campeonato.Location = new System.Drawing.Point(0, 231);
+            this.Btn_Campeonato.Location = new System.Drawing.Point(0, 284);
+            this.Btn_Campeonato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Campeonato.Name = "Btn_Campeonato";
-            this.Btn_Campeonato.Size = new System.Drawing.Size(155, 31);
+            this.Btn_Campeonato.Size = new System.Drawing.Size(207, 38);
             this.Btn_Campeonato.TabIndex = 2;
             this.Btn_Campeonato.Text = "     CAMPEONATOS";
             this.Btn_Campeonato.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,9 +220,10 @@
             this.Btn_Equipo.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Equipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Equipo.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Equipo.Image")));
-            this.Btn_Equipo.Location = new System.Drawing.Point(0, 329);
+            this.Btn_Equipo.Location = new System.Drawing.Point(0, 405);
+            this.Btn_Equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Equipo.Name = "Btn_Equipo";
-            this.Btn_Equipo.Size = new System.Drawing.Size(155, 31);
+            this.Btn_Equipo.Size = new System.Drawing.Size(207, 38);
             this.Btn_Equipo.TabIndex = 1;
             this.Btn_Equipo.Text = "        EQUIPOS";
             this.Btn_Equipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,9 +239,10 @@
             this.Btn_Entrenador.Font = new System.Drawing.Font("Tw Cen MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Entrenador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Btn_Entrenador.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Entrenador.Image")));
-            this.Btn_Entrenador.Location = new System.Drawing.Point(0, 277);
+            this.Btn_Entrenador.Location = new System.Drawing.Point(0, 341);
+            this.Btn_Entrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Entrenador.Name = "Btn_Entrenador";
-            this.Btn_Entrenador.Size = new System.Drawing.Size(155, 31);
+            this.Btn_Entrenador.Size = new System.Drawing.Size(207, 38);
             this.Btn_Entrenador.TabIndex = 0;
             this.Btn_Entrenador.Text = "    ENTRENADORES";
             this.Btn_Entrenador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,12 +252,13 @@
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 523);
+            this.ClientSize = new System.Drawing.Size(1425, 644);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_Contenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdmin";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

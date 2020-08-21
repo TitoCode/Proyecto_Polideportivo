@@ -493,5 +493,30 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
                 }
             }
         }
+
+        private void Btn_Ayuda_ModificarPartido_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0017.html");
+        }
+
+        private void Btn_AyudaControlPartido_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0018.html");
+        }
+
+        private void Btn_Ayuda_ModificarCampeonato_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0016.html");
+        }
+
+        private void Btn_Ayuda_IngresoCampeonato_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0015.html");
+        }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0014.html");
+        }
     }
 }

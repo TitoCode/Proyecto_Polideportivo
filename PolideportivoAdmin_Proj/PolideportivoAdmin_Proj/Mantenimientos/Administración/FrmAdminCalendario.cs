@@ -24,5 +24,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos
         {
             Admin.ListadoPartidos(Dgv_Calendario);
         }
+
+        private void Btn_Ayuda_Calendario_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0028.html");
+        }
     }
 }

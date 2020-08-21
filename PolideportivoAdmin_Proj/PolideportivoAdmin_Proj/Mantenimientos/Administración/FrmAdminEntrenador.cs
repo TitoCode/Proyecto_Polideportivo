@@ -231,6 +231,26 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Administración
             Admin.ListadoEntrenadores(Dgw_Listado_Entrenadores);
         }
 
+        private void Btn_Ayuda_Eliminar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0023.html");
+        }
+
+        private void Btn_Ayuda_Modificar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0022.html");
+        }
+
+        private void Btn_Ayuda_Ingreso_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0021.html");
+        }
+
+        private void Btn_Ayuda_ListadoEntrenadores_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0020.html");
+        }
+
         private void letra(object sender, KeyPressEventArgs e)
         {
             ClsValidarKeyPress.Letras(e);

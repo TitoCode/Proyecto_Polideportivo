@@ -338,6 +338,25 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             ClsValidarKeyPress.Numeros(e);
         }
 
+        private void Btn_Ayuda_Eliminar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0007.html");
+        }
+
+        private void Btn_Ayuda_Modificar_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0006.html");
+        }
+
+        private void Btn_Ayuda_Ingreso_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0005.html");
+        }
+
+        private void Btn_Ayuda_ListadoEmpleados_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0004.html");
+        }
 
         private void letra(object sender, KeyPressEventArgs e)
         {

@@ -71,7 +71,8 @@
             this.Dgv_Calendario.EnableHeadersVisualStyles = false;
             this.Dgv_Calendario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Dgv_Calendario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Dgv_Calendario.Location = new System.Drawing.Point(0, 94);
+            this.Dgv_Calendario.Location = new System.Drawing.Point(0, 116);
+            this.Dgv_Calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_Calendario.Name = "Dgv_Calendario";
             this.Dgv_Calendario.ReadOnly = true;
             this.Dgv_Calendario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -84,9 +85,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_Calendario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_Calendario.RowHeadersVisible = false;
+            this.Dgv_Calendario.RowHeadersWidth = 51;
             this.Dgv_Calendario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgv_Calendario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Calendario.Size = new System.Drawing.Size(914, 429);
+            this.Dgv_Calendario.Size = new System.Drawing.Size(1219, 528);
             this.Dgv_Calendario.TabIndex = 0;
             // 
             // Lbl_Titulo
@@ -94,9 +96,10 @@
             this.Lbl_Titulo.AutoSize = true;
             this.Lbl_Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lbl_Titulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Titulo.Location = new System.Drawing.Point(187, 47);
+            this.Lbl_Titulo.Location = new System.Drawing.Point(249, 58);
+            this.Lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Titulo.Name = "Lbl_Titulo";
-            this.Lbl_Titulo.Size = new System.Drawing.Size(498, 18);
+            this.Lbl_Titulo.Size = new System.Drawing.Size(642, 25);
             this.Lbl_Titulo.TabIndex = 31;
             this.Lbl_Titulo.Text = "Calendario De Partidos (Actualización cada 5 segundos)";
             // 
@@ -110,11 +113,13 @@
             this.Btn_Ayuda_Calendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda_Calendario.ForeColor = System.Drawing.Color.Brown;
             this.Btn_Ayuda_Calendario.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda_Calendario.Image")));
-            this.Btn_Ayuda_Calendario.Location = new System.Drawing.Point(869, 33);
+            this.Btn_Ayuda_Calendario.Location = new System.Drawing.Point(1159, 41);
+            this.Btn_Ayuda_Calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Ayuda_Calendario.Name = "Btn_Ayuda_Calendario";
-            this.Btn_Ayuda_Calendario.Size = new System.Drawing.Size(33, 32);
+            this.Btn_Ayuda_Calendario.Size = new System.Drawing.Size(44, 39);
             this.Btn_Ayuda_Calendario.TabIndex = 32;
             this.Btn_Ayuda_Calendario.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda_Calendario.Click += new System.EventHandler(this.Btn_Ayuda_Calendario_Click);
             // 
             // Tmr_Calendario
             // 
@@ -124,14 +129,15 @@
             // 
             // FrmAdminCalendario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(914, 523);
+            this.ClientSize = new System.Drawing.Size(1219, 644);
             this.Controls.Add(this.Btn_Ayuda_Calendario);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.Dgv_Calendario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdminCalendario";
             this.Text = "FrmAdminCalendario";
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Calendario)).EndInit();

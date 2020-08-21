@@ -115,5 +115,9 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
             }
         }
 
+        private void Btn_Ayuda_Sistema_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0010.html");
+        }
     }
 }

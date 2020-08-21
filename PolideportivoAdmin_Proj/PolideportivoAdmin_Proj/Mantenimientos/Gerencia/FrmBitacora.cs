@@ -24,5 +24,10 @@ namespace PolideportivoAdmin_Proj.Mantenimientos.Gerencia
         {
             Bitacora.MostrarBitacora(Dgv_Bitacora);
         }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas_Admin/AyudasAdmin.chm", "pg_0011.html");
+        }
     }
 }
